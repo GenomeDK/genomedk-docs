@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# GenomeDK Docs documentation build configuration file, created by
+# GenomeDK documentation build configuration file, created by
 # sphinx-quickstart on Wed Aug  9 15:13:46 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'GenomeDK Docs'
+project = 'GenomeDK'
 copyright = '2017, Anders Halager'
 author = 'Anders Halager'
 
@@ -127,7 +127,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'GenomeDKDocs.tex', 'GenomeDK Docs Documentation',
+    (master_doc, 'GenomeDKDocs.tex', 'GenomeDK Documentation',
      'Anders Halager', 'manual'),
 ]
 
@@ -137,7 +137,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'genomedkdocs', 'GenomeDK Docs Documentation',
+    (master_doc, 'genomedkdocs', 'GenomeDK Documentation',
      [author], 1)
 ]
 
@@ -148,7 +148,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'GenomeDKDocs', 'GenomeDK Docs Documentation',
+    (master_doc, 'GenomeDKDocs', 'GenomeDK Documentation',
      author, 'GenomeDKDocs', 'One line description of project.',
      'Miscellaneous'),
 ]
