@@ -10,7 +10,7 @@ The first thing we will do is to make sure that we can connect to the cluster.
 To connect you run the following command from a terminal or by putting the same
 address in to putty.
 
-.. code-block:: text
+.. code-block:: console
 
     [me@local ~]$ ssh me@login.genome.au.dk
     [me@genomedk ~]$
@@ -46,7 +46,7 @@ To get this script from your local machine to the cluster you can use the scp
 command on linux/mac and the WinSCP program on windows. This uses the same
 protocol as ssh so you connect to the same address with the same credentials.
 
-.. code-block:: text
+.. code-block:: console
 
     [me@local ~]$ scp scriptfile me@login.genome.au.dk:faststorage/scriptfile
     me@login.genome.au.dks password: 
@@ -68,7 +68,7 @@ This will enable the proxy for this session, if you want it to be enabled every
 session you can add the same export commands to the ``.bash_profile`` file in
 your home folder.
 
-.. code-block:: text
+.. code-block:: console
 
     [me@genomedk ~]$ export http_proxy="http://in:3128" && export ftp_proxy="http://in:3128"
     [me@genomedk ~]$ wget http://cs.au.dk/~aeh/genomedk_tut/test-reads.fq
@@ -112,7 +112,7 @@ Now to actually run our script we need to submit it to the queue of jobs. This
 is done by executing srun scriptfile which will wait until the job is done,
 showing you the output from the job as it executes.
 
-.. code-block:: text
+.. code-block:: console
 
     [me@genomedk faststorage]$ srun --mem-per-cpu=4G --partition=express scriptfile 
     srun: job 2396710 queued and waiting for resources
@@ -164,7 +164,7 @@ wait. Instead you can submit it with sbatch scriptfile which will return
 immediately and give you a job number that can be used to check on the  job
 later.
 
-.. code-block:: text
+.. code-block:: console
 
     [me@genomedk faststorage]$ sbatch scriptfile
     Submitted batch job 2396712
@@ -184,7 +184,7 @@ minutes to finish once the job gets through the queue. Once the job is finished
 we can get some information about it with the jobinfo command. It will look
 something like this:
 
-.. code-block:: text
+.. code-block:: console
 
     [me@genomedk faststorage]$ jobinfo 2396712
     Name                : scriptfile
