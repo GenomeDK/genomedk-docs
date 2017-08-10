@@ -277,7 +277,9 @@ We can now create the exact environment specified in environment.yml by simply r
 
     $ conda env create
 
-As you work you may need to change your environment, e.g. update a package to a more recent version, add or remove a package. To do this, just modify the environment.yml file and then run:
+As you work you may need to change your environment, e.g. update a package to a
+more recent version, add or remove a package. To do this, just modify the
+environment.yml file and then run:
 
 .. code-block:: bash
 
@@ -286,4 +288,7 @@ As you work you may need to change your environment, e.g. update a package to a 
 Sanity Check for Repeatability
 ------------------------------
 
-To check whether your project can easily be run by another person, package it into a zip-file and send it to one of your colleagues. They should be able to run your analysis with no help from you and by only reading the documentation in your project (and maybe this document).
+To check whether your project can easily be run by another person, package it
+into a zip-file and send it to one of your colleagues. They should be able to
+run your analysis with no help from you and by only reading the documentation
+in your project (and maybe this document).
