@@ -105,9 +105,12 @@ the VNC client.
 
 TODO: What to put into TightVNC
 
-TODO: Screenshot of TightVNC settings
+To connect to the running VNC server the ssh tunnel through the login node has to established. In case of TightVNC tunneling option is included in the software it-self and following settings should be sufficient:
 
-.. _TightVNC: http://www.tightvnc.com/download.php
+.. image:: TightVNC.png
+    :align: center
+
+TODO: Screenshot of TightVNC settings
 
 How do I run graphical programs from compute nodes?
 ---------------------------------------------------
