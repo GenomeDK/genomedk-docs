@@ -5,7 +5,7 @@ How does the GenomeDK cluster work?
 -----------------------------------
 
 * Graphical overview
-* Queuing system
+* Queuing system, partitions
 * Different types of storage
 
 Getting access to GenomeDK
@@ -13,6 +13,7 @@ Getting access to GenomeDK
 
 * How to get an account
 * How to log in to the front end node with SSH
+* Two-factor authentication, public key setup
 
 Getting your data to GenomeDK
 -----------------------------
@@ -38,12 +39,13 @@ Installing the Conda package manager
 ------------------------------------
 
 * Should it be installed by default?
-* What is an environment?
+* What is an environment? Creating environments, changing between them.
 * Why are environments useful?
 * Exporting an environment
 
 For existing users:
 
+* Migrating from old setup to conda legacy environment
 * Remove all uses of /com/extra (.bashrc, .bash_profile)
 * Check PATH in general
 
