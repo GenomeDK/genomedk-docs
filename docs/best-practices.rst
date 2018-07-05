@@ -1,10 +1,5 @@
-Best practices
-==============
-
-Use these guidelines when starting a new data analysis project at BiRC.
-
 Structure and document your projects
-------------------------------------
+====================================
 
 Using the same project structure for all of your projects provide a lot of
 benefits. I recommend that you follow the structure shown below. It is
@@ -105,7 +100,7 @@ contain at least two files: a file documenting your project structure
 to this page) and a file describing your environment.
 
 Multi-user project
-------------------
+==================
 
 This structure was suggested by Kasper Munch Terkelsen.
 
@@ -143,7 +138,7 @@ then create a symlink from :file:`myproject/people/A/results/foo.txt` to
 :file:`/myproject/results/foo.txt`.
 
 Use project-specific environments
----------------------------------
+=================================
 
 An environment is a isolated collection of programs and libraries. You can
 have multiple environments (e.g. one for each project) and these environments
@@ -286,7 +281,7 @@ environment.yml file and then run:
     conda env update --prune
 
 Sanity check for repeatability
-------------------------------
+==============================
 
 To check whether your project can easily be run by another person, package it
 into a zip-file and send it to one of your colleagues. They should be able to

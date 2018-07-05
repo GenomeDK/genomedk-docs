@@ -1,5 +1,5 @@
-Tutorial
-========
+Get ready
+=========
 
 The first thing we will do is to make sure that we can connect to the cluster.
 
@@ -16,7 +16,7 @@ address in to putty.
     [me@genomedk ~]$
 
 Creating a script
------------------
+=================
 
 Now we will create a simple text file on our local machine, with the following
 content:
@@ -38,7 +38,7 @@ Too see what else is available you can use the command ``sw-list``.
  
 
 Copying a file to the cluster
------------------------------
+=============================
 
 .. note:: ipsych.genome.au.dk users must follow the guide in Ipsych Usage.
 
@@ -54,7 +54,7 @@ protocol as ssh so you connect to the same address with the same credentials.
     [me@local ~]$
  
 Downloading data from the internet
-----------------------------------
+==================================
 
 Now you might have noticed that the script mentions a test-reads.fq which we
 haven't made. This is a file that is publicly available via http. You can use
@@ -103,10 +103,8 @@ that folder will have backups. Try to avoid putting larger derived files under
 backup - you can always derive them again, if you make sure to backup your
 pipeline, which was used to generate the files.
 
- 
-
 Submitting a job
-----------------
+================
 
 Now to actually run our script we need to submit it to the queue of jobs. This
 is done by executing srun scriptfile which will wait until the job is done,
@@ -217,3 +215,11 @@ is too large, as our jobs only take a few minutes to run. The more accurately
 everyone specifies their jobs the smoother the whole queue system is going to
 run.
 
+Running a workflow with gwf
+===========================
+
+* Installing gwf into an environment
+* Creating a small workflow
+* Running the workflow
+
+From here, the best practices guide kinda takes over.

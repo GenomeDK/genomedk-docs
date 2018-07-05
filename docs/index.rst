@@ -8,35 +8,33 @@ compute cores) connected with 10GigE/Infiniband. Each node has from 16 to
 The cluster has been designed specifically for bioinformatic workloads and has
 a storage capacity of 3.5 PB.
 
-If you desire a user account, then please complete this form:
+.. toctree::
+  :maxdepth: 2
+  :caption: Getting started
 
-* `Get user account <http://genome.au.dk/request-forms/>`_
-
-If you are already a user, then the following might be of interest to you:
-
-* `Get help using the GenomeDK cluster <https://genomedk.fogbugz.com/default.asp?W1>`_
-* `Request a new password <http://genome.au.dk/request-forms/request-new-password-forgot-password/>`_
-* `Request software <http://genome.au.dk/request-forms/request-software-for-cluster/>`_
-* `Report issue <http://genome.au.dk/request-forms/report-issue-on-cluster/>`_
+  getting-started
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents
+  :maxdepth: 2
+  :caption: Tutorial
 
-   getting-started
-   best-practices
-   tutorial
-   faq
+  tutorial
 
-Support
-=======
+.. toctree::
+  :maxdepth: 2
+  :caption: Best practices
 
-Please direct any question and problem you encounter to:
-cases@genomedk.fogbugz.com or tel: 871-55568
+  best-practices
 
-Indices and tables
-==================
+.. toctree::
+  :maxdepth: 2
+  :caption: Software-specific documentation
+   
+  software-specific
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+  :maxdepth: 2
+  :caption: Need more help?
+
+  support
+  faq
