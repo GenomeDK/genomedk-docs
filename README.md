@@ -1,8 +1,15 @@
 # genomedk-docs
-Docs for GenomeDK cluster
 
-    conda create -n gdkdocs python
-    source activate gdkdocs
-    pip install -r requirements.txt
+User documentation for the GenomeDK cluster.
+
+To get started:
+
+    git clone git@github.com:birc-aeh/genomedk-docs.git
+    cd genomedk-docs/
+    conda env create
+    source activate gdk-docs
     cd docs
+
+You can now build the documentation:
+
     make html
