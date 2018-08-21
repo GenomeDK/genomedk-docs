@@ -14,3 +14,6 @@ To get started (requires a working installation of Anaconda):
 You can now build the documentation:
 
     $ make html
+
+To see the documentation in your browser, open the file 
+`_build/html/index.html`.
