@@ -16,15 +16,15 @@ a storage capacity of 6 PB.
 
 .. toctree::
   :maxdepth: 2
-  :caption: Tutorial
-
-  tutorial
-
-.. toctree::
-  :maxdepth: 2
   :caption: Best practices
 
   best-practices
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Tutorial
+
+  tutorial
 
 .. toctree::
   :maxdepth: 2
