@@ -80,7 +80,7 @@ scripts
     e.g. those used by your workflow. Use file names that describe the purpose
     of the scripts. At the top of each script, insert a comment that briefly
     describes the input, output and purpose of the script. Again, a few
-    sentences if better than nothing and may often be enough.
+    sentences is better than nothing and may often be enough.
 
 sandbox
     This folder contains unfinished scripts, temporary data files and
@@ -150,7 +150,7 @@ that it is available as any other program installed on the machine.
 .. danger::
 
     To use Anaconda on the GenomeDK cluster you should put the following line
-    in your the .bashrc file in your home directory:
+    in the :file:`.bashrc` file in your home directory:
 
     .. code-block:: bash
 
@@ -241,7 +241,7 @@ etc.:
 
 .. code-block:: bash
 
-    conda config --add channels bioconda
+    $ conda config --add channels bioconda
 
 However, all of this hardly improves reproducibility. However, Anaconda allows
 you to specify an environment (a list of channels and packages with specific
@@ -278,7 +278,7 @@ environment.yml file and then run:
 
 .. code-block:: bash
 
-    conda env update --prune
+    $ conda env update --prune
 
 Sanity check for repeatability
 ==============================
