@@ -167,6 +167,16 @@ From your own machine to/from the cluster
 * MobaXterm [Windows]
 
 
+From the Internet to the cluster
+--------------------------------
+
+* wget
+
+.. todo::
+
+    Use the --progress=giga:force flag to avoid excessive output while 
+    downloading big files.
+
 
 Using graphical interfaces
 ==========================
@@ -179,10 +189,13 @@ You can use X-forwarding to tunnel individual graphical programs to your local
 desktop. This works well for many programs, but programs that do fancy graphics
 or anything animated might not work well.
 
-TODO: Add -X on linux
-TODO: Install and use XQuartz on OS X
-TODO (maybe): Xming + putty X-forwarding on windows?
-TODO: MobaXterm also allows X-forwarding
+.. todo::
+    Add -X on linux
+    Install and use XQuartz on OS X
+    MobaXterm also allows X-forwarding
+    Maybe Xming + putty X-forwarding on windows?
+
+    
 
 **VNC**
 
@@ -219,16 +232,18 @@ Starting the server is done with the ``vncserver`` command and looks like this:
 The display id (``:3`` in this example) is needed when you want to connect
 the VNC client.
 
-TODO: What to put into TightVNC
+.. todo::
+    What to put into TightVNC
 
 To connect to the running VNC server the ssh tunnel through the login node has 
 to established. In case of TightVNC tunneling option is included in the 
 software it-self and following settings should be sufficient:
 
-.. image:: images/TightVNC.png
+.. image:: images/tightvnc.png
     :align: center
 
-TODO: Screenshot of TightVNC settings
+.. todo::
+    Screenshot of TightVNC settings
 
 Editing files
 =============
@@ -267,4 +282,3 @@ For existing users:
 * Changing between environments
 * Installing software in an environment
 * Sharing an environment
-
