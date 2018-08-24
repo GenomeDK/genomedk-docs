@@ -2,7 +2,7 @@ Structure and document your projects
 ====================================
 
 Using the same project structure for all of your projects provide a lot of
-benefits. I recommend that you follow the structure shown below. It is
+benefits. We recommend that you follow the structure shown below. It is
 flexible enough to work for a wide variety of data analysis projects, but
 feel free to adapt it to your needs.
 
@@ -22,9 +22,6 @@ feel free to adapt it to your needs.
            README.txt
            ...
         scripts/
-           README.txt
-           ...
-        sandbox/
            README.txt
            ...
         docs/
@@ -82,12 +79,6 @@ scripts
     describes the input, output and purpose of the script. Again, a few
     sentences is better than nothing and may often be enough.
 
-sandbox
-    This folder contains unfinished scripts, temporary data files and
-    other things that you are not sure should be part of your analysis yet. When
-    you are about to publish your manuscript, this folder should be empty and
-    important contents should have been migrated into the main project folder.
-
 docs
     This folder is mainly for large projects where it may be nice to
     document each analysis in its own file. If you use plain text files as shown
@@ -101,8 +92,6 @@ to this page) and a file describing your environment.
 
 Multi-user project
 ==================
-
-This structure was suggested by Kasper Munch Terkelsen.
 
 In the case of multi-user projects where many people collaborate on the same
 data, the following structure may be used.
@@ -147,31 +136,18 @@ installed simultaneously. To use an environment you must *activate* it. This
 will load all of the software available in the environment into your shell so
 that it is available as any other program installed on the machine.
 
-.. danger::
-
-    To use Anaconda on the GenomeDK cluster you should put the following line
-    in the :file:`.bashrc` file in your home directory:
-
-    .. code-block:: bash
-
-        $ export http_proxy="http://in:3128" && export ftp_proxy="http://in:3128" && export https_proxy="http://in:3128"
-
-    Then run the following command:
-
-    .. code-block:: bash
-
-        $ conda config --set ssl_verify /com/etc/ssl-proxy-cert.pem
-
-    You should now be able to install packages from any channel on the cluster.
-
 First, download and install the Anaconda distribution according to the
 instructions for your platform. Instructions can be found here along with
 detailed documentation on how to use the :command:`conda` command. Then
-run this command:
+run:
 
 .. code-block:: bash
 
+    $ conda activate
     $ conda create -n myproject python=3.5
+
+If the first command doesn't work, you're running an old version of Anaconda.
+Please download and install a newer version.
 
 This will create an environment called *myproject* with Python 3.5 installed.
 To enter the environment, use this command:
