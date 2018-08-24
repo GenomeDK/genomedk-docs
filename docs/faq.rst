@@ -13,7 +13,8 @@ form that can be found on genome.au.dk
 Help! I have forgotten my password
 ----------------------------------
 
-TODO: How to mail us.
+.. todo:
+    How to mail us.
 
 
 How do I make the shell remember more commands?
@@ -25,23 +26,25 @@ Add ``export HISTSIZE=100000`` to your ``.bash_profile``.
 Why does ssh ask for a password when I try and connect to compute nodes?
 ------------------------------------------------------------------------
 
-TODO: Setup SSH to allow password-less login to compute nodes
+.. todo:
+    Setup SSH to allow password-less login to compute nodes
 
 
 Why are my jobs waiting so long to start?
 -----------------------------------------
 
-Check ``gnodes`` and ``priority``
-Check how many cores you are asking for
-Check how much memory you are asing for
-Check how much time you are asking for
+* Check ``gnodes`` and ``priority``
+* Check how many cores you are asking for
+* Check how much memory you are asing for
+* Check how much time you are asking for
 
 
 How do I open images/pdfs?
 --------------------------
 Use ``eog`` for images and ``evince`` for pdf.
 
-TODO: example + x forwarding
+.. todo:
+    example + x forwarding
 
 
 I get an error when trying to install ``pip`` packages
@@ -61,14 +64,25 @@ How can I avoid losing my session when I close my laptop?
 Use tmux/screen
 
 
-I'm downloading a large file but it keeps failing, what can I do?
------------------------------------------------------------------
+I'm downloading a large file, but it keeps failing, what can I do?
+------------------------------------------------------------------
 Run in screen/tmux so you don't have to stay logged-in
 Make wget auto-retry and continue from where it failed:
 
 .. code-block:: console
 
-    $ wget -c --timeout-120 --waitretry-60 --tries-10000 --retry-connrefused https://someurl.com/data.tar.gz
+    $ wget -c --timeout-120 --waitretry-60 --tries-10000 \
+          --retry-connrefused https://someurl.com/data.tar.gz
+
+When downloading large files you are encouraged to limit the progress output to
+avoid stressing the system, *especially* when you're sending the progress
+output to a file:
+
+.. code-block:: console
+
+    $ wget -c --timeout-120 --waitretry-60 --tries-10000 \
+          --retry-connrefused --progress=mega:force \
+          https://someurl.com/data.tar.gz
 
 
 How do I prevent accidental changes to my important data?
@@ -84,13 +98,15 @@ We only allow incoming connections from a whitelisted set of IPs, so if you get
 a `connection refused` you should try sending us an email with the IP you are
 connecting from. You can see what your IP is on http://myip.dk
 
-We don't mind adding your home IP address but beware that it might change
+We don't mind adding your home IP address, but beware that it might change
 frequently.  If you have a university VPN that might be more stable.
 
 
 I have a collaborator that would like to upload some data, how do we do that?
 -----------------------------------------------------------------------------
-We have a special upload user so just send us their email and we will set them up. Once the data is uploaded we will move it to a folder you have access to.
+
+We have a special upload user so just send us their email and we will set them 
+up. Once the data is uploaded we will move it to a folder you have access to.
 
 
 I am an iPSYCH user, how do I export files?
