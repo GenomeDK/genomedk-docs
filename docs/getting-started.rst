@@ -83,10 +83,48 @@ submitting jobs.
 Get access to the cluster
 =========================
 
-* Creating an account
-* Connecting to the cluster 
-* Two-factor authentication
-* Public key setup
+You can request access to the cluster by filling out one of these forms:
+
+* `Normal users <https://genomedk.wufoo.com/forms/request-access-to-cluster/>`_
+* `iPSYCH users <https://genomedk.wufoo.com/forms/request-access-to-cluster-ipsych-only/>`_
+
+Once you've been granted access, you'll receive an e-mail with your password.
+You'll then be able to connect to the cluster.
+
+Connecting to the cluster 
+-------------------------
+
+* SSH [Linux/macOS]
+* MobaXterm [Windows]
+
+Changing your password
+----------------------
+
+This is important! Since e-mail is not secure, someone may get access to the
+password that we sent to you. Thus, you should change it immediately after
+logging in. Run the command::
+
+    $ yppasswd
+
+It will ask you for your current password, then ask what your new password
+should be. Finally, it will ask you to confirm your new password by typing it
+again.
+
+
+Two-factor authentication
+-------------------------
+
+* FreeOTP (recommended)
+* NetIQ Advanced Authentication
+* Google Authenticator
+
+
+Public-key setup
+----------------
+
+* ssh-keygen [Linux/macOS]
+* PuttyGen [Windows]
+
 
 Copying data
 ============
