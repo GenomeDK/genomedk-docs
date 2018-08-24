@@ -132,16 +132,41 @@ Public-key setup
 Copying data
 ============
 
-* From your own machine
-    * scp
-    * mount on linux/osx
-    * winscp on windows
-    * mobaxterm on windows
-    * filezilla sftp on all platforms
-    * CyberDuck on OS X
-    * rsync on OS X / Linux
-* From the Internet
-    * wget
+Encrypting sensitive data
+-------------------------
+
+Encrypt:
+
+.. code-block:: bash
+
+    openssl aes-256-cbc -a -salt -in data.txt -out data.txt.enc
+
+This will encrypt ``data.txt`` and write the encrypted data to 
+``data.txt.enc``. You will be prompted for a password which is needed to
+decrypt the file again.
+
+Decrypt:
+
+.. code-block:: bash
+
+    openssl aes-256-cbc -d -a -in data.txt.enc -out data.txt.new
+
+This will ask for the password used to encrypt the file. The decrypted contents
+are written to ``data.txt.new``.
+
+
+From your own machine to/from the cluster
+-----------------------------------------
+
+* Filezilla [Linux/macOS/Windows]
+* scp [Linux/macOS]
+* SSH mount [Linux/macOS]
+* rsync [Linux/macOS]
+* CyberDuck [macOS]
+* WinSCP [Windows]
+* MobaXterm [Windows]
+
+
 
 Using graphical interfaces
 ==========================
