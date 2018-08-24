@@ -16,6 +16,9 @@ network connecting the nodes, data storage, and a queue manager. In
 section we'll discuss these components in a bit more detail, to give you an
 understanding of how a cluster works and how to utilize it properly.
 
+Components of the cluster
+-------------------------
+
 Our cluster is connected through a high-performance network which
 allows all of the nodes to "talk" to each other. This allows programs running
 on one node to communicate with programs running on another node.
