@@ -8,6 +8,11 @@ cores) connected with 10GigE/Infiniband. Each node has from 16 to
 The cluster has been designed specifically for bioinformatic workloads and has
 a storage capacity of 6 PB.
 
+.. todo::
+
+  Make it clear that there are restrictions and differences for iPSYCH users.
+  Put this in a big blue box.
+
 .. toctree::
   :maxdepth: 2
   :caption: Getting started
