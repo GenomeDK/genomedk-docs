@@ -3,12 +3,12 @@ Get ready
 
 The first thing we will do is to make sure that we can connect to the cluster.
 
-* iPSYCH users, must follow the instructions at http://ipsych.genome.au.dk
-* Windows users will want to get putty (and winscp for transferring files)
-* Linux and Mac OS X already has a command called ssh
+* iPSYCH users must follow the instructions at http://ipsych.genome.au.dk
+* Windows users will want to get Putty (and WinSCP for transferring files)
+* Linux and macOS users need no additional software
 
 To connect you run the following command from a terminal or by putting the same
-address in to putty.
+address in to Putty.
 
 .. code-block:: console
 
@@ -70,7 +70,6 @@ your home folder.
 
 .. code-block:: console
 
-    [me@genomedk ~]$ export http_proxy="http://in:3128" && export ftp_proxy="http://in:3128"
     [me@genomedk ~]$ wget http://cs.au.dk/~aeh/genomedk_tut/test-reads.fq
     --2015-01-14 10:37:14--  http://cs.au.dk/~aeh/genomedk_tut/test-reads.fq
     Resolving in... 10.20.0.50
@@ -84,6 +83,11 @@ your home folder.
     [me@genomedk ~]$ mv test-reads.fq faststorage/
     [me@genomedk ~]$ cd faststorage/
     [me@genomedk faststorage]$
+
+.. note::
+
+    If the first command does not work for you, it may be because your user
+    was created a long time ago
 
 We move the script and the datafile into the faststorage folder, as this
 storage is more suited for datafiles.
