@@ -135,6 +135,11 @@ Copying data
 Encrypting sensitive data
 -------------------------
 
+If you need to transfer sensitive data (for example human genomes) out of the
+cluster you must encrypt the data first. Encrypting the data makes it 
+impossible for strangers to look at it without decrypting it, which requires
+a password chosen by you.
+
 Encrypt:
 
 .. code-block:: bash
