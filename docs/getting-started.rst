@@ -11,7 +11,7 @@ and is optimized for specific workloads. However, like your desktop computer,
 each machine (often referred to as *node*) has a CPU, some memory, and a hard
 disk. The nodes running your programs are usually called *compute nodes*.
 
-To turn the separate nodes in to a cluster we need three more ingredients: a 
+To turn the separate nodes in to a cluster we need three more ingredients: a
 network connecting the nodes, data storage, and a queue manager. In
 section we'll discuss these components in a bit more detail, to give you an
 understanding of how a cluster works and how to utilize it properly.
@@ -71,14 +71,14 @@ should keep in mind when using the cluster...
   and running the program yourself.
 
 * A cluster is accessed through a single node, often denoted the *frontend*. The
-  frontend node is in many ways identical to all of the other nodes, but it is 
+  frontend node is in many ways identical to all of the other nodes, but it is
   set up to allow access from the Internet. Your day-to-day interaction with the
-  cluster thus goes through the frontend. However, you should *not* run any 
+  cluster thus goes through the frontend. However, you should *not* run any
   computation or memory intensive programs on the frontend. All users share the
   frontend's resources and thus it should mainly be used for basics things like
   looking around the file system, writing scripts, and submitting jobs.
 
-In the next section you will learn how to connect to the cluster, which 
+In the next section you will learn how to connect to the cluster, which
 essentially means getting access to the frontend node, so that you can start
 submitting jobs.
 
@@ -94,7 +94,7 @@ You can request access to the cluster by filling out one of these forms:
 Once you've been granted access, you'll receive an e-mail with your password.
 You'll then be able to connect to the cluster.
 
-Connecting to the cluster 
+Connecting to the cluster
 -------------------------
 
 * SSH [Linux/macOS]
@@ -107,7 +107,7 @@ This is important! Since e-mail is not secure, someone may get access to the
 password that we sent to you. Thus, you should change it immediately after
 logging in. Run the command::
 
-    $ yppasswd
+    $ change-password
 
 It will ask you for your current password, then ask what your new password
 should be. Finally, it will ask you to confirm your new password by typing it
@@ -136,7 +136,7 @@ Encrypting sensitive data
 -------------------------
 
 If you need to transfer sensitive data (for example human genomes) out of the
-cluster you must encrypt the data first. Encrypting the data makes it 
+cluster you must encrypt the data first. Encrypting the data makes it
 impossible for strangers to look at it without decrypting it, which requires
 a password chosen by you.
 
@@ -146,7 +146,7 @@ Encrypt:
 
     openssl aes-256-cbc -a -salt -in data.txt -out data.txt.enc
 
-This will encrypt ``data.txt`` and write the encrypted data to 
+This will encrypt ``data.txt`` and write the encrypted data to
 ``data.txt.enc``. You will be prompted for a password which is needed to
 decrypt the file again.
 
@@ -179,7 +179,7 @@ From the Internet to the cluster
 
 .. todo::
 
-    Use the --progress=giga:force flag to avoid excessive output while 
+    Use the --progress=giga:force flag to avoid excessive output while
     downloading big files.
 
 
@@ -200,7 +200,7 @@ or anything animated might not work well.
     MobaXterm also allows X-forwarding
     Maybe Xming + putty X-forwarding on windows?
 
-    
+
 
 **VNC**
 
@@ -240,8 +240,8 @@ the VNC client.
 .. todo::
     What to put into TightVNC
 
-To connect to the running VNC server the ssh tunnel through the login node has 
-to established. In case of TightVNC tunneling option is included in the 
+To connect to the running VNC server the ssh tunnel through the login node has
+to established. In case of TightVNC tunneling option is included in the
 software it-self and following settings should be sufficient:
 
 .. image:: images/tightvnc.png
