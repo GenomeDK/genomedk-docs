@@ -270,13 +270,26 @@ are written to ``data.txt.new``.
 From your own machine to/from the cluster
 -----------------------------------------
 
-* Filezilla [Linux/macOS/Windows]
-* scp [Linux/macOS]
-* SSH mount [Linux/macOS]
-* rsync [Linux/macOS]
-* CyberDuck [macOS]
-* WinSCP [Windows]
-* MobaXterm [Windows]
+Filezilla [Linux/macOS/Windows]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scp [Linux/macOS]
+~~~~~~~~~~~~~~~~~
+
+rsync [Linux/macOS]
+~~~~~~~~~~~~~~~~~~~
+
+SSH mount [Linux/macOS]
+~~~~~~~~~~~~~~~~~~~~~~~
+
+CyberDuck [macOS]
+~~~~~~~~~~~~~~~~~
+
+WinSCP [Windows]
+~~~~~~~~~~~~~~~~
+
+MobaXterm [Windows]
+~~~~~~~~~~~~~~~~~~~
 
 
 From the Internet to the cluster
