@@ -45,17 +45,6 @@ enabled.
     example + x forwarding
 
 
-I get an error when trying to install packages with :command:`pip`
-------------------------------------------------------------------
-
-You need to tell pip about the proxy we use and to trust its SSL certificate.
-You can do this through the ``--cert`` option, like this:
-
-.. code-block:: console
-
-    $ pip --cert /com/etc/ssl-proxy-cert.pem install package-name
-
-
 How can I avoid losing my session when I close my laptop?
 ---------------------------------------------------------
 
