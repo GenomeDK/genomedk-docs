@@ -5,7 +5,7 @@
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
 SPHINXPROJ    = GenomeDK
-SOURCEDIR     = .
+SOURCEDIR     =
 BUILDDIR      = _build
 
 # Put it first so that "make" without argument is like "make help".

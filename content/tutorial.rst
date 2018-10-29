@@ -27,15 +27,13 @@ content:
     source /com/extra/bwa/0.7.5a/load.sh
     reference_prefix="/data/refseq/iGenome/Homo_sapiens/UCSC/hg19/Sequence/BWAIndex/genome.fa"
     bwa mem $reference_prefix test-reads.fq > test-reads.sam
- 
+
 The script loads a pre-installed piece of software - in this case bwa - from a
 local software repository. It is important that you load the software in your
 script -- loading it in your session and starting a script will only work if
 you remember to load the software every time you submit the job.
 
 Too see what else is available you can use the command ``sw-list``.
-
- 
 
 Copying a file to the cluster
 =============================
@@ -49,16 +47,16 @@ protocol as ssh so you connect to the same address with the same credentials.
 .. code-block:: console
 
     [me@local ~]$ scp scriptfile me@login.genome.au.dk:faststorage/scriptfile
-    me@login.genome.au.dks password: 
+    me@login.genome.au.dks password:
     scriptfile                                     100%  242     0.2KB/s   00:00
     [me@local ~]$
- 
+
 Downloading data from the internet
 ==================================
 
 Now you might have noticed that the script mentions a test-reads.fq which we
 haven't made. This is a file that is publicly available via http. You can use
-the wget or curl commands to download it. 
+the wget or curl commands to download it.
 
 The cluster is behind a firewall. To download through the firewall you have to
 configure a proxy, by setting the environment variables ``http_proxy`` and
@@ -77,7 +75,7 @@ your home folder.
     Proxy request sent, awaiting response... 200 OK
     Length: 380 [text/plain]
     Saving to: “test-reads.fq”
-    100%[==============================================>] 380         --.-K/s   in 0s      
+    100%[==============================================>] 380         --.-K/s   in 0s
 
     2015-01-14 10:37:14 (44.4 MB/s) - “test-reads.fq” saved [380/380]
     [me@genomedk ~]$ mv test-reads.fq faststorage/
@@ -116,7 +114,7 @@ showing you the output from the job as it executes.
 
 .. code-block:: console
 
-    [me@genomedk faststorage]$ srun --mem-per-cpu=4G --partition=express scriptfile 
+    [me@genomedk faststorage]$ srun --mem-per-cpu=4G --partition=express scriptfile
     srun: job 2396710 queued and waiting for resources
     srun: job 2396710 has been allocated resources
     [M::main_mem] read 2 sequences (102 bp)...
@@ -218,12 +216,3 @@ while asking for 32GB is a waste of resources. The default 48 hour time limit
 is too large, as our jobs only take a few minutes to run. The more accurately
 everyone specifies their jobs the smoother the whole queue system is going to
 run.
-
-Running a workflow with gwf
-===========================
-
-* Installing gwf into an environment
-* Creating a small workflow
-* Running the workflow
-
-From here, the best practices guide kinda takes over.

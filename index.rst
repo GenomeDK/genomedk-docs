@@ -17,29 +17,23 @@ a storage capacity of 6 PB.
   :maxdepth: 2
   :caption: Getting started
 
-  getting-started
+  content/getting-started
 
 .. toctree::
   :maxdepth: 2
   :caption: Best practices
 
-  best-practices
-
-.. toctree::
-  :maxdepth: 2
-  :caption: Tutorial
-
-  tutorial
+  content/best-practices
 
 .. toctree::
   :maxdepth: 2
   :caption: Software-specific documentation
-   
-  software-specific
+
+  content/software-specific
 
 .. toctree::
   :maxdepth: 2
   :caption: How do I get more help?
 
-  support
-  faq
+  content/support
+  content/faq

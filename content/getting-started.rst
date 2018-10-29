@@ -53,10 +53,6 @@ the job on a node with at least that amount of memory available. At GenomeDK
 we use a queue manager called SLURM, so to run your programs on the cluster,
 you'll be interacting a lot with SLURM.
 
-.. todo:
-
-    Write something about partitions in SLURM.
-
 Things to remember...
 ---------------------
 
@@ -97,8 +93,15 @@ You'll then be able to connect to the cluster.
 Connecting to the cluster
 -------------------------
 
-* SSH [Linux/macOS]
-* MobaXterm [Windows]
+SSH [Linux/macOS]
+~~~~~~~~~~~~~~~~~
+
+
+
+MobaXterm [Windows]
+~~~~~~~~~~~~~~~~~~~
+
+
 
 Changing your password
 ----------------------
@@ -106,6 +109,8 @@ Changing your password
 This is important! Since e-mail is not secure, someone may get access to the
 password that we sent to you. Thus, you should change it immediately after
 logging in. Run the command::
+
+.. code-block:: bash
 
     $ change-password
 
@@ -144,7 +149,7 @@ Encrypt:
 
 .. code-block:: bash
 
-    openssl aes-256-cbc -a -salt -in data.txt -out data.txt.enc
+    $ openssl aes-256-cbc -a -salt -in data.txt -out data.txt.enc
 
 This will encrypt ``data.txt`` and write the encrypted data to
 ``data.txt.enc``. You will be prompted for a password which is needed to
@@ -154,7 +159,7 @@ Decrypt:
 
 .. code-block:: bash
 
-    openssl aes-256-cbc -d -a -in data.txt.enc -out data.txt.new
+    $ openssl aes-256-cbc -d -a -in data.txt.enc -out data.txt.new
 
 This will ask for the password used to encrypt the file. The decrypted contents
 are written to ``data.txt.new``.
