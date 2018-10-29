@@ -173,7 +173,7 @@ On your own computer, open the terminal of your choice and type:
 You'll be asked several questions. The defaults are just fine, so just press
 the :kbd:`Enter` for all of them. Make sure to leave the passphrase empty!
 
-The output should look like this:
+The output should look similar to this:
 
 .. code-block:: bash
     :emphasize-lines: 6
