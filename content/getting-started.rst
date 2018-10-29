@@ -84,11 +84,14 @@ Get access to the cluster
 
 You can request access to the cluster by filling out one of these forms:
 
-* `Normal users <https://genomedk.wufoo.com/forms/request-access-to-cluster/>`_
-* `iPSYCH users <https://genomedk.wufoo.com/forms/request-access-to-cluster-ipsych-only/>`_
+* `Normal users`_
+* `iPSYCH users`_
 
 Once you've been granted access, you'll receive an e-mail with your password.
 You'll then be able to connect to the cluster.
+
+.. _Normal users: https://genomedk.wufoo.com/forms/request-access-to-cluster/
+.. _iPSYCH users: https://genomedk.wufoo.com/forms/request-access-to-cluster-ipsych-only/
 
 Connecting to the cluster
 -------------------------
