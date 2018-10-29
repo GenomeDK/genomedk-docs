@@ -142,11 +142,98 @@ Two-factor authentication
 * Google Authenticator
 
 
-Public-key setup
-----------------
+Public-key authentication setup
+-------------------------------
 
-* ssh-keygen [Linux/macOS]
-* PuttyGen [Windows]
+A public-key setup is a way to be able to access one computer from another
+computer securely, but without typing a password every time you want to log in.
+This is practical if you often log in to the frontend of the cluster. However,
+we can also use a public-key setup to allow you to access any compute node on
+the cluster from the frontend without typing your password every time. This is
+especially handy when you're debugging a problem on the compute nodes.
+
+.. todo::
+
+    Note that for security reasons we require that you either (1) log in with
+    a password and two-factor authentication (2) log in with public-key
+    authentication
+
+Here, we will first set up a public key for accessing the frontend. Then, we'll
+set up a key for accessing compute nodes from the frontend.
+
+ssh-keygen [Linux/macOS]
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+On your own computer, open the terminal of your choice and type:
+
+.. code-block:: bash
+
+    $ ssh-keygen
+
+You'll be asked several questions. The defaults are just fine, so just press
+the :kbd:`Enter` for all of them. Make sure to leave the passphrase empty!
+
+The output should look like this:
+
+.. code-block:: bash
+    :emphasize-lines: 6
+
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/Users/das/.ssh/id_rsa):
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again:
+    Your identification has been saved in /Users/das/.ssh/id_rsa.
+    Your public key has been saved in /Users/das/.ssh/id_rsa.pub.
+    The key fingerprint is:
+    SHA256:XxSd35yPd1bUoIJQDBCAvxDu+pB25ipYpcmp+VEh5JE das@jorn
+    The key's randomart image is:
+    +---[RSA 2048]----+
+    | .+oooo+.   ...o.|
+    |ooE.   ...   oo o|
+    |.oo .   . . o  +o|
+    |......     o   .=|
+    |.o *.   S   .  .o|
+    | oB.     . .  . =|
+    |==.o      .    o.|
+    |B.+.             |
+    |.++.             |
+    +----[SHA256]-----+
+
+Note the path of the public key (on the highlighted line). To copy the public
+key to the cluster, run:
+
+.. code-block:: bash
+
+    $ ssh-copy-id -i PUBLIC-KEY-PATH login.genome.au.dk
+
+Replace `PUBLIC-KEY-PATH` with the path to your public key. You will be asked
+to enter your password for the cluster. You should now be able to log in to the
+cluster without typing your password. Test this by runnning:
+
+.. code-block:: bash
+
+    $ ssh USERNAME@login.genome.au.dk
+
+You should not be prompted for a password.
+
+Now, set up public-key access to all compute nodes. On the frontend, run the
+same :command:`ssh-keygen` command as before:
+
+.. code-block:: bash
+
+    $ ssh-keygen
+
+Again, just press :kbd:`Enter` to use the default values (and do not type in a
+password). Then run:
+
+.. code-block:: bash
+
+    $ cat ~/.ssh/id_rsa.pub >> authorized_keys
+
+You will now be able to SSH between compute nodes without typing a password.
+
+PuttyGen [Windows]
+~~~~~~~~~~~~~~~~~~
 
 
 Copying data
