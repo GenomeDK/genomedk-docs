@@ -99,11 +99,23 @@ Connecting to the cluster
 SSH [Linux/macOS]
 ~~~~~~~~~~~~~~~~~
 
+On Linux, open the terminal of your choice. On macOS, you may use the
+Terminal.app program which can be found in the `Applications/Utilities`
+folder. In both cases, you should now be able to log in to the frontend
+by typing this command:
+
+.. code-block:: bash
+
+    $ ssh USERNAME@login.genome.au.dk
 
 
 MobaXterm [Windows]
 ~~~~~~~~~~~~~~~~~~~
 
+On Windows, download and install the `MobaXterm`_ application following the
+instructions on the website.
+
+.. _MobaXterm: https://mobaxterm.mobatek.net/
 
 
 Changing your password
@@ -111,7 +123,7 @@ Changing your password
 
 This is important! Since e-mail is not secure, someone may get access to the
 password that we sent to you. Thus, you should change it immediately after
-logging in. Run the command::
+logging in. Run the command:
 
 .. code-block:: bash
 
