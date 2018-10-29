@@ -24,13 +24,6 @@ How do I make the shell remember more commands?
 Add ``export HISTSIZE=100000`` to your ``.bash_profile``.
 
 
-Why does SSH ask for a password when I try and connect to compute nodes?
-------------------------------------------------------------------------
-
-.. todo:
-    Setup SSH to allow password-less login to compute nodes
-
-
 Why are my jobs waiting for so long to start?
 ---------------------------------------------
 
