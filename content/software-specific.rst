@@ -1,6 +1,27 @@
 Python
 ======
 
+Different Python versions can be installed through the Conda package manager.
+For example, for a project that needs Python 2.7, create an environment like
+this:
+
+.. code-block:: console
+
+    $ conda activate
+    $ conda create -n myproject python=2.7
+    $ conda activate myproject
+    $ python --version
+
+If you need Python 3.6 for another project, just create another environment
+for that project:
+
+.. code-block:: console
+
+    $ conda deactivate # exit the myproject environment
+    $ conda create -n mynewproject python=3.6
+    $ conda activate mynewproject
+    $ python --version
+
 Jupyter Notebook/Lab
 ====================
 
