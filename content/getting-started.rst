@@ -236,11 +236,65 @@ PuttyGen [Windows]
 ~~~~~~~~~~~~~~~~~~
 
 
-Copying data
-============
+Accessing your files locally
+============================
+
+You can access your files on GenomeDK locally by a process called *mounting*.
+Mounting the GenomeDK filesystem locally makes it possible to access and edit
+your files as if they were located in a folder on your own harddrive.
+
+sshfs [Linux/macOS]
+-------------------
+
+1. On Linux, install the :program:`sshfs` program through your package manager.
+
+   On distros with the :program:`apt` package manager (Ubuntu, Mint etc.):
+
+   .. code-block:: console
+
+        $ apt-get install sshfs
+
+   On distros with the :program:`yum` package manager (Fedora, CentOS etc.):
+
+   .. code-block:: console
+
+        $ yum install sshfs
+
+   On macOS, download and install the *SSHFS* and *FUSE for macOS* packages
+   from the `OSX FUSE`_ website.
+
+2. Create a directory where the filesystem will be mounted:
+
+   .. code-block:: console
+
+       $ mkdir ~/GenomeDK
+
+3. Now mount the filesystem by running this command:
+
+   .. code-block:: console
+
+       sshfs USERNAME@login.genome.au.dk:/home/USERNAME ~/GenomeDK \
+           -o idmap=none -o uid=$(id -u),gid=$(id -g) \
+           -o allow_other -o umask=077 -o follow_symlinks
+
+   Where *USERNAME* should be replaced with your GenomeDK username. You should
+   now be able to access your files on GenomeDK by going to the ``~/GenomeDK``
+   directory on your computer.
+
+4. To unmount the directory, run:
+
+   .. code-block:: console
+
+       umount ~/GenomeDK
+
+.. _OSX FUSE: https://osxfuse.github.io/
+
+Win-SSHFS [Windows]
+-------------------
+
 
 Encrypting sensitive data
--------------------------
+=========================
 
 If you need to transfer sensitive data (for example human genomes) out of the
 cluster you must encrypt the data first. Encrypting the data makes it
@@ -266,6 +320,9 @@ Decrypt:
 This will ask for the password used to encrypt the file. The decrypted contents
 are written to ``data.txt.new``.
 
+
+Copying data
+============
 
 From your own machine to/from the cluster
 -----------------------------------------
