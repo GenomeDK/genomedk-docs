@@ -104,7 +104,7 @@ Terminal.app program which can be found in the `Applications/Utilities`
 folder. In both cases, you should now be able to log in to the frontend
 by typing this command:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ ssh USERNAME@login.genome.au.dk
 
@@ -125,7 +125,7 @@ This is important! Since e-mail is not secure, someone may get access to the
 password that we sent to you. Thus, you should change it immediately after
 logging in. Run the command:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ change-password
 
@@ -166,7 +166,7 @@ ssh-keygen [Linux/macOS]
 
 On your own computer, open the terminal of your choice and type:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ ssh-keygen
 
@@ -175,7 +175,7 @@ the :kbd:`Enter` for all of them. Make sure to leave the passphrase empty!
 
 The output should look similar to this:
 
-.. code-block:: bash
+.. code-block:: console
     :emphasize-lines: 6
 
     Generating public/private rsa key pair.
@@ -202,7 +202,7 @@ The output should look similar to this:
 Note the path of the public key (on the highlighted line). To copy the public
 key to the cluster, run:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ ssh-copy-id -i PUBLIC-KEY-PATH login.genome.au.dk
 
@@ -210,7 +210,7 @@ Replace `PUBLIC-KEY-PATH` with the path to your public key. You will be asked
 to enter your password for the cluster. You should now be able to log in to the
 cluster without typing your password. Test this by runnning:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ ssh USERNAME@login.genome.au.dk
 
@@ -219,14 +219,14 @@ You should not be prompted for a password.
 Now, set up public-key access to all compute nodes. On the frontend, run the
 same :command:`ssh-keygen` command as before:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ ssh-keygen
 
 Again, just press :kbd:`Enter` to use the default values (and do not type in a
 password). Then run:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ cat ~/.ssh/id_rsa.pub >> authorized_keys
 
@@ -249,7 +249,7 @@ a password chosen by you.
 
 Encrypt:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ openssl aes-256-cbc -a -salt -in data.txt -out data.txt.enc
 
@@ -259,7 +259,7 @@ decrypt the file again.
 
 Decrypt:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ openssl aes-256-cbc -d -a -in data.txt.enc -out data.txt.new
 

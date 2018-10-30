@@ -141,7 +141,7 @@ instructions for your platform. Instructions can be found here along with
 detailed documentation on how to use the :command:`conda` command. Then
 run:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ conda activate
     $ conda create -n myproject python=3.5
@@ -152,13 +152,13 @@ Please download and install a newer version.
 This will create an environment called *myproject* with Python 3.5 installed.
 To enter the environment, use this command:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ source activate myproject
 
 Now check that the environment has been activated correctly by starting Python:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ python
     Python 3.5.1 |Continuum Analytics, Inc.| (default, Dec 7 2015, 11:24:55)
@@ -176,7 +176,7 @@ because this package has not been installed in the environment. Let's try to
 install it. Press :kbd:`Control-d` to close the Python interpreter and then
 run this command:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ conda install numpy
 
@@ -192,7 +192,7 @@ also works for conda install, e.g. ``conda install numpy=1.9.1``.
 When you are done working with your project, or you want to switch to another
 environment for working with another project, run the command:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ source deactivate
 
@@ -207,7 +207,7 @@ of popular packages, other channels provide even more packages. One such channel
 is the R channel which provides access to the R programming language and many
 popular libraries used with R. To get access to the R channel run:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ conda config --add channels r
 
@@ -215,7 +215,7 @@ Another great channel is the Bioconda channel which provides access to
 hundreds of packages related to bioinformatics such as BWA, samtools, BLAST
 etc.:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ conda config --add channels bioconda
 
@@ -238,13 +238,13 @@ in the project folder and put this in the file:
 
 Now, for the sake of clarity, let's remove our existing myproject environment.
 
-.. code-block:: bash
+.. code-block:: console
 
     $ conda env remove -n myproject
 
 We can now create the exact environment specified in environment.yml by simply running:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ conda env create
 
@@ -252,7 +252,7 @@ As you work you may need to change your environment, e.g. update a package to a
 more recent version, add or remove a package. To do this, just modify the
 environment.yml file and then run:
 
-.. code-block:: bash
+.. code-block:: console
 
     $ conda env update --prune
 
