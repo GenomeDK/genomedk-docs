@@ -1,3 +1,5 @@
+.. _best_practices:
+
 Structure and document your projects
 ====================================
 

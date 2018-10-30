@@ -13,6 +13,15 @@ a storage capacity of 6 PB.
   Make it clear that there are restrictions and differences for iPSYCH users.
   Put this in a big blue box.
 
+If you're new to GenomeDK, please read through the
+:ref:`Getting started <getting_started>` chapter. This will help you understand
+how the cluster works and how to do common things like submitting jobs and
+installing software.
+
+Once you're comfortable with performing routine tasks on the cluster, read
+the :ref:`Best practices <best_practices>`, which contains suggestions and
+patterns for organizing your projects and keeping your research reproducible.
+
 .. toctree::
   :maxdepth: 2
   :caption: Getting started
