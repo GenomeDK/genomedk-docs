@@ -236,6 +236,7 @@ PuttyGen [Windows]
 ~~~~~~~~~~~~~~~~~~
 
 
+.. _mounting:
 Accessing your files locally
 ============================
 
@@ -327,6 +328,11 @@ Copying data
 From your own machine to/from the cluster
 -----------------------------------------
 
+If you :ref:`mounted <mounting>` GenomeDK on your computer, you can copy files to
+and from the cluster by simple drag-and-drop. Otherwise you can use one of the
+solutions listed here.
+
+
 Filezilla [Linux/macOS/Windows]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -335,9 +341,6 @@ scp [Linux/macOS]
 
 rsync [Linux/macOS]
 ~~~~~~~~~~~~~~~~~~~
-
-SSH mount [Linux/macOS]
-~~~~~~~~~~~~~~~~~~~~~~~
 
 CyberDuck [macOS]
 ~~~~~~~~~~~~~~~~~
