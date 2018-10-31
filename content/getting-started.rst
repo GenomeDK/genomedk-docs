@@ -366,35 +366,72 @@ From the Internet to the cluster
 Using graphical interfaces
 ==========================
 
-X or vnc yadda yadda
+There's two options for using programs with a graphical user interface on
+GenomeDK.
 
-**X-forwarding**
+X-forwarding
+------------
 
 You can use X-forwarding to tunnel individual graphical programs to your local
 desktop. This works well for many programs, but programs that do fancy graphics
 or anything animated might not work well.
 
-.. todo::
-    Add -X on linux
-    Install and use XQuartz on OS X
-    MobaXterm also allows X-forwarding
-    Maybe Xming + putty X-forwarding on windows?
+Xorg [Linux]
+~~~~~~~~~~~~
+
+Since most Linux distributions already include an X server, you simply need to
+tell SSH that you wish to enable X-forwaring. To do this, add ``-X`` to the
+:program:`ssh` command when logging in to the cluster, for example:
+
+.. code-block:: console
+
+    $ ssh -X USERNAME@login.genome.au.dk
+
+You should then be able to open e.g. Firefox on the frontend:
+
+.. code-block:: console
+
+    [fe1]$ firefox
+
+XQuartz [macOS]
+~~~~~~~~~~~~~~~
+
+Since macOS does not include an X server, you will need to download and install
+XQuartz_ on your computer. When installed, reboot the computer. Now, you just
+need to tell SSh that you wish to enable X-forwarding. To do this, add ``-X``
+to the :program:`ssh` command when logging in to the cluster, for example:
+
+.. code-block:: console
+
+    $ ssh -X USERNAME@login.genome.au.dk
+
+You should then be able to open e.g. Firefox on the frontend:
+
+.. code-block:: console
+
+    [fe1]$ firefox
+
+.. _XQuartz: https://www.xquartz.org/
+
+MobaXterm [Windows]
+~~~~~~~~~~~~~~~~~~~
 
 
 
-**VNC**
+VNC
+---
 
 If you want to use a full virtual desktop you can use a VNC program. There are
-lots of options but we recommend TightVNC_.  It is a Java program that will
-work on Linux, Windows and OS X.
+lots of options but we recommend TightVNC_ which works on both Linux, macOS,
+and Windows.
 
 To use VNC you first need to login to the frontend and start a *VNC server*.
 Starting the server is done with the ``vncserver`` command and looks like this:
 
 .. code-block:: console
+    :emphasize-lines: 8
 
-    $ vncserver
-    [user@fe1 ~]$ vncserver
+    [fe1]$ vncserver
 
     You will require a password to access your desktops.
 
@@ -407,28 +444,20 @@ Starting the server is done with the ``vncserver`` command and looks like this:
     Starting applications specified in /home/user/.vnc/xstartup
     Log file is /home/user/.vnc/fe1.genomedk.net:3.log
 
-    [aeh@fe1 ~]$ vncserver -list
-
-    TigerVNC server sessions:
-
-    X DISPLAY # PROCESS ID
-    :3      27049a
-
 The display id (``:3`` in this example) is needed when you want to connect
 the VNC client.
 
-.. todo::
-    What to put into TightVNC
-
-To connect to the running VNC server the ssh tunnel through the login node has
-to established. In case of TightVNC tunneling option is included in the
-software it-self and following settings should be sufficient:
+To connect to the running VNC server the SSH tunnel through the login node has
+to be established. In case of TightVNC, the tunneling option is included in the
+software itself and following settings should be sufficient:
 
 .. image:: images/tightvnc.png
     :align: center
 
-.. todo::
-    Screenshot of TightVNC settings
+Note the "Port" field! The number specified must be 5900 plus the display ID,
+which in this example was :3. Thus, the port number becomes 5903.
+
+.. _TightVNC: https://www.tightvnc.com/
 
 Editing files
 =============
