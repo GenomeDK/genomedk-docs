@@ -247,46 +247,46 @@ your files as if they were located in a folder on your own harddrive.
 sshfs [Linux/macOS]
 -------------------
 
-1. On Linux, install the :program:`sshfs` program through your package manager.
+On Linux, install the :program:`sshfs` program through your package manager.
 
-   On distros with the :program:`apt` package manager (Ubuntu, Mint etc.):
+On distros with the :program:`apt` package manager (Ubuntu, Mint etc.):
 
-   .. code-block:: console
+.. code-block:: console
 
-        $ apt-get install sshfs
+    $ apt-get install sshfs
 
-   On distros with the :program:`yum` package manager (Fedora, CentOS etc.):
+On distros with the :program:`yum` package manager (Fedora, CentOS etc.):
 
-   .. code-block:: console
+.. code-block:: console
 
-        $ yum install sshfs
+    $ yum install sshfs
 
-   On macOS, download and install the *SSHFS* and *FUSE for macOS* packages
-   from the `OSX FUSE`_ website.
+On macOS, download and install the *SSHFS* and *FUSE for macOS* packages
+from the `OSX FUSE`_ website.
 
-2. Create a directory where the filesystem will be mounted:
+Create a directory where the filesystem will be mounted:
 
-   .. code-block:: console
+.. code-block:: console
 
-       $ mkdir ~/GenomeDK
+    $ mkdir ~/GenomeDK
 
-3. Now mount the filesystem by running this command:
+Now mount the filesystem by running this command:
 
-   .. code-block:: console
+.. code-block:: console
 
-       sshfs USERNAME@login.genome.au.dk:/home/USERNAME ~/GenomeDK \
-           -o idmap=none -o uid=$(id -u),gid=$(id -g) \
-           -o allow_other -o umask=077 -o follow_symlinks
+    $ sshfs USERNAME@login.genome.au.dk:/home/USERNAME ~/GenomeDK \
+        -o idmap=none -o uid=$(id -u),gid=$(id -g) \
+        -o allow_other -o umask=077 -o follow_symlinks
 
    Where *USERNAME* should be replaced with your GenomeDK username. You should
    now be able to access your files on GenomeDK by going to the ``~/GenomeDK``
    directory on your computer.
 
-4. To unmount the directory, run:
+To unmount the directory, run:
 
-   .. code-block:: console
+.. code-block:: console
 
-       umount ~/GenomeDK
+    $ umount ~/GenomeDK
 
 .. _OSX FUSE: https://osxfuse.github.io/
 
