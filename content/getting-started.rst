@@ -99,8 +99,8 @@ Connecting to the cluster
 SSH [Linux/macOS]
 ~~~~~~~~~~~~~~~~~
 
-On Linux, open the terminal of your choice. On macOS, you may use the
-Terminal.app program which can be found in the `Applications/Utilities`
+On Linux, open the terminal of your choice. On macOS, you may use
+:program:Terminal.app: which can be found in the `Applications/Utilities`
 folder. In both cases, you should now be able to log in to the frontend
 by typing this command:
 
@@ -119,7 +119,7 @@ instructions on the website.
 
 
 Changing your password
-----------------------
+======================
 
 This is important! Since e-mail is not secure, someone may get access to the
 password that we sent to you. Thus, you should change it immediately after
@@ -135,7 +135,7 @@ again.
 
 
 Two-factor authentication
--------------------------
+=========================
 
 * FreeOTP (recommended)
 * NetIQ Advanced Authentication
@@ -143,7 +143,7 @@ Two-factor authentication
 
 
 Public-key authentication setup
--------------------------------
+===============================
 
 A public-key setup is a way to be able to access one computer from another
 computer securely, but without typing a password every time you want to log in.
@@ -162,7 +162,7 @@ Here, we will first set up a public key for accessing the frontend. Then, we'll
 set up a key for accessing compute nodes from the frontend.
 
 ssh-keygen [Linux/macOS]
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 On your own computer, open the terminal of your choice and type:
 
@@ -233,7 +233,7 @@ password). Then run:
 You will now be able to SSH between compute nodes without typing a password.
 
 PuttyGen [Windows]
-~~~~~~~~~~~~~~~~~~
+------------------
 
 
 .. _mounting:
