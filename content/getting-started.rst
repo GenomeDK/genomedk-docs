@@ -528,6 +528,8 @@ Interacting with the queue
 * Writing a job script
 * Annoying to write job script manually, so most people use *gwf* instead.
 
+.. _installing_and_using_software:
+
 Installing and using software
 =============================
 
