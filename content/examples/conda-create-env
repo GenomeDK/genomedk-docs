@@ -1,0 +1,87 @@
+[fe1]$ conda create --name amazing-project pysam
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /Users/das/.conda/envs/amazing-project
+
+  added / updated specs:
+    - pysam
+    - python=3
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    pysam-0.15.1               |   py36h0380709_0         2.0 MB  bioconda
+    bcftools-1.9               |       h4da6232_0         789 KB  bioconda
+    samtools-1.9               |       h8ee4bcc_1         526 KB  bioconda
+    setuptools-40.4.3          |           py36_0         556 KB
+    certifi-2018.10.15         |           py36_0         138 KB
+    libcurl-7.61.1             |       hf30b1f0_0         457 KB
+    libffi-3.2.1               |                1          41 KB  bioconda
+    htslib-1.9                 |       hc238db4_4         1.2 MB  bioconda
+    curl-7.61.1                |       ha441bb4_0         135 KB
+    wheel-0.32.2               |           py36_0          35 KB
+    libdeflate-1.0             |       h470a237_0          44 KB  bioconda
+    bzip2-1.0.6                |       h1de35cc_5         149 KB
+    ------------------------------------------------------------
+                                           Total:         6.0 MB
+
+The following NEW packages will be INSTALLED:
+
+    bcftools:        1.9-h4da6232_0          bioconda
+    bzip2:           1.0.6-h1de35cc_5
+    ca-certificates: 2018.03.07-0
+    certifi:         2018.10.15-py36_0
+    curl:            7.61.1-ha441bb4_0
+    htslib:          1.9-hc238db4_4          bioconda
+    libcurl:         7.61.1-hf30b1f0_0
+    libcxx:          4.0.1-hcfea43d_1
+    libcxxabi:       4.0.1-hcfea43d_1
+    libdeflate:      1.0-h470a237_0          bioconda
+    libedit:         3.1.20170329-hb402a30_2
+    libffi:          3.2.1-1                 bioconda
+    libssh2:         1.8.0-h322a93b_4
+    ncurses:         6.1-h0a44026_0
+    openssl:         1.0.2p-h1de35cc_0
+    pip:             10.0.1-py36_0
+    pysam:           0.15.1-py36h0380709_0   bioconda
+    python:          3.6.6-hc167b69_0
+    readline:        7.0-h1de35cc_5
+    samtools:        1.9-h8ee4bcc_1          bioconda
+    setuptools:      40.4.3-py36_0
+    sqlite:          3.25.2-ha441bb4_0
+    tk:              8.6.8-ha441bb4_0
+    wheel:           0.32.2-py36_0
+    xz:              5.2.4-h1de35cc_4
+    zlib:            1.2.11-hf3cbc9b_2
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+pysam-0.15.1         | 2.0 MB    | ################################## | 100%
+bcftools-1.9         | 789 KB    | ################################## | 100%
+samtools-1.9         | 526 KB    | ################################## | 100%
+setuptools-40.4.3    | 556 KB    | ################################## | 100%
+certifi-2018.10.15   | 138 KB    | ################################## | 100%
+libcurl-7.61.1       | 457 KB    | ################################## | 100%
+libffi-3.2.1         | 41 KB     | ################################## | 100%
+htslib-1.9           | 1.2 MB    | ################################## | 100%
+curl-7.61.1          | 135 KB    | ################################## | 100%
+wheel-0.32.2         | 35 KB     | ################################## | 100%
+libdeflate-1.0       | 44 KB     | ################################## | 100%
+bzip2-1.0.6          | 149 KB    | ################################## | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate amazing-project
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate

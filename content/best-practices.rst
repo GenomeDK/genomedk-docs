@@ -128,6 +128,8 @@ A produced a result :file:`foo.txt` and user B wants to use this file. User B ca
 then create a symlink from :file:`myproject/people/A/results/foo.txt` to
 :file:`/myproject/results/foo.txt`.
 
+.. _project_specific_environments:
+
 Use project-specific environments
 =================================
 

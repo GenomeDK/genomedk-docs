@@ -1,3 +1,5 @@
+.. _getting_started:
+
 How does the cluster work?
 ==========================
 
@@ -529,18 +531,140 @@ Interacting with the queue
 Installing and using software
 =============================
 
-For existing users:
+.. warning::
 
-* Migrating from old setup to conda environments
-* Remove all uses of /com/extra (.bashrc, .bash_profile)
-* Check PATH in general
-* DISCLAIMER: DO NOT USE /com/extra
+    Previously, GenomeDK has made software available for users through a
+    special mechanism called :file:`/com/extra` which allowed users to load
+    specific software packages. However, there are several problems with the
+    approach taken here. If you are already using software from `/com/extra`,
+    note that this may not be supported in the future and that no new software
+    will be made available through this mechanism.
+
+    Also, note that software installed through the old mechanism may interfere
+    with your environments. If you wish to use Conda we therefore encourage you
+    to edit your :file:`.bashrc` file and remove all lines which loads software
+    from :file:`/com/extra`.
+
+We recommend that you install and use the `Conda`_ package manager to install
+software on GenomeDK.
+
+Downloading and installing Conda is very simple, you just download and run the
+installer:
+
+.. code-block:: console
+
+   [fe1]$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+   [fe1]$ chmod +x Miniconda3-latest-Linux-x86_64.sh
+   [fe1]$ ./Miniconda3-latest-Linux-x86_64.sh
+
+You can use follow the installers suggestions about where to install and
+the let it add conda to your :file:`.bashrc`.
+
+Now that we have conda available we also need a few settings. The first
+is necessary and tells conda to trust our proxy server, the rest adds
+some recommended "channels" which will make a whole bunch of useful
+packages available to install.
+
+.. code-block:: console
+
+    [fe1]$ conda activate
+    [fe1]$ conda config --add channels defaults
+    [fe1]$ conda config --add channels conda-forge
+    [fe1]$ conda config --add channels bioconda
+
+The clever thing about conda is that it allows you to use separate
+environments for separate projects. If you have a project where you've
+installed a bunch packages into your Python or R there is no reason for
+those to accidentally seep in to your next project. If you want to try
+different versions of some package you can just create separate
+environments for them instead of installing and uninstalling multiple
+times. With separate environments you force yourself to make the
+dependencies for each project explicit which in turn makes it easier for
+collaborators to run your code and improves reproducibility.
+
+Here is how the usage might look if we want to create a new environment
+with the newest version of `pysam`_:
+
+.. literalinclude:: examples/conda-create-env
+    :language: console
+
+This gives us a clean environment with just the minimal number of packages
+necessary to support pysam. To use the software that was installed in the
+environment, the environment needs to be activated first:
+
+.. code-block:: console
+
+    [fe1]$ conda activate amazing-project
+    (amazing-project) [fe1]$ python -c 'import pysam; print(pysam.__version__)'
+    0.6.0
+
+Notice that the prompt changed to show you, that you're now in the
+*amazing-project* environment.
+
+Conda can install any kind of software. This means that your entire setup can
+be installed through Conda (if there's packages for it all). For example,
+you can create an environment with Rstudio, R, and ggplot2 with a single
+command. You can search for packages `here <anacondaorg>`_.
+
+To install software in the currenctly activated environment:
+
+.. code-block:: console
+
+    (amazing-project) [fe1]$ conda install PACKAGE-NAME
+
+To remove a software package from the currently activated environment:
+
+.. code-block:: console
+
+    (amazing-project) [fe1]$ conda remove PACKAGE-NAME
+
+To update a software package in the currently activated environment:
+
+.. code-block:: console
+
+    (amazing-project) [fe1]$ conda update PACKAGE-NAME
+
+Since Conda knows about the entire environment you created, it can tell you
+exactly which packages are used in the environment. This is very useful for
+collaborating with others, since your collaborators can create an exact copy
+of your environment with a single command.
+
+To export your environment so that others can recreate it:
+
+.. code-block:: console
+
+    (amazing-project) [fe1]$ conda env export > environment.yml
+
+The :file:`environment.yml` file contains an exact specification of your
+environment and the packages installed. You can put this in your shared project
+folder. Others will then be able to recreate your environment by running:
+
+.. code-block:: console
+
+    [fe1]$ conda env create -f environment.yml
+
+You can read more about using environments for projects
+:ref:`here <project_specific_environments>`.
+
+.. _pysam: http://pysam.readthedocs.io/en/stable/
+.. _anacondaorg: https://anaconda.org/
+.. _Conda: https://conda.io/docs/
+.. _Anaconda: https://www.anaconda.com/download/
+
+.. todo::
+
+    For existing users:
+
+    * Migrating from old setup to conda environments
+    * Remove all uses of /com/extra (.bashrc, .bash_profile)
+    * Check PATH in general
+    * DISCLAIMER: DO NOT USE /com/extra
 
 
-* Should Conda be installed by default?
-* What is an environment?
-* Why are environments useful?
-* Creating environments
-* Changing between environments
-* Installing software in an environment
-* Sharing an environment
+    * Should Conda be installed by default?
+    * What is an environment?
+    * Why are environments useful?
+    * Creating environments
+    * Changing between environments
+    * Installing software in an environment
+    * Sharing an environment
