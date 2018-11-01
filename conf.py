@@ -72,7 +72,7 @@ language = None
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'friendly'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
@@ -90,8 +90,10 @@ html_theme = 'sphinx_rtd_theme'
 # documentation.
 #
 html_theme_options = {
-    'collapse_navigation': True,
+    'collapse_navigation': False,
     'display_version': False,
+    'titles_only': True,
+    'style_external_links': True,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
