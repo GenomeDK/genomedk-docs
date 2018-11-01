@@ -9,7 +9,7 @@ How do I change my password?
 Run the :command:`change-password` command and follow the instructions. You
 will need to enter your old password.
 
-.. code-block:: shell
+.. code-block:: console
 
     $ change-password
 
