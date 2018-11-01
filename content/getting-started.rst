@@ -237,6 +237,7 @@ PuttyGen [Windows]
 
 
 .. _mounting:
+
 Accessing your files locally
 ============================
 
@@ -369,6 +370,8 @@ Using graphical interfaces
 There's two options for using programs with a graphical user interface on
 GenomeDK.
 
+.. _xforwarding:
+
 X-forwarding
 ------------
 
@@ -462,10 +465,55 @@ which in this example was :3. Thus, the port number becomes 5903.
 Editing files
 =============
 
-* Using nano to edit files directly on the cluster
-* Other text editors that people might want to use (vim, emacs)
-* Using X forwarding and gedit
-* Editing files through a mount
+If you :ref:`mounted <mounting>` GenomeDK on your computer, you can edit files
+directly by just opening them with your prefered text editor on your computer.
+Otherwise you can use one of the solutions listed here.
+
+Nano, vim, emacs
+----------------
+
+With editors like :program:`nano`, :program:`vim` and :program:`emacs` you can
+edit files directly on the cluster. The editor itself also runs on the cluster
+and thus your editor settings etc. are conserved, even if you log in from
+another computer. Also, these editors don't require a graphical user interface,
+so you don't need X-forwarding or VNC.
+
+The :program:`nano` editor is by far the simplest editor of three, but also the
+least powerful. However, it's just fine for quickly editing scripts or looking
+at output files. The documentation for :program:`nano` can be reached by
+running the command:
+
+.. code-block:: console
+
+    [fe1]$ man nano
+
+You can open :program:`nano` by running:
+
+.. code-block:: console
+
+    [fe1]$ nano name-of-file.txt
+
+Likewise, `vim`_ and `emacs`_ are already installed on the cluster.
+Documentation for each editor can be found on their respective websites.
+
+.. _vim: https://www.vim.org/
+.. _emacs: https://www.gnu.org/software/emacs/index.html
+
+
+Gedit with X-forwaring
+----------------------
+
+If you want a graphical user interface and a more familiar editing experience,
+you may use the :program:`Gedit` editor with :ref:`X-forwarding <xforwarding>`.
+Make sure that you are connected to the cluster with X-forwarding enabled. Then
+run:
+
+.. code-block:: console
+
+    [fe1]$ gedit
+
+This will open the :program:`Gedit` editor in a new window. Since the editor
+runs on the frontend, you have access to all of your files on the cluster.
 
 Interacting with the queue
 ==========================
