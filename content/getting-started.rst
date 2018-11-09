@@ -535,17 +535,9 @@ Installing and using software
 
 .. warning::
 
-    Previously, GenomeDK has made software available for users through a
-    special mechanism called :file:`/com/extra` which allowed users to load
-    specific software packages. However, there are several problems with the
-    approach taken here. If you are already using software from `/com/extra`,
-    note that this may not be supported in the future and that no new software
-    will be made available through this mechanism.
+    If you're an "old" user of GenomeDK, read the :ref:`transition` section
+    for instructions on transitioning away from :file:`/com/extra`.
 
-    Also, note that software installed through the old mechanism may interfere
-    with your environments. If you wish to use Conda we therefore encourage you
-    to edit your :file:`.bashrc` file and remove all lines which loads software
-    from :file:`/com/extra`.
 
 We recommend that you install and use the `Conda`_ package manager to install
 software on GenomeDK.
@@ -557,41 +549,47 @@ installer:
 
    [fe1]$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
    [fe1]$ chmod +x Miniconda3-latest-Linux-x86_64.sh
-   [fe1]$ ./Miniconda3-latest-Linux-x86_64.sh
+   [fe1]$ ./Miniconda3-latest-Linux-x86_64.sh -b
+   [fe1]$ echo ". /home/$(whoami)/anaconda/etc/profile.d/conda.sh" >> .bashrc
 
-You can use follow the installers suggestions about where to install and
-the let it add conda to your :file:`.bashrc`.
+Conda can install packages from different *channels*. This is similar to
+*repositories* in other package managers. Here we'll add a few channels that
+are commonly used in bioinformatics:
 
-Now that we have conda available we also need a few settings. The first
-is necessary and tells conda to trust our proxy server, the rest adds
-some recommended "channels" which will make a whole bunch of useful
-packages available to install.
+.. code-block:: console
+
+    [fe1]$ conda config --add channels defaults
+    [fe1]$ conda config --add channels conda-forge
+    [fe1]$ conda config --add channels bioconda
+    [fe1]$ conda config --add channels genomedk
+
+The clever thing about Conda is that it allows you to use separate environments
+for separate projects. If you have a project where you've installed a bunch
+packages for Python or R there is no reason for those to accidentally seep in
+to your next project. If you want to try different versions of some package you
+can just create separate environments for them instead of installing and
+uninstalling multiple times. With separate environments you force yourself to
+make the dependencies for each project explicit which in turn makes it easier
+for collaborators to run your code and improves reproducibility.
+
+When you just installed Conda, it comes with a single environment known as the
+*base* environment. To activate the base environment, just type:
 
 .. code-block:: console
 
     [fe1]$ conda activate
-    [fe1]$ conda config --add channels defaults
-    [fe1]$ conda config --add channels conda-forge
-    [fe1]$ conda config --add channels bioconda
+    (base) [fe1]$
 
-The clever thing about conda is that it allows you to use separate
-environments for separate projects. If you have a project where you've
-installed a bunch packages into your Python or R there is no reason for
-those to accidentally seep in to your next project. If you want to try
-different versions of some package you can just create separate
-environments for them instead of installing and uninstalling multiple
-times. With separate environments you force yourself to make the
-dependencies for each project explicit which in turn makes it easier for
-collaborators to run your code and improves reproducibility.
+You now have access to the software installed in the base environment.
 
-Here is how the usage might look if we want to create a new environment
-with the newest version of `pysam`_:
+Here is how the usage might look if we want to create a new environment with
+the newest version of `PySAM`_:
 
 .. literalinclude:: examples/conda-create-env
     :language: console
 
 This gives us a clean environment with just the minimal number of packages
-necessary to support pysam. To use the software that was installed in the
+necessary to support PySAM. To use the software that was installed in the
 environment, the environment needs to be activated first:
 
 .. code-block:: console
@@ -600,13 +598,13 @@ environment, the environment needs to be activated first:
     (amazing-project) [fe1]$ python -c 'import pysam; print(pysam.__version__)'
     0.6.0
 
-Notice that the prompt changed to show you, that you're now in the
+Notice that the prompt changed to show you that you're now in the
 *amazing-project* environment.
 
 Conda can install any kind of software. This means that your entire setup can
 be installed through Conda (if there's packages for it all). For example,
 you can create an environment with Rstudio, R, and ggplot2 with a single
-command. You can search for packages `here <anacondaorg>`_.
+command. You can search for packages at anaconda.org_.
 
 To install software in the currenctly activated environment:
 
@@ -646,27 +644,32 @@ folder. Others will then be able to recreate your environment by running:
     [fe1]$ conda env create -f environment.yml
 
 You can read more about using environments for projects
-:ref:`here <project_specific_environments>`.
+:ref:`here <project_specific_environments>`. There's also also a `cheat sheet`_
+with Conda commands available.
 
-.. _pysam: http://pysam.readthedocs.io/en/stable/
-.. _anacondaorg: https://anaconda.org/
+.. _PySAM: http://pysam.readthedocs.io/en/stable/
+.. _anaconda.org: https://anaconda.org/
 .. _Conda: https://conda.io/docs/
 .. _Anaconda: https://www.anaconda.com/download/
+.. _cheat sheet: https://conda.io/docs/_downloads/conda-cheatsheet.pdf
 
-.. todo::
+.. _transition:
 
-    For existing users:
+Transition to Conda
+-------------------
 
-    * Migrating from old setup to conda environments
-    * Remove all uses of /com/extra (.bashrc, .bash_profile)
-    * Check PATH in general
-    * DISCLAIMER: DO NOT USE /com/extra
+Previously, GenomeDK has made software available for users through a special
+mechanism called :file:`/com/extra` which allowed users to load specific
+software packages. However, there are several problems with the approach taken
+here. If you are already using software from `/com/extra`, note that this may
+not be supported in the future and that no new software will be made available
+through this mechanism.
 
+Also, note that software installed through the old mechanism may interfere with
+your environments. If you wish to use Conda we therefore encourage you to edit
+your :file:`.bashrc` and :file:`.bash_profile` files and remove all lines which
+loads software from :file:`/com/extra`.
 
-    * Should Conda be installed by default?
-    * What is an environment?
-    * Why are environments useful?
-    * Creating environments
-    * Changing between environments
-    * Installing software in an environment
-    * Sharing an environment
+Additionally, you should ensure that none of the above files reference any
+system Python installation or related modules. It's also a good idea to remove
+any reference to :file:`/com/extra/stable`.
