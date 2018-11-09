@@ -32,31 +32,15 @@ How can I avoid losing my session when I close my laptop?
 Use tmux/screen
 
 
-I'm downloading a large file, but it keeps failing, what can I do?
-------------------------------------------------------------------
-Run in screen/tmux so you don't have to stay logged-in
-Make wget auto-retry and continue from where it failed:
-
-.. code-block:: console
-
-    $ wget -c --timeout-120 --waitretry-60 --tries-10000 \
-          --retry-connrefused https://someurl.com/data.tar.gz
-
-When downloading large files you are encouraged to limit the progress output to
-avoid stressing the system, *especially* when you're sending the progress
-output to a file:
-
-.. code-block:: console
-
-    $ wget -c --timeout-120 --waitretry-60 --tries-10000 \
-          --retry-connrefused --progress=mega:force \
-          https://someurl.com/data.tar.gz
-
-
 How do I prevent accidental changes to my important data?
 ---------------------------------------------------------
 
-Put the data in a separate folder and do ``chmod -R a-w datafolder``.
+Put the data in a separate folder and run:
+
+.. code-block: console
+
+    [fe1]$ chmod -R a-w datafolder
+
 Now you can't change, add or remove files in that folder hierarchy.
 
 
