@@ -533,7 +533,7 @@ Interacting with the queue
 Installing and using software
 =============================
 
-.. warning::
+.. seealso::
 
     If you're an "old" user of GenomeDK, read the :ref:`transition` section
     for instructions on transitioning away from :file:`/com/extra`.
