@@ -9,12 +9,6 @@ I forgot my password
 Fill out the `request a new password`_ form.
 
 
-How do I make the shell remember more commands?
------------------------------------------------
-
-Add ``export HISTSIZE=100000`` to your ``.bash_profile``.
-
-
 Why are my jobs waiting for so long to start?
 ---------------------------------------------
 
