@@ -3,17 +3,6 @@
 FAQ
 ===
 
-How do I change my password?
-----------------------------
-
-Run the :command:`change-password` command and follow the instructions. You
-will need to enter your old password.
-
-.. code-block:: console
-
-    $ change-password
-
-
 I forgot my password
 --------------------
 
