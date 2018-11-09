@@ -281,9 +281,9 @@ Now mount the filesystem by running this command:
         -o idmap=none -o uid=$(id -u),gid=$(id -g) \
         -o allow_other -o umask=077 -o follow_symlinks
 
-   Where *USERNAME* should be replaced with your GenomeDK username. You should
-   now be able to access your files on GenomeDK by going to the ``~/GenomeDK``
-   directory on your computer.
+Where *USERNAME* should be replaced with your GenomeDK username. You should
+now be able to access your files on GenomeDK by going to the ``~/GenomeDK``
+directory on your computer.
 
 To unmount the directory, run:
 
