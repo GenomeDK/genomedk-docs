@@ -135,6 +135,12 @@ It will ask you for your current password, then ask what your new password
 should be. Finally, it will ask you to confirm your new password by typing it
 again.
 
+.. warning::
+
+    Do not use :program:`passwd`, :program:`yppasswd` or
+    :program:`ipsych-passwd` to change your password. These commands won't
+    work in all cases or at all.
+
 
 Two-factor authentication
 =========================
