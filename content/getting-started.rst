@@ -240,7 +240,7 @@ password). Then run:
 
 You will now be able to SSH between compute nodes without typing a password.
 
-PuttyGen [Windows]
+MobaXterm [Windows]
 ------------------
 
 
