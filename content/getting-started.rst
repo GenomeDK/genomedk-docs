@@ -520,13 +520,178 @@ runs on the frontend, you have access to all of your files on the cluster.
 Interacting with the queue
 ==========================
 
-* What is an interactive job?
-* Using srun
-* Now we're on a different node, fs is the same, but env may not be
+Since GenomeDK is a shared system, all computations must be carried out through
+a queue. Users submit jobs to the queue and the jobs then run when it's their
+turn. To cater for different workloads, jobs can be submitted to one or more
+*partitions*, which are essentially queues that have been assigned certain
+restrictions such as the maximum running time.
 
-* What is a batch job?
-* Writing a job script
-* Annoying to write job script manually, so most people use *gwf* instead.
+The queueing system used at GenomeDK is Slurm_. Users that are familiar with
+Sun Grid Engine (SGE) or Portable Batch System (PBS), will find Slurm very
+familiar.
+
+.. note::
+
+    A node can be shared by more users, so you should always take extra care in
+    requesting to correct amount of resources (nodes, cores and memory). There
+    is no reason to occupy an entire node if you are only using a single core
+    and a few gigabytes of memory. Always make sure to utillize the resources
+    on the requested nodes efficiently.
+
+To get an overview of the available partitions:
+
+.. code-block:: console
+
+    [fe1]$ gnodes
+
+This will list each partition and all of the compute nodes assigned to each
+partition. The header of each partitions lists the available resources such as
+the number of cores per node, available memory per node, and the maximum
+walltime (running time) a job in the partition can have.
+
+The queueing system allows us to either submit an *interactive* or *batch* job.
+An interactive job effectively gives you a shell on a compute node so that you
+can type commands and run programs that will run on that node. This is great
+for experimenting and debugging problems.
+
+Interactive jobs
+----------------
+
+To submit an interactive job:
+
+.. code-block:: console
+
+    [fe1]$ srun --pty /bin/bash
+    srun: job 17129453 queued and waiting for resources
+    srun: job 17129453 has been allocated resources
+    [s03n73]$
+
+This may take some time since you must wait until it's your turn in the queue.
+Once it's your turn, you'll get a shell on the node that was assigned to you.
+In this case, we were given the node `s03n73`.
+
+You may also specify some requirements for the job, such as the amount of
+memory that should be allocated:
+
+.. code-block:: console
+
+    [fe1]$ srun --mem=16g --pty /bin/bash
+
+When running a job you have access to the same filesystems as when running on
+the frontend. Thus, you can access your home folder and project folders with
+the same paths as on `fe1`.
+
+When you're done with your interactive session on the node, it can be exited
+by running the ``exit`` command or pressing :kbd:`Control + D`.
+
+.. code-block:: console
+
+        [s03n73]$ exit
+        [fe1]$
+
+You'll now be back on the frontend.
+
+Batch jobs
+----------
+
+While interactive jobs are useful, they require you to be logged in to the node
+while your computations one the node are running. Exiting the session will
+cancel your computations, which is not usually what you want. Also, you may
+want to run many jobs on multiple nodes, and having that many interactive
+sessions open quickly becomes unmanagable.
+
+To solve this, we may submit a *batch* job instead. Batch jobs are submitted to
+the queue like interactive jobs, but they don't give you a shell to run
+commands. Instead, you must write a *job script* which contains the commands
+that needs to be run.
+
+A job script looks like this:
+
+.. code-block:: shell
+
+    #!/bin/bash
+    #SBATCH --partition normal
+    #SBATCH --mem-per-cpu 4G
+    #SBATCH -c 1
+
+    echo hello world > result.txt
+
+The job script specifies which resources are needed as well as the commands to
+be run. Line 2 specifies that this job should be submitted to the *normal*
+partition. Line 3 specifies that we want 4G of memory per allocated core, and
+line 4 specifies that we want a single core to run on. See the table below for
+an overview of commonly used resource flags:
+
+.. csv-table:: Resource flags
+    :header: "Short flag", "Long flag", "Description"
+
+    "``-p``", "``--partition``", "One or more comma-separated partitions that the job may run on."
+    "", "``--mem-per-cpu``", "Memory allocated per allocated CPU core."
+    "``-c``", "", "Number of cores allocated for the job."
+    "``-t``", "``--time``", "Maximum time the job will be allowed to run."
+
+The rest of the script is a normal Bash_ script which contains the commands
+that should be executed, when the job is started by Slurm.
+
+To submit a job for this script, save it to a file (e.g. :file:`example.sh`)
+and run:
+
+.. code-block:: console
+
+    [fe1]$ sbatch example.sh
+    Submitted batch job 17129500
+    [fe1]$
+
+Contrary to :command:`srun`, this command returns immediately, giving us a job
+id to identify our job.
+
+Checking job status
+-------------------
+
+To check the status of a job:
+
+.. code-block:: console
+
+    [fe1]$ jobinfo 17129500
+
+To check the status of all of your submitted jobs:
+
+.. code-block:: console
+
+    [fe1]$ squeue -u USERNAME
+
+You can also omit the username flag to get an overview of all jobs that have
+been submitted to the queue:
+
+.. code-block:: console
+
+    [fe1]$ squeue
+
+Checking job priorities
+-----------------------
+
+You may be wondering why one of your jobs are not starting. It may be due to
+other jobs having a higher priority. To see the priority of all jobs in the
+queue:
+
+.. code-block:: console
+
+    [fe1]$ priority -a
+
+
+Extra credit
+------------
+
+Most people find it annoying to write these job script for each step in their
+workflows and instead use a workflow engine such as gwf_ (developed at
+GenomeDK) or snakemake_ (quite popular in bioinformatics). Such tools allow you
+to write entire pipelines consisting of thousands of separate jobs and submit
+those jobs to Slurm without writing job scripts.
+
+.. _Slurm: https://slurm.schedmd.com/
+.. _Bash: https://www.gnu.org/software/bash/manual/bash.html
+.. _gwf: https://docs.gwf.app/en/latest/
+.. _snakemake: https://snakemake.readthedocs.io/
 
 .. _installing_and_using_software:
 
