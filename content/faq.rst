@@ -21,13 +21,9 @@ Why are my jobs waiting for so long to start?
 How do I open images/PDFs?
 --------------------------
 
-Use :command:`eog` for images and :command:`evince` for PDF.
-
-For these to work you will need to SSH to the cluster with X forwarding
+Use :command:`eog` for images and :command:`evince` for PDF. For these to work
+you will need to SSH to the cluster with :ref:`X-forwarding <xforwarding>`
 enabled.
-
-.. todo:
-    example + x forwarding
 
 
 How can I avoid losing my session when I close my laptop?
