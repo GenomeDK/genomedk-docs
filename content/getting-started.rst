@@ -331,39 +331,72 @@ Copying data
 From your own machine to/from the cluster
 -----------------------------------------
 
-If you :ref:`mounted <mounting>` GenomeDK on your computer, you can copy files to
-and from the cluster by simple drag-and-drop. Otherwise you can use one of the
-solutions listed here.
+If you :ref:`mounted <mounting>` GenomeDK on your computer, you can copy files
+to and from the cluster by simple drag-and-drop. Otherwise you can use one of
+the solutions listed here or one of these alternatives:
 
+* Filezilla_ [Linux/macOS/Windows]
+* Cyberduck_ [macOS]
+* WinSCP_ [Windows]
 
-Filezilla [Linux/macOS/Windows]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-scp [Linux/macOS]
+scp/rsync [Linux/macOS]
 ~~~~~~~~~~~~~~~~~
 
-rsync [Linux/macOS]
-~~~~~~~~~~~~~~~~~~~
+To copy a single file from your computer to the cluster:
 
-CyberDuck [macOS]
-~~~~~~~~~~~~~~~~~
+.. code-block:: console
 
-WinSCP [Windows]
-~~~~~~~~~~~~~~~~
+    [local]$ scp myfile.txt login.genome.au.dk:path/to/destination/
+
+To copy a single file from the cluster to your computer:
+
+.. code-block:: console
+
+    [local]$ scp login.genome.au.dk:/path/to/file .
+
+If you want to copy an entire folder to/from the cluster you will want to use
+:program:`rsync` instead. To copy a folder from your computer to the cluster:
+
+.. code-block:: console
+
+    [local]$ rsync -e ssh -avz /path/to/data user@login.genome.au.dk:data
+
+If you want to upload a folder, but also delete files that you deleted in the
+source folder from the destination:
+
+.. code-block:: console
+
+    [local]$ rsync -e ssh -avz --delete /path/to/data user@login.genome.au.dk:data
+
+If you want to download data from the cluster:
+
+.. code-block:: console
+
+    [local]$ rsync -e ssh -avz --delete /location/data user@login.genome.au.dk:data
+
+You may want to add the ``--progress`` flag to all of these commands if you're
+downloading/uploading large amounts of data.
 
 MobaXterm [Windows]
 ~~~~~~~~~~~~~~~~~~~
 
 
+
+.. _Filezilla: https://filezilla-project.org/
+.. _Cyberduck: https://cyberduck.io/
+.. _WinSCP: https://winscp.net/eng/index.php
+
 From the Internet to the cluster
 --------------------------------
 
-* wget
+You can use :program:`wget` to download data from the Internet to the cluster:
 
-.. todo::
+.. code-block:: console
 
-    Use the --progress=giga:force flag to avoid excessive output while
-    downloading big files.
+    [fe1]$ wget -c --progress=giga:force --timeout=120 --waitretry=60 \
+        --tries=10000 --retry-connrefused ftp://url.somewhere/important.file
+
+For small files you may wish to remove the ``--progress=giga:force`` parameter.
 
 
 Using graphical interfaces
