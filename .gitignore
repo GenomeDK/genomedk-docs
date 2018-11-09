@@ -102,3 +102,6 @@ ENV/
 
 # OSX litter
 .DS_Store
+
+# Visual Studio Code
+.vscode
