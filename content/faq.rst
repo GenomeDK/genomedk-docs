@@ -29,7 +29,8 @@ enabled.
 How can I avoid losing my session when I close my laptop?
 ---------------------------------------------------------
 
-Use tmux/screen
+Use a terminal multiplexer like `tmux <https://github.com/tmux/tmux/wiki>`_
+or `screen <https://www.gnu.org/software/screen/manual/screen.html>`_.
 
 
 How do I prevent accidental changes to my important data?
