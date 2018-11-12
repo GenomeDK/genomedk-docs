@@ -263,22 +263,20 @@ your files as if they were located in a folder on your own harddrive.
 sshfs [Linux/macOS]
 -------------------
 
-On Linux, install the :program:`sshfs` program through your package manager.
+* On distros with the :program:`apt` package manager (Ubuntu, Mint etc.):
 
-On distros with the :program:`apt` package manager (Ubuntu, Mint etc.):
+  .. code-block:: console
 
-.. code-block:: console
+      $ apt-get install sshfs
 
-    $ apt-get install sshfs
+* On distros with the :program:`yum` package manager (Fedora, CentOS etc.):
 
-On distros with the :program:`yum` package manager (Fedora, CentOS etc.):
+  .. code-block:: console
 
-.. code-block:: console
+      $ yum install sshfs
 
-    $ yum install sshfs
-
-On macOS, download and install the *SSHFS* and *FUSE for macOS* packages
-from the `OSX FUSE`_ website.
+* On macOS, download and install the *SSHFS* and *FUSE for macOS* packages
+  from the `OSX FUSE`_ website.
 
 Create a directory where the filesystem will be mounted:
 
