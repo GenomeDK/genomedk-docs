@@ -99,7 +99,7 @@ Connecting to the cluster
 =========================
 
 SSH [Linux/macOS]
-~~~~~~~~~~~~~~~~~
+-----------------
 
 On Linux, open the terminal of your choice. On macOS, you may use
 :program:Terminal.app: which can be found in the `Applications/Utilities`
@@ -112,7 +112,7 @@ by typing this command:
 
 
 MobaXterm [Windows]
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 On Windows, download and install the `MobaXterm`_ application following the
 instructions on the website.
@@ -150,8 +150,8 @@ Two-factor authentication
 * Google Authenticator
 
 
-Public-key authentication setup
-===============================
+Public-key authentication
+=========================
 
 A public-key setup is a way to be able to access one computer from another
 computer securely, but without typing a password every time you want to log in.
@@ -241,7 +241,7 @@ password). Then run:
 You will now be able to SSH between compute nodes without typing a password.
 
 MobaXterm [Windows]
-------------------
+-------------------
 
 
 .. _mounting:
@@ -346,7 +346,7 @@ the solutions listed here or one of these alternatives:
 * WinSCP_ [Windows]
 
 scp/rsync [Linux/macOS]
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 To copy a single file from your computer to the cluster:
 
