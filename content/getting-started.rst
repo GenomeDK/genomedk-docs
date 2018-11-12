@@ -429,8 +429,8 @@ GenomeDK.
 
 .. _xforwarding:
 
-X-forwarding
-------------
+X-forwarding [Linux, macOS, Windows]
+------------------------------------
 
 You can use X-forwarding to tunnel individual graphical programs to your local
 desktop. This works well for many programs, but programs that do fancy graphics
