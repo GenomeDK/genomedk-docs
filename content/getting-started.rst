@@ -96,7 +96,7 @@ You'll then be able to connect to the cluster.
 .. _iPSYCH users: https://genomedk.wufoo.com/forms/request-access-to-cluster-ipsych-only/
 
 Connecting to the cluster
--------------------------
+=========================
 
 SSH [Linux/macOS]
 ~~~~~~~~~~~~~~~~~
@@ -399,11 +399,17 @@ You can use :program:`wget` to download data from the Internet to the cluster:
 
 .. code-block:: console
 
-    [fe1]$ wget -c --progress=giga:force --timeout=120 --waitretry=60 \
+    [fe1]$ wget -c --timeout=120 --waitretry=60 \
         --tries=10000 --retry-connrefused ftp://url.somewhere/important.file
 
-For small files you may wish to remove the ``--progress=giga:force`` parameter.
+When downloading large files you are encouraged to limit the progress output to
+avoid stressing the system, *especially* when you're sending the progress
+output to a file:
 
+.. code-block:: console
+
+    [fe1]$ wget -c --progress=giga:force --timeout=120 --waitretry=60 \
+        --tries=10000 --retry-connrefused ftp://url.somewhere/important.file
 
 Using graphical interfaces
 ==========================
