@@ -61,17 +61,17 @@ Things to remember...
 This ends our tour of the cluster setup. Now, here's a few things that you
 should keep in mind when using the cluster...
 
-* The nodes in a cluster are set up so that they're all (more or less) identical.
-  This means that software that is available on one node will also be available
-  on all other nodes, that your user account exists on all nodes, and that you
-  can access your files in the same way on all nodes. When the queue manager runs
-  your job in a node, it more or less corresponds to you logging in to the node
-  and running the program yourself.
+* The nodes in a cluster are set up so that they're all (more or less)
+  identical. This means that software that is available on one node will also
+  be available on all other nodes, that your user account exists on all nodes,
+  and that you can access your files in the same way on all nodes. When the
+  queue manager runs your job in a node, it more or less corresponds to you
+  logging in to the node and running the program yourself.
 
-* A cluster is accessed through a single node, often denoted the *frontend*. The
-  frontend node is in many ways identical to all of the other nodes, but it is
-  set up to allow access from the Internet. Your day-to-day interaction with the
-  cluster thus goes through the frontend. However, you should *not* run any
+* A cluster is accessed through a single node, often denoted the *frontend*.
+  The frontend node is in many ways identical to all of the other nodes, but it
+  is set up to allow access from the Internet. Your day-to-day interaction with
+  the cluster thus goes through the frontend. However, you should *not* run any
   computation or memory intensive programs on the frontend. All users share the
   frontend's resources and thus it should mainly be used for basics things like
   looking around the file system, writing scripts, and submitting jobs.
