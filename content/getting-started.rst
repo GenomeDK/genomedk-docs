@@ -3,10 +3,6 @@
 How does the cluster work?
 ==========================
 
-.. todo:
-
-    Graphical overview
-
 A cluster consists of a large number of interconnected machines. Each machine
 is very much like your own desktop computer, except it's much more powerful
 and is optimized for specific workloads. However, like your desktop computer,
