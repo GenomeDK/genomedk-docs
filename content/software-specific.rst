@@ -74,7 +74,7 @@ RStudio
 RStudio is available on the cluster as a graphical application, which can
 be run on both compute nodes and the frontend node. Bare in mind, the
 frontend node must *not* be used for computation or analysis. RStudio needs
-:ref:`X-forwarding <x-forwarding>` to be enabled.
+:ref:`X-forwarding <xforwarding>` to be enabled.
 
 When logged in, you must either activate the environment where RStudio is
 installed or install it into an environment yourself
