@@ -468,8 +468,8 @@ MobaXterm [Windows]
 
 
 
-VNC
----
+VNC [Linux/macOS/Windows]
+-------------------------
 
 If you want to use a full virtual desktop you can use a VNC program. There are
 lots of options but we recommend TightVNC_ which works on both Linux, macOS,
