@@ -316,7 +316,7 @@ Encrypt:
 
 .. code-block:: console
 
-    $ openssl aes-256-cbc -a -salt -in data.txt -out data.txt.enc
+    [fe1]$ openssl aes-256-cbc -a -salt -in data.txt -out data.txt.enc
 
 This will encrypt ``data.txt`` and write the encrypted data to
 ``data.txt.enc``. You will be prompted for a password which is needed to
@@ -326,7 +326,7 @@ Decrypt:
 
 .. code-block:: console
 
-    $ openssl aes-256-cbc -d -a -in data.txt.enc -out data.txt.new
+    [fe1]$ openssl aes-256-cbc -d -a -in data.txt.enc -out data.txt.new
 
 This will ask for the password used to encrypt the file. The decrypted contents
 are written to ``data.txt.new``.
@@ -443,7 +443,7 @@ tell SSH that you wish to enable X-forwaring. To do this, add ``-X`` to the
 
 .. code-block:: console
 
-    $ ssh -X USERNAME@login.genome.au.dk
+    [local]$ ssh -X USERNAME@login.genome.au.dk
 
 You should then be able to open e.g. Firefox on the frontend:
 
@@ -461,7 +461,7 @@ to the :program:`ssh` command when logging in to the cluster, for example:
 
 .. code-block:: console
 
-    $ ssh -X USERNAME@login.genome.au.dk
+    [local]$ ssh -X USERNAME@login.genome.au.dk
 
 You should then be able to open e.g. Firefox on the frontend:
 
