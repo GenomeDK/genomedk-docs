@@ -47,8 +47,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'GenomeDK'
-copyright = '2017, Anders Halager'
-author = 'Anders Halager'
+copyright = '2018, The GenomeDK Team'
+author = 'Anders Halager \\and Jaroslaw Kalinowski \\and Dan Søndergaard'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -133,7 +133,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'GenomeDKDocs.tex', 'GenomeDK Documentation',
-     'Anders Halager', 'manual'),
+     author, 'manual'),
 ]
 
 
