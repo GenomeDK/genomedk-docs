@@ -557,7 +557,7 @@ Documentation for each editor can be found on their respective websites.
 .. _emacs: https://www.gnu.org/software/emacs/index.html
 
 
-Gedit with X-forwaring
+Gedit with X-forwarding
 ----------------------
 
 If you want a graphical user interface and a more familiar editing experience,
