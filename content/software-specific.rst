@@ -103,14 +103,23 @@ the 10 hours expires or the connection is lost. So remember to save your work!
 Perl
 ====
 
-Since the system has been updated to CentOS 7 an old perl module collection
-present in :file:`/com/extra/perl-cpan` will not work and support for it has
-been dropped.
+.. warning::
 
-Right now installation of new perl modules for your user is very easy, and you
-can install/maintain installation much easier than before. For installation of
-perl modules from cpan a simple command line tool can be installed, and just
-one command can install it for you.
+    As of June 26, 2018 the old Perl module collection present in
+    :file:`/com/extra/perl-cpan` will not work and support for it has been
+    dropped.
+
+.. note::
+
+    Perl and Perl modules can be installed through Conda, which is also the
+    recommended method. The method described here should only be used in cases
+    where no Conda package exists for the module or it has been decided that
+    Conda should not be used at all.
+
+    See :ref:`installing_and_using_software` for help with Conda.
+
+For installation of Perl modules from CPAN a simple command line tool can be
+installed, and just one command will install it for you.
 
 To start just run:
 
@@ -119,7 +128,7 @@ To start just run:
     [fe1]$ cpan App::cpanminus
 
 :file:`CPAN.pm` requires configuration, but most of it can be done
-automatically. If you answer 'no' below, you will enter an interactive dialog
+automatically. If you answer *no* below, you will enter an interactive dialog
 for each configuration option instead.
 
 .. code-block:: plain
@@ -148,7 +157,7 @@ for each configuration option instead.
     Would you like me to automatically choose some CPAN mirror
     sites for you? (This means connecting to the Internet) [yes]
 
-For this, just answer 'yes'. Then a lot of output follows, what is actually
+For this, just answer *yes*. Then a lot of output follows, what is actually
 important is:
 
 .. code-block:: none
@@ -165,8 +174,8 @@ important is:
 
 You need to put these lines into you :file:`~/.bashrc` file.
 
-After all that you need to start a new session, and you can just install new
-modules with :program:`cpanm` command, for example:
+After all that you need to start a new session, and you can install new modules
+with :program:`cpanm` command, for example:
 
 .. code-block:: console
 
