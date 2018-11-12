@@ -338,7 +338,9 @@ Copying data
 .. note::
 
     iPSYCH users wishing to copy data from the cluster to their own computer
-    should follow the instructions :ref:`ipsych-export`.
+    should follow the instructions :ref:`ipsych-export`
+
+    To copy data to the cluster, follow the instructions :ref:`ipsych-import`
 
 From your own machine to/from the cluster
 -----------------------------------------
