@@ -8,10 +8,12 @@ cores) connected with 10GigE/Infiniband. Each node has from 16 to
 The cluster has been designed specifically for bioinformatic workloads and has
 a storage capacity of 6 PB.
 
-.. todo::
+.. warning::
 
-  Make it clear that there are restrictions and differences for iPSYCH users.
-  Put this in a big blue box.
+    For security reasons, iPSYCH users are working in a restricted environment.
+    In some cases, this means that iPSYCH users must use special commands or
+    follow special instructions for certain things. This will be noted in blue
+    boxes throughout the documentation.
 
 If you're new to GenomeDK, please read through the
 :ref:`Getting started <getting_started>` chapter. This will help you understand
