@@ -147,8 +147,8 @@ run:
 
 .. code-block:: console
 
-    $ conda activate
-    $ conda create -n myproject python=3.5
+    [fe1]$ conda activate
+    (base) [fe1]$ conda create -n myproject python=3.5
 
 If the first command doesn't work, you're running an old version of Anaconda.
 Please download and install a newer version.
@@ -158,13 +158,14 @@ To enter the environment, use this command:
 
 .. code-block:: console
 
-    $ source activate myproject
+    [fe1]$ source activate myproject
+    (myproject) [fe1]$
 
 Now check that the environment has been activated correctly by starting Python:
 
 .. code-block:: console
 
-    $ python
+    [fe1]$ python
     Python 3.5.1 |Continuum Analytics, Inc.| (default, Dec 7 2015, 11:24:55)
     [GCC 4.2.1 (Apple Inc. build 5577)] on darwin
     Type "help", "copyright", "credits" or "license" for more information.
@@ -182,7 +183,7 @@ run this command:
 
 .. code-block:: console
 
-    $ conda install numpy
+    [fe1]$ conda install numpy
 
 This will install the latest version of the numpy package into the current
 environment (you may have to say yes to installing the packages). Now try to
@@ -198,7 +199,7 @@ environment for working with another project, run the command:
 
 .. code-block:: console
 
-    $ source deactivate
+    [fe1]$ source deactivate
 
 That's fine, but we still need a way to export an environment and its packages
 to other people. We can do this with:
@@ -213,7 +214,7 @@ popular libraries used with R. To get access to the R channel run:
 
 .. code-block:: console
 
-    $ conda config --add channels r
+    [fe1]$ conda config --add channels r
 
 Another great channel is the Bioconda channel which provides access to
 hundreds of packages related to bioinformatics such as BWA, samtools, BLAST
@@ -221,7 +222,7 @@ etc.:
 
 .. code-block:: console
 
-    $ conda config --add channels bioconda
+    [fe1]$ conda config --add channels bioconda
 
 However, all of this hardly improves reproducibility. However, Anaconda allows
 you to specify an environment (a list of channels and packages with specific
@@ -244,13 +245,13 @@ Now, for the sake of clarity, let's remove our existing myproject environment.
 
 .. code-block:: console
 
-    $ conda env remove -n myproject
+    [fe1]$ conda env remove -n myproject
 
 We can now create the exact environment specified in environment.yml by simply running:
 
 .. code-block:: console
 
-    $ conda env create
+    [fe1]$ conda env create
 
 As you work you may need to change your environment, e.g. update a package to a
 more recent version, add or remove a package. To do this, just modify the
@@ -258,7 +259,7 @@ environment.yml file and then run:
 
 .. code-block:: console
 
-    $ conda env update --prune
+    [fe1]$ conda env update --prune
 
 Sanity check for repeatability
 ==============================
