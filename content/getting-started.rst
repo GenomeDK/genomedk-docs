@@ -556,7 +556,7 @@ Documentation for each editor can be found on their respective websites.
 
 
 Gedit with X-forwarding
-----------------------
+-----------------------
 
 If you want a graphical user interface and a more familiar editing experience,
 you may use the :program:`Gedit` editor with :ref:`X-forwarding <xforwarding>`.
