@@ -112,13 +112,15 @@ by typing this command:
     $ ssh USERNAME@login.genome.au.dk
 
 
-MobaXterm [Windows]
--------------------
+.. todo::
 
-On Windows, download and install the `MobaXterm`_ application following the
-instructions on the website.
+    MobaXterm [Windows]
+    -------------------
 
-.. _MobaXterm: https://mobaxterm.mobatek.net/
+    On Windows, download and install the `MobaXterm`_ application following the
+    instructions on the website.
+
+    .. _MobaXterm: https://mobaxterm.mobatek.net/
 
 
 Changing your password
@@ -143,12 +145,14 @@ again.
     work in all cases or at all.
 
 
-Two-factor authentication
-=========================
+.. todo::
 
-* FreeOTP (recommended)
-* NetIQ Advanced Authentication
-* Google Authenticator
+    Two-factor authentication
+    =========================
+
+    * FreeOTP (recommended)
+    * NetIQ Advanced Authentication
+    * Google Authenticator
 
 
 Public-key authentication
@@ -241,8 +245,10 @@ password). Then run:
 
 You will now be able to SSH between compute nodes without typing a password.
 
-MobaXterm [Windows]
--------------------
+.. todo::
+
+    MobaXterm [Windows]
+    -------------------
 
 
 .. _mounting:
@@ -300,8 +306,10 @@ To unmount the directory, run:
 
 .. _OSX FUSE: https://osxfuse.github.io/
 
-Win-SSHFS [Windows]
--------------------
+.. todo::
+
+    Win-SSHFS [Windows]
+    -------------------
 
 
 Encrypting sensitive data
@@ -391,8 +399,10 @@ If you want to download data from the cluster:
 You may want to add the ``--progress`` flag to all of these commands if you're
 downloading/uploading large amounts of data.
 
-MobaXterm [Windows]
-~~~~~~~~~~~~~~~~~~~
+.. todo::
+
+    MobaXterm [Windows]
+    ~~~~~~~~~~~~~~~~~~~
 
 
 
@@ -471,8 +481,10 @@ You should then be able to open e.g. Firefox on the frontend:
 
 .. _XQuartz: https://www.xquartz.org/
 
-MobaXterm [Windows]
-~~~~~~~~~~~~~~~~~~~
+.. todo::
+
+    MobaXterm [Windows]
+    ~~~~~~~~~~~~~~~~~~~
 
 
 
