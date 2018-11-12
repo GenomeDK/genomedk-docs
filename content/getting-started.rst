@@ -720,6 +720,15 @@ been submitted to the queue:
 
     [fe1]$ squeue
 
+Cancelling a job
+----------------
+
+Jobs can be cancelled using the :program:`scancel` command:
+
+.. code-block:: console
+
+    [fe1]$ scancel 17129500
+
 Checking job priorities
 -----------------------
 
