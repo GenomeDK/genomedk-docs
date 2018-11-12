@@ -98,6 +98,11 @@ You'll then be able to connect to the cluster.
 Connecting to the cluster
 =========================
 
+.. note::
+
+    iPSYCH users should follow the instructions
+    `here <http://ipsych.genome.au.dk/>`_.
+
 SSH [Linux/macOS]
 -----------------
 
@@ -333,6 +338,11 @@ are written to ``data.txt.new``.
 
 Copying data
 ============
+
+.. note::
+
+    iPSYCH users wishing to copy data from the cluster to their own computer
+    should follow the instructions :ref:`ipsych-export`.
 
 From your own machine to/from the cluster
 -----------------------------------------

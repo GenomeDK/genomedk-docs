@@ -62,6 +62,8 @@ We have a special upload user so just send us their email and we will set them
 up. Once the data is uploaded we will move it to a folder you have access to.
 
 
+.. _ipsych-export:
+
 I am an iPSYCH user, how do I export files?
 -------------------------------------------
 
