@@ -25,7 +25,7 @@ the :ref:`Best practices <best_practices>`, which contains suggestions and
 patterns for organizing your projects and keeping your research reproducible.
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
   :caption: Getting started
 
   content/getting-started
