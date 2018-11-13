@@ -78,6 +78,10 @@ pygments_style = 'friendly'
 todo_include_todos = False
 
 
+def setup(app):
+    app.add_stylesheet('custom.css')
+
+
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for

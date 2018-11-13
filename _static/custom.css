@@ -1,0 +1,6 @@
+.admonition-ipsych {
+    background: rgb(252, 223, 227) !important;
+}
+.admonition-ipsych.admonition > .first.admonition-title {
+    background: rgb(209, 116, 116);
+}
