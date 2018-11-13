@@ -181,7 +181,7 @@ On your own computer, open the terminal of your choice and type:
 
 .. code-block:: console
 
-    $ ssh-keygen
+    [local]$ ssh-keygen
 
 You'll be asked several questions. The defaults are just fine, so just press
 the :kbd:`Enter` for all of them. Make sure to leave the passphrase empty!
@@ -217,7 +217,7 @@ key to the cluster, run:
 
 .. code-block:: console
 
-    $ ssh-copy-id -i PUBLIC-KEY-PATH login.genome.au.dk
+    [local]$ ssh-copy-id -i PUBLIC-KEY-PATH login.genome.au.dk
 
 Replace `PUBLIC-KEY-PATH` with the path to your public key. You will be asked
 to enter your password for the cluster. You should now be able to log in to the
@@ -225,7 +225,7 @@ cluster without typing your password. Test this by runnning:
 
 .. code-block:: console
 
-    $ ssh USERNAME@login.genome.au.dk
+    [local]$ ssh USERNAME@login.genome.au.dk
 
 You should not be prompted for a password.
 
@@ -234,14 +234,14 @@ same :command:`ssh-keygen` command as before:
 
 .. code-block:: console
 
-    $ ssh-keygen
+    [fe1]$ ssh-keygen
 
 Again, just press :kbd:`Enter` to use the default values (and do not type in a
 password). Then run:
 
 .. code-block:: console
 
-    $ cat ~/.ssh/id_rsa.pub >> authorized_keys
+    [fe1]$ cat ~/.ssh/id_rsa.pub >> authorized_keys
 
 You will now be able to SSH between compute nodes without typing a password.
 
@@ -267,13 +267,13 @@ sshfs [Linux/macOS]
 
   .. code-block:: console
 
-      $ apt-get install sshfs
+      [local]$ apt-get install sshfs
 
 * On distros with the :program:`yum` package manager (Fedora, CentOS etc.):
 
   .. code-block:: console
 
-      $ yum install sshfs
+      [local]$ yum install sshfs
 
 * On macOS, download and install the *SSHFS* and *FUSE for macOS* packages
   from the `OSX FUSE`_ website.
@@ -282,13 +282,13 @@ Create a directory where the filesystem will be mounted:
 
 .. code-block:: console
 
-    $ mkdir ~/GenomeDK
+    [local]$ mkdir ~/GenomeDK
 
 Now mount the filesystem by running this command:
 
 .. code-block:: console
 
-    $ sshfs USERNAME@login.genome.au.dk:/home/USERNAME ~/GenomeDK \
+    [local]$ sshfs USERNAME@login.genome.au.dk:/home/USERNAME ~/GenomeDK \
         -o idmap=none -o uid=$(id -u),gid=$(id -g) \
         -o allow_other -o umask=077 -o follow_symlinks
 
