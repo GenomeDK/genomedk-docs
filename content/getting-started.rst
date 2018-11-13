@@ -80,24 +80,24 @@ submitting jobs.
 Get access to the cluster
 =========================
 
-You can request access to the cluster by filling out one of these forms:
+.. admonition:: iPSYCH...
 
-* `Normal users`_
-* `iPSYCH users`_
+    Fill out the form for `iPSYCH users`_.
+
+Fill out the form for `normal users`_.
 
 Once you've been granted access, you'll receive an e-mail with your password.
 You'll then be able to connect to the cluster.
 
-.. _Normal users: https://genomedk.wufoo.com/forms/request-access-to-cluster/
+.. _normal users: https://genomedk.wufoo.com/forms/request-access-to-cluster/
 .. _iPSYCH users: https://genomedk.wufoo.com/forms/request-access-to-cluster-ipsych-only/
 
 Connecting to the cluster
 =========================
 
-.. note::
+.. admonition:: iPSYCH...
 
-    iPSYCH users should follow the instructions
-    `here <http://ipsych.genome.au.dk/>`_.
+    Follow the instructions `here <http://ipsych.genome.au.dk/>`_.
 
 SSH [Linux/macOS]
 -----------------
@@ -341,12 +341,10 @@ are written to ``data.txt.new``.
 Copying data
 ============
 
-.. note::
+.. admonition:: iPSYCH...
 
-    iPSYCH users wishing to copy data from the cluster to their own computer
-    should follow the instructions :ref:`ipsych-export`
-
-    To copy data to the cluster, follow the instructions :ref:`ipsych-import`
+    To copy data from the cluster, see :ref:`ipsych-export`
+    To copy data to the cluster, see :ref:`ipsych-import`
 
 From your own machine to/from the cluster
 -----------------------------------------
