@@ -103,9 +103,9 @@ SSH [Linux/macOS]
 -----------------
 
 On Linux, open the terminal of your choice. On macOS, you may use
-:program:Terminal.app: which can be found in the `Applications/Utilities`
-folder. In both cases, you should now be able to log in to the frontend
-by typing this command:
+:program:`Terminal.app` which can be found in the
+:file:`/Applications/Utilities` folder. In both cases, you should now be able
+to log in to the frontend by typing this command:
 
 .. code-block:: console
 
@@ -645,7 +645,7 @@ To submit an interactive job:
 
 This may take some time since you must wait until it's your turn in the queue.
 Once it's your turn, you'll get a shell on the node that was assigned to you.
-In this case, we were given the node `s03n73`.
+In this case, we were given the node *s03n73*.
 
 You may also specify some requirements for the job, such as the amount of
 memory that should be allocated:
@@ -656,7 +656,7 @@ memory that should be allocated:
 
 When running a job you have access to the same filesystems as when running on
 the frontend. Thus, you can access your home folder and project folders with
-the same paths as on `fe1`.
+the same paths as on *fe1*.
 
 When you're done with your interactive session on the node, it can be exited
 by running the ``exit`` command or pressing :kbd:`Control + D`.
@@ -704,7 +704,7 @@ an overview of commonly used resource flags:
 
     "``-p``", "``--partition``", "One or more comma-separated partitions that the job may run on."
     "", "``--mem-per-cpu``", "Memory allocated per allocated CPU core."
-    "``-c``", "", "Number of cores allocated for the job."
+    "``-c``", "``--cpus-per-task``", "Number of cores allocated for the job."
     "``-t``", "``--time``", "Maximum time the job will be allowed to run."
 
 The rest of the script is a normal Bash_ script which contains the commands

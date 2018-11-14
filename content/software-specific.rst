@@ -43,9 +43,9 @@ the port-forwarding from the computing node to your computer.
 
 .. code-block:: console
 
-    [local ~]$ ssh -L$UID:$HOSTNAME:$UID <user>@login.genome.au.dk
+    [local ~]$ ssh -L$UID:$HOSTNAME:$UID USER@login.genome.au.dk
 
-You will need to replace `<user>` with your username on the cluster.
+You will need to replace *USER* with your username on the cluster.
 
 *Start the notebook*. Back on the computing node start a Jupyter notebook.
 For this you may have to first unset the environmental variable
@@ -60,7 +60,7 @@ For this you may have to first unset the environmental variable
 
 *Run the notebook*. Back on your local computer start a web browser and
 paste the URL from above. But replace the part in parenthesis with
-`localhost` to get:
+*localhost* to get:
 
 .. code-block:: plain
 

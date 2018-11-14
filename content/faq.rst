@@ -63,7 +63,7 @@ Why can't I connect?
 --------------------
 
 We only allow incoming connections from a whitelisted set of IPs, so if you get
-a `connection refused` you should try sending us an email with the IP you are
+a *connection refused* you should try sending us an email with the IP you are
 connecting from. You can see what your IP is on http://myip.dk.
 
 Contact us if you need your IP address to be whitelisted.
