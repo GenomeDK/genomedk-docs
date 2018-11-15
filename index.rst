@@ -1,19 +1,15 @@
-Welcome to GenomeDK's documentation!
-====================================
+Welcome to GenomeDK!
+====================
+
 
 The GenomeDK HPC cluster at Aarhus University comprises of 215 nodes (4352
 cores) connected with 10GigE/Infiniband. Each node has from 16 to
 36 cores and either 64 GB, 128 GB, 256 GB, 384 GB, or 1 TB of RAM.
 
 The cluster has been designed specifically for bioinformatic workloads and has
-a storage capacity of 5.5 PB.
+a storage capacity of 6 PB.
 
-.. admonition:: iPSYCH...
-
-    For security reasons, iPSYCH users are working in a restricted environment.
-    In some cases, this means that iPSYCH users must use special commands or
-    follow special instructions for certain things. This will be noted in red
-    boxes like this one throughout the documentation.
+---
 
 If you're new to GenomeDK, please read through the
 :ref:`Getting started <getting_started>` chapter. This will help you understand
@@ -26,25 +22,37 @@ patterns for organizing your projects and keeping your research reproducible.
 
 .. toctree::
   :maxdepth: 1
-  :caption: Getting started
-
-  content/getting-started
-
-.. toctree::
-  :maxdepth: 2
-  :caption: Best practices
-
-  content/best-practices
-
-.. toctree::
-  :maxdepth: 2
-  :caption: Software-specific documentation
-
-  content/software-specific
-
-.. toctree::
-  :maxdepth: 2
-  :caption: How do I get more help?
+  :hidden:
+  :caption: Main
 
   content/support
+  content/technical
+  content/staff
+  content/forms
+
+.. toctree::
+  :maxdepth: 2
+  :hidden:
+  :caption: Documentation
+
+  content/getting-started
+  content/best-practices
+  content/software-specific
   content/faq
+
+.. container:: logo-box
+
+  .. container:: inline-logo
+
+    .. image:: content/images/logo-birc.png
+      :height: 100pt
+
+  .. container:: inline-logo
+
+    .. image:: content/images/logo-iseq.png
+      :height: 55pt
+
+  .. container:: inline-logo
+
+    .. image:: content/images/logo-au.png
+      :height: 100pt

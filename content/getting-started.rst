@@ -1,5 +1,17 @@
 .. _getting_started:
 
+===============
+Getting started
+===============
+
+.. admonition:: iPSYCH...
+
+    For security reasons, iPSYCH users are working in a restricted environment.
+    In some cases, this means that iPSYCH users must use special commands or
+    follow special instructions for certain things. This will be noted in red
+    boxes like this one throughout the documentation.
+
+
 How does the cluster work?
 ==========================
 
@@ -219,7 +231,7 @@ key to the cluster, run:
 
     [local]$ ssh-copy-id -i PUBLIC-KEY-PATH login.genome.au.dk
 
-Replace `PUBLIC-KEY-PATH` with the path to your public key. You will be asked
+Replace *PUBLIC-KEY-PATH* with the path to your public key. You will be asked
 to enter your password for the cluster. You should now be able to log in to the
 cluster without typing your password. Test this by runnning:
 
@@ -912,9 +924,9 @@ Transition to Conda
 Previously, GenomeDK has made software available for users through a special
 mechanism called :file:`/com/extra` which allowed users to load specific
 software packages. However, there are several problems with the approach taken
-here. If you are already using software from `/com/extra`, note that this may
-not be supported in the future and that no new software will be made available
-through this mechanism.
+here. If you are already using software from :file:`/com/extra`, note that this
+may not be supported in the future and that no new software will be made
+available through this mechanism.
 
 Also, note that software installed through the old mechanism may interfere with
 your environments. If you wish to use Conda we therefore encourage you to edit
