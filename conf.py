@@ -167,3 +167,27 @@ texinfo_documents = [
 
 
 html_last_updated_fmt = ''
+
+# -- Custom shell session lexer -------------------------------------------
+from pygments.lexers.shell import ShellSessionBaseLexer, BashLexer
+from sphinx.highlighting import lexers
+
+def _optional(s):
+    return "(?:" + s + ")?"
+def _group(s):
+    return "(" + s + ")"
+
+_command = r'.*\n?'
+_conda_env = r'\(.*\)\s*'
+_info = r'\[.*\]\s*'
+_sep = r'[$]'
+prompt_regex = _group(_optional(_conda_env) + _optional(_info) + _sep) + _group(_command)
+assert(prompt_regex == r"((?:\(.*\)\s*)?(?:\[.*\]\s*)?[$])(.*\n?)")
+
+class CustomBashSessionLexer(ShellSessionBaseLexer):
+    name = 'Bash Session'
+    _innerLexerCls = BashLexer
+    _ps1rgx = prompt_regex
+    _ps2 = '>'
+
+lexers['console'] = CustomBashSessionLexer()
