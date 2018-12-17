@@ -813,7 +813,7 @@ installer:
    [fe1]$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
    [fe1]$ chmod +x Miniconda3-latest-Linux-x86_64.sh
    [fe1]$ ./Miniconda3-latest-Linux-x86_64.sh -b
-   [fe1]$ echo ". /home/$(whoami)/anaconda/etc/profile.d/conda.sh" >> .bashrc
+   [fe1]$ echo ". /home/$(whoami)/miniconda3/etc/profile.d/conda.sh" >> .bashrc
 
 Conda can install packages from different *channels*. This is similar to
 *repositories* in other package managers. Here we'll add a few channels that
