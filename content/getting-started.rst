@@ -517,7 +517,9 @@ VNC [Linux/macOS/Windows]
 
 If you want to use a full virtual desktop you can use a VNC program. There are
 lots of options but we recommend TightVNC_ which works on both Linux, macOS,
-and Windows.
+and Windows. When downloading TightVNC we recommend to get "TightVNC Java Viewer"
+from the download section. It downloads a zip archive which contains an executable
+jar file.
 
 To use VNC you first need to login to the frontend and start a *VNC server*.
 Starting the server is done with the ``vncserver`` command and looks like this:
