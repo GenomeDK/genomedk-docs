@@ -443,15 +443,14 @@ Collaborating on data
 
 Data sharing between users can only be accomplished through dedicated project
 folders to which only certain users have access. To apply for a project folder,
-fill out `this <request-project>`_ form.
+fill out `this <http://genome.au.dk/request-forms/request-new-project-group/>`_
+form.
 
 When your request has been accepted, you and the other project members will
 have access to a shared folder in :file:`/project/PROJECT-NAME` where
 *PROJECT-NAME* is the name requested for your project. All users can add, edit,
 and delete files in the project folder unless restrictions have been set on
 specific files/folders.
-
-.. _request-project: http://genome.au.dk/request-forms/request-new-project-group/
 
 Using graphical interfaces
 ==========================
