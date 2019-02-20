@@ -915,7 +915,7 @@ with Conda commands available.
 .. _anaconda.org: https://anaconda.org/
 .. _Conda: https://conda.io/docs/
 .. _Anaconda: https://www.anaconda.com/download/
-.. _cheat sheet: https://conda.io/docs/_downloads/conda-cheatsheet.pdf
+.. _cheat sheet: https://docs.conda.io/projects/conda/en/master/_downloads/60ae10e38705011c7fd365802504d04d/conda-cheatsheet.pdf
 
 .. _transition:
 
