@@ -426,7 +426,9 @@ You can use :program:`wget` to download data from the Internet to the cluster:
 .. code-block:: console
 
     [fe1]$ wget -c --timeout=120 --waitretry=60 \
-        --tries=10000 --retry-connrefused ftp://url.somewhere/important.file
+        --tries=10000 --retry-connrefused URL
+
+Remember to replace ``URL`` with the thing you want to download.
 
 When downloading large files you are encouraged to limit the progress output to
 avoid stressing the system, *especially* when you're sending the progress
@@ -435,7 +437,7 @@ output to a file:
 .. code-block:: console
 
     [fe1]$ wget -c --progress=giga:force --timeout=120 --waitretry=60 \
-        --tries=10000 --retry-connrefused ftp://url.somewhere/important.file
+        --tries=10000 --retry-connrefused URL
 
 
 Collaborating on data
