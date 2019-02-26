@@ -738,6 +738,25 @@ and run:
 Contrary to :command:`srun`, this command returns immediately, giving us a job
 id to identify our job.
 
+Working on GPU nodes
+--------------------
+
+There are currently 2 compute nodes on the cluster that are equipped with GPU cards with
+two devices per node. There are currently no frontends equipped with GPU devices.
+
+If you need to compile a piece of software that is supposed to use GPU’s you most likely
+have to do it in a job on one of the compute nodes with such devices, since headers required
+for compilation are only located there.
+
+Headers and libraries for compilation are located in */usr/local/cuda/targets/x86_64-linux*
+
+To to run a job on a node with a GPU device you need to submit it to the *gpu* partition and specify how many GPU devices you are going to use, for example to submit an interactive job that will use just one GPU:
+
+.. code-block:: console
+
+    [fe1]$ srun --gres=gpu:1 -p gpu –pty /bin/bash
+
+
 Checking job status
 -------------------
 
