@@ -773,7 +773,7 @@ submit an interactive job that will use just one GPU:
 
 .. code-block:: console
 
-    [fe1]$ srun --gres=gpu:1 -p gpu –pty /bin/bash
+    [fe1]$ srun --gres=gpu:1 -p gpu --pty /bin/bash
 
 
 Checking job status
