@@ -220,4 +220,7 @@ Headers and libraries for compilation are located in */usr/local/cuda/targets/x8
 To to run a job on a node with a GPU device you need to submit it to the *gpu* partition and specify how many GPU devices you are going to use, for example to submit an interactive job that will use just one GPU:
 
 .. code-block:: console
+
     [fe1]$ srun --gres=gpu:1 -p gpu –pty /bin/bash
+
+ 
