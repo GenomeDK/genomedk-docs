@@ -717,16 +717,11 @@ an overview of commonly used resource flags:
 .. csv-table:: Resource flags
     :header: "Short flag", "Long flag", "Description"
 
-    "``-p``", "``--partition``", "One or more comma-separated partitions that the job
-                                  may run on. Jobs submitted to the *gpu* partition should
-				  also use the *--gres* flag."
+    "``-p``", "``--partition``", "One or more comma-separated partitions that the job may run on. Jobs submitted to the *gpu* partition should also use the *--gres* flag."
     "", "``--mem-per-cpu``", "Memory allocated per allocated CPU core."
     "``-c``", "``--cpus-per-task``", "Number of cores allocated for the job."
     "``-t``", "``--time``", "Maximum time the job will be allowed to run."
-    "", "``--gres=gpu:<number of gpu's>``", "Number of GPU cards to be used in case the job
-                                             is being submitted to the *gpu* partition. If not
-					     defined the job will not have access to GPU cards,
-					     even if it is running on a proper node."
+    "", "``--gres=gpu:<number of gpu's>``", "Number of GPU cards to be used in case the job is being submitted to the *gpu* partition. If not defined the job will not have access to GPU cards, even if it is running on a proper node."
 
 The rest of the script is a normal Bash_ script which contains the commands
 that should be executed, when the job is started by Slurm.
