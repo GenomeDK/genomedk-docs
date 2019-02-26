@@ -39,6 +39,12 @@ Technical
 |               | -  384 GB of memory                                   |
 |               | -  Infiniband FDR                                     |
 +---------------+-------------------------------------------------------+
+| 2 / 72        | -  Two Intel/"Skylake" Gold 6140                      |
+|               |    CPU @ 2.30GHz, 18 cores/CPU                        |
+|               | -  384 GB of memory                                   |
+|               | -  Infiniband FDR                                     |
+|               | -  Two Nvidia V100 16Gb GPU devices                   |
++---------------+-------------------------------------------------------+
 | 1 / 32        |                                                       |
 |               |                                                       |
 |               | -  Four AMD/Opteron 6212 CPUs @                       |
