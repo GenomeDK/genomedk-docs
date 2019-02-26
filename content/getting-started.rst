@@ -454,6 +454,23 @@ have access to a shared folder in :file:`/project/PROJECT-NAME` where
 and delete files in the project folder unless restrictions have been set on
 specific files/folders.
 
+
+Backing up data
+===============
+
+We provide backup on good old-fashioned tape to all users. To back up a file,
+it should be put in a directory called either ``BACKUP``, ``Backup`` or
+``backup``. The directory can be located in any other directory.
+
+Data is backed up approximately once per week.
+
+.. warning::
+
+    Do not back up temporary data files that can easily be reproduced.
+    Computation is cheap, but backup is *very* expensive. The backup is meant
+    for scripts/source code and important raw data.
+
+
 Using graphical interfaces
 ==========================
 
