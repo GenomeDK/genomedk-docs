@@ -508,7 +508,7 @@ XQuartz [macOS]
 
 Since macOS does not include an X server, you will need to download and install
 XQuartz_ on your computer. When installed, reboot the computer. Now, you just
-need to tell SSh that you wish to enable X-forwarding. To do this, add ``-X``
+need to tell SSH that you wish to enable X-forwarding. To do this, add ``-X``
 to the :program:`ssh` command when logging in to the cluster, for example:
 
 .. code-block:: console
