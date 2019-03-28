@@ -66,7 +66,7 @@ For this you may have to first unset the environmental variable
 paste the URL from above. But replace the part in parenthesis with
 *localhost* to get:
 
-.. code-block:: plain
+.. code-block:: text
 
     http://localhost:<UID>/?token=....
 
@@ -135,7 +135,7 @@ To start just run:
 automatically. If you answer *no* below, you will enter an interactive dialog
 for each configuration option instead.
 
-.. code-block:: plain
+.. code-block:: text
 
     Would you like to configure as much as possible automatically? [yes]
     and just answer 'yes'
@@ -205,4 +205,4 @@ with :program:`cpanm` command, for example:
     [fe1]$ perldoc -l DBD::mysql
     /home/xjk/perl5/lib/perl5/x86_64-linux-thread-multi/DBD/mysql.pm
 
- 
+
