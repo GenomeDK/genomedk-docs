@@ -29,6 +29,7 @@ patterns for organizing your projects and keeping your research reproducible.
   content/technical
   content/staff
   content/forms
+  content/system-status
 
 .. toctree::
   :maxdepth: 2
