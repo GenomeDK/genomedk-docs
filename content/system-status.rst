@@ -2,6 +2,4 @@
 System status
 =============
 
-.. raw:: html
-
-    <iframe sandbox src="http://suvi.services/v2/status.html" frameBorder="0" width="100%" height="60" scrolling="no"></iframe>
+2019-04-05 12:00:00 - We are experiencing issues on the faststorage. New jobs will not start while we are working on the fix. There is currently no ETA.
