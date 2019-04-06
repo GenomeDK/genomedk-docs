@@ -2,6 +2,11 @@
 System status
 =============
 
+2019-04-06 19:50
+----------------
+
+We accepting incoming connections, i.e., you can login, soon the queue will be released!
+
 2019-04-06 19:22
 ----------------
 
