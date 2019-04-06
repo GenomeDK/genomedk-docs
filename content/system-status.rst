@@ -2,6 +2,11 @@
 System status
 =============
 
+2019-04-06 19:22
+----------------
+
+We hope to open the cluster for normal use in about and hour from now.
+
 2019-04-06 07:41
 ----------------
 
