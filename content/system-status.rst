@@ -2,6 +2,11 @@
 System status
 =============
 
+2019-04-06 20:15
+----------------
+
+Jobs are now starting normally and everything is working as indended.
+
 2019-04-06 19:50
 ----------------
 
