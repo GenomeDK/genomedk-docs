@@ -445,7 +445,7 @@ Collaborating on data
 
 Data sharing between users can only be accomplished through dedicated project
 folders to which only certain users have access. To apply for a project folder,
-fill out `this <http://genome.au.dk/request-forms/request-new-project-group/>`_
+fill out `this <https://genomedk.wufoo.com/forms/request-new-project-group>`_
 form.
 
 When your request has been accepted, you and the other project members will
