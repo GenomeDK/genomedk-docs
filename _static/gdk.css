@@ -1,3 +1,12 @@
+body {
+    font-size: 14pt;
+}
+
+.main h2, .main h3, .main h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
 /* Main page logos */
 .logo-box {
     display: flex;
