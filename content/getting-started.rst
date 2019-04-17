@@ -121,7 +121,7 @@ to log in to the frontend by typing this command:
 
 .. code-block:: console
 
-    $ ssh USERNAME@login.genome.au.dk
+    [local]$ ssh USERNAME@login.genome.au.dk
 
 
 .. todo::
@@ -144,7 +144,7 @@ logging in. Run the command:
 
 .. code-block:: console
 
-    $ change-password
+    [fe1]$ change-password
 
 It will ask you for your current password, then ask what your new password
 should be. Finally, it will ask you to confirm your new password by typing it
@@ -312,7 +312,7 @@ To unmount the directory, run:
 
 .. code-block:: console
 
-    $ umount ~/GenomeDK
+    [local]$ umount ~/GenomeDK
 
 .. _OSX FUSE: https://osxfuse.github.io/
 
