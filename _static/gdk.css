@@ -10,7 +10,8 @@
 
 /* iPSYCH box */
 .admonition-ipsych {
-    background: #5f0030;
+    border-left: 4px solid rgba(95, 0, 48, 1) !important;
+    background: rgba(95, 0, 48, 0.1);
 }
 
 /* Staff-page contact info blocks */
