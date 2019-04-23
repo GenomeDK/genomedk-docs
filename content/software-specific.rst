@@ -41,6 +41,9 @@ where the notebook will run.
 
     [local ~]$ ssh <user>@login.genome.au.dk
     [me@genomedk ~]$ srun --pty bash
+    srun: job 3597082 queued and waiting for resources
+    srun: job 3597082 has been allocated resources
+    [me@node ~]$
 
 *Setup SSH tunnel.* Back on your local computer open a second terminal to setup
 the port-forwarding from the computing node to your computer.
