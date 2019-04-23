@@ -47,9 +47,24 @@ the port-forwarding from the computing node to your computer.
 
 .. code-block:: console
 
-    [local ~]$ ssh -L$UID:$HOSTNAME:$UID USER@login.genome.au.dk
+    [local ~]$ ssh -L<UID>:<compute node>:<UID> <user>@login.genome.au.dk
 
-You will need to replace *USER* with your username on the cluster.
+You will need to replace *<UID>* with your user ID on the cluster, *<compute node>* with the name of the compute node you have your job on, and *<user>* with your username on the cluster. You can easily get those values by running following commands on your compute node inside the interactive job you started in the previous step.
+
+.. code-block:: console
+
+    [me@node ~]$ echo $UID
+    1234
+    [me@node ~]$ echo $HOSTNAME
+    node
+    [me@node ~]$ echo $USER
+    me
+
+Resulting in a command that would look like this:
+
+.. code-block:: console
+
+    [local ~]$ ssh -L1234:node:1234 me@login.genome.au.dk
 
 *Start the notebook*. Back on the computing node start a Jupyter notebook.
 For this you may have to first unset the environmental variable
