@@ -3,8 +3,25 @@ body {
 }
 
 .main h2, .main h3, .main h4 {
-    margin-top: 1.5em;
+    margin-top: 2em;
     margin-bottom: 0.5em;
+}
+
+.left-menu {
+    background: none;
+}
+
+footer p {
+    font-size: 0.8em;
+}
+
+.main table {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.main .toctree-wrapper {
+    font-size: 0.8em;
 }
 
 /* Main page logos */
@@ -26,4 +43,14 @@ body {
 /* Staff-page contact info blocks */
 .line-block {
     margin-bottom: 1em;
+}
+
+/* Code blocks */
+code, pre {
+    background: rgb(247, 247, 247) !important;
+}
+code.file {
+    background: none !important;
+    padding: 0;
+    border: none;
 }
