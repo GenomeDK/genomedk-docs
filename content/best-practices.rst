@@ -208,6 +208,17 @@ environment for working with another project, run the command:
 That's fine, but we still need a way to export an environment and its packages
 to other people. We can do this with:
 
+.. code-block:: console
+
+    (myproject) [fe1]$ conda env export > environment.yml
+
+Which allows other members of the project to recreate your exact environment:
+
+.. code-block:: console
+
+    [fe1]$ conda env create -f environment.yml
+    [fe1]$ conda activate myproject
+
 You may think that Anaconda only works for Python and Python packages, however,
 Anaconda actually works for any program that is available as an Anaconda package
 (which may Python, R or any other language, including binaries). Packages are
