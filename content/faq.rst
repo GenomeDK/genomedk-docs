@@ -53,11 +53,12 @@ How do I prevent accidental changes to my important data?
 
 Put the data in a separate folder and run:
 
-.. code-block: console
+.. code-block:: console
 
     [fe1]$ chmod -R a-w datafolder
 
-Now you can't change, add or remove files in that folder hierarchy.
+Now you can't change, add or remove files in that folder or any of its
+subfolders.
 
 
 Why can't I connect?
