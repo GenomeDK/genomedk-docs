@@ -1,3 +1,6 @@
+.. _contact:
+.. _support:
+
 =======
 Support
 =======
