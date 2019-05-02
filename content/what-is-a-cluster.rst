@@ -5,9 +5,6 @@
 What is a cluster?
 ==================
 
-How does the cluster work?
---------------------------
-
 A cluster consists of a large number of interconnected machines. Each machine
 is very much like your own desktop computer, except it's much more powerful
 and is optimized for specific workloads. However, like your desktop computer,
@@ -19,8 +16,8 @@ network connecting the nodes, data storage, and a queue manager. In
 section we'll discuss these components in a bit more detail, to give you an
 understanding of how a cluster works and how to utilize it properly.
 
-Components of the cluster
--------------------------
+Network
+=======
 
 Our cluster is connected through a high-performance network which
 allows all of the nodes to "talk" to each other. This allows programs running
@@ -28,7 +25,12 @@ on one node to communicate with programs running on another node.
 
 The compute nodes allow us to compute things and the network allows us to
 communicate between nodes. However, we also need access to data. This is the
-task of the storage system. Since bioinformatics is extremely data intensive we
+task of the storage system.
+
+Storage
+=======
+
+Since bioinformatics is extremely data intensive we
 can't make do with a single hard disk as you would in your own computer.
 Instead we buy hundreds of hard disks and use a file system that can manage
 files across all of these disks and present the user with one, united file
@@ -45,7 +47,12 @@ different nodes, consuming the resources of the entire cluster for an unknown
 duration of time. In short, it would be complete anarchy!
 
 To solve this problem we need the final component of the cluster, the *queue
-manager*. The queue manager is much like the queues in the supermarket. You
+manager*.
+
+Queue manager
+=============
+
+The queue manager is much like the queues in the supermarket. You
 stand in the queue and wait until it's your turn to pay. On the cluster, you
 submit *jobs* to the queue, and your jobs will then be run on some node chosen
 by the queue manager, once resources are available. The queue manager also
@@ -57,7 +64,7 @@ we use a queue manager called SLURM, so to run your programs on the cluster,
 you'll be interacting a lot with SLURM.
 
 Things to remember...
-~~~~~~~~~~~~~~~~~~~~~
+=====================
 
 This ends our tour of the cluster setup. Now, here's a few things that you
 should keep in mind when using the cluster...
