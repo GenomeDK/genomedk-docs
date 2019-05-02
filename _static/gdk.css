@@ -54,3 +54,37 @@ code.file {
     padding: 0;
     border: none;
 }
+
+/* Events */
+.event .event-title a img {
+    margin: 0.2em;
+    display: inline-block;
+    cursor: pointer;
+}
+.event .event-start:before {
+    content: "Start";
+    width: 5em;
+    display: inline-block;
+    font-weight: bold;
+}
+.event .event-end:before {
+    content: "End";
+    width: 5em;
+    display: inline-block;
+    font-weight: bold;
+}
+.event ul.event-tags {
+    margin-top: 0.5em;
+    font-size: 0.8em;
+}
+.event ul.event-tags li.event-tag::before {
+    content: none;
+}
+.event ul.event-tags li.event-tag {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    background: rgba(0, 171, 164, 1);
+    color: white;
+    margin-right: 0.5em;
+}
