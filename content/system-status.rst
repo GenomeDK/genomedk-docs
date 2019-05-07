@@ -7,20 +7,13 @@ System status
    <iframe sandbox src="https://suvi.services/status.html" frameBorder="0" width="100%" height="60" scrolling="no"></iframe>
 
 
-Upcoming maintenances
----------------------
+**Update (10:51:54):** We're experiencing problems with storage systems
+which are most likely related to the cooling maintenance. To ensure data
+safety we have closed access to the cluster for all users.
 
-.. event:: NFS storage maintenance
-    :uid: nfs-storage-maintenance-20190501
-    :start: 2019-05-03 08:00 +0200
-    :end: 2019-05-03 16:00 +0200
-    :tags: storage nfs
 
-    The cluster will be unavailable for all users in this timespan. During the
-    downtime we will perform NFS storage maintenance as we are working towards
-    decommissioning our old NFS storage servers and introducing new servers.
-    Over time, this will result in a more stable and responsive environment for
-    all GenomeDK users.
+Maintenances
+------------
 
 .. event:: Building maintenance
     :uid: building-maintenance-20190507
@@ -32,4 +25,3 @@ Upcoming maintenances
     lower the power output to the minimum. Therefore, the downtime procedure
     will be followed. We hope to limit the scope of this downtime to just
     compute nodes, and keep the rest of the cluster fully operational.
-
