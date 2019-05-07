@@ -15,6 +15,9 @@ safety we have closed access to the cluster for all users.
 take longer than expected. It is now expected we will be able to resume
 operations at 15.00. The cluster should be available shortly after.
 
+**Update @ 13:44:** Building maintenance has finished and GenomeDK is now back
+up.
+
 
 Maintenances
 ------------
@@ -23,6 +26,7 @@ Maintenances
     :uid: building-maintenance-20190507
     :start: 2019-05-07 08:00 +0200
     :end: 2019-05-07 12:00 +0200
+    :actualend: 2019-05-07 13:44 +0200
     :tags: compute
 
     Due to critical building maintenance on 7th of May 8:00-12:00 we have to
