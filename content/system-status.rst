@@ -7,9 +7,13 @@ System status
    <iframe sandbox src="https://suvi.services/status.html" frameBorder="0" width="100%" height="60" scrolling="no"></iframe>
 
 
-**Update (10:51:54):** We're experiencing problems with storage systems
+**Update @ 10:51:** We're experiencing problems with storage systems
 which are most likely related to the cooling maintenance. To ensure data
 safety we have closed access to the cluster for all users.
+
+**Update @ 11:21:** We have been informed that the building maintenance will
+take longer than expected. It is now expected we will be able to resume
+operations at 15.00. The cluster should be available shortly after.
 
 
 Maintenances
