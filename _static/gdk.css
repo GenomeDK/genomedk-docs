@@ -55,6 +55,39 @@ code.file {
     border: none;
 }
 
+/* Footnotes */
+a.footnote-reference {
+    vertical-align: super;
+    font-size: 0.8em;
+    padding: 0.1em;
+    font-weight: bold;
+}
+dl.footnote {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    overflow: visible;
+    font-size: 0.8em;
+    border-top: 1px solid #ececec;
+    padding-top: 0.5em;
+    margin-top: 2em;
+}
+dl.footnote dt.label {
+    flex: 0 0 5%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+dl.footnote dd {
+    flex: 0 0 95%;
+    margin-left: auto;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+a.fn-backref {
+    text-decoration: none;
+}
+
 /* Events */
 .event .event-title a img {
     margin: 0.2em;
