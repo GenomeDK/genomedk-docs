@@ -2,6 +2,10 @@ body {
     font-size: 14pt;
 }
 
+.main h1 {
+    margin-bottom: 1em;
+    font-size: 3.5em;
+}
 .main h2, .main h3, .main h4 {
     margin-top: 2em;
     margin-bottom: 0.5em;
