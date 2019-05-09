@@ -109,7 +109,6 @@ html_static_path = ['_static']
 
 def setup(app):
     app.add_stylesheet('gdk.css')
-    app.add_javascript('gdk.js')
 
 
 # -- Options for HTMLHelp output ------------------------------------------

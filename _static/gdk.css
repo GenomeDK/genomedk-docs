@@ -103,22 +103,13 @@ a.fn-backref {
     border-left: 4px solid rgba(95, 0, 48, 1) !important;
     background: rgba(95, 0, 48, 0.1);
 }
-.event.status-ongoing h3.event-title::before {
-    content: "[on-going] ";
-}
-.event.status-ended {
+.event.status-ended, .event.status-recent {
     border-left: 4px solid rgba(0, 171, 164, 1) !important;
     background: rgba(0, 171, 164, 0.1);
-}
-.event.status-ended h3.event-title::before {
-    content: "[ended] ";
 }
 .event.status-upcoming {
     border-left: 4px solid rgba(238, 127, 0, 1) !important;
     background: rgba(238, 127, 0, 0.1);
-}
-.event.status-old {
-    display: none;
 }
 
 .event h3.event-title {

@@ -2,6 +2,10 @@
 Welcome to GenomeDK!
 ====================
 
+.. eventlist::
+    :status: ongoing
+    :quiet: True
+
 We know that you're busy so here are some shortcuts:
 
 * :ref:`Request an account <request_access>`

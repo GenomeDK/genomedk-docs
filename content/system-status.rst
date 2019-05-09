@@ -6,9 +6,28 @@ System status
 
    <iframe sandbox src="https://suvi.services/status.html" frameBorder="0" width="100%" height="60" scrolling="no"></iframe>
 
-
+------------
 Maintenances
 ------------
+
+On-going
+--------
+
+.. eventlist::
+    :status: ongoing
+
+Upcoming
+--------
+
+.. eventlist::
+    :status: upcoming
+
+Recent
+------
+
+.. eventlist::
+    :status: recent
+
 
 .. event:: Building maintenance
     :uid: building-maintenance-20190507
