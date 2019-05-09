@@ -93,20 +93,58 @@ a.fn-backref {
 }
 
 /* Events */
+.event {
+    padding: 1rem 1rem 1rem 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-family: inherit;
+}
+.event.status-ongoing {
+    border-left: 4px solid rgba(95, 0, 48, 1) !important;
+    background: rgba(95, 0, 48, 0.1);
+}
+.event.status-ongoing h3.event-title::before {
+    content: "[on-going] ";
+}
+.event.status-ended {
+    border-left: 4px solid rgba(0, 171, 164, 1) !important;
+    background: rgba(0, 171, 164, 0.1);
+}
+.event.status-ended h3.event-title::before {
+    content: "[ended] ";
+}
+.event.status-upcoming {
+    border-left: 4px solid rgba(238, 127, 0, 1) !important;
+    background: rgba(238, 127, 0, 0.1);
+}
+.event.status-old {
+    display: none;
+}
+
+.event h3.event-title {
+    margin: 0;
+}
+
 .event .event-title a img {
     margin: 0.2em;
     display: inline-block;
     cursor: pointer;
 }
 .event .event-start:before {
-    content: "Start";
-    width: 5em;
+    content: "Planned start";
+    width: 7em;
     display: inline-block;
     font-weight: bold;
 }
 .event .event-end:before {
-    content: "End";
-    width: 5em;
+    content: "Planned end";
+    width: 7em;
+    display: inline-block;
+    font-weight: bold;
+}
+.event .event-actualend:before {
+    content: "Actual end";
+    width: 7em;
     display: inline-block;
     font-weight: bold;
 }

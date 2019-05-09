@@ -9,9 +9,13 @@ from sphinx.util import logging
 from sphinx.util.osutil import ensuredir, relative_uri
 from sphinx.util.docutils import SphinxDirective
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from dateutil.parser import parse as _parsedatetime
 from dateutil.tz import tzutc, tzlocal
+
+
+DATETIME_FORMAT = '%a, %b %d, %Y %H:%M %z'
+
 
 CALENDAR_ICON = ''.join("""
 data:image/svg+xml;base64,
@@ -47,6 +51,11 @@ def _parsetags(s):
     return s.split(' ')
 
 
+def tznow():
+    """Return the current date and time in the local time-zone"""
+    return datetime.now(tzlocal())
+
+
 def render_ical(title, uid, start, end):
     date_format = '%Y%m%dT%H%M%SZ'
     start_str = start.astimezone(tzutc()).strftime(date_format)
@@ -60,48 +69,63 @@ class event(nodes.General, nodes.Element):
 
 class EventDirective(SphinxDirective):
 
-    required_arguments = 1
-    optional_arguments = 3
+    required_arguments = 0
+    optional_arguments = 5
     final_argument_whitespace = False
     has_content = True
     option_spec = {
         'uid': directives.unchanged_required,
         'start': _parsedatetime,
         'end': _parsedatetime,
+        'actualend': _parsedatetime,
         'tags': _parsetags,
     }
 
     def run(self):
         document = self.state.document
+        env = document.settings.env
 
-        node = event()
-        node['title'] = ' '.join(self.arguments)
-        node['uid'] = self.options['uid']
-        node['start'] = self.options['start']
-        node['end'] = self.options['end']
-        node['tags'] = self.options.get('tags')
+        event_node = event()
+        event_node['title'] = ' '.join(self.arguments)
+        event_node['uid'] = self.options['uid']
+        event_node['start'] = self.options['start']
+        event_node['end'] = self.options['end']
+        event_node['actualend'] = self.options.get('actualend')
+        event_node['tags'] = self.options.get('tags')
 
-        self.state.nested_parse(self.content, self.content_offset, node)
+        self.state.nested_parse(self.content, self.content_offset, event_node)
 
-        if datetime.now(tzlocal()) > node['end']:
+        if not hasattr(env, 'event_all_events'):
+            env.event_all_events = []
+        env.event_all_events.append(event_node.deepcopy())
+
+        if event_node['actualend'] is not None:
+            end = event_node['actualend']
+        else:
+            end = event_node['end']
+
+        if tznow() - timedelta(hours=24) > end:
             return [
                 document.reporter.warning(
-                    _('skipping event "%s" since it is in the past') % node['title'],
+                    _('skipping event "%s" since it is in the past') % event_node['title'],
                     line=self.lineno
                 )
             ]
-        return [node]
+        return [event_node]
 
 
-def render_event_html(self, node, ical_path):
+def render_html_from_node(self, node, ical_path):
     title = node['title']
-    start = node['start'].strftime('%a, %b %d, %Y %H:%M')
-    end = node['end'].strftime('%a, %b %d, %Y %H:%M')
+    start = node['start'].strftime(DATETIME_FORMAT)
+    end = node['end'].strftime(DATETIME_FORMAT)
+    actualend = node['actualend']
 
     self.body.append('<section class="event">')
     self.body.append('<h3 class="event-title">{}<a type="text/calendar" alt="Add to calendar" href="{}"><img src="{}"></a></h3>'.format(title, ical_path, CALENDAR_ICON))
     self.body.append('<div class="event-start">{}</div>'.format(start))
-    self.body.append('<div class="event-end">{}</div>'.format(end))
+    self.body.append('<div class="event-end">{}</div>'.format(end, actualend))
+    if actualend is not None:
+        self.body.append('<div class="event-actualend">{}</div>'.format(actualend.strftime(DATETIME_FORMAT)))
     self.body.append('<ul class="event-tags">')
     for tag in node['tags']:
         self.body.append('<li class="event-tag">{}</li>'.format(tag))
@@ -114,18 +138,21 @@ def render_event_html(self, node, ical_path):
     raise nodes.SkipNode
 
 
-def render_event(self, node):
+def render_ical_from_node(self, node):
     ical = render_ical(node['title'], node['uid'], node['start'], node['end'])
-    ensuredir(os.path.join(self.builder.outdir, '_downloads'))
-    outpath = os.path.join(self.builder.outdir, '_downloads', '{}.ics'.format(node['uid']))
-    dlpath = os.path.join(self.builder.dlpath, '{}.ics'.format(node['uid']))
+    downloads_dir = os.path.join(self.builder.outdir, '_downloads')
+    ensuredir(downloads_dir)
+    filename = '{}.ics'.format(node['uid'])
+    outpath = os.path.join(downloads_dir, filename)
+    dlpath = os.path.join(self.builder.dlpath, filename)
     with open(outpath, 'w') as fp:
         fp.write(ical)
-    render_event_html(self, node, dlpath)
+    return dlpath
 
 
 def html_visit_event(self, node):
-    render_event(self, node)
+    dlpath = render_ical_from_node(self, node)
+    render_html_from_node(self, node, dlpath)
 
 
 def setup(app):
