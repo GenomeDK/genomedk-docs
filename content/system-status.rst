@@ -27,19 +27,6 @@ Recent
 
 .. event:: Building maintenance
     :uid: building-maintenance-20190507
-    :start: 2019-05-10 08:00 +0200
-    :end: 2019-05-10 12:00 +0200
-    :actualend: 2019-05-10 11:00 +0200
-    :tags: compute
-
-    Due to critical building maintenance on 7th of May 8:00-12:00 we have to
-    lower the power output to the minimum. Therefore, the downtime procedure
-    will be followed. We hope to limit the scope of this downtime to just
-    compute nodes, and keep the rest of the cluster fully operational.
-
-
-.. event:: Building maintenance
-    :uid: building-maintenance-20190507
     :start: 2019-05-07 08:00 +0200
     :end: 2019-05-07 12:00 +0200
     :actualend: 2019-05-07 13:44 +0200
