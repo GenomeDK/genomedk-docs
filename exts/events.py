@@ -198,23 +198,12 @@ def process_event_nodes(app, doctree, fromdocname):
             event_list.replace_self([])
 
 
-def purge_events(app, env, docname):
-    if not hasattr(env, 'event_all_events'):
-        return
-
-    env.event_all_events = [
-        event for event in env.event_all_events
-        if event['docname'] != docname
-    ]
-
-
 def setup(app):
     app.add_node(event, html=(html_visit_event, None))
     app.add_node(eventlink, html=(html_visit_eventlink, html_depart_eventlink))
     app.add_directive('event', EventDirective)
     app.add_directive('eventlist', EventlistDirective)
     app.connect('doctree-resolved', process_event_nodes)
-    app.connect('env-purge-doc', purge_events)
     return {
         'version': '1.0',
         'parallel_read_safe': True,
