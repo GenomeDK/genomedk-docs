@@ -41,9 +41,6 @@ Connecting to the cluster
 
     Follow the instructions `here <http://ipsych.genome.au.dk/>`_.
 
-SSH [Linux/macOS]
------------------
-
 On Linux, open the terminal of your choice. On macOS, you may use
 :program:`Terminal.app` which can be found in the
 :file:`/Applications/Utilities` folder. In both cases, you should now be able
@@ -99,9 +96,6 @@ Accessing your files locally
 You can access your files on GenomeDK locally by a process called *mounting*.
 Mounting the GenomeDK filesystem locally makes it possible to access and edit
 your files as if they were located in a folder on your own harddrive.
-
-sshfs [Linux/macOS]
--------------------
 
 * On distros with the :program:`apt` package manager (Ubuntu, Mint etc.):
 
@@ -168,9 +162,6 @@ the solutions listed here or one of these alternatives:
 * Filezilla_ [Linux/macOS/Windows]
 * Cyberduck_ [macOS]
 * WinSCP_ [Windows]
-
-scp/rsync [Linux/macOS]
-~~~~~~~~~~~~~~~~~~~~~~~
 
 To copy a single file from your computer to the cluster:
 
