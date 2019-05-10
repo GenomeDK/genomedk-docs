@@ -1,5 +1,5 @@
 body {
-    font-size: 14pt;
+    font-size: 1.75rem;
 }
 
 .main h1 {
@@ -111,32 +111,40 @@ a.fn-backref {
     border-left: 4px solid rgba(238, 127, 0, 1) !important;
     background: rgba(238, 127, 0, 0.1);
 }
-
-.event h3.event-title {
+.event .event-title {
     margin: 0;
+    font-size: 2rem;
 }
-
+.event dl {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+.event dt {
+    flex: 0 0 15%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.event dd {
+    flex: 0 0 85%;
+    margin-left: auto;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .event .event-title a img {
     margin: 0.2em;
     display: inline-block;
     cursor: pointer;
 }
-.event .event-start:before {
-    content: "Planned start";
-    width: 7em;
-    display: inline-block;
+.event .event-start {
     font-weight: bold;
 }
-.event .event-end:before {
-    content: "Planned end";
-    width: 7em;
-    display: inline-block;
+.event .event-ende {
     font-weight: bold;
 }
-.event .event-actualend:before {
-    content: "Actual end";
-    width: 7em;
-    display: inline-block;
+.event .event-actualend {
     font-weight: bold;
 }
 .event ul.event-tags {

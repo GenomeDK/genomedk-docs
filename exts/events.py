@@ -1,35 +1,19 @@
 import os.path
+from datetime import datetime, timedelta
 
+from dateutil.parser import parse as _parsedatetime
+from dateutil.tz import tzutc, tzlocal
 from docutils import nodes
 from docutils.parsers.rst import directives
-
-
 from sphinx.locale import _
 from sphinx.util import logging
 from sphinx.util.osutil import ensuredir, relative_uri
 from sphinx.util.docutils import SphinxDirective
 
-from datetime import datetime, timedelta
-from dateutil.parser import parse as _parsedatetime
-from dateutil.tz import tzutc, tzlocal
 
+ICAL_DATETIME_FORMAT = '%Y%m%dT%H%M%SZ'
 
 DATETIME_FORMAT = '%a, %b %d, %Y %H:%M %z'
-
-
-CALENDAR_ICON = ''.join("""
-data:image/svg+xml;base64,
-PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIy
-NCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBz
-dHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGlu
-ZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0
-aGVyIGZlYXRoZXItY2FsZW5kYXIiPjxyZWN0IHg9IjMiIHk9IjQiIHdpZHRoPSIx
-OCIgaGVpZ2h0PSIxOCIgcng9IjIiIHJ5PSIyIj48L3JlY3Q+PGxpbmUgeDE9IjE2
-IiB5MT0iMiIgeDI9IjE2IiB5Mj0iNiI+PC9saW5lPjxsaW5lIHgxPSI4IiB5MT0i
-MiIgeDI9IjgiIHkyPSI2Ij48L2xpbmU+PGxpbmUgeDE9IjMiIHkxPSIxMCIgeDI9
-IjIxIiB5Mj0iMTAiPjwvbGluZT48L3N2Zz4=
-""".strip().splitlines())
-
 
 ICAL_TEMPLATE = """
 BEGIN:VCALENDAR
@@ -42,7 +26,7 @@ DTEND:{end}
 SUMMARY:{title}
 END:VEVENT
 END:VCALENDAR
-""".strip()
+"""
 
 logger = logging.getLogger(__name__)
 
@@ -56,18 +40,15 @@ def tznow():
     return datetime.now(tzlocal())
 
 
-def render_ical(title, uid, start, end):
-    date_format = '%Y%m%dT%H%M%SZ'
-    start_str = start.astimezone(tzutc()).strftime(date_format)
-    end_str = end.astimezone(tzutc()).strftime(date_format)
-    return ICAL_TEMPLATE.format(title=title, uid=uid, start=start_str, end=end_str)
-
-
 class event(nodes.General, nodes.Element):
     pass
 
 
 class eventlist(nodes.General, nodes.Element):
+    pass
+
+
+class eventlink(nodes.General, nodes.Element):
     pass
 
 
@@ -85,29 +66,64 @@ class EventDirective(SphinxDirective):
         'tags': _parsetags,
     }
 
-    def run(self):
-        event_node = event()
-        event_node['title'] = ' '.join(self.arguments)
-        event_node['uid'] = self.options['uid']
-        event_node['start'] = self.options['start']
-        event_node['end'] = self.options['end']
-        event_node['actualend'] = self.options.get('actualend')
-        event_node['tags'] = self.options.get('tags')
-        
-        start = event_node['start']
-        end = event_node['actualend'] if event_node['actualend'] is not None else event_node['end']
+    def make_definition_list(self, definitions):
+        dl = nodes.definition_list()
+        for term, description, _termclass in definitions:
+            dli = nodes.definition_list_item(CLASSES=[_termclass])
+            dli += nodes.term('', nodes.Text(term))
+            dli += nodes.description('', nodes.Text(description))
+            dl += dli
+        return dl
 
+    def run(self):
+        title = ' '.join(self.arguments)
+        uid = self.options['uid']
+        start = self.options['start']
+        end = self.options['end']
+        actualend = self.options.get('actualend')
+        tags = self.options.get('tags')
+    
+        _end = actualend or end
         now = tznow()
-        if start < now < end:
-            event_node['status'] = 'ongoing'
+        if start < now < _end:
+           status = 'ongoing'
         elif now < start:
-            event_node['status'] = 'upcoming'
-        elif now - timedelta(hours=48) < end:
-            event_node['status'] = 'recent'
+           status = 'upcoming'
+        elif now - timedelta(hours=48) < _end:
+           status = 'recent'
         else:
-            event_node['status'] = 'ended'
+           status = 'ended'
+
+        event_node = nodes.section(
+            ids=[uid,], CLASSES=['event', 'status-{}'.format(status)]
+        )
+        event_node['status'] = status
+
+        title_par = nodes.title('', title, CLASSES=['event-title'])
+        event_node += title_par
+
+        definitions=[
+            ('Planned start', start, 'event-start'),
+            ('Planned end', start, 'event-end'),
+        ]
+        if actualend:
+            definitions.append(('Actual end', actualend, 'event-actualend'))
+
+        event_node += self.make_definition_list(definitions)
+
+        tag_list = nodes.bullet_list(CLASSES=['event-tags'])
+        for tag in tags:
+            tag_list += nodes.list_item('', nodes.Text(tag), CLASSES=['event-tag'])
+        event_node += tag_list
 
         self.state.nested_parse(self.content, self.content_offset, event_node)
+
+        lnk = eventlink()
+        lnk['title'] = title
+        lnk['uid'] = uid
+        lnk['start'] = start
+        lnk['end'] = end
+        event_node += lnk
 
         if not hasattr(self.env, 'event_all_events'):
             self.env.event_all_events = []
@@ -133,46 +149,37 @@ class EventlistDirective(SphinxDirective):
         return [lst]
 
 
-def render_html_from_node(self, node, ical_path):
-    title = node['title']
-    start = node['start'].strftime(DATETIME_FORMAT)
-    end = node['end'].strftime(DATETIME_FORMAT)
-    actualend = node['actualend']
-    status = node['status']
+def html_visit_eventlink(self, node):
+    def generate_ical():
+        ical_str = ICAL_TEMPLATE.format(
+            title=node['title'],
+            uid=node['uid'],
+            start=node['start'].astimezone(tzutc()).strftime(ICAL_DATETIME_FORMAT),
+            end=node['end'].astimezone(tzutc()).strftime(ICAL_DATETIME_FORMAT),
+        )
 
-    self.body.append('<section class="event status-{}">'.format(status))
-    self.body.append('<h3 class="event-title">{}<a type="text/calendar" alt="Add to calendar" href="{}"><img src="{}"></a></h3>'.format(title, ical_path, CALENDAR_ICON))
-    self.body.append('<div class="event-start">{}</div>'.format(start))
-    self.body.append('<div class="event-end">{}</div>'.format(end, actualend))
-    if actualend is not None:
-        self.body.append('<div class="event-actualend">{}</div>'.format(actualend.strftime(DATETIME_FORMAT)))
-    self.body.append('<ul class="event-tags">')
-    for tag in node['tags']:
-        self.body.append('<li class="event-tag">{}</li>'.format(tag))
-    self.body.append('</ul>')
-    self.body.append('<div class="event-description">')
-    for child in node.children:
-        self.body.append(child.astext())
-    self.body.append('</div>')
-    self.body.append('</section>')
-    raise nodes.SkipNode
+        filename = '{}.ics'.format(node['uid'])
+
+        downloads_dir = os.path.join(self.builder.outdir, '_downloads')
+        ensuredir(downloads_dir)
+        
+        outpath = os.path.join(downloads_dir, filename)
+        dlpath = os.path.join(self.builder.dlpath, filename)
+        
+        with open(outpath, 'w') as fp:
+            fp.write(ical_str)
+        return dlpath
+    
+    src = generate_ical()
+    self.body.append('<a href="{}">Add to calendar</a>'.format(src))
 
 
-def render_ical_from_node(self, node):
-    ical = render_ical(node['title'], node['uid'], node['start'], node['end'])
-    downloads_dir = os.path.join(self.builder.outdir, '_downloads')
-    ensuredir(downloads_dir)
-    filename = '{}.ics'.format(node['uid'])
-    outpath = os.path.join(downloads_dir, filename)
-    dlpath = os.path.join(self.builder.dlpath, filename)
-    with open(outpath, 'w') as fp:
-        fp.write(ical)
-    return dlpath
+def html_depart_eventlink(self, node):
+    pass
 
 
 def html_visit_event(self, node):
-    dlpath = render_ical_from_node(self, node)
-    render_html_from_node(self, node, dlpath)
+    pass
 
 
 def process_event_nodes(app, doctree, fromdocname):
@@ -203,6 +210,7 @@ def purge_events(app, env, docname):
 
 def setup(app):
     app.add_node(event, html=(html_visit_event, None))
+    app.add_node(eventlink, html=(html_visit_eventlink, html_depart_eventlink))
     app.add_directive('event', EventDirective)
     app.add_directive('eventlist', EventlistDirective)
     app.connect('doctree-resolved', process_event_nodes)
