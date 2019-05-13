@@ -97,6 +97,7 @@ class EventDirective(SphinxDirective):
         event_node = nodes.section(
             ids=[uid,], CLASSES=['event', 'status-{}'.format(status)]
         )
+        event_node['start'] = start
         event_node['status'] = status
 
         title_par = nodes.title('', title, CLASSES=['event-title'])
@@ -140,12 +141,14 @@ class EventlistDirective(SphinxDirective):
     option_spec = {
         'status': directives.unchanged_required,
         'quiet': directives.unchanged,
+        'reverse': directives.flag,
     }
 
     def run(self):
         lst = eventlist('')
         lst['status'] = self.options['status']
         lst['quiet'] = self.options.get('quiet', False)
+        lst['reverse'] = True if self.options.get('reverse', False) is None else False
         return [lst]
 
 
@@ -191,7 +194,11 @@ def process_event_nodes(app, doctree, fromdocname):
             if event['status'] == event_list['status']:
                 content.append(event)
         if content:
-            event_list.replace_self(content)
+            event_list.replace_self(sorted(
+                content, 
+                reverse=event_list['reverse'], 
+                key=lambda e: e['start'])
+            )
         elif not event_list['quiet']:
             event_list.replace_self(nodes.Text(_('No events.', _('No events.'))))
         else:

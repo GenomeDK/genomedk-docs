@@ -23,6 +23,7 @@ Recent
 
 .. eventlist::
     :status: recent
+    :reverse:
 
 
 .. event:: Building maintenance
