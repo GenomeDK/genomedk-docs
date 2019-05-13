@@ -40,10 +40,6 @@ def tznow():
     return datetime.now(tzlocal())
 
 
-class event(nodes.General, nodes.Element):
-    pass
-
-
 class eventlist(nodes.General, nodes.Element):
     pass
 
@@ -177,14 +173,6 @@ def html_visit_eventlink(self, node):
     self.body.append('<a href="{}">Add to calendar</a>'.format(src))
 
 
-def html_depart_eventlink(self, node):
-    pass
-
-
-def html_visit_event(self, node):
-    pass
-
-
 def process_event_nodes(app, doctree, fromdocname):
     env = app.builder.env
     for event_list in doctree.traverse(eventlist):
@@ -206,8 +194,7 @@ def process_event_nodes(app, doctree, fromdocname):
 
 
 def setup(app):
-    app.add_node(event, html=(html_visit_event, None))
-    app.add_node(eventlink, html=(html_visit_eventlink, html_depart_eventlink))
+    app.add_node(eventlink, html=(html_visit_eventlink, None))
     app.add_directive('event', EventDirective)
     app.add_directive('eventlist', EventlistDirective)
     app.connect('doctree-resolved', process_event_nodes)
