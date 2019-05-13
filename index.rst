@@ -4,7 +4,7 @@ Welcome to GenomeDK!
 
 .. eventlist::
     :status: ongoing
-    :quiet: True
+    :quiet:
 
 We know that you're busy so here are some shortcuts:
 

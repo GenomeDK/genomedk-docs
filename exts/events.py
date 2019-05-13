@@ -136,14 +136,14 @@ class EventlistDirective(SphinxDirective):
     optional_arguments = 1
     option_spec = {
         'status': directives.unchanged_required,
-        'quiet': directives.unchanged,
+        'quiet': directives.flag,
         'reverse': directives.flag,
     }
 
     def run(self):
         lst = eventlist('')
         lst['status'] = self.options['status']
-        lst['quiet'] = self.options.get('quiet', False)
+        lst['quiet'] = True if self.options.get('quiet', False) is None else False
         lst['reverse'] = True if self.options.get('reverse', False) is None else False
         return [lst]
 
