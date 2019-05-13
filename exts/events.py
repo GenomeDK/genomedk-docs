@@ -100,11 +100,11 @@ class EventDirective(SphinxDirective):
         event_node += title_par
 
         definitions=[
-            ('Planned start', start, 'event-start'),
-            ('Planned end', start, 'event-end'),
+            (_('Planned start'), start, 'event-start'),
+            (_('Planned end'), start, 'event-end'),
         ]
         if actualend:
-            definitions.append(('Actual end', actualend, 'event-actualend'))
+            definitions.append((_('Actual end'), actualend, 'event-actualend'))
 
         event_node += self.make_definition_list(definitions)
 
@@ -170,7 +170,7 @@ def html_visit_eventlink(self, node):
         return dlpath
     
     src = generate_ical()
-    self.body.append('<a href="{}">Add to calendar</a>'.format(src))
+    self.body.append('<a href="{}">{}</a>'.format(src, _('Add to calendar')))
 
 
 def process_event_nodes(app, doctree, fromdocname):
