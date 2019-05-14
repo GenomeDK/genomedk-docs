@@ -52,7 +52,11 @@ the port-forwarding from the computing node to your computer.
 
     [local ~]$ ssh -L<UID>:<compute node>:<UID> <user>@login.genome.au.dk
 
-You will need to replace *<UID>* with your user ID on the cluster, *<compute node>* with the name of the compute node you have your job on, and *<user>* with your username on the cluster. You can easily get those values by running following commands on your compute node inside the interactive job you started in the previous step.
+You will need to replace *<UID>* with your user ID on the cluster, *<compute
+node>* with the name of the compute node you have your job on, and *<user>*
+with your username on the cluster. You can easily get those values by running
+following commands on your compute node inside the interactive job you started
+in the previous step.
 
 .. code-block:: console
 
@@ -136,9 +140,8 @@ Perl
     Perl and Perl modules can be installed through Conda, which is also the
     recommended method. The method described here should only be used in cases
     where no Conda package exists for the module or it has been decided that
-    Conda should not be used at all.
-
-    See :ref:`installing_and_using_software` for help with Conda.
+    Conda should not be used at all. See :ref:`installing_and_using_software`
+    for help with Conda.
 
 For installation of Perl modules from CPAN a simple command line tool can be
 installed, and just one command will install it for you.
