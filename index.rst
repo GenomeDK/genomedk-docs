@@ -45,6 +45,7 @@ If you want a friendly presentation of how the cluster works, see
   content/support
   content/technical
   content/staff
+  content/policy
   content/forms
   content/system-status
 
