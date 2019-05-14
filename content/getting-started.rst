@@ -50,21 +50,24 @@ to log in to the frontend by typing this command:
 
     [local]$ ssh USERNAME@login.genome.au.dk
 
-Access to GenomeDK is restricted to the internal network at Aarhus University.
-However, if you need access from abroad or for some other reason can not
-connect connect from AU, feel free to :ref:`contact us <contact>` to get
-whitelisted.
+On Windows, you have multiple options. On Windows 10, open
+:program:`PowerShell`. You should then be able to type:
 
+.. code-block:: console
 
-.. todo::
+    [local]$ ssh.exe USERNAME@login.genome.au.dk
 
-    MobaXterm [Windows]
-    -------------------
+Older versions of Windows do not include the :program:`ssh` command and thus
+you will need to install an alternative yourself. We recommend MobaXterm_.
 
-    On Windows, download and install the `MobaXterm`_ application following the
-    instructions on the website.
+.. note::
 
-    .. _MobaXterm: https://mobaxterm.mobatek.net/
+    Access to GenomeDK is restricted to the internal network at Aarhus University.
+    However, if you need access from abroad or for some other reason can not
+    connect connect from AU, feel free to :ref:`contact us <contact>` to get
+    whitelisted.
+
+.. _MobaXterm: https://mobaxterm.mobatek.net/
 
 
 Changing your password
@@ -96,6 +99,10 @@ Accessing your files locally
 You can access your files on GenomeDK locally by a process called *mounting*.
 Mounting the GenomeDK filesystem locally makes it possible to access and edit
 your files as if they were located in a folder on your own harddrive.
+
+Unfortunately, mounting over SSH does not work on Windows. If you're on Windows
+you can use MobaXterm_ or one of the alternatives listed in
+:ref:`copying_data`.
 
 * On distros with the :program:`apt` package manager (Ubuntu, Mint etc.):
 
@@ -138,11 +145,8 @@ To unmount the directory, run:
 
 .. _OSX FUSE: https://osxfuse.github.io/
 
-.. todo::
 
-    Win-SSHFS [Windows]
-    -------------------
-
+.. _copying_data:
 
 Copying data
 ============
@@ -161,13 +165,18 @@ the solutions listed here or one of these alternatives:
 
 * Filezilla_ [Linux/macOS/Windows]
 * Cyberduck_ [macOS]
+* MobaXterm_ [Windows]
 * WinSCP_ [Windows]
+
+You may also use the command line.
 
 To copy a single file from your computer to the cluster:
 
 .. code-block:: console
 
     [local]$ scp myfile.txt login.genome.au.dk:path/to/destination/
+
+On Windows, replace ``scp`` with ``scp.exe``.
 
 To copy a single file from the cluster to your computer:
 
@@ -181,6 +190,9 @@ If you want to copy an entire folder to/from the cluster you will want to use
 .. code-block:: console
 
     [local]$ rsync -e ssh -avz /path/to/data user@login.genome.au.dk:data
+
+Windows doesn't have :program:`rsync` installed, so you must resort to one of
+the options listed above.
 
 If you want to upload a folder, but also delete files that you deleted in the
 source folder from the destination:
@@ -198,16 +210,10 @@ If you want to download data from the cluster:
 You may want to add the ``--progress`` flag to all of these commands if you're
 downloading/uploading large amounts of data.
 
-.. todo::
-
-    MobaXterm [Windows]
-    ~~~~~~~~~~~~~~~~~~~
-
-
-
 .. _Filezilla: https://filezilla-project.org/
 .. _Cyberduck: https://cyberduck.io/
 .. _WinSCP: https://winscp.net/eng/index.php
+
 
 From the Internet to the cluster
 --------------------------------
@@ -340,11 +346,11 @@ familiar.
 
 .. note::
 
-    A node can be shared by more users, so you should always take extra care in
-    requesting to correct amount of resources (nodes, cores and memory). There
-    is no reason to occupy an entire node if you are only using a single core
-    and a few gigabytes of memory. Always make sure to utillize the resources
-    on the requested nodes efficiently.
+    A node can be shared by multiple users, so you should always take extra
+    care in requesting to correct amount of resources (nodes, cores and
+    memory). There is no reason to occupy an entire node if you are only using
+    a single core and a few gigabytes of memory. Always make sure to utillize
+    the resources on the requested nodes efficiently.
 
 To get an overview of the available partitions:
 
@@ -458,14 +464,16 @@ id to identify our job.
 Working on GPU nodes
 --------------------
 
-There are currently 2 compute nodes on the cluster that are equipped with GPU cards with
-two devices per node. There are currently no frontends equipped with GPU devices.
+There are currently two compute nodes on the cluster that are equipped with GPU
+cards with two devices per node. There are currently no frontends equipped with
+GPU devices.
 
-If you need to compile a piece of software that is supposed to use GPU’s you most likely
-have to do it in a job on one of the compute nodes with such devices, since headers required
-for compilation are only located there.
+If you need to compile a piece of software that is supposed to use GPU’s you
+most likely have to do it in a job on one of the compute nodes with such
+devices, since headers required for compilation are only located there.
 
-Headers and libraries for compilation are located in */usr/local/cuda/targets/x86_64-linux*
+Headers and libraries for compilation are located in
+:file:`/usr/local/cuda/targets/x86_64-linux`.
 
 To to run a job on a node with a GPU device you need to submit it to the *gpu*
 partition and specify how many GPU devices you are going to use, for example to

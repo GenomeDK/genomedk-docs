@@ -31,9 +31,6 @@ especially handy when you're debugging a problem on the compute nodes.
 Here, we will first set up a public key for accessing the frontend. Then, we'll
 set up a key for accessing compute nodes from the frontend.
 
-ssh-keygen [Linux/macOS]
-------------------------
-
 On your own computer, open the terminal of your choice and type:
 
 .. code-block:: console
@@ -102,11 +99,6 @@ password). Then run:
 
 You will now be able to SSH between compute nodes without typing a password.
 
-.. todo::
-
-    MobaXterm [Windows]
-    -------------------
-
 Encrypting sensitive data
 =========================
 
@@ -121,8 +113,8 @@ Encrypt:
 
     [fe1]$ openssl aes-256-cbc -a -salt -in data.txt -out data.txt.enc
 
-This will encrypt ``data.txt`` and write the encrypted data to
-``data.txt.enc``. You will be prompted for a password which is needed to
+This will encrypt :file:`data.txt` and write the encrypted data to
+:file:`data.txt.enc`. You will be prompted for a password which is needed to
 decrypt the file again.
 
 Decrypt:
@@ -132,7 +124,7 @@ Decrypt:
     [fe1]$ openssl aes-256-cbc -d -a -in data.txt.enc -out data.txt.new
 
 This will ask for the password used to encrypt the file. The decrypted contents
-are written to ``data.txt.new``.
+are written to :file:`data.txt.new`.
 
 Collaborating on data
 =====================
@@ -153,8 +145,8 @@ Backing up data
 ===============
 
 We provide backup on good old-fashioned tape to all users. To back up a file,
-it should be put in a directory called either ``BACKUP``, ``Backup`` or
-``backup``. The directory can be located in any other directory.
+it should be put in a directory called either :file:`BACKUP`, :file:`Backup` or
+:file:`backup`. The directory can be located in any other directory.
 
 Data is backed up approximately once per week.
 
@@ -173,19 +165,16 @@ GenomeDK.
 
 .. _xforwarding:
 
-X-forwarding [Linux, macOS, Windows]
-------------------------------------
+X-forwarding
+------------
 
 You can use X-forwarding to tunnel individual graphical programs to your local
 desktop. This works well for many programs, but programs that do fancy graphics
 or anything animated might not work well.
 
-Xorg [Linux]
-~~~~~~~~~~~~
-
-Since most Linux distributions already include an X server, you simply need to
-tell SSH that you wish to enable X-forwaring. To do this, add ``-X`` to the
-:program:`ssh` command when logging in to the cluster, for example:
+On Linux you simply need to tell SSH that you wish to enable X-forwarding. To
+do this, add ``-X`` to the :program:`ssh` command when logging in to the
+cluster, for example:
 
 .. code-block:: console
 
@@ -196,9 +185,6 @@ You should then be able to open e.g. Firefox on the frontend:
 .. code-block:: console
 
     [fe1]$ firefox
-
-XQuartz [macOS]
-~~~~~~~~~~~~~~~
 
 Since macOS does not include an X server, you will need to download and install
 XQuartz_ on your computer. When installed, reboot the computer. Now, you just
@@ -215,23 +201,21 @@ You should then be able to open e.g. Firefox on the frontend:
 
     [fe1]$ firefox
 
+On Windows, we recommend that you use MobaXterm_ which has an integrated X
+server.
+
 .. _XQuartz: https://www.xquartz.org/
-
-.. todo::
-
-    MobaXterm [Windows]
-    ~~~~~~~~~~~~~~~~~~~
+.. _MobaXterm: https://mobaxterm.mobatek.net/
 
 
-
-VNC [Linux/macOS/Windows]
+VNC
 -------------------------
 
 If you want to use a full virtual desktop you can use a VNC program. There are
 lots of options but we recommend TightVNC_ which works on both Linux, macOS,
-and Windows. When downloading TightVNC we recommend to get "TightVNC Java Viewer"
-from the download section. It downloads a zip archive which contains an executable
-jar file.
+and Windows. When downloading TightVNC we recommend to get "TightVNC Java
+Viewer" from the download section. It downloads a ZIP archive which contains an
+executable JAR file.
 
 To use VNC you first need to login to the frontend and start a *VNC server*.
 Starting the server is done with the ``vncserver`` command and looks like this:
