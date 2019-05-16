@@ -439,6 +439,7 @@ an overview of commonly used resource flags:
 .. csv-table:: Resource flags
     :header: "Short flag", "Long flag", "Description"
     :align: left
+    :widths: 10, 40, 50
 
     "``-p``", "``--partition``", "One or more comma-separated partitions that the job may run on. Jobs submitted to the *gpu* partition should also use the *--gres* flag."
     "", "``--mem-per-cpu``", "Memory allocated per allocated CPU core."
