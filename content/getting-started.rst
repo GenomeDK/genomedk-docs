@@ -442,7 +442,9 @@ an overview of commonly used resource flags:
 
     "``-p``", "``--partition``", "One or more comma-separated partitions that the job may run on. Jobs submitted to the *gpu* partition should also use the *--gres* flag."
     "", "``--mem-per-cpu``", "Memory allocated per allocated CPU core."
-    "``-c``", "``--cpus-per-task``", "Number of cores allocated for the job."
+    "``-c``", "``--cpus-per-task``", "Number of cores allocated for the job. All cores will be on the same node."
+    "``-n``", "``--ntasks``", "Number of cores allocated for the job. Cores may be allocated on different nodes."
+    "``-N``", "``--nodes``", "Number of nodes allocated for the job. Can be combined with ``-n`` and ``-c``."
     "``-t``", "``--time``", "Maximum time the job will be allowed to run."
     "", "``--gres=gpu:<number of gpu's>``", "Number of GPU cards to be used in case the job is being submitted to the *gpu* partition. If not defined the job will not have access to GPU cards, even if it is running on a proper node."
 
