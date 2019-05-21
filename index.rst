@@ -6,6 +6,12 @@ Welcome to GenomeDK!
     :status: ongoing
     :quiet:
 
+**GenomeDK is a national high-performance computing facility for bioinformatics
+and life sciences managed by Center for Genome Analysis and Personalized
+Medicine, located at Aarhus University, Denmark.**
+
+---
+
 We know that you're busy so here are some shortcuts:
 
 * :ref:`Request an account <request_access>`
@@ -13,7 +19,7 @@ We know that you're busy so here are some shortcuts:
 * :ref:`Contact us <contact>` if you need help
 
 Give me the numbers
--------------------
+===================
 
 The GenomeDK HPC cluster at Aarhus University comprises of 215 nodes (4352
 cores) connected with 10GigE/Infiniband. Each node has from 16 to
@@ -23,7 +29,7 @@ The cluster has been designed specifically for bioinformatic workloads and has
 a storage capacity of 6 PB. Do you want to know :ref:`more <technical>`?
 
 Where do I start?
------------------
+=================
 
 If you're new to GenomeDK, please read through the
 :ref:`Getting started <getting_started>` chapter. This will help do common
@@ -59,6 +65,7 @@ If you want a friendly presentation of how the cluster works, see
   content/best-practices
   content/software-specific
   content/faq
+
 
 .. container:: logo-box
 
