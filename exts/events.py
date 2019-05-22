@@ -78,7 +78,7 @@ class EventDirective(SphinxDirective):
         end = self.options['end']
         actualend = self.options.get('actualend')
         tags = self.options.get('tags')
-    
+
         _end = actualend or end
         now = tznow()
         if start < now < _end:
@@ -101,7 +101,7 @@ class EventDirective(SphinxDirective):
 
         definitions=[
             (_('Planned start'), start, 'event-start'),
-            (_('Planned end'), start, 'event-end'),
+            (_('Planned end'), end, 'event-end'),
         ]
         if actualend:
             definitions.append((_('Actual end'), actualend, 'event-actualend'))
@@ -161,16 +161,20 @@ def html_visit_eventlink(self, node):
 
         downloads_dir = os.path.join(self.builder.outdir, '_downloads')
         ensuredir(downloads_dir)
-        
+
         outpath = os.path.join(downloads_dir, filename)
         dlpath = os.path.join(self.builder.dlpath, filename)
-        
+
         with open(outpath, 'w') as fp:
             fp.write(ical_str)
         return dlpath
-    
+
     src = generate_ical()
     self.body.append('<a href="{}">{}</a>'.format(src, _('Add to calendar')))
+
+
+def html_depart_eventlink(self, node):
+    pass
 
 
 def process_event_nodes(app, doctree, fromdocname):
@@ -183,8 +187,8 @@ def process_event_nodes(app, doctree, fromdocname):
                 content.append(event)
         if content:
             event_list.replace_self(sorted(
-                content, 
-                reverse=event_list['reverse'], 
+                content,
+                reverse=event_list['reverse'],
                 key=lambda e: e['start'])
             )
         elif not event_list['quiet']:
@@ -193,11 +197,20 @@ def process_event_nodes(app, doctree, fromdocname):
             event_list.replace_self([])
 
 
+def purge_events(app, env, docname):
+    if not hasattr(env, 'event_all_events'):
+        return
+
+    env.event_all_events = [event for event in env.event_all_events
+                          if event['docname'] != docname]
+
+
 def setup(app):
-    app.add_node(eventlink, html=(html_visit_eventlink, None))
+    app.add_node(eventlink, html=(html_visit_eventlink, html_depart_eventlink))
     app.add_directive('event', EventDirective)
     app.add_directive('eventlist', EventlistDirective)
     app.connect('doctree-resolved', process_event_nodes)
+    app.connect('env-purge-doc', purge_events)
     return {
         'version': '1.0',
         'parallel_read_safe': True,
