@@ -201,8 +201,11 @@ def purge_events(app, env, docname):
     if not hasattr(env, 'event_all_events'):
         return
 
-    env.event_all_events = [event for event in env.event_all_events
-                          if event['docname'] != docname]
+    env.event_all_events = [
+        event
+        for event in env.event_all_events
+        if event['docname'] != docname
+    ]
 
 
 def setup(app):
