@@ -26,17 +26,32 @@ Recent
     :reverse:
 
 
+.. event:: Fire detector and cooling maintenance
+    :uid: fire-detector-and-cooling-maintenance-20190522
+    :start: 2019-06-12 08:00 +0200
+    :end: 2019-06-12 12:00 +0200
+    :tags: building
+
+    This maintenance does not involve the cluster itself. No changes or
+    upgrades will be performed.
+
+    Due to maintenance of the fire detector and cooling system in the server
+    room we need to lower the power output to a minimum. The cluster will not
+    be available in any way during this maintenance.
+
+
 .. event:: Building maintenance
     :uid: building-maintenance-20190507
     :start: 2019-05-07 08:00 +0200
     :end: 2019-05-07 12:00 +0200
     :actualend: 2019-05-07 13:44 +0200
-    :tags: compute
+    :tags: building
 
     Due to critical building maintenance on 7th of May 8:00-12:00 we have to
     lower the power output to the minimum. Therefore, the downtime procedure
     will be followed. We hope to limit the scope of this downtime to just
     compute nodes, and keep the rest of the cluster fully operational.
+
 
 .. event:: NFS storage maintenance
     :uid: nfs-storage-maintenance-20190501
