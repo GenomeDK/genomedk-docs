@@ -23,7 +23,7 @@ BEGIN:VEVENT
 UID:{uid}@genome.au.dk
 DTSTART:{start}
 DTEND:{end}
-SUMMARY:{title}
+SUMMARY:[GenomeDK] {title}
 END:VEVENT
 END:VCALENDAR
 """
