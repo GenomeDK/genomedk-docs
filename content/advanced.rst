@@ -140,6 +140,21 @@ have access to a shared folder in :file:`/project/PROJECT-NAME` where
 and delete files in the project folder unless restrictions have been set on
 specific files/folders.
 
+Project owners and project members with administrative rights can manage their
+own projects through the following commands:
+
+:command:`gm-add-user -g <project name> -u <username>`
+    Add a user to a project.
+:command:`gm-remove-user  -g <project name> -u <username>`
+    Remove a user from a project.
+:command:`gm-grant-admin-rights-to-user -g <project name> -u <username>`
+    Grant administrative rights to a user in a project.
+:command:`gm-revoke-admin-rights-from-user -g <project name> -u <username>`
+    Revoke a users' administrative rights to a project.
+:command:`gm-list-admins <project name>`
+    List all members of a project with administrative rights.
+
+To get help for any of the commands, run the command without any parameters.
 
 Backing up data
 ===============
