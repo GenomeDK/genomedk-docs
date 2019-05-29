@@ -8,7 +8,7 @@ Support
 Please direct any question and problem you encounter to:
 
 * Mail: cases@genomedk.fogbugz.com
-* Telephone: 87 15 55 68
+* Telephone: +45 87 15 55 68
 * Office: Bioinformatics Research Centre (BiRC), building 1110, office 327
 
 You are welcome to come by our office. It may be most practical for you to
