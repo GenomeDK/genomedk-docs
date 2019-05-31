@@ -8,7 +8,7 @@ from sphinx.builders.html import StandaloneHTMLBuilder
 
 def remove_script_files(app):
     builder = app.builder
-    if type(builder) == StandaloneHTMLBuilder and builder.script_files is not None:
+    if isinstance(builder, StandaloneHTMLBuilder) and builder.script_files is not None:
         builder.script_files = []
 
 def setup(app):
