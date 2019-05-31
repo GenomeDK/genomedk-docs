@@ -13,6 +13,10 @@ body {
     background: none;
 }
 
+.section-title {
+    margin-bottom: 2em;
+}
+
 footer p {
     font-size: 0.8em;
 }

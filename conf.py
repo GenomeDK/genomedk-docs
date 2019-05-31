@@ -100,6 +100,7 @@ html_theme_options = {
     'sitename': 'GenomeDK',
     'phone': '+45 87 15 55 68',
     'email': 'cases@genomedk.fogbugz.com',
+    'show_breadcrumb': 'no',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
