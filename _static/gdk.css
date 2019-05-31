@@ -1,10 +1,8 @@
 body {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
-
 .main h1 {
     margin-bottom: 0.5em;
-    font-size: 3.5em;
 }
 .main h2, .main h3, .main h4 {
     margin-top: 2em;
@@ -22,10 +20,7 @@ footer p {
 .main table {
     margin-top: 2em;
     margin-bottom: 2em;
-}
-
-.main .toctree-wrapper {
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 /* Main page logos */
