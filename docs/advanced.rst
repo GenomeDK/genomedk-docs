@@ -258,7 +258,7 @@ To connect to the running VNC server the SSH tunnel through the login node has
 to be established. In case of TightVNC, the tunneling option is included in the
 software itself and following settings should be sufficient:
 
-.. image:: images/tightvnc.png
+.. image:: tightvnc.png
     :align: center
 
 Note the "Port" field! The number specified must be 5900 plus the display ID,
