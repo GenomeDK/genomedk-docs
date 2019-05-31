@@ -48,38 +48,38 @@ If you want a friendly presentation of how the cluster works, see
   :hidden:
   :caption: Main
 
-  content/support
-  content/technical
-  content/staff
-  content/forms
-  content/system-status
+  support
+  technical
+  staff
+  forms
+  system-status
 
 .. toctree::
   :maxdepth: 2
   :hidden:
   :caption: Documentation
 
-  content/what-is-a-cluster
-  content/getting-started
-  content/advanced
-  content/best-practices
-  content/software-specific
-  content/faq
+  docs/what-is-a-cluster
+  docs/getting-started
+  docs/advanced
+  docs/best-practices
+  docs/software-specific
+  docs/faq
 
 
 .. container:: logo-box
 
   .. container:: inline-logo
 
-    .. image:: content/images/logo-birc.png
+    .. image:: images/logo-birc.png
       :height: 100pt
 
   .. container:: inline-logo
 
-    .. image:: content/images/logo-iseq.png
+    .. image:: images/logo-iseq.png
       :height: 55pt
 
   .. container:: inline-logo
 
-    .. image:: content/images/logo-au.png
+    .. image:: images/logo-au.png
       :height: 100pt
