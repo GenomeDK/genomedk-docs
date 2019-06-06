@@ -4,6 +4,12 @@
 Getting started
 ===============
 
+.. note::
+
+    If you don't know what iPSYCH is, or you know that you're not an iPSYCH
+    user, skip all red boxes like the one below. Most users on GenomeDK are
+    *not* iPSYCH users.
+
 .. admonition:: iPSYCH...
 
     For security reasons, iPSYCH users are working in a restricted environment.
