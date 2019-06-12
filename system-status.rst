@@ -30,6 +30,7 @@ Recent
     :uid: fire-detector-and-cooling-maintenance-20190522
     :start: 2019-06-12 08:00 +0200
     :end: 2019-06-12 12:00 +0200
+    :actualend: 2019-06-12 10:00 +0200
     :tags: building
 
     This maintenance does not involve the cluster itself. No changes or
