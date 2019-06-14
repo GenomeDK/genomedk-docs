@@ -22,9 +22,11 @@ footer p {
 }
 
 .main table {
-    margin-top: 2em;
-    margin-bottom: 2em;
     font-size: 0.9em;
+    width: auto;
+    min-width: 50%;
+    margin: 2em auto;
+    font-variant-numeric: tabular-nums;
 }
 
 /* Main page logos */
@@ -160,4 +162,18 @@ a.fn-backref {
     background: rgba(0, 171, 164, 1);
     color: white;
     margin-right: 0.5em;
+}
+
+.main .figure {
+    margin: 2em 0;
+    padding: 2em 0;
+    background: #f2f2f2;
+}
+.main .caption {
+    font-weight: bold;
+    margin: 0 2em;
+    margin-top: 1em;
+}
+.main img {
+    max-width: 90%;
 }
