@@ -179,7 +179,7 @@ A few tips
 * Our software repository, ``/com/extra`` is deprecated. We won't add new
   software or update existing software in this repository. Instead, we
   encourage all users to use a proper package manager, like
-  `Conda <_installing_and_using_software>`_.
+  :ref:`Conda <installing_and_using_software>`.
 
 ---
 
