@@ -501,6 +501,8 @@ and run:
 Contrary to :command:`srun`, this command returns immediately, giving us a job
 id to identify our job.
 
+.. _gpu_nodes:
+
 Working on GPU nodes
 --------------------
 
