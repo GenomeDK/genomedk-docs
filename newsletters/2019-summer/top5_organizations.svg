@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="268.890625pt" version="1.1" viewBox="0 0 558.09043 268.890625" width="558.09043pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;white-space:pre;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 268.890625 
+L 558.09043 268.890625 
+L 558.09043 0 
+L 0 0 
+z
+" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 170.41543 211.940625 
+L 550.89043 211.940625 
+L 550.89043 7.2 
+L 170.41543 7.2 
+z
+" style="fill:none;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="text_1">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 170.41543, 241.065625)" x="170.41543" y="241.065625">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="text_2">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 241.333741, 241.065625)" x="241.333741" y="241.065625">2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="text_3">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 312.252053, 241.065625)" x="312.252053" y="241.065625">4</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="text_4">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 383.170365, 241.065625)" x="383.170365" y="241.065625">6</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="text_5">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 454.088676, 241.065625)" x="454.088676" y="241.065625">8</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="text_6">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 525.006988, 241.065625)" x="525.006988" y="241.065625">10</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="fill:#262626;font-family:AU Passata;font-size:15px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 360.65293, 258.690625)" x="360.65293" y="258.690625">Mio. billing hours</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="text_8">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 150.91543, 32.727187)" x="150.91543" y="32.727187">Aarhus University</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="text_9">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 150.91543, 73.606562)" x="150.91543" y="73.606562">Region Midt</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="text_10">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 150.91543, 114.485938)" x="150.91543" y="114.485938">Copenhagen University</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="text_11">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 150.91543, 155.330938)" x="150.91543" y="155.330938">Private</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="text_12">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 150.91543, 196.279063)" x="150.91543" y="196.279063">Max Planck Institute</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#p2e5e7b375e)" d="M 170.41543 11.294812 
+L 532.772573 11.294812 
+L 532.772573 44.053312 
+L 170.41543 44.053312 
+z
+" style="fill:#5875a4;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#p2e5e7b375e)" d="M 170.41543 52.242937 
+L 295.410743 52.242937 
+L 295.410743 85.001437 
+L 170.41543 85.001437 
+z
+" style="fill:#cc8963;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_5">
+    <path clip-path="url(#p2e5e7b375e)" d="M 170.41543 93.191062 
+L 268.407921 93.191062 
+L 268.407921 125.949562 
+L 170.41543 125.949562 
+z
+" style="fill:#5f9e6e;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_6">
+    <path clip-path="url(#p2e5e7b375e)" d="M 170.41543 134.139187 
+L 196.726761 134.139187 
+L 196.726761 166.897688 
+L 170.41543 166.897688 
+z
+" style="fill:#b55d60;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_7">
+    <path clip-path="url(#p2e5e7b375e)" d="M 170.41543 175.087313 
+L 191.657502 175.087313 
+L 191.657502 207.845813 
+L 170.41543 207.845813 
+z
+" style="fill:#857aab;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 160.41543 211.940625 
+L 160.41543 7.2 
+" style="fill:none;stroke:#262626;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1.25;"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 170.41543 221.940625 
+L 550.89043 221.940625 
+" style="fill:none;stroke:#262626;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1.25;"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2e5e7b375e">
+   <rect height="204.740625" width="380.475" x="170.41543" y="7.2"/>
+  </clipPath>
+ </defs>
+</svg>

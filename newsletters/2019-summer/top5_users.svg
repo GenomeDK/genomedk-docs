@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="268.875pt" version="1.1" viewBox="0 0 558.09043 268.875" width="558.09043pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;white-space:pre;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 268.875 
+L 558.09043 268.875 
+L 558.09043 0 
+L 0 0 
+z
+" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 170.41543 212.3 
+L 550.89043 212.3 
+L 550.89043 7.2 
+L 170.41543 7.2 
+z
+" style="fill:none;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="text_1">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 170.41543, 241.425)" x="170.41543" y="241.425">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="text_2">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 253.145371, 241.425)" x="253.145371" y="241.425">50</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="text_3">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 335.875312, 241.425)" x="335.875312" y="241.425">100</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="text_4">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 418.605254, 241.425)" x="418.605254" y="241.425">150</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="text_5">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 501.335195, 241.425)" x="501.335195" y="241.425">200</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="fill:#262626;font-family:AU Passata;font-size:15px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 360.65293, 258.675)" x="360.65293" y="258.675">Number of users</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="text_7">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 150.91543, 32.763125)" x="150.91543" y="32.763125">Aarhus University</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="text_8">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 150.91543, 73.714375)" x="150.91543" y="73.714375">Region Midt</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="text_9">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 150.91543, 114.665625)" x="150.91543" y="114.665625">Copenhagen University</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="text_10">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 150.91543, 155.5825)" x="150.91543" y="155.5825">Harvard</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="text_11">
+      <text style="fill:#262626;font-family:AU Passata;font-size:13.75px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 150.91543, 196.6025)" x="150.91543" y="196.6025">Private</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#p8762725e6d)" d="M 170.41543 11.302 
+L 532.772573 11.302 
+L 532.772573 44.118 
+L 170.41543 44.118 
+z
+" style="fill:#5875a4;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#p8762725e6d)" d="M 170.41543 52.322 
+L 299.474138 52.322 
+L 299.474138 85.138 
+L 170.41543 85.138 
+z
+" style="fill:#cc8963;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_5">
+    <path clip-path="url(#p8762725e6d)" d="M 170.41543 93.342 
+L 195.234412 93.342 
+L 195.234412 126.158 
+L 170.41543 126.158 
+z
+" style="fill:#5f9e6e;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_6">
+    <path clip-path="url(#p8762725e6d)" d="M 170.41543 134.362 
+L 191.925214 134.362 
+L 191.925214 167.178 
+L 170.41543 167.178 
+z
+" style="fill:#b55d60;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_7">
+    <path clip-path="url(#p8762725e6d)" d="M 170.41543 175.382 
+L 191.925214 175.382 
+L 191.925214 208.198 
+L 170.41543 208.198 
+z
+" style="fill:#857aab;stroke:#ffffff;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 160.41543 212.3 
+L 160.41543 7.2 
+" style="fill:none;stroke:#262626;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1.25;"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 170.41543 222.3 
+L 550.89043 222.3 
+" style="fill:none;stroke:#262626;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1.25;"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8762725e6d">
+   <rect height="205.1" width="380.475" x="170.41543" y="7.2"/>
+  </clipPath>
+ </defs>
+</svg>
