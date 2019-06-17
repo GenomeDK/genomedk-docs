@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Created with matplotlib (https://matplotlib.org/) -->
-<svg height="268.875pt" version="1.1" viewBox="0 0 560.158653 268.875" width="560.158653pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg height="268.875pt" version="1.1" viewBox="0 0 558.09043 268.875" width="558.09043pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
 *{stroke-linecap:butt;stroke-linejoin:round;white-space:pre;}
@@ -11,8 +11,8 @@
  <g id="figure_1">
   <g id="patch_1">
    <path d="M 0 268.875 
-L 560.158653 268.875 
-L 560.158653 0 
+L 558.09043 268.875 
+L 558.09043 0 
 L 0 0 
 z
 " style="fill:none;"/>
@@ -120,7 +120,7 @@ Q 5.90625 16.296875 5.90625 21
 z
 " id="AUPassata-Regular-53"/>
       </defs>
-      <g style="fill:#262626;" transform="translate(219.803884 241.425)scale(0.1375 -0.1375)">
+      <g style="fill:#262626;" transform="translate(224.510615 241.425)scale(0.1375 -0.1375)">
        <use xlink:href="#AUPassata-Regular-53"/>
        <use x="56.999985" xlink:href="#AUPassata-Regular-48"/>
        <use x="113.999969" xlink:href="#AUPassata-Regular-48"/>
@@ -140,7 +140,7 @@ L 27.5 0
 z
 " id="AUPassata-Regular-49"/>
       </defs>
-      <g style="fill:#262626;" transform="translate(277.029837 241.425)scale(0.1375 -0.1375)">
+      <g style="fill:#262626;" transform="translate(286.4433 241.425)scale(0.1375 -0.1375)">
        <use xlink:href="#AUPassata-Regular-49"/>
        <use x="56.999985" xlink:href="#AUPassata-Regular-48"/>
        <use x="113.999969" xlink:href="#AUPassata-Regular-48"/>
@@ -151,7 +151,7 @@ z
     <g id="xtick_4">
      <g id="text_4">
       <!-- 1500 -->
-      <g style="fill:#262626;" transform="translate(338.174541 241.425)scale(0.1375 -0.1375)">
+      <g style="fill:#262626;" transform="translate(352.294736 241.425)scale(0.1375 -0.1375)">
        <use xlink:href="#AUPassata-Regular-49"/>
        <use x="56.999985" xlink:href="#AUPassata-Regular-53"/>
        <use x="113.999969" xlink:href="#AUPassata-Regular-48"/>
@@ -191,7 +191,7 @@ L 4.296875 0
 z
 " id="AUPassata-Regular-50"/>
       </defs>
-      <g style="fill:#262626;" transform="translate(399.319245 241.425)scale(0.1375 -0.1375)">
+      <g style="fill:#262626;" transform="translate(418.146171 241.425)scale(0.1375 -0.1375)">
        <use xlink:href="#AUPassata-Regular-50"/>
        <use x="56.999985" xlink:href="#AUPassata-Regular-48"/>
        <use x="113.999969" xlink:href="#AUPassata-Regular-48"/>
@@ -202,7 +202,7 @@ z
     <g id="xtick_6">
      <g id="text_6">
       <!-- 2500 -->
-      <g style="fill:#262626;" transform="translate(460.463949 241.425)scale(0.1375 -0.1375)">
+      <g style="fill:#262626;" transform="translate(483.997607 241.425)scale(0.1375 -0.1375)">
        <use xlink:href="#AUPassata-Regular-50"/>
        <use x="56.999985" xlink:href="#AUPassata-Regular-53"/>
        <use x="113.999969" xlink:href="#AUPassata-Regular-48"/>
@@ -210,63 +210,7 @@ z
       </g>
      </g>
     </g>
-    <g id="xtick_7">
-     <g id="text_7">
-      <!-- 3000 -->
-      <defs>
-       <path d="M 14.09375 21 
-Q 14.09375 14.09375 17.75 9.890625 
-Q 21.40625 5.703125 27.90625 5.703125 
-Q 30.796875 5.703125 33.25 6.75 
-Q 35.703125 7.796875 37.5 9.59375 
-Q 39.296875 11.40625 40.296875 13.84375 
-Q 41.296875 16.296875 41.296875 19.203125 
-Q 41.296875 22 40.34375 24.546875 
-Q 39.40625 27.09375 37.546875 28.9375 
-Q 35.703125 30.796875 32.84375 31.890625 
-Q 30 33 26.203125 33 
-L 26.203125 40 
-Q 33.203125 40 36.453125 43.546875 
-Q 39.703125 47.09375 39.703125 52.203125 
-Q 39.703125 54.703125 38.796875 56.953125 
-Q 37.90625 59.203125 36.296875 60.796875 
-Q 34.703125 62.40625 32.546875 63.34375 
-Q 30.40625 64.296875 27.90625 64.296875 
-Q 22 64.296875 18.796875 60.390625 
-Q 15.59375 56.5 15.59375 50.703125 
-L 7.90625 50.703125 
-Q 7.90625 55.296875 9.296875 59.09375 
-Q 10.703125 62.90625 13.296875 65.65625 
-Q 15.90625 68.40625 19.59375 69.953125 
-Q 23.296875 71.5 27.90625 71.5 
-Q 31.90625 71.5 35.453125 70 
-Q 39 68.5 41.640625 65.84375 
-Q 44.296875 63.203125 45.84375 59.703125 
-Q 47.40625 56.203125 47.40625 52.203125 
-Q 47.40625 47 44.953125 42.796875 
-Q 42.5 38.59375 38.40625 36.59375 
-Q 43.203125 34.40625 46.046875 29.75 
-Q 48.90625 25.09375 48.90625 19.203125 
-Q 48.90625 14.90625 47.25 11.15625 
-Q 45.59375 7.40625 42.75 4.59375 
-Q 39.90625 1.796875 36.09375 0.140625 
-Q 32.296875 -1.5 27.90625 -1.5 
-Q 23.40625 -1.5 19.453125 0.203125 
-Q 15.5 1.90625 12.59375 4.90625 
-Q 9.703125 7.90625 8.046875 12 
-Q 6.40625 16.09375 6.40625 21 
-z
-" id="AUPassata-Regular-51"/>
-      </defs>
-      <g style="fill:#262626;" transform="translate(521.608653 241.425)scale(0.1375 -0.1375)">
-       <use xlink:href="#AUPassata-Regular-51"/>
-       <use x="56.999985" xlink:href="#AUPassata-Regular-48"/>
-       <use x="113.999969" xlink:href="#AUPassata-Regular-48"/>
-       <use x="170.999954" xlink:href="#AUPassata-Regular-48"/>
-      </g>
-     </g>
-    </g>
-    <g id="text_8">
+    <g id="text_7">
      <!-- TB used -->
      <defs>
       <path d="M 1 70 
@@ -468,7 +412,7 @@ z
    </g>
    <g id="matplotlib.axis_2">
     <g id="ytick_1">
-     <g id="text_9">
+     <g id="text_8">
       <!-- Aarhus University -->
       <defs>
        <path d="M 32.703125 73.5 
@@ -679,7 +623,7 @@ z
      </g>
     </g>
     <g id="ytick_2">
-     <g id="text_10">
+     <g id="text_9">
       <!-- Copenhagen University -->
       <defs>
        <path d="M 71.5 20.5 
@@ -858,7 +802,7 @@ z
      </g>
     </g>
     <g id="ytick_3">
-     <g id="text_11">
+     <g id="text_10">
       <!-- Region Midt -->
       <defs>
        <path d="M 7.40625 70 
@@ -920,7 +864,7 @@ z
      </g>
     </g>
     <g id="ytick_4">
-     <g id="text_12">
+     <g id="text_11">
       <!-- Private -->
       <defs>
        <path d="M 7.40625 70 
@@ -963,45 +907,104 @@ z
      </g>
     </g>
     <g id="ytick_5">
-     <g id="text_13">
-      <!-- Dtu -->
+     <g id="text_12">
+      <!-- Max Planck Institute -->
       <defs>
-       <path d="M 7.40625 70 
-L 23.796875 70 
-Q 32.296875 70 39.390625 67.34375 
-Q 46.5 64.703125 51.59375 60.046875 
-Q 56.703125 55.40625 59.5 48.953125 
-Q 62.296875 42.5 62.296875 35 
-Q 62.296875 27.5 59.546875 21.046875 
-Q 56.796875 14.59375 51.640625 9.9375 
-Q 46.5 5.296875 39.203125 2.640625 
-Q 31.90625 0 22.796875 0 
-L 7.40625 0 
+       <path d="M 18.59375 26 
+L 2.40625 50 
+L 10.59375 50 
+L 23.40625 30.59375 
+L 35.40625 50 
+L 43.59375 50 
+L 28.296875 26.09375 
+L 47 0 
+L 38 0 
+L 23.59375 21 
+L 10 0 
+L 1 0 
 z
-M 14.90625 63 
-L 14.90625 7 
-L 20.796875 7 
-Q 29.296875 7 35.640625 9.09375 
-Q 42 11.203125 46.25 14.953125 
-Q 50.5 18.703125 52.59375 23.84375 
-Q 54.703125 29 54.703125 35 
-Q 54.703125 41.09375 52.59375 46.25 
-Q 50.5 51.40625 46.25 55.09375 
-Q 42 58.796875 35.640625 60.890625 
-Q 29.296875 63 20.796875 63 
+" id="AUPassata-Regular-120"/>
+       <path d="M 7.59375 70 
+L 14.796875 70 
+L 14.796875 0 
+L 7.59375 0 
 z
-" id="AUPassata-Regular-68"/>
+" id="AUPassata-Regular-108"/>
+       <path d="M 51.09375 13 
+Q 48.203125 6.703125 42.390625 2.84375 
+Q 36.59375 -1 29 -1 
+Q 23.59375 -1 18.84375 1.046875 
+Q 14.09375 3.09375 10.59375 6.59375 
+Q 7.09375 10.09375 5.046875 14.84375 
+Q 3 19.59375 3 25 
+Q 3 30.40625 5.046875 35.15625 
+Q 7.09375 39.90625 10.59375 43.40625 
+Q 14.09375 46.90625 18.84375 48.953125 
+Q 23.59375 51 29 51 
+Q 36.59375 51 42.390625 47.140625 
+Q 48.203125 43.296875 51.09375 37 
+L 42.40625 37 
+Q 40.09375 40.296875 36.84375 42.09375 
+Q 33.59375 43.90625 29 43.90625 
+Q 25 43.90625 21.59375 42.453125 
+Q 18.203125 41 15.75 38.453125 
+Q 13.296875 35.90625 11.890625 32.453125 
+Q 10.5 29 10.5 25 
+Q 10.5 21 11.890625 17.546875 
+Q 13.296875 14.09375 15.75 11.546875 
+Q 18.203125 9 21.59375 7.546875 
+Q 25 6.09375 29 6.09375 
+Q 33.59375 6.09375 36.9375 7.890625 
+Q 40.296875 9.703125 42.59375 13 
+z
+" id="AUPassata-Regular-99"/>
+       <path d="M 6.5 70 
+L 13.703125 70 
+L 13.703125 0 
+L 6.5 0 
+z
+M 15.203125 26.09375 
+L 38.59375 50 
+L 48.203125 50 
+L 24.40625 26.203125 
+L 50.796875 0 
+L 40.59375 0 
+z
+" id="AUPassata-Regular-107"/>
+       <path d="M 8 70 
+L 15.5 70 
+L 15.5 0 
+L 8 0 
+z
+" id="AUPassata-Regular-73"/>
       </defs>
-      <g style="fill:#262626;" transform="translate(130.44082 196.6025)scale(0.1375 -0.1375)">
-       <use xlink:href="#AUPassata-Regular-68"/>
-       <use x="65.299988" xlink:href="#AUPassata-Regular-116"/>
-       <use x="93.499985" xlink:href="#AUPassata-Regular-117"/>
+      <g style="fill:#262626;" transform="translate(31.079883 196.6025)scale(0.1375 -0.1375)">
+       <use xlink:href="#AUPassata-Regular-77"/>
+       <use x="77.699982" xlink:href="#AUPassata-Regular-97"/>
+       <use x="137.999969" xlink:href="#AUPassata-Regular-120"/>
+       <use x="185.999954" xlink:href="#AUPassata-Regular-32"/>
+       <use x="209.999939" xlink:href="#AUPassata-Regular-80"/>
+       <use x="265.999924" xlink:href="#AUPassata-Regular-108"/>
+       <use x="288.399918" xlink:href="#AUPassata-Regular-97"/>
+       <use x="348.699905" xlink:href="#AUPassata-Regular-110"/>
+       <use x="405.19989" xlink:href="#AUPassata-Regular-99"/>
+       <use x="458.099884" xlink:href="#AUPassata-Regular-107"/>
+       <use x="507.299881" xlink:href="#AUPassata-Regular-32"/>
+       <use x="531.299866" xlink:href="#AUPassata-Regular-73"/>
+       <use x="554.79985" xlink:href="#AUPassata-Regular-110"/>
+       <use x="611.299835" xlink:href="#AUPassata-Regular-115"/>
+       <use x="650.899826" xlink:href="#AUPassata-Regular-116"/>
+       <use x="679.099823" xlink:href="#AUPassata-Regular-105"/>
+       <use x="701.499817" xlink:href="#AUPassata-Regular-116"/>
+       <use x="729.699814" xlink:href="#AUPassata-Regular-117"/>
+       <use x="785.099808" xlink:href="#AUPassata-Regular-116"/>
+       <use x="813.299805" xlink:href="#AUPassata-Regular-101"/>
       </g>
      </g>
     </g>
    </g>
    <g id="patch_3">
-    <path clip-path="url(#pd9f82062c7)" d="M 170.41543 11.302 
+    <path clip-path="url(#p43e3606a41)" d="M 170.41543 11.302 
 L 532.772573 11.302 
 L 532.772573 44.118 
 L 170.41543 44.118 
@@ -1009,33 +1012,33 @@ z
 " style="fill:#5875a4;stroke:#ffffff;stroke-linejoin:miter;"/>
    </g>
    <g id="patch_4">
-    <path clip-path="url(#pd9f82062c7)" d="M 170.41543 52.322 
-L 261.70166 52.322 
-L 261.70166 85.138 
+    <path clip-path="url(#p43e3606a41)" d="M 170.41543 52.322 
+L 268.368669 52.322 
+L 268.368669 85.138 
 L 170.41543 85.138 
 z
 " style="fill:#cc8963;stroke:#ffffff;stroke-linejoin:miter;"/>
    </g>
    <g id="patch_5">
-    <path clip-path="url(#pd9f82062c7)" d="M 170.41543 93.342 
-L 238.130209 93.342 
-L 238.130209 126.158 
+    <path clip-path="url(#p43e3606a41)" d="M 170.41543 93.342 
+L 239.397939 93.342 
+L 239.397939 126.158 
 L 170.41543 126.158 
 z
 " style="fill:#5f9e6e;stroke:#ffffff;stroke-linejoin:miter;"/>
    </g>
    <g id="patch_6">
-    <path clip-path="url(#pd9f82062c7)" d="M 170.41543 134.362 
-L 199.455988 134.362 
-L 199.455988 167.178 
+    <path clip-path="url(#p43e3606a41)" d="M 170.41543 134.362 
+L 201.69144 134.362 
+L 201.69144 167.178 
 L 170.41543 167.178 
 z
 " style="fill:#b55d60;stroke:#ffffff;stroke-linejoin:miter;"/>
    </g>
    <g id="patch_7">
-    <path clip-path="url(#pd9f82062c7)" d="M 170.41543 175.382 
-L 181.842628 175.382 
-L 181.842628 208.198 
+    <path clip-path="url(#p43e3606a41)" d="M 170.41543 175.382 
+L 174.377022 175.382 
+L 174.377022 208.198 
 L 170.41543 208.198 
 z
 " style="fill:#857aab;stroke:#ffffff;stroke-linejoin:miter;"/>
@@ -1053,7 +1056,7 @@ L 550.89043 222.3
   </g>
  </g>
  <defs>
-  <clipPath id="pd9f82062c7">
+  <clipPath id="p43e3606a41">
    <rect height="205.1" width="380.475" x="170.41543" y="7.2"/>
   </clipPath>
  </defs>
