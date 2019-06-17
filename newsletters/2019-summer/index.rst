@@ -106,6 +106,13 @@ collectively **spent 864000 DKK** on data storage in the past year. If you had
 to store this data in the cloud, for example on Microsoft Azure, you would pay
 **18 mio. DKK... per month**!
 
+.. figure:: top5_organizations_storage.svg
+
+    Storage usage by organization. Aarhus University is of course at the top
+    here, but has also been used GenomeDK for the longest time. Copenhagen
+    University is a relatively new user and thus being number two in this plot
+    shows that they've had explosive storage usage growth.
+
 Let's look at some of the projects that call GenomeDK their home. First, here's
 a list of the top five largest projects by the total size of the files in the
 project.
@@ -171,8 +178,8 @@ A few tips
 * Do you want **faster and more stable** access to files in your home folder?
   We can now offer to move your home folder to a new, faster, and more stable
   file server! To be moved the size of your home folder must be **less than 100
-  GB**. We encourage you to clean up your home folder and then contact us to
-  have your user moved.
+  GB**. We encourage you to clean up your home folder, move big files to
+  faststorage, and then contact us to have your user moved.
 
   To get the size of your home folder, run ``du --si -s /home/<username>``.
 
