@@ -32,7 +32,7 @@ We welcome all feedback on the new site!
 Coming up, more storage!
 ------------------------
 
-After manually pushing 840 hard drives into place we can seen increase our
+After manually pushing 840 hard drives into place we can increase our
 storage to 12 PB! We will also be saying goodbye to some of our old storage
 servers and will be migrating data from them to the new storage servers.
 
