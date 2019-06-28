@@ -179,12 +179,13 @@ A few tips
 ==========
 
 * Do you want **faster and more stable** access to files in your home folder?
-  We can now offer to move your home folder to a new, faster, and more stable
-  file server! To be moved the size of your home folder must be **less than 100
-  GB**. We encourage you to clean up your home folder, move big files to
-  faststorage, and then contact us to have your user moved.
+  We can now offer to move your NFS home folder to a new, faster, and more
+  stable file server! To be moved the size of your home folder must be **less
+  than 100 GB**. We encourage you to clean up your home folder, move big files
+  to faststorage, and then contact us to have your user moved.
 
-  To get the size of your home folder, run ``du --si -s /home/<username>``.
+  To get the size of your home folder, run ``space``. This gives you a nice
+  report of your disk usage.
 
 * Our software repository, ``/com/extra`` is deprecated. We won't add new
   software or update existing software in this repository. Instead, we
