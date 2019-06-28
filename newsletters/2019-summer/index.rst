@@ -10,11 +10,16 @@ We're quickly approaching summer vacation here in Denmark, so this is probably
 a good time to take a look at the past year at GenomeDK.
 
 We've collected numbers that demonstrate how we're growing, how the cluster is
-used, and who the users are and where they come from.
+used, and who the users are and where they come from. We also have a few tips
+for you, as well as updates from the last year.
 
-We also have a few tips for you, as well as updates from the last year.
+We would like to feature **your** scientific work with GenomeDK in future
+newsletters. If you'd like to write a few lines about your research and how
+it's being supported by GenomeDK, please get in touch!
 
 Enjoy!
+
+*The GenomeDK Team*
 
 A few updates
 =============
