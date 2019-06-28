@@ -32,10 +32,9 @@ We welcome all feedback on the new site!
 Coming up, more storage!
 ------------------------
 
-GenomeDK currently has 6 PB of storage, but after manually pushing 840 hard
-drives into place we can now bump that to 12 PB! We will also be saying goodbye
-to some of our old storage servers and will be migrating data from them to the
-new storage servers.
+After manually pushing 840 hard drives into place we can seen increase our
+storage to 12 PB! We will also be saying goodbye to some of our old storage
+servers and will be migrating data from them to the new storage servers.
 
 The new storage will be available as soon as the data migration and testing
 has been completed.
@@ -55,7 +54,11 @@ Who uses GenomeDK?
 ------------------
 
 In the last year we've welcomed approximately 80 new users to the cluster which
-is now serving more than **400 people**.
+is now serving more than **400 people** from 17 countries.
+
+.. figure:: worldmap.svg
+
+    Countries with at least one GenomeDK user marked in red.
 
 Although Aarhus University is by far the largest user of GenomeDK, we've seen
 quite a bit of interest in GenomeDK from outside AU too. Actually, **47%** of
