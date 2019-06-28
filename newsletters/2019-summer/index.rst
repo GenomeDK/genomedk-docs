@@ -60,6 +60,9 @@ is now serving more than **400 people** from 17 countries.
 
     Countries with at least one GenomeDK user marked in red.
 
+We're well on our way to world domination if you consider continents. You just
+need to find collaborators in Africa.
+
 Although Aarhus University is by far the largest user of GenomeDK, we've seen
 quite a bit of interest in GenomeDK from outside AU too. Actually, **47%** of
 our users are not from AU. Many of these are, of course, your external
@@ -106,6 +109,10 @@ The estimated cost of storing 1 TB of data for one year is 180 DKK. Thus, you
 collectively **spent 864000 DKK** on data storage in the past year. If you had
 to store this data in the cloud, for example on Microsoft Azure, you would pay
 **18 mio. DKK... per month**!
+
+On top of that, we currently have **850 TB of data in backup**, which cost you
+an additional 595000 DKK per year. On average, **87 GB of data is added to the
+backup every single day**. This number is, however, increasing significantly.
 
 .. figure:: top5_organizations_storage.svg
 
