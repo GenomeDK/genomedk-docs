@@ -69,8 +69,6 @@ collaborators.
 
     Top five organizations based on the number of active user accounts.
 
-We even have users from Harvard!
-
 How much compute is used?
 -------------------------
 
