@@ -18,6 +18,18 @@ Upcoming
 .. eventlist::
     :status: upcoming
 
+
+.. event:: Faststorage hardware upgrade
+    :uid: faststorage-upgrade-20190805
+    :start: 2019-08-06 00:00 +0200
+    :end: 2019-08-06 16:00 +0200
+    :tags: storage hardware
+
+    The cluster will be unavailable for all users in this time span. During the
+    downtime we will be applying hardware expansion to our storage. Because the
+    expansion involves key infrastructure upgrades, the downtime is needed.
+
+
 Recent
 ------
 
