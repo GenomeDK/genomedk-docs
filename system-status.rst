@@ -38,6 +38,17 @@ Recent
     :reverse:
 
 
+.. event:: Faststorage outage
+    :uid: faststorage-outage-20190726
+    :start: 2019-07-26 01:12 +0200
+    :end: 2019-07-26 06:05 +0200
+    :actualend: 2019-07-26 06:05 +0200
+    :tags: outage
+
+    Due to unexpected software crash faststorage was unavailable. The problem has been resolved
+    and everything should be back up and operational now. 
+
+
 .. event:: Fire detector and cooling maintenance
     :uid: fire-detector-and-cooling-maintenance-20190522
     :start: 2019-06-12 08:00 +0200
