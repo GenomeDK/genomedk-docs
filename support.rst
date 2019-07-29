@@ -7,7 +7,7 @@ Support
 
 Please direct any question and problem you encounter to:
 
-* Mail: cases@genomedk.manuscript.com
+* Mail: cases@genome.au.dk
 * Telephone: +45 87 15 55 68
 * Office:
 
