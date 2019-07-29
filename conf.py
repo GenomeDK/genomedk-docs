@@ -99,7 +99,7 @@ html_theme = 'au'
 html_theme_options = {
     'sitename': 'GenomeDK',
     'phone': '+45 87 15 55 68',
-    'email': 'cases@genomedk.fogbugz.com',
+    'email': 'cases@genomedk.manuscript.com',
     'show_breadcrumb': 'no',
 }
 

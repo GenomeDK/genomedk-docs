@@ -7,7 +7,7 @@ Support
 
 Please direct any question and problem you encounter to:
 
-* Mail: cases@genomedk.fogbugz.com
+* Mail: cases@genomedk.manuscript.com
 * Telephone: +45 87 15 55 68
 * Office:
 
