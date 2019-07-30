@@ -135,10 +135,28 @@ fill out `this <https://genomedk.wufoo.com/forms/request-new-project-group>`_
 form.
 
 When your request has been accepted, you and the other project members will
-have access to a shared folder in :file:`/project/PROJECT-NAME` where
-*PROJECT-NAME* is the name requested for your project. All users can add, edit,
-and delete files in the project folder unless restrictions have been set on
-specific files/folders.
+have access to a shared folder in :file:`/project/<project name>` where
+*project name* is the name requested for your project.
+
+.. _jobs_with_project:
+
+Submitting jobs under a project
+-------------------------------
+
+All projects are given an account that can be used to submit jobs belonging to
+the project. The account name is the same as the project name, but lowercased.
+
+Submitting jobs with the project account has the benefit that jobs submitted
+with a project account get much higher priority than non-project jobs.
+
+To submit a job with an account:
+
+.. code-block:: console
+
+    [fe1]$ sbatch --account <lowercase project name> ...
+
+Managing a project
+------------------
 
 Project owners and project members with administrative rights can manage their
 own projects through the following commands:
@@ -153,8 +171,31 @@ own projects through the following commands:
     Revoke a users' administrative rights to a project.
 :command:`gm-list-admins <project name>`
     List all members of a project with administrative rights.
+:command:`gm-list-members <project name>`
+    List all members of a project.
 
 To get help for any of the commands, run the command without any parameters.
+
+Data access in project folders
+------------------------------
+
+All members can add, edit, and delete files in the project folder unless
+restrictions have been set on specific files/subfolders. If you have data that
+you want to keep private to your user, but that belongs to in the project
+folder anyway, you can set permissions so that only you can read, write, and
+execute the file with this command:
+
+.. code-block:: console
+
+    [fe1]$ chmod go-rwx <files>
+
+The :command:`chmod` command changes file permissions. The first parameter
+specifies that groups (g) and others (o) should have their read (r), write (w),
+and execute (x) permissions removed (-). This means that it's only the owner of
+the file who can now access it.
+
+You can read more about :command:`chmod`
+`here <https://en.wikipedia.org/wiki/Chmod>`_.
 
 Backing up data
 ===============

@@ -478,6 +478,7 @@ an overview of commonly used resource flags:
     :align: left
     :widths: 10, 40, 50
 
+    "``-A``", "``--account``", "Account to submit the job under. See :ref:`jobs_with_project`."
     "``-p``", "``--partition``", "One or more comma-separated partitions that the job may run on. Jobs submitted to the *gpu* partition should also use the *--gres* flag."
     "", "``--mem-per-cpu``", "Memory allocated per allocated CPU core."
     "``-c``", "``--cpus-per-task``", "Number of cores allocated for the job. All cores will be on the same node."
