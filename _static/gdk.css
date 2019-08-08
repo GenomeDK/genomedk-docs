@@ -53,6 +53,8 @@ footer p {
 /* Code blocks */
 code, pre {
     background: rgb(247, 247, 247) !important;
+    max-height: 340px;
+    overflow-y: scroll;
 }
 code.file {
     background: none !important;
