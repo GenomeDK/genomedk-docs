@@ -126,17 +126,50 @@ Decrypt:
 This will ask for the password used to encrypt the file. The decrypted contents
 are written to :file:`data.txt.new`.
 
+.. _collaborating:
+
 Collaborating on data
 =====================
 
 Data sharing between users can only be accomplished through dedicated project
-folders to which only certain users have access. To apply for a project folder,
-fill out `this <https://genomedk.wufoo.com/forms/request-new-project-group>`_
-form.
+folders to which only certain users have access.
+
+Run the following command to request a new project folder:
+
+.. code-block:: console
+
+    [fe1]$ gm-request-project -g <project name> -m <members>
+
+where **project name** is the desired name of the new project and **members**
+is a comma-separated list of usernames of users that should be given access to
+the project. For example, to request a project called *MyAwesomeProject* with
+two additional members, *das* and *aeh*, run:
+
+.. code-block:: console
+
+    [fe1]$ gm-request-project -g MyAwesomeProject -m das,aeh
 
 When your request has been accepted, you and the other project members will
 have access to a shared folder in :file:`/project/<project name>` where
 *project name* is the name requested for your project.
+
+.. note::
+
+    Don't know the username of one of your collaborators? You can use the
+    :command:`finger` command to get information about any user on GenomeDK:
+
+    .. code-block:: console
+
+        [fe1]$ finger <name, username or mail>
+
+    For example, to find all users with "anders" in their name:
+
+    .. code-block:: console
+
+        [fe1]$ finger anders
+        aeh             Anders Egerup Halager <aeh@birc.au.dk>
+        anders          Anders Boerglum <anders@biomed.au.dk>
+        ...
 
 .. _jobs_with_project:
 
@@ -161,6 +194,8 @@ Managing a project
 Project owners and project members with administrative rights can manage their
 own projects through the following commands:
 
+:command:`gm-request-project -g <project name> -m <members>`
+    Request a new project folder with the given name and list of members.
 :command:`gm-add-user -g <project name> -u <username>`
     Add a user to a project.
 :command:`gm-remove-user  -g <project name> -u <username>`
