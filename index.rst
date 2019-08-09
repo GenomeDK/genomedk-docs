@@ -66,6 +66,7 @@ If you want a friendly presentation of how the cluster works, see
 
   docs/what-is-a-cluster
   docs/getting-started
+  docs/installing-software
   docs/advanced
   docs/best-practices
   docs/software-specific
