@@ -7,7 +7,7 @@ FAQ
 I forgot my password
 --------------------
 
-Fill out the `request a new password`_ form.
+Fill out the `this <https://genomedk.wufoo.com/forms/request-new-password-forgot-password>`_ form.
 
 
 Why are my jobs waiting for so long to start?
