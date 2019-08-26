@@ -20,3 +20,16 @@ agree on a time first via mail or phone.
 
 We also greatly appreciate your feedback on the documentation itself, so please
 let us know if you have any suggestions for improvements to the documentation.
+
+Workshops
+=========
+
+We are happy to provide on-location workshops on request. Send us an e-mail
+with your wishes for the workshop and approximate size of the group. Here are
+some possible topics for a workshop:
+
+* you group needs help getting started with GenomeDK,
+* you wants to improve the reproducibility of your projects,
+* you group wants to use *gwf* for workflows, but need an introduction,
+* just want to know if high-performance computing can help you solve your
+  problems.
