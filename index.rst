@@ -31,7 +31,7 @@ Each node has from 16 to 36 cores and either 64 GB, 128 GB, 256 GB, 384 GB, or
 1 TB of RAM.
 
 The cluster has been designed specifically for bioinformatic workloads and has
-a storage capacity of 6 PB. Do you want to know :ref:`more <technical>`?
+a storage capacity of 12 PB. Do you want to know :ref:`more <technical>`?
 
 Where do I start?
 =================

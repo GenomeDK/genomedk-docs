@@ -72,9 +72,9 @@ Technical
 Storage
 =======
 
-The total storage space available is 6 PB.
+The total storage space available is 12 PB.
 
-Data may be located either on one of nine NFS servers or on our 5.5 PB BeeGFS
+Data may be located either on one of nine NFS servers or on our 11.5 PB BeeGFS
 distributed file system (fast storage).
 
 Home and project folders are located on NFS storage by default. The fast
