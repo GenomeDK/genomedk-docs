@@ -78,19 +78,19 @@ We have a special upload user so just send us their email and we will set them
 up. Once the data is uploaded we will move it to a folder you have access to.
 
 
-.. _ipsych-export:
+.. _gdk-export:
 
-I am an iPSYCH user, how do I export files?
--------------------------------------------
+I am in a closed zone, how do I export files?
+---------------------------------------------
 
 If you have many files you should pack them up in a tar/zip. Use
-:program:`ipsych-export` on the file to be exported and then send an email to
+:program:`gdk-export` on the file to be exported and then send an email to
 Anders Børglum and CC us so we can see when he approves it.
 
-.. _ipsych-import:
+.. _gdk-import:
 
-I am an iPSYCH user, how do I import files?
--------------------------------------------
+I am in a closed zone, how do I import files?
+---------------------------------------------
 
 Importing and exporting data is done through an intermediate server for
 security reasons. Transferring data into the cluster isn't restricted, but we
@@ -104,19 +104,20 @@ upload the data to ipsych.genome.au.dk with :program:`scp`.
     my-file                                   100% 4387     4.3KB/s   00:00
 
 Now we can import it into the actual cluster, by running the
-:program:`ipsych-import` command from a session on ``fe2``.
+:program:`gdk-import` command from a session on ``fe2``.
 
 .. code-block:: console
 
-    [fe2]$ ipsych-import my-file my-file
+    [fe2]$ gdk-import my-file my-file
     my-file                                   100% 4387     4.3KB/s   00:00
 
 Now the file is available to your user from all machines, just like any other
 file in your home directory.
 
 
-I am an iPSYCH user, why is NoMachine acting up?
-------------------------------------------------
+I am in a closed zone, why is NoMachine acting up?
+--------------------------------------------------
+
 We have seen cases where the keyboard (or just some buttons) stop working and
 some other mysterious bugs like this.
 

@@ -3,7 +3,7 @@ Get ready
 
 The first thing we will do is to make sure that we can connect to the cluster.
 
-* iPSYCH users must follow the instructions at http://ipsych.genome.au.dk
+* jail users must follow the instructions at http://ipsych.genome.au.dk
 * Windows users will want to get Putty (and WinSCP for transferring files)
 * Linux and macOS users need no additional software
 

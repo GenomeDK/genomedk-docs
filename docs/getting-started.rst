@@ -6,14 +6,14 @@ Getting started
 
 .. note::
 
-    If you don't know what iPSYCH is, or you know that you're not an iPSYCH
-    user, skip all red boxes like the one below. Most users on GenomeDK are
-    *not* iPSYCH users.
+    If you don't know what a closed zone is, or you know that you're not
+    running in one, skip all red boxes like the one below. Most users on
+    GenomeDK are *not* in a closed zone.
 
-.. admonition:: iPSYCH...
+.. admonition:: Closed zone...
 
-    For security reasons, iPSYCH users are working in a restricted environment.
-    In some cases, this means that iPSYCH users must use special commands or
+    Running in a closed zone means running in a restricted environment.
+    In some cases, this means that you must use special commands or
     follow special instructions for certain things. This will be noted in red
     boxes like this one throughout the documentation.
 
@@ -51,29 +51,64 @@ later), it will be shown like this:
 In this case the compute node is **s03n11**, but anything that has the format
 **sXXnYY** is a compute node.
 
+What is a closed zone?
+======================
+
+The GenomeDK cluster is divided into zones. There is one *open* zone and
+multiple *closed* zones. Most users only need to use the open zone.
+
+.. warning::
+
+    If you are not part of a project that requires a closed zone, you are in our
+    default, open zone and you can ignore this section completely.
+
+For projects with additional security requirements, GenomeDK provides *closed
+zones*. A closed zone is an additional layer of security on top of our
+existing security solutions. Closed zones were previously called *jails*.
+
+A closed zone provides:
+
+Isolated networking
+    Users and compute nodes that are not part of the closed zone cannot access
+    or even see nodes that are in the closed zone.
+Data access limitations
+    Users in the zone cannot directly move data in or out of GenomeDK. Instead,
+    data must be imported and exported. Exporting requires approval from the
+    owner of the closed zone. All exports are logged.
+Access through a virtual desktop
+    Users must access the cluster through a special virtual desktop which
+    disallows copy-paste. This means that users cannot leak data by copy-
+    pasting it out of the closed zone.
+No node sharing
+    In the open zone, jobs from multiple users can run on the same compute
+    node. In a closed zone, only jobs started by users in the same zone can
+    share a compute node.
+
+A closed zone is not tied to a single project. Users will need a separate
+account/user for each closed zone they need access to. If you think that you
+need a closed zone for your projects, feel free to get in touch.
+
 .. _request_access:
 
 Get access to the cluster
 =========================
 
-.. admonition:: iPSYCH...
+.. admonition:: Closed zone...
 
-    Fill out the form for `iPSYCH users`_.
+    Fill out `this <https://genomedk.wufoo.com/forms/request-access-to-cluster-ipsych-only/>`_
+    form instead.
 
-Fill out the form for `normal users`_.
+Fill out the form for `normal users <https://genomedk.wufoo.com/forms/request-access-to-cluster/>`_.
 
 Once you've been granted access, you'll receive an e-mail with your password.
 You'll then be able to connect to the cluster.
-
-.. _normal users: https://genomedk.wufoo.com/forms/request-access-to-cluster/
-.. _iPSYCH users: https://genomedk.wufoo.com/forms/request-access-to-cluster-ipsych-only/
 
 .. _connecting_to_the_cluster:
 
 Connecting to the cluster
 =========================
 
-.. admonition:: iPSYCH...
+.. admonition:: Closed zone...
 
     Follow the instructions `here <http://ipsych.genome.au.dk/>`_.
 
@@ -187,10 +222,10 @@ To unmount the directory, run:
 Copying data
 ============
 
-.. admonition:: iPSYCH...
+.. admonition:: Closed zone...
 
-    To copy data from the cluster, see :ref:`ipsych-export`
-    To copy data to the cluster, see :ref:`ipsych-import`
+    To copy data from the cluster, see :ref:`gdk-export`
+    To copy data to the cluster, see :ref:`gdk-import`
 
 From your own machine to/from the cluster
 -----------------------------------------

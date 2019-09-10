@@ -39,8 +39,8 @@ footer p {
     flex-grow: 1;
 }
 
-/* iPSYCH box */
-.admonition-ipsych {
+/* closed-zone box */
+.admonition-closed-zone {
     border-left: 4px solid rgba(95, 0, 48, 1) !important;
     background: rgba(95, 0, 48, 0.1);
 }
