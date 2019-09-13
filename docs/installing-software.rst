@@ -56,9 +56,13 @@ installer:
    [fe1]$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
    [fe1]$ chmod +x Miniconda3-latest-Linux-x86_64.sh
    [fe1]$ ./Miniconda3-latest-Linux-x86_64.sh -b
-   [fe1]$ echo ". /home/$(whoami)/miniconda3/etc/profile.d/conda.sh" >> .bashrc
+   [fe1]$ conda init
 
-That's it! Now, let's configure Conda to make it super useful.
+That's it! The last step makes sure that Conda will be available when you log
+in, so now is a good time to open a new connection and check that Conda is
+available.
+
+Now let's configure Conda to make it super useful.
 
 Adding channels
 ---------------
