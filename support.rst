@@ -33,3 +33,9 @@ some possible topics for a workshop:
 * you group wants to use *gwf* for workflows, but need an introduction,
 * just want to know if high-performance computing can help you solve your
   problems.
+
+Previous workshops
+------------------
+
+* Sep 5, 2019, 9-12, "Introduction to Conda and *gwf*", Børglum Lab, Aarhus
+  University.
