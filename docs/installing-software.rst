@@ -190,8 +190,9 @@ A Conda package is not available
 
 I'm part of a project that dictates the software I should use
     In this case the project should and probably will supply you for either a
-    set of Conda packages or :ref:`Singularity <singularity>` images. In some
-    cases you will only be given
+    set of Conda packages or :ref:`Singularity <singularity>` images. If not,
+    most or all of the software will probably be available through Conda
+    anyway, so you can still set up an environment with the software.
 
 
 .. _PySAM: http://pysam.readthedocs.io/en/stable/
