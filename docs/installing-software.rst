@@ -64,8 +64,8 @@ available.
 
 Now let's configure Conda to make it super useful.
 
-Adding channels
----------------
+Configuring Conda
+-----------------
 
 Conda can install packages from different *channels*. This is similar to
 *repositories* in other package managers. Here we'll add a few channels that
@@ -74,9 +74,13 @@ are commonly used in bioinformatics:
 .. code-block:: console
 
     [fe1]$ conda config --add channels defaults
-    [fe1]$ conda config --add channels conda-forge
     [fe1]$ conda config --add channels bioconda
+    [fe1]$ conda config --add channels conda-forge
     [fe1]$ conda config --add channels genomedk
+
+Finally, to make Conda more predictable, we use *strict* channel priority:
+
+    [fe1]$ conda config --set channel_priority strict
 
 Searching for packages
 ----------------------
