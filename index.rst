@@ -33,6 +33,18 @@ Each node has from 16 to 36 cores and either 64 GB, 128 GB, 256 GB, 384 GB, or
 The cluster has been designed specifically for bioinformatic workloads and has
 a storage capacity of 12 PB. Do you want to know :ref:`more <technical>`?
 
+Cite us!
+========
+
+We provide GenomeDK as a resource to research. If you publish results from
+computations performed on GenomeDK, it is important that you acknowledge and/or
+cite GenomeDK in your publications. We recommend phrasing it like this:
+
+  *Some/all of the computing for this project was performed on the GenomeDK
+  cluster. We would like to thank GenomeDK and Aarhus University for providing
+  computational resources and support that contributed to these research
+  results.*
+
 Where do I start?
 =================
 
