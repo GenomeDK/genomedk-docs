@@ -74,16 +74,15 @@ Storage
 
 The total storage space available is 12 PB.
 
-Data may be located either on one of nine NFS servers or on our 11.5 PB BeeGFS
-distributed file system (fast storage).
+Data may be located either on our NFS servers or on fast storage, our
+11.5 PB BeeGFS distributed file system (fast storage).
 
-Home and project folders are located on NFS storage by default. The fast
-storage is reserved for large data files involved in I/O intensive
-computations.
+Home folders are located on NFS storage by default. Project folders are located
+on fast storage. Fast storage is reserved for large data files involved in
+I/O intensive computations.
 
-NFS can deliver read/write performance of up to 700MB/s, while the fast storage
-can reach an aggregated read/write performance of more than 35GB/s. Fast
-storage is a 26 node distributed file system running BeeGFS.
+NFS can deliver read/write performance of up to 700MB/s, while fast storage
+can reach an aggregated read/write performance of more than 35GB/s.
 
 Backup
 ======
@@ -96,4 +95,5 @@ Power
 Storage and switches are protected by 3x40 kVA UPS
 Diesel generator provides long term power backup for storage and switches.
 
-In case of power failure, only frontend and compute nodes will be without power.
+In case of power failure, only frontend and compute nodes will be without
+power.
