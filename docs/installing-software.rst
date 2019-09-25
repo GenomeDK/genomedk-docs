@@ -1,5 +1,6 @@
 .. _installing_and_using_software:
 
+=============================
 Installing and using software
 =============================
 
@@ -25,7 +26,7 @@ bioinformatics. These packages can be installed with a single command, so you
 don't have to worry about compilers, dependencies, and where to put binaries.
 
 For old users only...
----------------------
+=====================
 
 Previously, GenomeDK has made software available for users through a special
 mechanism called :file:`/com/extra` which allowed users to load specific
@@ -46,7 +47,7 @@ any reference to :file:`/com/extra/stable`.
 .. _installing_conda:
 
 Installing the Conda package manager
-------------------------------------
+====================================
 
 Downloading and installing Conda is very simple, you just download and run the
 installer:
@@ -65,7 +66,7 @@ available.
 Now let's configure Conda to make it super useful.
 
 Configuring Conda
------------------
+=================
 
 Conda can install packages from different *channels*. This is similar to
 *repositories* in other package managers. Here we'll add a few channels that
@@ -85,7 +86,7 @@ Finally, to make Conda more predictable, we use *strict* channel priority:
     [fe1]$ conda config --set channel_priority strict
 
 Searching for packages
-----------------------
+======================
 
 You can easily search for Conda packages through the website anaconda.org_ or
 using the :command:`conda search` command:
@@ -100,7 +101,7 @@ just called *biobambam*, so searching for *biobambam2* would not return any
 results.
 
 Using environments
-------------------
+==================
 
 When you just installed Conda, it comes with a single environment known as the
 *base* environment. To activate the base environment, just type:
@@ -137,7 +138,7 @@ you can create an environment with Rstudio, R, and ggplot2 with a single
 command.
 
 Command reference
------------------
+=================
 
 To install software in the currenctly activated environment:
 
@@ -181,7 +182,7 @@ You can read more about using environments for projects
 with Conda commands available.
 
 I don't think I can use Conda because...
-----------------------------------------
+========================================
 
 A Conda package is not available
     In this case you can contact us and we will build a Conda package for you
@@ -200,3 +201,99 @@ I'm part of a project that dictates the software I should use
 .. _Conda: https://conda.io/docs/
 .. _Anaconda: https://www.anaconda.com/download/
 .. _cheat sheet: http://know.continuum.io/rs/387-XNW-688/images/conda-cheatsheet.pdf
+
+
+Using graphical interfaces
+==========================
+
+There's two options for using programs with a graphical user interface on
+GenomeDK.
+
+.. _xforwarding:
+
+X-forwarding
+------------
+
+You can use X-forwarding to tunnel individual graphical programs to your local
+desktop. This works well for many programs, but programs that do fancy graphics
+or anything animated might not work well.
+
+On Linux you simply need to tell SSH that you wish to enable X-forwarding. To
+do this, add ``-X`` to the :program:`ssh` command when logging in to the
+cluster, for example:
+
+.. code-block:: console
+
+    [local]$ ssh -X USERNAME@login.genome.au.dk
+
+You should then be able to open e.g. Firefox on the frontend:
+
+.. code-block:: console
+
+    [fe1]$ firefox
+
+Since macOS does not include an X server, you will need to download and install
+XQuartz_ on your computer. When installed, reboot the computer. Now, you just
+need to tell SSH that you wish to enable X-forwarding. To do this, add ``-X``
+to the :program:`ssh` command when logging in to the cluster, for example:
+
+.. code-block:: console
+
+    [local]$ ssh -X USERNAME@login.genome.au.dk
+
+You should then be able to open e.g. Firefox on the frontend:
+
+.. code-block:: console
+
+    [fe1]$ firefox
+
+On Windows, we recommend that you use MobaXterm_ which has an integrated X
+server.
+
+.. _XQuartz: https://www.xquartz.org/
+.. _MobaXterm: https://mobaxterm.mobatek.net/
+
+
+VNC
+---
+
+If you want to use a full virtual desktop you can use a VNC program. There are
+lots of options but we recommend TightVNC_ which works on both Linux, macOS,
+and Windows. When downloading TightVNC we recommend to get "TightVNC Java
+Viewer" from the download section. It downloads a ZIP archive which contains an
+executable JAR file.
+
+To use VNC you first need to login to the frontend and start a *VNC server*.
+Starting the server is done with the ``vncserver`` command and looks like this:
+
+.. code-block: console
+    :emphasize-lines: 8
+
+    [fe1]$ vncserver
+
+    You will require a password to access your desktops.
+
+    Password:
+    Verify:
+
+    New 'fe1.genomedk.net:3 (user)' desktop is fe1.genomedk.net:3
+
+    Creating default startup script /home/user/.vnc/xstartup
+    Starting applications specified in /home/user/.vnc/xstartup
+    Log file is /home/user/.vnc/fe1.genomedk.net:3.log
+
+The display id (``:3`` in this example) is needed when you want to connect
+the VNC client.
+
+To connect to the running VNC server the SSH tunnel through the login node has
+to be established. In case of TightVNC, the tunneling option is included in the
+software itself and following settings should be sufficient:
+
+.. image:: tightvnc.png
+    :align: center
+
+Note the "Port" field! The number specified must be 5900 plus the display ID,
+which in this example was :3. Thus, the port number becomes 5903.
+
+.. _TightVNC: https://www.tightvnc.com/
+.. _MobaXterm: https://mobaxterm.mobatek.net/

@@ -77,13 +77,16 @@ If you want a friendly presentation of how the cluster works, see
   :caption: Documentation
 
   docs/what-is-a-cluster
+  docs/prerequisites
   docs/getting-started
+  docs/interacting-with-the-queue
   docs/installing-software
-  docs/advanced
+  docs/working-with-data
   docs/best-practices
   docs/software-specific
   docs/faq
 
+---
 
 .. container:: logo-box
 

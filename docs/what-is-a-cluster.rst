@@ -81,5 +81,5 @@ should keep in mind when using the cluster...
   and you should only use it for basics things like looking around the file
   system, writing scripts, and submitting jobs.
 
-In the next section you will learn how to connect to the cluster so that you
+In the coming sections you will learn how to connect to the cluster so that you
 can start submitting jobs.
