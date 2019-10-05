@@ -43,6 +43,7 @@ Recent
     :uid: downtime-20191005
     :start: 2019-10-05 08:00 +0200
     :end: 2019-10-05 16:00 +0200
+    :actualend: 2019-10-05 10:29 +0200
     :tags: storage nfs
 
     The cluster will be unavailable for all users in this timespan. During the
