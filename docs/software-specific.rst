@@ -17,6 +17,33 @@ be able to pull and run containers without any further setup. See the
 
 .. _`Singularity documentation`: https://sylabs.io/guides/3.3/user-guide/quick_start.html#overview-of-the-singularity-interface
 
+GATK
+====
+
+GATK 4 can be installed through Conda with:
+
+.. code-block:: console
+
+    $ conda install -c bioconda gatk4
+
+GATK 3 cannot be installed this easily due to licensing restrictions. Instead,
+you must download a licensed copy of GATK from https://software.broadinstitute.org/gatk/download/archive,
+for example:
+
+.. code-block:: console
+
+    [fe1]$ conda activate myproject
+    (myproject) [fe1]$ conda install -c bioconda gatk
+    (myproject) [fe1]$ wget 'https://software.broadinstitute.org/gatk/download/auth?package=GATK-archive&version=3.8-1-0-gf15c1c3ef' -O GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2
+    (myproject) [fe1]$ gatk3-register GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2
+
+You can now call GATK with the :program:`gatk3` command:
+
+.. code-block:: console
+
+    (myproject) [fe1]$ gatk3 --help
+
+
 Python
 ======
 
