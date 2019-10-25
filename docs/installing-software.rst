@@ -79,12 +79,6 @@ are commonly used in bioinformatics:
     [fe1]$ conda config --add channels conda-forge
     [fe1]$ conda config --add channels genomedk
 
-Finally, to make Conda more predictable, we use *strict* channel priority:
-
-.. code-block:: console
-
-    [fe1]$ conda config --set channel_priority strict
-
 Searching for packages
 ======================
 
