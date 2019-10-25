@@ -75,7 +75,16 @@ If you want a friendly presentation of how the cluster works, see
   :hidden:
   :caption: Documentation
 
-  docs/index
+  docs/what-is-a-cluster
+  docs/prerequisites
+  docs/getting-started
+  docs/interacting-with-the-queue
+  docs/installing-software
+  docs/working-with-data
+  docs/best-practices
+  docs/software-specific
+  docs/faq
+
 
 ---
 
