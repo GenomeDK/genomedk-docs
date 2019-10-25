@@ -54,13 +54,13 @@ installer:
 
 .. code-block:: console
 
-   [fe1]$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-   [fe1]$ chmod +x Miniconda3-latest-Linux-x86_64.sh
-   [fe1]$ ./Miniconda3-latest-Linux-x86_64.sh -b
-   [fe1]$ conda init
+   [fe1]$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+   [fe1]$ chmod +x miniconda.sh
+   [fe1]$ bash miniconda.sh -b
+   [fe1]$ ./miniconda3/bin/conda init bash
 
-That's it! The last step makes sure that Conda will be available when you log
-in, so now is a good time to open a new connection and check that Conda is
+That's it! The last two step makes sure that Conda will be available when you
+log in, so now is a good time to open a new connection and check that Conda is
 available.
 
 Now let's configure Conda to make it super useful.
