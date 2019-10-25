@@ -4,40 +4,22 @@
 Technical
 =========
 
-.. table:: Overview of available nodes
+.. table:: Overview of available compute nodes
     :align: left
 
     +---------------+-------------------------------------------------------+
     | Nodes / cores | Description                                           |
     +===============+=======================================================+
-    | 95 / 1520     |                                                       |
-    |               |                                                       |
-    |               | -  Two Intel/"Sandy Bridge"                           |
-    |               |    E5-2670 CPUs @ 2.67 GHz, 8                         |
-    |               |    cores/CPU                                          |
-    |               | -  64 GB memory                                       |
-    |               | -  10 GigE                                            |
-    |               |                                                       |
-    |               |                                                       |
-    +---------------+-------------------------------------------------------+
-    | 56 / 896      |                                                       |
-    |               |                                                       |
-    |               | -  Two Intel/"Sandy Bridge"                           |
+    | 56 / 896      | -  Two Intel/"Sandy Bridge"                           |
     |               |    E5-2670 CPUs @ 2.67 GHz, 8                         |
     |               |    cores/CPU                                          |
     |               | -  128 GB of memory                                   |
     |               | -  Infiniband 4X QDR                                  |
-    |               |                                                       |
-    |               |                                                       |
     +---------------+-------------------------------------------------------+
-    | 38 / 912      |                                                       |
-    |               |                                                       |
-    |               | -  Two Intel/"Haswell" E5-2680v3                      |
+    | 34 / 816      | -  Two Intel/"Haswell" E5-2680v3                      |
     |               |    CPUs @ 2.5 Ghz, 12 cores/CPU                       |
     |               | -  256 GB of memory                                   |
     |               | -  Infiniband FDR                                     |
-    |               |                                                       |
-    |               |                                                       |
     +---------------+-------------------------------------------------------+
     | 30 / 1080     | -  Two Intel/"Skylake" Gold 6140                      |
     |               |    CPU @ 2.30GHz, 18 cores/CPU                        |
@@ -50,23 +32,10 @@ Technical
     |               | -  Infiniband FDR                                     |
     |               | -  Two Nvidia V100 16Gb GPU devices                   |
     +---------------+-------------------------------------------------------+
-    | 1 / 32        |                                                       |
-    |               |                                                       |
-    |               | -  Four AMD/Opteron 6212 CPUs @                       |
-    |               |    2.67 GHz, 8 cores/CPU                              |
-    |               | -  512 GB memory                                      |
-    |               | -  10 GigE and 1 GigE NIC's.                          |
-    |               |                                                       |
-    |               |                                                       |
-    +---------------+-------------------------------------------------------+
-    | 3 / 72        |                                                       |
-    |               |                                                       |
-    |               | -  Four Intel/"Westmere" E7-4807                      |
+    | 2 / 48        | -  Four Intel/"Westmere" E7-4807                      |
     |               |    CPUs @ 1.87 Ghz, 6 cores/CPU                       |
     |               | -  1024 GB memory                                     |
     |               | -  10 GigE and 1GigE NIC's.                           |
-    |               |                                                       |
-    |               |                                                       |
     +---------------+-------------------------------------------------------+
 
 Storage
