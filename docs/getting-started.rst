@@ -165,11 +165,12 @@ key to the cluster, run:
 
 .. code-block:: console
 
-    [local]$ ssh-copy-id -i PUBLIC-KEY-PATH login.genome.au.dk
+    [local]$ ssh-copy-id -i PUBLIC-KEY-PATH USERNAME@login.genome.au.dk
 
-Replace *PUBLIC-KEY-PATH* with the path to your public key. You will be asked
-to enter your password for the cluster. You should now be able to log in to the
-cluster without typing your password. Test this by runnning:
+Replace *PUBLIC-KEY-PATH* with the path to your public key and *USERNAME* with 
+your cluster username. You will be asked to enter your password for the cluster. 
+You should now be able to log in to the cluster without typing your password. 
+Test this by runnning:
 
 .. code-block:: console
 
