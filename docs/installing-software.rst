@@ -252,10 +252,9 @@ VNC
 ---
 
 If you want to use a full virtual desktop you can use a VNC program. There are
-lots of options but we recommend TightVNC_ which works on both Linux, macOS,
-and Windows. When downloading TightVNC we recommend to get "TightVNC Java
-Viewer" from the download section. It downloads a ZIP archive which contains an
-executable JAR file.
+lots of options but we recommend TightVNC_ 2.x which works on both Linux,
+macOS, and Windows. When downloading TightVNC we recommend to get "TightVNC
+Java Viewer". It downloads a ZIP archive which contains an executable JAR file.
 
 To use VNC you first need to login to the frontend and start a *VNC server*.
 Starting the server is done with the ``vncserver`` command and looks like this:
@@ -289,5 +288,5 @@ software itself and following settings should be sufficient:
 Note the "Port" field! The number specified must be 5900 plus the display ID,
 which in this example was :3. Thus, the port number becomes 5903.
 
-.. _TightVNC: https://www.tightvnc.com/
+.. _TightVNC: https://www.tightvnc.com/download.php
 .. _MobaXterm: https://mobaxterm.mobatek.net/
