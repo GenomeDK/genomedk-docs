@@ -39,7 +39,20 @@ Recent
     :status: recent
     :reverse:
 
-.. event:: nfs storage maintenance
+.. event:: Storage node failure
+    :uid: storage-failure-20191202
+    :start: 2019-12-02 18:45 +0200
+    :end:   2019-12-02 23:55 +0200
+    :tags: storage failure
+
+    Approximately at 18:45 one of the storage nodes for faststorage experianced a
+    hardware failure which resulted in I/O errors when trying to access faststorage. The queue
+    was paused almost immidately. It was quickly discovered that failure cannot be handled
+    remotely. At 21:32 our representative was at the site and at 22:15 the failure
+    was preliminarly resolved. After further stability testing at 23:55 the cluster
+    resumed normal operations. No data was lost.
+
+.. event:: NFS storage maintenance
     :uid: downtime-20191102
     :start: 2019-11-02 08:00 +0200
     :end: 2019-11-02 16:00 +0200
