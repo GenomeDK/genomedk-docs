@@ -6,11 +6,6 @@ Welcome to GenomeDK!
     :status: ongoing
     :quiet:
 
-
-.. note::
-
-    Our newsletter for the summer 2019 is out! :ref:`Read it here <newsletter-2019>`.
-
 **GenomeDK is a national high-performance computing facility for bioinformatics
 and life sciences managed by Center for Genome Analysis and Personalized
 Medicine, located at Aarhus University, Denmark.**
