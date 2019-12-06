@@ -46,6 +46,11 @@ optimally.
     move them to much faster storage servers. If your home folder is less than
     100 GB and you want to be moved to the fast storage servers, get in touch.
 
+How much space am I using?
+==========================
+
+You can use the :command:`space user` command to figure out how much storage
+and compute you're using across your home folders and projects.
 
 .. _mounting:
 
@@ -289,6 +294,22 @@ have access to a shared folder in :file:`/project/<project name>` where
         aeh             Anders Egerup Halager <aeh@birc.au.dk>
         anders          Anders Boerglum <anders@biomed.au.dk>
         ...
+
+Being a project owner
+---------------------
+
+When you request a project you're officially the project owner. This means that
+you're responsible for the compute and storage used by the project. To help you
+keep up to date on how much compute and storage is used by your projects, you
+can use the :command:`space` command.
+
+:command:`space overview`
+    Provides you with an overview of the compute usage over time, as well as
+    storage usage accounting, of all of the projects you own.
+:command:`space project <project name>`
+    Shows detailed compute and storage accounting for a specific project.
+    For example, you can see how much compute and storage is used by each
+    member of the project. All members of the project can run this command.
 
 .. _jobs_with_project:
 
