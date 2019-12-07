@@ -21,9 +21,9 @@ Upcoming
 
     
 .. event:: nfs storage maintenance
-    :uid: downtime-20191207
-    :start: 2019-12-07 08:00 +0200
-    :end: 2019-12-07 16:00 +0200
+    :uid: downtime-20200104
+    :start: 2020-01-04 08:00 +0200
+    :end: 2020-01-04 16:00 +0200
     :tags: storage nfs
 
     the cluster will be unavailable for all users in this timespan. during the
@@ -38,6 +38,18 @@ Recent
 .. eventlist::
     :status: recent
     :reverse:
+
+.. event:: nfs storage maintenance
+    :uid: downtime-20191207
+    :start: 2019-12-07 08:00 +0200
+    :end: 2019-12-07 16:00 +0200
+    :tags: storage nfs
+
+    the cluster will be unavailable for all users in this timespan. during the
+    downtime we will apply system updates across the cluster and perform nfs
+    storage maintenance as we are working towards decommissioning our old nfs
+    storage servers and introducing new servers. over time, this will result
+    in a more stable and responsive environment for all genomedk users.
 
 .. event:: Storage node failure
     :uid: storage-failure-20191202
