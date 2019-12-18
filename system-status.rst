@@ -22,8 +22,8 @@ Upcoming
     
 .. event:: nfs storage maintenance
     :uid: downtime-20200104
-    :start: 2020-01-04 08:00 +0200
-    :end: 2020-01-04 16:00 +0200
+    :start: 2020-02-01 08:00 +0200
+    :end: 2020-02-01 16:00 +0200
     :tags: storage nfs
 
     the cluster will be unavailable for all users in this timespan. during the
