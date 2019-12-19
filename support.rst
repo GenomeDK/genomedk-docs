@@ -37,5 +37,7 @@ some possible topics for a workshop:
 Previous workshops
 ------------------
 
+* Dec 10, 2019, 9-12, "Managing software with Conda", "Workflows with *gwf*",
+  "Project organization", official GenomeDK workshop, Aarhus University.
 * Sep 5, 2019, 9-12, "Introduction to Conda and *gwf*", Børglum Lab, Aarhus
   University.
