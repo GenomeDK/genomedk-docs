@@ -20,6 +20,7 @@ six==1.12.0
 snowballstemmer==1.2.1
 Sphinx==2.0.1
 sphinx-au-theme==0.6.0
+sphinx-notfound-page==0.4
 sphinxcontrib-applehelp==1.0.1
 sphinxcontrib-devhelp==1.0.1
 sphinxcontrib-htmlhelp==1.0.2
