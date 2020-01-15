@@ -24,6 +24,13 @@ queries = [
 blacklist = [
     "10.1007/s00167-019-05351-3",
     "10.12688/f1000research.15140.1",
+    "10.1016/j.jtbi.2012.01.007",
+    "10.1007/978-1-4419-7210-1_4",
+    "10.1007/s11538-011-9658-0",
+    "10.1007/s00167-013-2444-9",
+    "10.1007/s00167-014-3149-4",
+    "10.2106/jbjs.cc.n.00101",
+    "10.1038/nature11539",
 ]
 
 
@@ -92,7 +99,8 @@ def write_index(index):
 
 
 def diff_index(old, new):
-    assert old.issubset(new), "some publications that were previously included have disappeared"
+    if not old.issubset(new):
+        print("Some publications that were previously included have disappeared")
     return new.difference(old)
 
 
@@ -124,7 +132,6 @@ def main():
     diff = diff_index(index, new_index)
     if not diff:
         print("No new publications found")
-        return
 
     print("The following publications were added:")
     for doi in diff:
