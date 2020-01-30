@@ -10,13 +10,19 @@ Technical
     +---------------+-------------------------------------------------------+
     | Nodes / cores | Description                                           |
     +===============+=======================================================+
+    | 40 / 640      | -  Two Intel/"Sandy Bridge"                           |
+    |               |    E5-2670 CPUs @ 2.67 GHz, 8                         |
+    |               |    cores/CPU                                          |
+    |               | -  128 GB of memory                                   |
+    |               | -  10 GigE                                            |
+    +---------------+-------------------------------------------------------+
     | 56 / 896      | -  Two Intel/"Sandy Bridge"                           |
     |               |    E5-2670 CPUs @ 2.67 GHz, 8                         |
     |               |    cores/CPU                                          |
     |               | -  128 GB of memory                                   |
     |               | -  Infiniband 4X QDR                                  |
     +---------------+-------------------------------------------------------+
-    | 34 / 816      | -  Two Intel/"Haswell" E5-2680v3                      |
+    | 32 / 816      | -  Two Intel/"Haswell" E5-2680v3                      |
     |               |    CPUs @ 2.5 Ghz, 12 cores/CPU                       |
     |               | -  256 GB of memory                                   |
     |               | -  Infiniband FDR                                     |
@@ -32,10 +38,10 @@ Technical
     |               | -  Infiniband FDR                                     |
     |               | -  Two Nvidia V100 16Gb GPU devices                   |
     +---------------+-------------------------------------------------------+
-    | 2 / 48        | -  Four Intel/"Westmere" E7-4807                      |
+    | 3 / 72        | -  Four Intel/"Westmere" E7-4807                      |
     |               |    CPUs @ 1.87 Ghz, 6 cores/CPU                       |
     |               | -  1024 GB memory                                     |
-    |               | -  10 GigE and 1GigE NIC's.                           |
+    |               | -  Infiniband 4X QDR                                  |
     +---------------+-------------------------------------------------------+
 
 Storage

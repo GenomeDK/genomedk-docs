@@ -27,7 +27,7 @@ We know that you're busy so here are some shortcuts:
 Give me the numbers
 ===================
 
-GenomeDK comprises of 124 nodes (2912 cores) connected with Infiniband. Each
+GenomeDK comprises of 163 nodes (3528 cores) connected with Infiniband. Each
 node has from 16 to 36 cores and either 128 GB, 256 GB, 384 GB, or 1 TB of RAM.
 
 The cluster has been designed specifically for bioinformatic workloads and has
