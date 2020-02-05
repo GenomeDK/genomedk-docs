@@ -12,13 +12,15 @@ http = urllib3.PoolManager()
 
 queries = [
     ("Anders Børglum", 2012),
-    ("Mikkel H Schierup", 2012),
+    ("Mikkel Heide Schierup", 2012),
     ("Søren Vang", 2016),
     ("Dan Søndergaard", 2015),
     ("Michael Knudsen", 2012),
     ("Søren Besenbacher", 2012),
     ("Christian N S Pedersen", 2012),
     ("Thomas Mailund", 2012),
+    ("Jakob Skou Pedersen", 2015),
+    ("Palle Villesen", 2012),
 ]
 
 blacklist = [
@@ -81,7 +83,8 @@ def formatted_citation(doi, style="apa"):
         })
     if response.status != 200:
         return None
-    return response.data.decode("utf-8").strip()
+    tmp = response.data.decode("utf-8").strip().replace('\n', '')
+    return ' '.join(tmp.split())
 
 
 def read_index():
@@ -106,6 +109,8 @@ def diff_index(old, new):
 
 def main():
     index = read_index()
+
+    total_citations = 0
 
     publications = []
     citations = []
@@ -137,15 +142,24 @@ def main():
     for doi in diff:
         print("{}".format(doi))
 
+    from collections import Counter
+    c = Counter()
     last_updated = date.today()
     with open("_publications.rst", "w") as fileobj:
-        print("*{} publications listed, last updated on {}*.".format(len(combined), last_updated), file=fileobj)
+        print("*{} publications listed, last updated on {}*. Sorted by first publication date.".format(len(combined), last_updated), file=fileobj)
         print(file=fileobj)
         for publication, citation in sorted(combined, key=lambda p: p[0]["firstPublicationDate"], reverse=True):
+            total_citations += publication['citedByCount']
+            if publication['citedByCount'] > 100:
+                print(publication["doi"])
+            c[publication['citedByCount']] += 1
             print("* {}".format(citation), file=fileobj)
 
     write_index(new_index)
 
+    print("Total citations: {}".format(total_citations))
+    for i, x in sorted(c.items(), key=lambda k: k[1]):
+        print(i, x)
 
 if __name__ == "__main__":
     main()
