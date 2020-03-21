@@ -262,20 +262,22 @@ Run the following command to request a new project folder:
 
 .. code-block:: console
 
-    [fe1]$ gm-request-project -g <project name> -m <members>
+    [fe1]$ gm-request-project -g <project name>
 
-where **project name** is the desired name of the new project and **members**
-is a comma-separated list of usernames of users that should be given access to
-the project. For example, to request a project called *MyAwesomeProject* with
-two additional members, *das* and *aeh*, run:
+where **project name** is the desired name of the new project. For example,
+to request a project called *MyAwesomeProject*:
 
 .. code-block:: console
 
-    [fe1]$ gm-request-project -g MyAwesomeProject -m das,aeh
+    [fe1]$ gm-request-project -g MyAwesomeProject
 
-When your request has been accepted, you and the other project members will
-have access to a shared folder in :file:`/project/<project name>` where
-*project name* is the name requested for your project.
+When your request has been accepted, you  will have access to a shared folder
+in :file:`/project/<project name>` where *project name* is the name requested
+for your project. It's now time to add other members to the project:
+
+.. code-block:: console
+
+    [fe1]$ gm-add-user -g <project name> -u <username>
 
 .. note::
 
@@ -334,8 +336,8 @@ Managing a project
 Project owners and project members with administrative rights can manage their
 own projects through the following commands:
 
-:command:`gm-request-project -g <project name> -m <members>`
-    Request a new project folder with the given name and list of members.
+:command:`gm-request-project -g <project name>`
+    Request a new project folder with the given name.
 :command:`gm-add-user -g <project name> -u <username>`
     Add a user to a project.
 :command:`gm-remove-user  -g <project name> -u <username>`
