@@ -41,3 +41,5 @@ Previous workshops
   "Project organization", official GenomeDK workshop, Aarhus University.
 * Sep 5, 2019, 9-12, "Introduction to Conda and *gwf*", Børglum Lab, Aarhus
   University.
+* Jan 28, 2020, 12-15, "Introduction to Conda, *gwf*, and project organization", Bioscience, Aarhus University.
+* Apr 1, 2020, 12-15, "Introduction to Conda, *gwf*, and project organization", Molecular Biology, Aarhus University.
