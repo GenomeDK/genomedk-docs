@@ -40,6 +40,9 @@ cite GenomeDK in your publications. We recommend phrasing it like this:
   computational resources and support that contributed to these research
   results.*
 
+We host an incomplete list of :ref:`publications` with data analysis run on
+GenomeDK.
+
 Where do I start?
 =================
 
@@ -61,6 +64,7 @@ If you want a friendly presentation of how the cluster works, see
   :caption: Main
 
   support
+  publications
   technical
   staff
   forms
@@ -80,6 +84,7 @@ If you want a friendly presentation of how the cluster works, see
   docs/best-practices
   docs/software-specific
   docs/faq
+  docs/command-reference
 
 
 ---
