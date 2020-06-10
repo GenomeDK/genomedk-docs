@@ -18,15 +18,32 @@ Upcoming
 .. eventlist::
     :status: upcoming
 
-
-    
-    
 Recent
 ------
 
 .. eventlist::
     :status: recent
     :reverse:
+
+
+.. event:: General maintenance
+    :uid: downtime-20200617
+    :start: 2020-06-17 23:59 +0200
+    :end: 2020-06-18 16:00 +0200
+    :tags: storage upgrades
+
+    The cluster will be unavailable for all users in this timespan.
+
+    During the downtime we will upgrade several systems including the
+    faststorage filesystem.
+
+    At the start of the maintenance we will close all open connections and shut
+    off access to the cluster for all users.
+
+    Queued jobs overlapping the maintenance window will not start. Running jobs
+    will be re-queued at the start of the maintenance.
+
+    We apologize for any inconvenience this may cause.
 
 .. event:: nfs storage maintenance
     :uid: downtime-20200104
@@ -79,7 +96,7 @@ Recent
     storage maintenance as we are working towards decommissioning our old nfs
     storage servers and introducing new servers. over time, this will result
     in a more stable and responsive environment for all genomedk users.
-       
+
 .. event:: NFS storage maintenance
     :uid: downtime-20191005
     :start: 2019-10-05 08:00 +0200
@@ -92,7 +109,7 @@ Recent
     decommissioning our old NFS storage servers and introducing new servers.
     Over time, this will result in a more stable and responsive environment for
     all GenomeDK users.
-    
+
 .. event:: NFS storage maintenance
     :uid: downtime-20190907
     :start: 2019-09-07 08:00 +0200
@@ -115,7 +132,7 @@ Recent
     The cluster will be unavailable for all users in this time span. During the
     downtime we will be applying hardware expansion to our storage. Because the
     expansion involves key infrastructure upgrades, the downtime is needed.
-    
+
 
 .. event:: Faststorage outage
     :uid: faststorage-outage-20190726
@@ -125,7 +142,7 @@ Recent
     :tags: outage
 
     Due to unexpected software crash faststorage was unavailable. The problem has been resolved
-    and everything should be back up and operational now. 
+    and everything should be back up and operational now.
 
 
 .. event:: Fire detector and cooling maintenance
