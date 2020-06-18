@@ -30,6 +30,7 @@ Recent
     :uid: downtime-20200617
     :start: 2020-06-17 23:59 +0200
     :end: 2020-06-18 22:00 +0200
+    :actualend: 2020-06-18 16:45 +0200
     :tags: storage upgrades
 
     The cluster will be unavailable for all users in this timespan.
