@@ -29,7 +29,7 @@ Recent
 .. event:: General maintenance
     :uid: downtime-20200617
     :start: 2020-06-17 23:59 +0200
-    :end: 2020-06-18 16:00 +0200
+    :end: 2020-06-18 22:00 +0200
     :tags: storage upgrades
 
     The cluster will be unavailable for all users in this timespan.
@@ -44,6 +44,8 @@ Recent
     will be re-queued at the start of the maintenance.
 
     We apologize for any inconvenience this may cause.
+
+    Extended due to database issues.
 
 .. event:: nfs storage maintenance
     :uid: downtime-20200104
