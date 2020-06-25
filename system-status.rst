@@ -26,6 +26,33 @@ Recent
     :reverse:
 
 
+.. event:: Major power outage
+    :uid: power-outage-20200624
+    :start: 2020-06-24 11:23 +0200
+    :end: 2020-06-25 15:30 +0200
+    :tags: unexpected outage
+
+    Today at approx. 11.23 we experienced a major power outage. The outage
+    affected a large area around Ny Munkegade/Langelandsgade. While the first
+    line of emergency power kicked, the second line did not. This caused the
+    entire cluster to shut down.
+
+    The power resumed at approx. 12.30 and the cluster slowly booted up again.
+    At 13.00 all compute nodes and frontends were up and running.
+    Unfortunately, faststorage did not come back up as expected. One of the
+    JBODs (a drawer full of hard drives) was completely dead. This causes the
+    entire faststorage to become unavailable.
+
+    We have reported the issue to the manufacturer and expect it to be resolved
+    during tomorrow. We do not expect any data loss.
+
+    **UPDATE:** We have now recovered fully from the power outage yesterday.
+    Some compute nodes will remain unavailable.
+
+    All users should now be able to access the cluster and access all
+    filesystems (home folder and faststorage). If you experience any issues,
+    please let us know.
+
 .. event:: General maintenance
     :uid: downtime-20200617
     :start: 2020-06-17 23:59 +0200
