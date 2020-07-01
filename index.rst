@@ -22,8 +22,9 @@ We know that you're busy so here are some shortcuts:
 Give me the numbers
 ===================
 
-GenomeDK comprises of 163 nodes (3528 cores) connected with Infiniband. Each
-node has from 16 to 36 cores and either 128 GB, 256 GB, 384 GB, or 1 TB of RAM.
+GenomeDK comprises of 185 nodes (6568 cores) connected with Infiniband. Each
+node has from 16 to 64 cores and either 128 GB, 256 GB, 384 GB, 512 GB or 1 TB
+of RAM for a total of 58 TB of memory.
 
 The cluster has been designed specifically for bioinformatic workloads and has
 a storage capacity of 12 PB. Do you want to know :ref:`more <technical>`?
@@ -71,10 +72,11 @@ If you want a friendly presentation of how the cluster works, see
   system-status
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
   :hidden:
   :caption: Documentation
 
+  docs/index
   docs/what-is-a-cluster
   docs/prerequisites
   docs/getting-started
