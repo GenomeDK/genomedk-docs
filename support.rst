@@ -21,6 +21,8 @@ agree on a time first via mail or phone.
 We also greatly appreciate your feedback on the documentation itself, so please
 let us know if you have any suggestions for improvements to the documentation.
 
+.. _workshops:
+
 Workshops
 =========
 
