@@ -1,4 +1,4 @@
-.. _newsletter-2020:
+.. _newsletter-2020-summer:
 
 =======================
 Newsletter, summer 2020
