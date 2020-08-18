@@ -116,6 +116,7 @@ an overview of commonly used resource flags:
     "``-n``", "``--ntasks``", "Number of cores allocated for the job. Cores may be allocated on different nodes."
     "``-N``", "``--nodes``", "Number of nodes allocated for the job. Can be combined with ``-n`` and ``-c``."
     "``-t``", "``--time``", "Maximum time the job will be allowed to run."
+    "``-C``", "``--constraint``", "Constrain nodes to be allocated."
     "", "``--gres=gpu:<number of gpu's>``", "Number of GPU cards to be used in case the job is being submitted to the *gpu* partition. If not defined the job will not have access to GPU cards, even if it is running on a proper node."
 
 The rest of the script is a normal Bash_ script which contains the commands
@@ -175,6 +176,53 @@ queue:
 
     [fe1]$ priority -a
 
+Constraining jobs to certain nodes
+----------------------------------
+
+While the compute nodes are almost identical, there are small differences
+such as CPU architecture. If your code depends on specific CPU features you
+must restrict your jobs to compute nodes supporting those features.
+
+For example, our 4th generation nodes do not support AVX2 instructions. To
+restrict your job to only the older generations:
+
+.. code-block:: console
+
+    [fe1]$ sbatch --constraint "gen1|gen2|gen3" ...
+
+This also works for ``srun``:
+
+.. code-block:: console
+
+    [fe1]$ srun --constraint "gen1|gen2|gen3" ...
+
+You can get a list of all of the features you can constrain by with the
+``scontrol show node`` command. For example, to get the features associated
+with the ``s03n11`` node:
+
+.. code-block:: console
+    :emphasize-lines: 4
+
+    [fe1]$ scontrol show node s03n11
+    NodeName=s03n11 Arch=x86_64 CoresPerSocket=8
+        CPUAlloc=9 CPUTot=16 CPULoad=9.94
+        AvailableFeatures=gen1,s03
+        ActiveFeatures=gen1,s03
+        Gres=(null)
+        NodeAddr=s03n11 NodeHostName=s03n11 Version=20.02.3
+        OS=Linux 3.10.0-1062.1.1.el7.x86_64 #1 SMP Fri Sep 13 22:55:44 UTC 2019
+        RealMemory=131072 AllocMem=9216 FreeMem=63976 Sockets=2 Boards=1
+        State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=igrove(6490) MCS_label=N/A
+        Partitions=short
+        BootTime=2020-06-25T09:30:05 SlurmdStartTime=2020-07-15T14:40:42
+        CfgTRES=cpu=16,mem=128G,billing=16
+        AllocTRES=cpu=9,mem=9G
+        CapWatts=n/a
+        CurrentWatts=0 AveWatts=0
+        ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
+
+Looking at the line that starts with ``AvailableFeatures`` we see that the node
+has the *gen1* and *s03* features associated to it.
 
 .. _gpu_nodes:
 
