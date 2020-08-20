@@ -194,7 +194,7 @@ output to a file:
 
 .. code-block:: console
 
-    [fe1]$ wget -c --progress=giga:force --timeout=120 --waitretry=60 \
+    [fe1]$ wget -c --progress=dot:giga --timeout=120 --waitretry=60 \
         --tries=10000 --retry-connrefused URL
 
 Editing files
