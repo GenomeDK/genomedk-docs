@@ -25,6 +25,14 @@ optimally.
     this file system. However, it's fine for small documents like notes,
     programs and your Conda installation.
 
+    .. warning::
+
+        The 100 GB limit was introduced in 2019 for new users. Old users are
+        encouraged to keep their home folders under 100 GB since this allows us to
+        move them to much faster storage servers. If your home folder is less than
+        100 GB and you want to be moved to the fast storage servers, get in touch.
+
+
 /faststorage/home/<username>
     For big files we provide access to a fast, parallel file system called
     BeeGFS. We call this file system *faststorage*. This file system is ideal
@@ -39,12 +47,18 @@ optimally.
     project should be placed in this folder. Project folders have no quota and
     can be accessed by all members of the project.
 
-.. warning::
+/scratch/$SLURM_JOB_ID
+    All jobs get access shared, local disk. Files written to this space are
+    only available on the given node (that is, you can not access files written
+    here from other nodes).
 
-    The 100 GB limit was introduced in 2019 for new users. Old users are
-    encouraged to keep their home folders under 100 GB since this allows us to
-    move them to much faster storage servers. If your home folder is less than
-    100 GB and you want to be moved to the fast storage servers, get in touch.
+    This folder is deleted when the job finishes! Any files written here, that
+    you wish to keep, should be moved to *faststorage* as the last step in your
+    job script.
+
+    Use this for (1) temporary files that are not needed later, or (2) for
+    output files that are written in small chunks.
+
 
 How much space am I using?
 ==========================
