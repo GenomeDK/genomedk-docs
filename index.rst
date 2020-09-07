@@ -52,7 +52,8 @@ If you want a friendly presentation of how the cluster works, see
 Who can get an account?
 =======================
 
-We are open to account requests from people associated with a university.
+We are open to account requests from people associated with a university
+or small and medium-sized enterprises (SMEs).
 
 What does it cost?
 ==================
