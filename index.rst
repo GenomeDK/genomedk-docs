@@ -34,20 +34,57 @@ of RAM for a total of 58 TB of memory.
 The cluster has been designed specifically for bioinformatic workloads and has
 a storage capacity of 12 PB. Do you want to know :ref:`more <technical>`?
 
+Where do I start?
+=================
+
+If you're new to GenomeDK, please read through the
+:ref:`Getting started <getting_started>` chapter. This will help do common
+things like handling data, submitting jobs and installing software, as well as
+how to request an account.
+
+Once you're comfortable with performing routine tasks on the cluster, read
+the :ref:`Best practices <best_practices>`, which contains suggestions and
+patterns for organizing your projects and keeping your research reproducible.
+
+If you want a friendly presentation of how the cluster works, see
+:ref:`How does the cluster work? <how_does_the_cluster_work>`.
+
+Who can get an account?
+=======================
+
+We are open to account requests from people associated with a university.
+
 What does it cost?
 ==================
 
-Our current prices are:
+In 2020, the prices are:
 
 * 0.12 DKK/billing hour
 * 250 DKK/TB
 * 700 DKK/TB in backup
 
-Prices are update yearly and are subject to change. Do not hesitate to contact
-us if you have any questions.
-
 One billing hour corresponds to one CPU core for one hour or 8 GB memory for
 one hour, whichever is highest.
+
+How do I pay?
+=============
+
+Costs are associated with *project folders*. The owner of a project folder is
+responsible for the costs associated with the project. The project owner will
+be charged yearly based on actual usage.
+
+If the project owner is associated with either:
+
+* Faculty of Health, Aarhus University,
+* Faculty of Natural Sciences, Aarhus University,
+* Faculty of Technical Sciences, Aarhus University,
+* Central Region Denmark (Region Midt),
+
+then the usage is paid internally and you will not receive a bill directly from
+GenomeDK.
+
+Prices are updated yearly and are subject to change. Do not hesitate to contact
+us if you have any questions.
 
 Cite us!
 ========
@@ -63,21 +100,6 @@ cite GenomeDK in your publications. We recommend phrasing it like this:
 
 We host an incomplete list of :ref:`publications` with data analysis run on
 GenomeDK.
-
-Where do I start?
-=================
-
-If you're new to GenomeDK, please read through the
-:ref:`Getting started <getting_started>` chapter. This will help do common
-things like handling data, submitting jobs and installing software, as well as
-how to request an account.
-
-Once you're comfortable with performing routine tasks on the cluster, read
-the :ref:`Best practices <best_practices>`, which contains suggestions and
-patterns for organizing your projects and keeping your research reproducible.
-
-If you want a friendly presentation of how the cluster works, see
-:ref:`How does the cluster work? <how_does_the_cluster_work>`.
 
 .. toctree::
   :maxdepth: 1
