@@ -34,6 +34,21 @@ of RAM for a total of 58 TB of memory.
 The cluster has been designed specifically for bioinformatic workloads and has
 a storage capacity of 12 PB. Do you want to know :ref:`more <technical>`?
 
+What does it cost?
+==================
+
+Our current prices are:
+
+* 0.12 DKK/billing hour
+* 250 DKK/TB
+* 700 DKK/TB in backup
+
+Prices are update yearly and are subject to change. Do not hesitate to contact
+us if you have any questions.
+
+One billing hour corresponds to one CPU core for one hour or 8 GB memory for
+one hour, whichever is highest.
+
 Cite us!
 ========
 
@@ -112,3 +127,4 @@ If you want a friendly presentation of how the cluster works, see
 
     .. image:: images/logo-au.png
       :height: 100pt
+
