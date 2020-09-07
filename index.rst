@@ -80,8 +80,8 @@ If the project owner is associated with either:
 * Faculty of Technical Sciences, Aarhus University,
 * Central Region Denmark (Region Midt),
 
-then the usage is paid internally and you will not receive a bill directly from
-GenomeDK.
+then the usage is paid internally and the project owner will not receive a bill
+directly from GenomeDK.
 
 Prices are updated yearly and are subject to change. Do not hesitate to contact
 us if you have any questions.
