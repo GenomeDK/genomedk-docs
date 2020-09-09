@@ -67,6 +67,9 @@ In 2020, the prices are:
 One billing hour corresponds to one CPU core for one hour or 8 GB memory for
 one hour, whichever is highest.
 
+Prices are updated yearly and are subject to change. Do not hesitate to contact
+us if you have any questions.
+
 How do I pay?
 =============
 
@@ -83,9 +86,6 @@ If the project owner is associated with either:
 
 then the usage is paid internally and the project owner will not receive a bill
 directly from GenomeDK.
-
-Prices are updated yearly and are subject to change. Do not hesitate to contact
-us if you have any questions.
 
 Cite us!
 ========
