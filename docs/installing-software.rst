@@ -79,6 +79,18 @@ are commonly used in bioinformatics:
     [fe1]$ conda config --add channels conda-forge
     [fe1]$ conda config --add channels genomedk
 
+Conda creates a ``base`` environment which contains Conda itself. It's tempting
+to install packages in ``base``, but that might ruin your Conda installation.
+You should *never* install anything in the base environment.
+
+To prevent that you accidentially install something in the ``base``
+environment, we'll configure Conda so that it doesn't activate it when you log
+in:
+
+.. code-block:: console
+
+    [fe1]$ conda config --set auto_activate_base false
+
 Searching for packages
 ======================
 
