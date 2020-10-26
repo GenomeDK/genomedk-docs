@@ -25,6 +25,17 @@ Recent
     :status: recent
     :reverse:
 
+.. event:: NFS storage maintenance
+    :uid: downtime-20201110
+    :start: 2020-11-10 14:00 +0200
+    :end: 2020-11-11 10:00 +0200
+    :tags: storage nfs management
+
+    The cluster will be unavailable for all users in this timespan. During the
+    downtime we will decomission our old NFS storage servers. After this 
+    maintenance, all users will be on new storage servers.
+    
+    Additionally, we will move critical services to a new management node.
 
 .. event:: Major power outage
     :uid: power-outage-20200624
