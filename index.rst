@@ -6,12 +6,6 @@ Welcome to GenomeDK!
     :status: ongoing
     :quiet:
 
-
-.. note::
-
-    Our third newsletter is out! :ref:`Read it here <newsletter-2020-summer>`.
-
-
 **GenomeDK is a national high-performance computing facility for bioinformatics
 and life sciences managed by Center for Genome Analysis and Personalized
 Medicine, located at Aarhus University, Denmark.**
@@ -61,14 +55,18 @@ What does it cost?
 In 2020, the prices are:
 
 * 0.12 DKK/billing hour
-* 250 DKK/TB
-* 700 DKK/TB in backup
+* 250 DKK/TB/year
+* 700 DKK/TB/year in backup*
 
 One billing hour corresponds to one CPU core for one hour or 8 GB memory for
 one hour, whichever is highest.
 
 Prices are updated yearly and are subject to change. Do not hesitate to contact
 us if you have any questions.
+
+\* For example, if you store 1 TB of data in backup for a year you will be
+billed 250 + 700 DKK. 250 DKK for the on-disk copy and 700 DKK for the two
+off-site backup copies.
 
 How do I pay?
 =============
@@ -81,7 +79,6 @@ If the project owner is associated with either:
 
 * Faculty of Health, Aarhus University,
 * Faculty of Natural Sciences, Aarhus University,
-* Faculty of Technical Sciences, Aarhus University,
 * Central Region Denmark (Region Midt),
 
 then the usage is paid internally and the project owner will not receive a bill
