@@ -28,10 +28,28 @@ Recent
     :tags: storage nfs management
 
     The cluster will be unavailable for all users in this timespan. During the
-    downtime we will decomission our old NFS storage servers. After this 
+    downtime we will decomission our old NFS storage servers. After this
     maintenance, all users will be on new storage servers.
-    
+
     Additionally, we will move critical services to a new management node.
+
+
+.. comment::
+
+    .. event:: Dead file server
+        :uid: dead-file-server-20200624
+        :start: 2020-08-06 09:00 +0200
+        :end: 2020-08-12 12:00 +0200
+        :tags: unexpected outage
+
+        A storage server (s96n01) unexpectedly died yesterday.
+
+        This means that faststorage is completely unavailable. To prevent any
+        further problems and confusion, all users have been disconnected from
+        the cluster.
+
+        We have contacted the manufacturer. You will be notificed as soon as
+        the issue is resolved.
 
 .. event:: Major power outage
     :uid: power-outage-20200624
