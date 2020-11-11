@@ -25,6 +25,7 @@ Recent
     :uid: downtime-20201110
     :start: 2020-11-10 14:00 +0200
     :end: 2020-11-11 10:00 +0200
+    :actualend: 2020-11-11 10:00 +0200
     :tags: storage nfs management
 
     The cluster will be unavailable for all users in this timespan. During the
