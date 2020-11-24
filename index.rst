@@ -6,9 +6,11 @@ Welcome to GenomeDK!
     :status: ongoing
     :quiet:
 
-**GenomeDK is a national high-performance computing facility for bioinformatics
-and life sciences managed by Center for Genome Analysis and Personalized
-Medicine, located at Aarhus University, Denmark.**
+.. container:: lead
+
+  GenomeDK is a national high-performance computing facility for bioinformatics
+  and life sciences managed by the Joint AU/RM Genome Data Center, located at
+  Aarhus University, Denmark.
 
 ---
 
@@ -84,67 +86,23 @@ If the project owner is associated with either:
 then the usage is paid internally and the project owner will not receive a bill
 directly from GenomeDK.
 
-Cite us!
-========
-
-We provide GenomeDK as a resource to research. If you publish results from
-computations performed on GenomeDK, it is important that you acknowledge and/or
-cite GenomeDK in your publications. We recommend phrasing it like this:
-
-  *Some/all of the computing for this project was performed on the GenomeDK
-  cluster. We would like to thank GenomeDK and Aarhus University for providing
-  computational resources and support that contributed to these research
-  results.*
-
-We host an incomplete list of :ref:`publications` with data analysis run on
-GenomeDK.
 
 .. toctree::
   :maxdepth: 1
   :hidden:
   :caption: Main
 
-  support
+  governance
   publications
   technical
-  staff
   forms
   system-status
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 3
   :hidden:
-  :caption: Documentation
+  :caption: Help
 
+  support
+  training
   docs/index
-  docs/what-is-a-cluster
-  docs/prerequisites
-  docs/getting-started
-  docs/interacting-with-the-queue
-  docs/installing-software
-  docs/working-with-data
-  docs/best-practices
-  docs/software-specific
-  docs/faq
-  docs/command-reference
-
-
----
-
-.. container:: logo-box
-
-  .. container:: inline-logo
-
-    .. image:: images/logo-birc.png
-      :height: 100pt
-
-  .. container:: inline-logo
-
-    .. image:: images/logo-iseq.png
-      :height: 55pt
-
-  .. container:: inline-logo
-
-    .. image:: images/logo-au.png
-      :height: 100pt
-

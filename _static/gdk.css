@@ -1,30 +1,49 @@
-body {
-    font-size: 1.5rem;
+.main {
+    line-height: 1.75;
+}
+
+.main p {
+    margin-bottom: 1rem !important;
+}
+.main p:last-child {
+    margin-bottom: 0rem !important;
+}
+
+.main h1, .main h2, .main h3, .main h4, .main h5 {
+    margin: 3rem 0 1.38rem !important;
+    line-height: 1.3 !important;
 }
 
 .main h1 {
-    margin-bottom: 2.25rem;
-}
-.main h2, .main h3, .main h4 {
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0 !important;
+    font-size: 3.052rem !important;
 }
 
-h1 { font-size: 5rem; }
-h2 { font-size: 3rem; }
-h3 { font-size: 2.25rem; }
-h4 { font-size: 1.5rem; }
+.main h2 {font-size: 2.441rem !important;}
 
-.left-menu {
-    background: none;
+.main h3 {font-size: 1.953rem !important;}
+
+.main h4 {font-size: 1.563rem !important;}
+
+.main h5 {font-size: 1.25rem !important;}
+
+.main small {font-size: 0.8rem !important;}
+
+.lead {
+    font-size: 1.953rem !important;
+    font-weight: bold;
 }
 
 .section-title {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
+}
+
+#c962 {
+    padding: 2rem;
 }
 
 footer p {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .main table {
