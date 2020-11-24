@@ -70,9 +70,13 @@ footer p {
     background: rgba(95, 0, 48, 0.1);
 }
 
+.main dd {
+    margin-bottom: 1rem;
+}
+
 /* Staff-page contact info blocks */
 .line-block {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 /* Code blocks */

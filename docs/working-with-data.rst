@@ -4,6 +4,8 @@
 Working with data
 =================
 
+.. _data_locations:
+
 Where to put your data
 ======================
 
@@ -25,12 +27,8 @@ optimally.
     this file system. However, it's fine for small documents like notes,
     programs and your Conda installation.
 
-    .. warning::
-
-        The 100 GB limit was introduced in 2019 for new users. Old users are
-        encouraged to keep their home folders under 100 GB since this allows us to
-        move them to much faster storage servers. If your home folder is less than
-        100 GB and you want to be moved to the fast storage servers, get in touch.
+    This location IS NOT eligible for backup. Instead we perform regular
+    snapshots (see :ref:`shapshots`).
 
 
 /faststorage/home/<username>
@@ -42,12 +40,16 @@ optimally.
     on the amount of data that can be stored in this folder, but the data can
     only be accessed by your user.
 
+    This location IS eligible for backup.
+
 /faststorage/project/<project name>
     All projects get their own folder on fast storage. All files related to the
     project should be placed in this folder. Project folders have no quota and
     can be accessed by all members of the project.
 
-/scratch/$SLURM_JOB_ID
+    This location IS eligible for backup.
+
+/scratch/$SLURM_JOB_ID, $TMPDIR, $TMP
     All jobs get access shared, local disk. Files written to this space are
     only available on the given node (that is, you can not access files written
     here from other nodes).
@@ -58,6 +60,47 @@ optimally.
 
     Use this for (1) temporary files that are not needed later, or (2) for
     output files that are written in small chunks.
+
+    This location is NOT eligible for backup.
+
+.. _backup:
+
+Backing up data
+===============
+
+We provide backup on good old-fashioned tape to all users. To back up a file,
+it should be put in a directory called either :file:`BACKUP`, :file:`Backup` or
+:file:`backup`. The directory can be located in any other directory, but
+only some locations are eligible for backup (see :ref:`data_locations`).
+
+Data is backed up approximately once per week and are kept for 30 days.
+
+.. warning::
+
+    Do not back up temporary data files that can easily be reproduced.
+    Computation is cheap, but backup is *very* expensive. The backup is meant
+    for scripts/source code and important raw data.
+
+.. _snapshots:
+
+Snapshots
+=========
+
+All home folders are automatically snapshotted. As a user you do not have to do
+anything to enable this.
+
+Snapshots do not provide the same data safety as a backup since the data is not
+stored at an offsite location. Instead, a snapshot of the data is taken on a
+regular basis and stored on the local server. This means that if you e.g.
+deleted a file by mistake, the file can be recovered from a previous snapshot.
+
+Snapshots are currently taken with the following intervals and retention times:
+
+* 15 minutes, last 4 are kept
+* 1 hour, last 24 are kept
+* 24 hours, last 31 are kept
+* Weekly, last 8 are kept
+* Monthly, last 12 are kept
 
 
 How much space am I using?
@@ -387,21 +430,6 @@ the file who can now access it.
 
 You can read more about :command:`chmod`
 `here <https://en.wikipedia.org/wiki/Chmod>`_.
-
-Backing up data
-===============
-
-We provide backup on good old-fashioned tape to all users. To back up a file,
-it should be put in a directory called either :file:`BACKUP`, :file:`Backup` or
-:file:`backup`. The directory can be located in any other directory.
-
-Data is backed up approximately once per week.
-
-.. warning::
-
-    Do not back up temporary data files that can easily be reproduced.
-    Computation is cheap, but backup is *very* expensive. The backup is meant
-    for scripts/source code and important raw data.
 
 Encrypting sensitive data
 =========================
