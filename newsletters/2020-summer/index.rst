@@ -1,3 +1,5 @@
+:orphan:
+
 .. _newsletter-2020-summer:
 
 =======================
