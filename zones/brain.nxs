@@ -1,5 +1,5 @@
 <!DOCTYPE NXClientSettings>
-<NXClientSettings version="1.6" application="nxclient" >
+<NXClientSettings version="1.7" application="nxclient" >
  <group name="Advanced" >
   <option key="Disable deferred updates" value="false" />
   <option key="Grab keyboard input" value="" />
@@ -43,7 +43,7 @@
   <option key="Disable SHM" value="false" />
   <option key="Disable emulate shared pixmaps" value="false" />
   <option key="Use render" value="true" />
-  <option key="Last connection time" value="1568371154" />
+  <option key="Last connection time" value="1606732253" />
   <option key="Link quality" value="9" />
   <option key="Link speed" value="lan" />
   <option key="Platform of the last connection" value="Linux" />
@@ -115,12 +115,14 @@
   <option key="Disable lossless display refinement" value="false" />
   <option key="Disable multi-pass display encoding" value="false" />
   <option key="E-reader display update policy" value="false" />
+  <option key="Video frame rate for display server" value="30" />
   <option key="Stream downsampling factor" value="0" />
   <option key="Image Compression Type" value="" />
   <option key="Image encoding quality" value="5" />
   <option key="JPEG Quality" value="" />
   <option key="RDP Image Encoding" value="" />
   <option key="RDP JPEG Quality" value="" />
+  <option key="Request a specific frame rate" value="false" />
   <option key="Video encoding quality" value="7" />
   <option key="VNC images compression" value="" />
   <option key="VNC JPEG Quality" value="" />
