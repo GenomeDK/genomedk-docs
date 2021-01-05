@@ -4,35 +4,36 @@
 import sys
 import os.path
 
-sys.path.append(os.path.abspath('exts'))
+sys.path.append(os.path.abspath("exts"))
 
 # -- General configuration ------------------------------------------------
 
-extensions = ['events', 'kill_html_js']
-templates_path = ['_templates']
-source_suffix = '.rst'
-master_doc = 'index'
+extensions = ["events", "kill_html_js"]
+templates_path = ["_templates"]
+source_suffix = ".rst"
+master_doc = "index"
 
-project = 'GenomeDK'
-copyright = '2018, The GenomeDK Team'
-author = 'Anders Halager \\and Jaroslaw Kalinowski \\and Dan Søndergaard'
+project = "GenomeDK"
+copyright = "2018, The GenomeDK Team"
+author = "Anders Halager \\and Jaroslaw Kalinowski \\and Dan Søndergaard"
 
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-pygments_style = 'friendly'
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+pygments_style = "friendly"
 
 # -- Options for HTML output ----------------------------------------------
 
-html_theme = 'au'
+html_theme = "au"
 html_theme_options = {
-    'sitename': 'GenomeDK',
-    'phone': '+45 87 15 55 68',
-    'email': 'cases@genome.au.dk',
-    'show_breadcrumb': 'no',
+    "sitename": "GenomeDK",
+    "phone": "+45 87 15 55 68",
+    "email": "cases@genome.au.dk",
+    "show_breadcrumb": "no",
 }
-html_static_path = ['_static']
+html_static_path = ["_static"]
+
 
 def setup(app):
-    app.add_stylesheet('gdk.css')
+    app.add_css_file("gdk.css")
 
 
 # -- Custom shell session lexer -------------------------------------------
@@ -40,22 +41,31 @@ def setup(app):
 from pygments.lexers.shell import ShellSessionBaseLexer, BashLexer
 from sphinx.highlighting import lexers
 
+
 def _optional(s):
     return "(?:" + s + ")?"
+
+
 def _group(s):
     return "(" + s + ")"
 
-_command = r'.*\n?'
-_conda_env = r'\(.*\)\s*'
-_info = r'\[.*\]\s*'
-_sep = r'[$]'
-prompt_regex = _group(_optional(_conda_env) + _optional(_info) + _sep) + _group(_command)
-assert(prompt_regex == r"((?:\(.*\)\s*)?(?:\[.*\]\s*)?[$])(.*\n?)")
+
+_command = r".*\n?"
+_conda_env = r"\(.*\)\s*"
+_info = r"\[.*\]\s*"
+_sep = r"[$]"
+prompt_regex = _group(_optional(_conda_env) + _optional(_info) + _sep) + _group(
+    _command
+)
+assert prompt_regex == r"((?:\(.*\)\s*)?(?:\[.*\]\s*)?[$])(.*\n?)"
+
 
 class CustomBashSessionLexer(ShellSessionBaseLexer):
-    name = 'Bash Session'
+    name = "Bash Session"
     _innerLexerCls = BashLexer
     _ps1rgx = prompt_regex
-    _ps2 = '>'
+    _ps2 = ">"
 
-lexers['console'] = CustomBashSessionLexer()
+
+lexers["console"] = CustomBashSessionLexer()
+
