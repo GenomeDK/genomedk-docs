@@ -39,7 +39,7 @@ optimally.
     programs and your Conda installation.
 
     This location IS NOT eligible for backup. Instead we perform regular
-    snapshots (see :ref:`shapshots`).
+    snapshots (see :ref:`snapshots`).
 
 /faststorage/home/<username>
     For big files we provide access to a fast, parallel file system called
