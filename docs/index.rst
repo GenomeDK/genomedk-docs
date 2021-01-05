@@ -11,6 +11,7 @@ Documentation
   interacting-with-the-queue
   installing-software
   working-with-data
+  projects-and-accounting
   best-practices
   software-specific
   faq

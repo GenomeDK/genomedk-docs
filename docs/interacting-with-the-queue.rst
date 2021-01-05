@@ -36,6 +36,34 @@ An interactive job effectively gives you a shell on a compute node so that you
 can type commands and run programs that will run on that node. This is great
 for experimenting and debugging problems.
 
+.. warning::
+
+    By default, you have a very small quota for running jobs **without
+    specifying a project**. We allow this so that new users can familiarize
+    themselves with GenomeDK and the queueing system without requesting or
+    joining a project.
+
+    However, when this small quota is used, you will no longer be able to
+    submit jobs and ``jobinfo`` will show something like this (note the
+    highlighted lines):
+
+    .. code-block:: console
+        :emphasize-lines: 3,4,9
+
+        Name                : bash
+        User                : das
+        Account             : --
+            Note: You haven't specified a project. You have a limited number of billing hours!
+        Partition           : short,normal
+        Nodes               : None assigned
+        Cores               : 1
+        GPUs                : 0
+        State               : PENDING (AssocMaxWallDurationPerJobLimit)
+        ...
+
+    To be able to submit jobs again, you must specify an account when
+    submitting jobs (see :ref:`jobs_with_project`).
+
 Interactive jobs
 ----------------
 

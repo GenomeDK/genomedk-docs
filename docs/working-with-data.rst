@@ -17,6 +17,17 @@ Each of these file systems have their own advantages and disadvantages. Thus,
 you need to put your data on the right file system to utilize the cluster
 optimally.
 
+.. csv-table:: Storage locations
+    :header: "Path", "Accessible by", "Distributed", "Eligible for backup", "Has snapshots", "Quota"
+    :align: left
+    :widths: 30, 14, 14, 14, 14, 14
+
+    "/home/<username>",                    "Only you",        "Yes", "No",  "Yes", "100 GB"
+    "/faststorage/home/<username>",        "Only you",        "Yes", "Yes", "No",  "None"
+    "/faststorage/project/<project name>", "Project members", "Yes", "Yes", "No",  "None"
+    "/scratch/$SLURM_JOB_ID",              "Only you",        "No",  "No",  "No",  "None"
+
+
 /home/<username>
     Your home folder is on a file system called NFS. This file system handles
     many small files well, but not big files. It's also rather slow to access
@@ -29,7 +40,6 @@ optimally.
 
     This location IS NOT eligible for backup. Instead we perform regular
     snapshots (see :ref:`shapshots`).
-
 
 /faststorage/home/<username>
     For big files we provide access to a fast, parallel file system called
@@ -73,7 +83,7 @@ it should be put in a directory called either :file:`BACKUP`, :file:`Backup` or
 :file:`backup`. The directory can be located in any other directory, but
 only some locations are eligible for backup (see :ref:`data_locations`).
 
-Data is backed up approximately once per week and are kept for 30 days.
+Data is backed up approximately once per week and is kept for 30 days.
 
 .. warning::
 
@@ -101,13 +111,6 @@ Snapshots are currently taken with the following intervals and retention times:
 * 24 hours, last 31 are kept
 * Weekly, last 8 are kept
 * Monthly, last 12 are kept
-
-
-How much space am I using?
-==========================
-
-You can use the :command:`space user` command to figure out how much storage
-and compute you're using across your home folders and projects.
 
 .. _mounting:
 
@@ -307,129 +310,6 @@ run:
 This will open the :program:`Gedit` editor in a new window. Since the editor
 runs on the frontend, you have access to all of your files on the cluster.
 
-.. _collaborating:
-
-Collaborating on data
-=====================
-
-Data sharing between users can only be accomplished through dedicated project
-folders to which only certain users have access.
-
-Run the following command to request a new project folder:
-
-.. code-block:: console
-
-    [fe1]$ gm-request-project -g <project name>
-
-where **project name** is the desired name of the new project. For example,
-to request a project called *MyAwesomeProject*:
-
-.. code-block:: console
-
-    [fe1]$ gm-request-project -g MyAwesomeProject
-
-When your request has been accepted, you  will have access to a shared folder
-in :file:`/project/<project name>` where *project name* is the name requested
-for your project. It's now time to add other members to the project:
-
-.. code-block:: console
-
-    [fe1]$ gm-add-user -g <project name> -u <username>
-
-.. note::
-
-    Don't know the username of one of your collaborators? You can use the
-    :command:`finger` command to get information about any user on GenomeDK:
-
-    .. code-block:: console
-
-        [fe1]$ finger <name, username or mail>
-
-    For example, to find all users with "anders" in their name:
-
-    .. code-block:: console
-
-        [fe1]$ finger anders
-        aeh             Anders Egerup Halager <aeh@birc.au.dk>
-        anders          Anders Boerglum <anders@biomed.au.dk>
-        ...
-
-Being a project owner
----------------------
-
-When you request a project you're officially the project owner. This means that
-you're responsible for the compute and storage used by the project. To help you
-keep up to date on how much compute and storage is used by your projects, you
-can use the :command:`space` command.
-
-:command:`space overview`
-    Provides you with an overview of the compute usage over time, as well as
-    storage usage accounting, of all of the projects you own.
-:command:`space project <project name>`
-    Shows detailed compute and storage accounting for a specific project.
-    For example, you can see how much compute and storage is used by each
-    member of the project. All members of the project can run this command.
-
-.. _jobs_with_project:
-
-Submitting jobs under a project
--------------------------------
-
-All projects are given an account that can be used to submit jobs belonging to
-the project. The account name is the same as the project name, but lowercased.
-
-Submitting jobs with the project account has the benefit that jobs submitted
-with a project account get much higher priority than non-project jobs.
-
-To submit a job with an account:
-
-.. code-block:: console
-
-    [fe1]$ sbatch --account <lowercase project name> ...
-
-Managing a project
-------------------
-
-Project owners and project members with administrative rights can manage their
-own projects through the following commands:
-
-:command:`gm-request-project -g <project name>`
-    Request a new project folder with the given name.
-:command:`gm-add-user -g <project name> -u <username>`
-    Add a user to a project.
-:command:`gm-remove-user  -g <project name> -u <username>`
-    Remove a user from a project.
-:command:`gm-grant-admin-rights-to-user -g <project name> -u <username>`
-    Grant administrative rights to a user in a project.
-:command:`gm-revoke-admin-rights-from-user -g <project name> -u <username>`
-    Revoke a users' administrative rights to a project.
-:command:`gm-list-admins <project name>`
-    List all members of a project with administrative rights.
-:command:`gm-list-members <project name>`
-    List all members of a project.
-
-To get help for any of the commands, run the command without any parameters.
-
-Data access in project folders
-------------------------------
-
-All members can add, edit, and delete files in the project folder unless
-restrictions have been set on specific files/subfolders. If you have data that
-you want to keep private to your user, but that belongs to in the project
-folder anyway, you can set permissions so that only you can read, write, and
-execute the file with this command:
-
-.. code-block:: console
-
-    [fe1]$ chmod go-rwx <files>
-
-The :command:`chmod` command changes file permissions. The first parameter
-specifies that groups (g) and others (o) should have their read (r), write (w),
-and execute (x) permissions removed (-). This means that it's only the owner of
-the file who can now access it.
-
-You can read more about :command:`chmod`
-`here <https://en.wikipedia.org/wiki/Chmod>`_.
 
 Encrypting sensitive data
 =========================
