@@ -116,7 +116,7 @@ again.
 I forgot my password
 ====================
 
-Fill out the `this <https://genomedk.wufoo.com/forms/request-new-password-forgot-password>`_ form.
+Send an e-mail to support to request a password reset.
 
 
 Public-key authentication
