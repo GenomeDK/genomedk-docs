@@ -5,6 +5,7 @@
 .main p {
     margin-bottom: 1rem !important;
 }
+
 .main p:last-child {
     margin-bottom: 0rem !important;
 }
@@ -19,19 +20,29 @@
     font-size: 3.052rem !important;
 }
 
-.main h2 {font-size: 2.441rem !important;}
+.main h2 {
+    font-size: 2.441rem !important;
+}
 
-.main h3 {font-size: 1.953rem !important;}
+.main h3 {
+    font-size: 1.953rem !important;
+}
 
-.main h4 {font-size: 1.563rem !important;}
+.main h4 {
+    font-size: 1.563rem !important;
+}
 
-.main h5 {font-size: 1.25rem !important;}
+.main h5 {
+    font-size: 1.25rem !important;
+}
 
-.main small {font-size: 0.8rem !important;}
+.main small {
+    font-size: 0.8rem !important;
+}
 
 .lead {
     font-size: 1.953rem !important;
-    font-weight: bold;
+    font-family: AUPassataBold;
 }
 
 .section-title {
@@ -55,16 +66,19 @@ footer p {
 }
 
 /* Main page logos */
+
 .logo-box {
     display: flex;
     width: 100%;
     margin-top: 2em;
 }
+
 .inline-logo {
     flex-grow: 1;
 }
 
 /* closed-zone box */
+
 .admonition-closed-zone {
     border-left: 4px solid rgba(95, 0, 48, 1) !important;
     background: rgba(95, 0, 48, 0.1);
@@ -75,16 +89,19 @@ footer p {
 }
 
 /* Staff-page contact info blocks */
+
 .line-block {
     margin-bottom: 1rem;
 }
 
 /* Code blocks */
+
 code, pre {
     background: rgb(247, 247, 247) !important;
     max-height: 340px;
     overflow-y: scroll;
 }
+
 code.file {
     background: none !important;
     padding: 0;
@@ -92,12 +109,14 @@ code.file {
 }
 
 /* Footnotes */
+
 a.footnote-reference {
     vertical-align: super;
     font-size: .875rem;
     padding: 0.1em;
     font-weight: bold;
 }
+
 dl.footnote {
     display: flex;
     flex-flow: row;
@@ -108,11 +127,13 @@ dl.footnote {
     padding-top: 0.5em;
     margin-top: 2em;
 }
+
 dl.footnote dt.label {
     flex: 0 0 5%;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 dl.footnote dd {
     flex: 0 0 95%;
     margin-left: auto;
@@ -120,44 +141,53 @@ dl.footnote dd {
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 a.fn-backref {
     text-decoration: none;
 }
 
 /* Events */
+
 .event {
     padding: 1rem 1rem 1rem 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
     font-family: inherit;
 }
+
 .event.status-ongoing {
     border-left: 4px solid rgba(95, 0, 48, 1) !important;
     background: rgba(95, 0, 48, 0.1);
 }
+
 .event.status-ended, .event.status-recent {
     border-left: 4px solid rgba(0, 171, 164, 1) !important;
     background: rgba(0, 171, 164, 0.1);
 }
+
 .event.status-upcoming {
     border-left: 4px solid rgba(238, 127, 0, 1) !important;
     background: rgba(238, 127, 0, 0.1);
 }
+
 .event .event-title {
     margin: 0;
     font-size: 2.25rem;
 }
+
 .event dl {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
     overflow: visible;
 }
+
 .event dt {
     flex: 0 0 15%;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 .event dd {
     flex: 0 0 85%;
     margin-left: auto;
@@ -165,27 +195,34 @@ a.fn-backref {
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 .event .event-title a img {
     margin: 0.2em;
     display: inline-block;
     cursor: pointer;
 }
+
 .event .event-start {
     font-weight: bold;
 }
+
 .event .event-ende {
     font-weight: bold;
 }
+
 .event .event-actualend {
     font-weight: bold;
 }
+
 .event ul.event-tags {
     margin-top: 0.5em;
     font-size: 0.8em;
 }
+
 .event ul.event-tags li.event-tag::before {
     content: none;
 }
+
 .event ul.event-tags li.event-tag {
     display: inline-block;
     padding: 0.25em 0.5em;
@@ -200,11 +237,13 @@ a.fn-backref {
     padding: 2em 0;
     background: #f2f2f2;
 }
+
 .main .caption {
     font-weight: bold;
     margin: 0 2em;
     margin-top: 1em;
 }
+
 .main img {
     max-width: 90%;
 }
