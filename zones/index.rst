@@ -1,8 +1,8 @@
 :orphan:
 
-=====
-Zones
-=====
+========================
+Working in a closed zone
+========================
 
 .. _zone_connect:
 
