@@ -33,17 +33,13 @@ a storage capacity of 12 PB. Do you want to know :ref:`more <technical>`?
 Where do I start?
 =================
 
-If you're new to GenomeDK, please read through the
-:ref:`Getting started <getting_started>` chapter. This will help do common
-things like handling data, submitting jobs and installing software, as well as
-how to request an account.
+If you're new to GenomeDK, please read through the :ref:`documentation <docs>`.
+This will help do common things like handling data, submitting jobs and
+installing software, as well as how to request an account.
 
 Once you're comfortable with performing routine tasks on the cluster, read
 the :ref:`Best practices <best_practices>`, which contains suggestions and
 patterns for organizing your projects and keeping your research reproducible.
-
-If you want a friendly presentation of how the cluster works, see
-:ref:`How does the cluster work? <how_does_the_cluster_work>`.
 
 Who can get an account?
 =======================
