@@ -204,6 +204,21 @@ queue:
 
     [fe1]$ priority -a
 
+
+Why is the partition I chose being ignored?
+-------------------------------------------
+
+Unless you specify a partition other that short/normal, like *fat2* or
+*express*, the partition parameter is largely ignored and your jobs are
+actually submitted to both partitions. When they start, they are moved to a
+single partition, in which they are started. This is done to avoid waiting in
+the *short* queue if normal nodes are empty.
+
+Long story short: don't worry, just submit the job asking for an appropriate
+time limit and it will start in an appropriate place. Unless you want *fat2* or
+*express*, you can forget about the partition parameter.
+
+
 Constraining jobs to certain nodes
 ----------------------------------
 

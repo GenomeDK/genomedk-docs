@@ -73,6 +73,23 @@ you will need to install an alternative yourself. We recommend MobaXterm_.
 
 .. _MobaXterm: https://mobaxterm.mobatek.net/
 
+.. todo::
+
+    Two-factor authentication
+    =========================
+
+    * FreeOTP (recommended)
+    * NetIQ Advanced Authentication
+    * Google Authenticator
+
+
+Why can't I connect?
+--------------------
+
+We only allow incoming connections from a whitelisted set of IPs, so if you get
+a *connection refused* you should send us an email with the IP you are
+connecting from. You can see what your IP is on https://ifconfig.co/ip.
+
 
 Changing your password
 ======================
@@ -96,14 +113,10 @@ again.
     work in all cases or at all.
 
 
-.. todo::
+I forgot my password
+====================
 
-    Two-factor authentication
-    =========================
-
-    * FreeOTP (recommended)
-    * NetIQ Advanced Authentication
-    * Google Authenticator
+Fill out the `this <https://genomedk.wufoo.com/forms/request-new-password-forgot-password>`_ form.
 
 
 Public-key authentication
@@ -167,9 +180,9 @@ key to the cluster, run:
 
     [local]$ ssh-copy-id -i PUBLIC-KEY-PATH USERNAME@login.genome.au.dk
 
-Replace *PUBLIC-KEY-PATH* with the path to your public key and *USERNAME* with 
-your cluster username. You will be asked to enter your password for the cluster. 
-You should now be able to log in to the cluster without typing your password. 
+Replace *PUBLIC-KEY-PATH* with the path to your public key and *USERNAME* with
+your cluster username. You will be asked to enter your password for the cluster.
+You should now be able to log in to the cluster without typing your password.
 Test this by runnning:
 
 .. code-block:: console
@@ -193,3 +206,16 @@ password). Then run:
     [fe1]$ cat ~/.ssh/id_rsa.pub >> authorized_keys
 
 You will now be able to SSH between compute nodes without typing a password.
+
+
+Using a terminal multiplexer
+============================
+
+Using a terminal multiplexer allows you to keep your session open, even when
+you disconnect from the cluster. You can even reconnect from a different
+computer and get your session back.
+
+We recommend that you use either :command:`tmux` or :command:`screen`.
+
+* `tmux <https://github.com/tmux/tmux/wiki>`_
+* `screen <https://www.gnu.org/software/screen/manual/screen.html>`_.

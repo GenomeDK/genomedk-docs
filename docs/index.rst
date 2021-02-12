@@ -14,5 +14,4 @@ Documentation
   projects-and-accounting
   best-practices
   software-specific
-  faq
   command-reference

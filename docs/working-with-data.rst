@@ -337,3 +337,16 @@ Decrypt:
 
 This will ask for the password used to encrypt the file. The decrypted contents
 are written to :file:`data.txt.new`.
+
+
+Prevent accidental changes to data
+==================================
+
+Put the data in a separate folder and run:
+
+.. code-block:: console
+
+    [fe1]$ chmod -R a-w <folder name>
+
+Now you can't change, add or remove files in that folder or any of its
+subfolders.
