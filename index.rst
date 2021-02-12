@@ -95,7 +95,6 @@ directly from GenomeDK.
   governance
   publications
   technical
-  forms
   system-status
 
 .. toctree::
