@@ -55,10 +55,13 @@ Step 5
 Finally, read the documentation at http://genome.au.dk.
 
 
+Using the data lock
+===================
+
 .. _gdk-export:
 
 Exporting files
-===============
+---------------
 
 If you have many files you should pack them up in a tar/zip. Use
 :program:`gdk-export` on the file to be exported and then send an email to
@@ -77,7 +80,7 @@ Cyberduck with host 185.45.23.195 and port 2022.
 .. _gdk-import:
 
 Importing files
-===============
+---------------
 
 Transferring data into a closed zone isn't restricted, but we still have to go
 through an intermediate step for security reasons.
@@ -95,3 +98,9 @@ You can now access the file from the inside at
 :file:`/data-lock/public/<username>`. However, the file will be read-only. To
 use the file, copy it to some other location, for example a relevant project
 folder.
+
+Cleanup
+-------
+
+Files in the public part of the data lock are automatically deleted after 60
+days.
