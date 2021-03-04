@@ -21,6 +21,23 @@ Recent
     :status: recent
     :reverse:
 
+
+.. event:: Updating drivers and firmware
+    :uid: downtime-210311
+    :start: 2021-03-11 08:00 +0200
+    :end: 2021-03-11 16:00 +0200
+    :tags: drivers firmware
+
+    During this downtime we will update firmware and drivers, as well as BeeGFS,
+    which serves /faststorage. This will improve overall stability of the systems.
+
+    At the start of the maintenance we will close all open connections and shut off
+    access to the cluster for all users.
+
+    Queued jobs overlapping the maintenance window will not start. Running jobs
+    will be re-queued at the start of the maintenance.
+
+
 .. event:: NFS storage maintenance
     :uid: downtime-20201110
     :start: 2020-11-10 14:00 +0200
