@@ -89,7 +89,7 @@ First, upload the file to the data lock:
 
 .. code-block:: console
 
-    [local]$ echo put test.fa . | sftp -b <username>@185.45.23.195
+    [local]$ echo put test.fa . | sftp -P 2022 <username>@185.45.23.195
 
 Alternatively, use a graphical SFTP client such as WinSCP, FileZilla or
 Cyberduck with host 185.45.23.195 and port 2022.
