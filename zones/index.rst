@@ -71,10 +71,10 @@ When the export has been approved you can download the file with:
 
 .. code-block:: console
 
-    [local]$ sftp -P 2022 <username>@185.45.23.195:test.fa .
+    [local]$ sftp -P 21 <username>@185.45.23.195:test.fa .
 
 Alternatively, use a graphical SFTP client such as WinSCP, FileZilla or
-Cyberduck with host 185.45.23.195 and port 2022.
+Cyberduck with host 185.45.23.195 and port 21.
 
 
 .. _gdk-import:
@@ -89,10 +89,10 @@ First, upload the file to the data lock:
 
 .. code-block:: console
 
-    [local]$ echo put test.fa . | sftp -P 2022 <username>@185.45.23.195
+    [local]$ echo put test.fa . | sftp -P 21 <username>@185.45.23.195
 
 Alternatively, use a graphical SFTP client such as WinSCP, FileZilla or
-Cyberduck with host 185.45.23.195 and port 2022.
+Cyberduck with host 185.45.23.195 and port 21.
 
 You can now access the file from the inside at
 :file:`/data-lock/public/<username>`. However, the file will be read-only. To
