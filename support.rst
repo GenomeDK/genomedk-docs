@@ -33,6 +33,9 @@ System management
 | Dan Søndergaard
 | Email: das (at) birc.au.dk
 
+| Rasmus Edgar Fink Jørgensen
+| Email: rasmus\_edgar (at) birc.au.dk
+
 Hardware management
 -------------------
 
