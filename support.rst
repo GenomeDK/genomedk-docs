@@ -34,7 +34,7 @@ System management
 | Email: das (at) birc.au.dk
 
 | Rasmus Edgar Fink Jørgensen
-| Email: rasmus\_edgar (at) birc.au.dk
+| Email: rasmus\_edgar (at) biomed.au.dk
 
 Hardware management
 -------------------
