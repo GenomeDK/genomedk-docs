@@ -7,7 +7,7 @@ Support
 
 Please direct any question and problem you encounter to:
 
-* Mail: cases@genome.au.dk
+* Mail: support@genome.au.dk
 * Telephone: +45 87 15 55 68
 * Office:
 
@@ -28,13 +28,13 @@ System management
 -----------------
 
 | Anders Egerup Halager
-| Email: aeh (at) birc.au.dk
+| Email: aeh (at) genome.au.dk
 
 | Dan Søndergaard
-| Email: das (at) birc.au.dk
+| Email: das (at) genome.au.dk
 
 | Rasmus Edgar Fink Jørgensen
-| Email: rasmus\_edgar (at) biomed.au.dk
+| Email: ref (at) genome.au.dk
 
 Hardware management
 -------------------
