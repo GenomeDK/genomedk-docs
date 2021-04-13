@@ -53,6 +53,15 @@ and batch jobs.
 .. toctree::
   :maxdepth: 1
 
+  ../zones/index
+
+These are instructions for the users who are working in a closed zone
+(primarily iPSYCH).
+If you are not working in a closed zone you can skip this part.
+
+.. toctree::
+  :maxdepth: 1
+
   interacting-with-the-queue
 
 Most likely you'll need to install software. Here's a complete guide to using

@@ -43,7 +43,7 @@ Connecting to the cluster
 
 .. admonition:: Closed zone...
 
-    Follow the instructions `here <http://ipsych.genome.au.dk/>`_.
+    Follow the :ref:`zones` instructions.
 
 On Linux, open the terminal of your choice. On macOS, you may use
 :program:`Terminal.app` which can be found in the
