@@ -42,11 +42,6 @@ Technical
     |               | -  Infiniband FDR                                     |
     |               | -  Two Nvidia V100 16Gb GPU devices                   |
     +---------------+-------------------------------------------------------+
-    | 3 / 72        | -  4x Intel/"Westmere" E7-4807                        |
-    |               |    CPUs @ 1.87 Ghz, 6 cores/CPU                       |
-    |               | -  1024 GB memory                                     |
-    |               | -  Infiniband 4X QDR                                  |
-    +---------------+-------------------------------------------------------+
 
 Storage
 =======
