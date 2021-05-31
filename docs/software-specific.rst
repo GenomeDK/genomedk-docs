@@ -268,4 +268,56 @@ with :program:`cpanm` command, for example:
     [fe1]$ perldoc -l DBD::mysql
     /home/xjk/perl5/lib/perl5/x86_64-linux-thread-multi/DBD/mysql.pm
 
+TexLive/LaTeX
+=============
 
+TeXLive is available on GenomeDK in the form of TinyTex, which is a stripped 
+down version of TeXLive. See `TinyTex`_ for more details.
+
+The conda provided package is for CLI or script usage, the R integration has not been tested
+and should probably be done using the guide described on the TinyTex home page found above.
+
+To install TinyTex with conda in a new environment:
+
+.. code-block:: console
+
+   [fe1]$ conda create <name of project> -c genomedk tinytex
+
+or if you have an existing environment where you want TinyTex installed:
+
+.. code-block:: console
+   
+   [fe1]$ conda activate <existing project>
+   [fe1]$ conda install -c genomedk tinytex
+
+Compiling documents is done using the normal TexLive commands, i.e.:
+
+.. code-block:: console
+
+   [fe1]$ pdflatex test.tex
+
+To install LaTeX packages from CTAN:
+
+.. code-block:: console
+
+   [fe1]$ tlmgr install <package>
+
+Example for installing some packages:
+
+.. code-block:: console
+
+   [fe1]$ tlmgr install txfonts enumitem titlesec newpx
+
+Search for packages using tlmgr:
+
+.. code-block:: console
+
+   [fe1]$ tlmgr search <package name>
+
+Search for specific file inside package using tlmgr (example):
+
+.. code-block:: console
+
+   [fe1]$ tlmgr info t1xtt.tfm
+   
+.. _`TinyTex`: https://yihui.org/tinytex/
