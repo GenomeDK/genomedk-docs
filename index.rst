@@ -24,8 +24,8 @@ Give me the numbers
 ===================
 
 GenomeDK comprises 185 nodes (6568 cores) connected with Infiniband. Each
-node has from 16 to 64 cores and either 128 GB, 256 GB, 384 GB, 512 GB or 1 TB
-of RAM for a total of 58 TB of memory.
+node has from 16 to 64 cores and either 128 GB, 256 GB, 384 GB or 512 GB
+of RAM for a total of 56 TB of memory.
 
 The cluster has been designed specifically for bioinformatic workloads and has
 a storage capacity of 12 PB. Do you want to know :ref:`more <technical>`?
