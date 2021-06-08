@@ -21,6 +21,21 @@ Recent
     :status: recent
     :reverse:
 
+.. event:: Install hardware for upcoming backup solution
+    :uid: downtime-220616
+    :start: 2021-06-16 09:00 +0200
+    :end: 2021-06-16 12:00 +0200
+    :tags: hardware
+    
+    During this downtime we will install hardware necessary for our upcoming
+    backup solution.
+
+    At the start of the maintenance we will close all open connections and shut off
+    access to the cluster for all users.
+
+    Queued jobs overlapping the maintenance window will not start. Running jobs
+    will be re-queued at the start of the maintenance.
+
 
 .. event:: Updating drivers and firmware
     :uid: downtime-210311
