@@ -21,12 +21,12 @@ Recent
     :status: recent
     :reverse:
 
-.. event:: Install hardware for upcoming backup solution
+.. event:: Prepare backup solution
     :uid: downtime-220616
     :start: 2021-06-16 09:00 +0200
     :end: 2021-06-16 12:00 +0200
     :tags: hardware
-    
+
     During this downtime we will install hardware necessary for our upcoming
     backup solution.
 
