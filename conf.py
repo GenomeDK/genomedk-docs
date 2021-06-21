@@ -3,6 +3,7 @@
 
 import sys
 import os.path
+import re
 
 sys.path.append(os.path.abspath("exts"))
 
@@ -63,7 +64,7 @@ assert prompt_regex == r"((?:\(.*\)\s*)?(?:\[.*\]\s*)?[$])(.*\n?)"
 class CustomBashSessionLexer(ShellSessionBaseLexer):
     name = "Bash Session"
     _innerLexerCls = BashLexer
-    _ps1rgx = prompt_regex
+    _ps1rgx = re.compile(prompt_regex)
     _ps2 = ">"
 
 
