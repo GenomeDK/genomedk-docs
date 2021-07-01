@@ -9,7 +9,7 @@ Welcome to GenomeDK!
 .. container:: lead
 
   GenomeDK is a national high-performance computing facility for bioinformatics
-  and life sciences managed by the Joint AU/RM Genome Data Center, located at
+  and life sciences managed by the Aarhus Genome Data Center, located at
   Aarhus University, Denmark.
 
 ---
