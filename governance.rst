@@ -11,8 +11,8 @@ for students, researchers, and small-to-medium-sized enterprises. We have users
 from most regions of Denmark and a wide range of universities.
 
 The Faculty of Natural Sciences, the Faculty of Health, and Central Region
-Denmark established the Joint AU/RM Genome Data Center to govern GenomeDK and
-ensure its continued success. The center board has representatives from all
+Denmark established the Aarhus Genome Data Center to govern GenomeDK and
+ensure its continued success. The leader forum has representatives from all
 three parties and is headed by Professor Anders Børglum.
 
 Day-to-day operations are managed by the *technical steering committee*, which
