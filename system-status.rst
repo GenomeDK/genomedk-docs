@@ -21,6 +21,10 @@ Recent
     :status: recent
     :reverse:
 
+.. comment::
+
+    We currently have an incident that influences some/all users. We are aware of the problem and working on a fix. This page will be updated when we know more.
+
 .. event:: Prepare backup solution
     :uid: downtime-220616
     :start: 2021-06-16 09:00 +0200
