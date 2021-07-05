@@ -1,7 +1,7 @@
 .. _terms:
 
 ================
-Terms of Service
+Terms of service
 ================
 
 Thanks for using GenomeDK!

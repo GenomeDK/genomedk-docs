@@ -92,6 +92,7 @@ directly from GenomeDK.
   publications
   technical
   system-status
+  terms
 
 .. toctree::
   :maxdepth: 3
