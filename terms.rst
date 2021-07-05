@@ -4,6 +4,8 @@
 Terms of service
 ================
 
+**Last updated: July 5th, 2021**
+
 Thanks for using GenomeDK!
 
 We provide computational power, storage, and software to manage projects as a high-performance computing (HPC) facility to people associated with a university or small and medium-sized enterprises (SMEs). GenomeDK is managed by Aarhus Genome Data Center at Aarhus University, Denmark.
