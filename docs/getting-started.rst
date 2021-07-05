@@ -93,6 +93,8 @@ a *connection refused* you should send us an email with the IP you are
 connecting from. You can see what your IP is on https://ifconfig.co/ip.
 
 
+.. _change_password:
+
 Changing your password
 ======================
 
