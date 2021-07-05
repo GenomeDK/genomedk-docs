@@ -26,6 +26,8 @@ line/terminal.
 Get access to the cluster
 =========================
 
+You should check out our :ref:`terms`.
+
 We have several types of users. In most cases you'll want a normal user. To
 request this, `fill out the form for normal users <https://genomedk.wufoo.com/forms/request-access-to-cluster/>`_.
 
