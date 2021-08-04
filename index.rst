@@ -50,7 +50,7 @@ or small and medium-sized enterprises (SMEs).
 What does it cost?
 ==================
 
-In 2020, the prices are:
+In 2021, the prices are:
 
 * 0.12 DKK/billing hour
 * 250 DKK/TB/year
