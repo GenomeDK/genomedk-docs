@@ -28,10 +28,13 @@ Recent
 .. event:: Problems with faststorage
     :uid: downtime-220810
     :start: 2021-08-10 08:00 +0200
-    :start: 2021-08-10 16:00 +0200
+    :end: 2021-08-10 16:00 +0200
+    :actualend: 2021-08-10 12:00 +0200
     :tags: incident faststorage
     
     We currently have an incident that influences some/all users. We are aware of the problem and working on a fix. This page will be updated when we know more.
+    
+    The incident is now resolved and operations should (mostly) be back to normal.
 
 .. event:: Prepare backup solution
     :uid: downtime-220616
