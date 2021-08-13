@@ -25,25 +25,6 @@ Conda also provides access to thousands of packages used in data science and
 bioinformatics. These packages can be installed with a single command, so you
 don't have to worry about compilers, dependencies, and where to put binaries.
 
-For old users only...
-=====================
-
-Previously, GenomeDK has made software available for users through a special
-mechanism called :file:`/com/extra` which allowed users to load specific
-software packages. However, there are several problems with the approach taken
-here. If you are already using software from :file:`/com/extra`, note that this
-may not be supported in the future and that no new software will be made
-available through this mechanism.
-
-Also, note that software installed through the old mechanism may interfere with
-your environments. If you wish to use Conda we therefore encourage you to edit
-your :file:`.bashrc` and :file:`.bash_profile` files and remove all lines which
-loads software from :file:`/com/extra`.
-
-Additionally, you should ensure that none of the above files reference any
-system Python installation or related modules. It's also a good idea to remove
-any reference to :file:`/com/extra/stable`.
-
 .. _installing_conda:
 
 Installing the Conda package manager
