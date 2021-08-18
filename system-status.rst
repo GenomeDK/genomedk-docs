@@ -26,6 +26,27 @@ Recent
     We currently have an incident that influences some/all users. We are aware of the problem and working on a fix. This page will be updated when we know more.
 
 .. event:: Problems with faststorage
+    :uid: downtime-220817
+    :start: 2021-08-17 19:00 +0200
+    :end: 2021-08-18 09:20 +0200
+    :actualend: 2021-08-18 09:20 +0200
+    :tags: incident faststorage
+    
+    During this incident, /faststorage became unavailable at approximately 19:00 on 
+    Tuesday, 17th of August.
+    
+    The issue was reported by several users. Initially, users reported problems with 
+    logging in. Support staff started investigating the issue at 08:30 on Wednesday,
+    18th of August.
+    
+    After debugging it turned out that one of the meta servers handling /faststorage 
+    requests was hanging and needed to be killed and restarted. We have experienced
+    this issue several times and are now in discussions with the developer of the
+    file system underlying /faststorage to fully resolve the issue.
+    
+    Operations were resumed again 09:20 on Wednesday, 18th of August.
+
+.. event:: Problems with faststorage
     :uid: downtime-220810
     :start: 2021-08-10 08:00 +0200
     :end: 2021-08-10 16:00 +0200
