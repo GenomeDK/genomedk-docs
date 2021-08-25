@@ -29,4 +29,5 @@ Technical steering committee members (in alphabetical order):
 * Jakob Grove
 * Jakob Skou Pedersen
 * Mikkel Schierup
+* Rasmus Edgar Fink Jørgensen
 * Søren Vang
