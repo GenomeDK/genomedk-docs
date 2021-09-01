@@ -29,10 +29,12 @@ Recent
 .. event:: Extreme heat in server room
     :uid: downtime-220817
     :start: 2021-09-01 18:00 +0200
-    :end: 2021-09-01 12:00 +0200
+    :end: 2021-09-01 21:00 +0200
     :tags: incident cooling-failure
     
-    We currently have an incident due to extreme heat in the server, which causes servers to shut down to avoid permanent damage. This influences all users. This page will be updated when we know more.
+    We currently have an incident due to extreme heat in the server room, which causes servers to shut down to avoid permanent damage. This influences all users. This page will be updated when we know more.
+    
+    Update 20.55: Cooling in the server room has resumed and most systems are up again. The remaining compute nodes will be resumed tomorrow.
 
 
 .. event:: Problems with faststorage
