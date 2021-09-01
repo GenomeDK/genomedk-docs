@@ -25,6 +25,16 @@ Recent
 
     We currently have an incident that influences some/all users. We are aware of the problem and working on a fix. This page will be updated when we know more.
 
+
+.. event:: Extreme heat in server room
+    :uid: downtime-220817
+    :start: 2021-09-01 18:00 +0200
+    :end: 2021-09-01 12:00 +0200
+    :tags: incident cooling-failure
+    
+    We currently have an incident due to extreme heat in the server, which causes servers to shut down to avoid permanent damage. This influences all users. This page will be updated when we know more.
+
+
 .. event:: Problems with faststorage
     :uid: downtime-220817
     :start: 2021-08-17 19:00 +0200
