@@ -26,10 +26,12 @@ Recent
 .. event:: Problems with faststorage
     :uid: downtime-220907
     :start: 2021-09-07 00:30 +0200
-    :end: 2021-09-07 16:00 +0200
+    :end: 2021-09-07 09:50 +0200
     :tags: incident storage
 
-    We currently have an incident that influences some/all users. We are aware of the problem and working on a fix. This page will be updated when we know more.
+    We currently have an incident that influences some/all users. We are aware of the problem and working on a fix.
+    
+    Update 12.54: Operations were resumed again at 09.50, with some compute nodes still down. Most nodes are now back in operation again.
 
 
 .. event:: Extreme heat in server room
