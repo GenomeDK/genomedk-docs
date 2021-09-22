@@ -8,10 +8,6 @@ On-going
 .. eventlist::
     :status: ongoing
 
-.. comment::
-
-   We are currently have an incident with one of our faststorage nodes, which impacts many users. We are working on a fix.
-
 Upcoming
 --------
 
