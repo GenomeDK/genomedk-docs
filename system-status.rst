@@ -24,6 +24,25 @@ Recent
 .. comment::
     We currently have an incident that influences some/all users. We are aware of the problem and working on a fix.
 
+
+.. event:: General maintenance
+    :uid: downtime-211005
+    :start: 2021-10-05 09:00 +0200
+    :end: 2021-10-05 16:00 +0200
+    :tags: slurm beegfs frontend maintenance
+    
+    During this downtime we will carry out the following changes update the 
+    queuing system (Slurm) to the newest version, update the filesystem for 
+    /faststorage (BeeGFS) to the newest version, move to a new frontend for the 
+    open zone.
+
+    At the start of the maintenance we will close all open connections and shut off
+    access to the cluster for all users.
+
+    Queued jobs overlapping the maintenance window will not start. Running jobs
+    will be re-queued at the start of the maintenance.
+
+
 .. event:: Problems with faststorage
     :uid: downtime-220907
     :start: 2021-09-07 00:30 +0200
