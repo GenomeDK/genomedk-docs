@@ -22,6 +22,7 @@ Recent
     :reverse:
 
 .. comment::
+    We currently have an incident that influences some/all users. We are aware of the problem and working on a fix.
 
 .. event:: Problems with faststorage
     :uid: downtime-220907
