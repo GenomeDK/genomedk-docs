@@ -29,6 +29,7 @@ Recent
     :uid: downtime-211005
     :start: 2021-10-05 09:00 +0200
     :end: 2021-10-05 16:00 +0200
+    :actualend: 2021-10-05 12:30 +0200
     :tags: slurm beegfs frontend maintenance
     
     During this downtime we will carry out the following changes update the 
