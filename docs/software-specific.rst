@@ -321,3 +321,28 @@ Search for specific file inside package using tlmgr (example):
    [fe1]$ tlmgr info t1xtt.tfm
    
 .. _`TinyTex`: https://yihui.org/tinytex/
+
+Ssh-agent with password protected keys
+======================================
+
+An SSH agent is a program which caches your decrypted private keys and provides them to SSH 
+client programs on your behalf. In this arrangement, you must only provide your passphrase once, 
+when adding your private key to the agent's cache. This facility can be of great convenience when 
+making frequent SSH connections.
+
+To avoid problems when running starting new sessions when the ssh-agent is already running, add the 
+following to your .bashrc
+
+.. code-block:: bash
+
+   if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+      eval "$(ssh-agent)"
+      ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+   fi
+   export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+   ssh-add -l > /dev/null || ssh-add ~/.ssh/id_rsa
+
+The above snippet checks if a softlink to the ssh auth socket is valid, if not it will run a ssh-agent process, 
+and save the output thereof. It will then create a softlink to socket, which will be used for the session.
+
+Adjust the last line of the above code to fit the name of your password protected private key.
