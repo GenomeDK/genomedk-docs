@@ -12,7 +12,7 @@ On-going
     :uid: downtime-211108
     :start: 2021-11-08 07:00 +0200
     :end: 2021-11-08 09:00 +0200
-    :tags: slurm beegfs frontend maintenance
+    :tags: network frontend maintenance
     
     During this downtime we will carry out the following changes:
 
