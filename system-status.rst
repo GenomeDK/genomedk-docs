@@ -8,18 +8,6 @@ On-going
 .. eventlist::
     :status: ongoing
 
-.. event:: General maintenance
-    :uid: downtime-211108
-    :start: 2021-11-08 07:00 +0200
-    :end: 2021-11-08 09:00 +0200
-    :tags: network frontend maintenance
-    
-    During this downtime we will carry out the following changes:
-
-    AU IT will replace a faulty network switch with a more reliable piece of network equipment.
-
-    During these hours no connection to the cluster will be possible.
-
 Upcoming
 --------
 
@@ -35,6 +23,19 @@ Recent
 
 .. comment::
     We currently have an incident that influences some/all users. We are aware of the problem and working on a fix.
+
+
+.. event:: General maintenance
+    :uid: downtime-211108
+    :start: 2021-11-08 07:00 +0200
+    :end: 2021-11-08 09:00 +0200
+    :tags: network frontend maintenance
+    
+    During this downtime we will carry out the following changes:
+
+    AU IT will replace a faulty network switch with a more reliable piece of network equipment.
+
+    During these hours no connection to the cluster will be possible.
 
 
 .. event:: General maintenance
