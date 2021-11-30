@@ -14,6 +14,25 @@ Upcoming
 .. eventlist::
     :status: upcoming
 
+.. event:: General maintenance
+   :uid: downtime-211201
+   :start: 2021-12-01 08:00 +0200
+   :end: 2021-12-01 16:00 +0200
+   :tags: BeeGFS maintenance
+
+   During this downtime we will update BeeGFS and ZFS on the BeeGFS meta servers,
+   which serves /faststorage.
+
+   These changes will be implemented to fix some recurring faststorage problems 
+   we have seen the last couple of months.
+
+   We will also need to restart one of our storage devices, which recently had a partial 
+   hardware failure.
+
+   At the start of the maintenance we will close all open connections and shut off
+   access to the cluster for all users.
+
+
 Recent
 ------
 
