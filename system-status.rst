@@ -23,10 +23,14 @@ Recent
     :status: recent
     :reverse:
 
+.. comment::
+    We currently have an incident that influences some/all users. We are aware of the problem and working on a fix.
+
 .. event:: General maintenance
    :uid: downtime-211201
    :start: 2021-12-01 08:00 +0200
    :end: 2021-12-01 16:00 +0200
+   :actualend: 2021-10-05 11:45 +0200
    :tags: BeeGFS maintenance
 
    During this downtime we will update BeeGFS and ZFS on the BeeGFS meta servers,
@@ -40,10 +44,6 @@ Recent
 
    At the start of the maintenance we will close all open connections and shut off
    access to the cluster for all users.
-
-.. comment::
-    We currently have an incident that influences some/all users. We are aware of the problem and working on a fix.
-
 
 .. event:: General maintenance
     :uid: downtime-211108
