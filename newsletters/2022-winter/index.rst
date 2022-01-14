@@ -103,6 +103,19 @@ To install the latest compatible version of Tidyverse run:
 
 The Tidyverse package should now be installed and available for use with R.
 
+The same applies for Python modules, instead of reaching for pip you should 
+search conda for the module you need. Mixing pip and conda packages can lead to 
+hard-to-debug issues.
+
+A Python example could be SciPy and to install it, activate the relevant Python
+environment and run:
+
+.. code-block:: console
+
+   [local]$ conda install scipy
+
+Unlike R packages, Python packages are not prefixed by language type.
+
 ---
 
 Thank you for reading!
