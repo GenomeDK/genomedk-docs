@@ -75,14 +75,12 @@ We'll retire the s04 nodes during 2022 as they reach end-of-life.
 Tips and tricks
 ===============
 
-When adding new R packages to Rstudio in a conda Rstudio/R environment you 
-should always check if the package is available through conda before trying to 
-install it via the R console.
+**Short version:** Always do ``conda install`` to install packages, no matter
+what language the package is for. Not doing so can cause hard-to-debug issues
+and broken Conda environments.
 
-This ensures that the package and dependencies are compatible with the R version
-that comes with yourd Rstudio/R installation. 
-
-For example, to install the Tidyverse package, do this:
+**Long version:** When adding new R packages to Rstudio, you should always
+install it via Conda. For example, to install the Tidyverse package, do this:
 
 .. code-block:: console
 
@@ -105,10 +103,6 @@ Instead of this:
 .. code-block:: console
 
    [local]$ pip install scipy
-
-In short: always do ``conda install`` to install packages, no matter what
-language the package is for. Not doing so can cause hard-to-debug issues and
-broken Conda environments.
 
 ---
 
