@@ -75,7 +75,31 @@ We'll retire the s04 nodes during 2022 as they reach end-of-life.
 Tips and tricks
 ===============
 
+When adding new R packages to Rstudio in a conda Rstudio/R environment you 
+should always check if the package is available in conda before trying to 
+install it via the R console.
 
+This ensures that the package and dependencies are compatible with the R version
+that comes with the conda provided Rstudio/R installation. 
+
+An example could be the rather popular Tidyverse collection of R packages, which
+by its nature has several layers of dependent packages, which usually fail
+installing via the R console.
+
+To check if the Tidyverse is available via conda first activate your R/Rstudio
+environment and then run:
+
+.. code-block:: bash
+   conda search r-tidyverse
+
+(Tip: All R packages in conda are prefixed with "r-")
+
+To install the latest compatible version of Tidyverse run:
+
+.. code-block:: bash
+   conda install r-tidyverse
+
+The Tidyverse package should now be installed and available for use with R.
 
 ---
 
