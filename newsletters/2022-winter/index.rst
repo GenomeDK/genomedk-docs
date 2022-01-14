@@ -89,14 +89,16 @@ installing via the R console.
 To check if the Tidyverse is available via conda first activate your R/Rstudio
 environment and then run:
 
-.. code-block:: bash
+.. code-block:: console
+
    conda search r-tidyverse
 
 (Tip: All R packages in conda are prefixed with "r-")
 
 To install the latest compatible version of Tidyverse run:
 
-.. code-block:: bash
+.. code-block:: console
+
    conda install r-tidyverse
 
 The Tidyverse package should now be installed and available for use with R.
