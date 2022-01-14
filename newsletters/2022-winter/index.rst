@@ -76,45 +76,39 @@ Tips and tricks
 ===============
 
 When adding new R packages to Rstudio in a conda Rstudio/R environment you 
-should always check if the package is available in conda before trying to 
+should always check if the package is available through conda before trying to 
 install it via the R console.
 
 This ensures that the package and dependencies are compatible with the R version
-that comes with the conda provided Rstudio/R installation. 
+that comes with yourd Rstudio/R installation. 
 
-An example could be the rather popular Tidyverse collection of R packages, which
-by its nature has several layers of dependent packages, which usually fail
-installing via the R console.
-
-To check if the Tidyverse is available via conda first activate your R/Rstudio
-environment and then run:
+For example, to install the Tidyverse package, do this:
 
 .. code-block:: console
 
-   [local]$ conda search r-tidyverse
+   [local]$ conda install -c conda-forge r-tidyverse
 
-(Tip: All R packages in conda are prefixed with "r-")
+Instead of doing this in the Rstudio console:
 
-To install the latest compatible version of Tidyverse run:
+.. code-block:: r
 
-.. code-block:: console
+    install.packages("tidyverse")
 
-   [local]$ conda install r-tidyverse
-
-The Tidyverse package should now be installed and available for use with R.
-
-The same applies for Python modules, instead of reaching for pip you should 
-search conda for the module you need. Mixing pip and conda packages can lead to 
-hard-to-debug issues.
-
-A Python example could be SciPy and to install it, activate the relevant Python
-environment and run:
+The same applies for Python packages. For example, to install SciPy, do this:
 
 .. code-block:: console
 
    [local]$ conda install scipy
 
-Unlike R packages, Python packages are not prefixed by language type.
+Instead of this:
+
+.. code-block:: console
+
+   [local]$ pip install scipy
+
+In short: always do ``conda install`` to install packages, no matter what
+language the package is for. Not doing so can cause hard-to-debug issues and
+broken Conda environments.
 
 ---
 
