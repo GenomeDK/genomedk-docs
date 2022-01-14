@@ -39,10 +39,12 @@ Let us know if you have content ideas!
 ISO 27001-compliance
 --------------------
 
-GenomeDK is a ISO 27001-compliant HPC facility, which means that we have a
-formal information security management system (ISMS) in place to guide our
-information security choices and implementation. This summer we completed our
-first external audit and received an excellent report.
+GenomeDK is a ISO 27001-compliant HPC facility. This means that we have a formal
+information security management system (ISMS) in place to guide our information
+security choices and implementation, and that you can safely store your
+sensitive data on GenomeDK.
+
+This summer we completed an external audit and received an excellent report.
 
 Unstable faststorage
 --------------------
@@ -84,7 +86,7 @@ install it via Conda. For example, to install the Tidyverse package, do this:
 
 .. code-block:: console
 
-   [local]$ conda install -c conda-forge r-tidyverse
+   [local]$ conda install r-tidyverse
 
 Instead of doing this in the Rstudio console:
 
