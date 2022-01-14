@@ -1,4 +1,5 @@
+python-dateutil
+rstcheck
 sphinx
 sphinx-au-theme
-python-dateutil
 urllib3
