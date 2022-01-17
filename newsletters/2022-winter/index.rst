@@ -11,7 +11,10 @@ Hello!
 First of all, happy New Year! We hope that you've enjoyed the holidays.
 
 In 2021 you all submitted 19 mio. jobs and used 21 mio. billing hours worth of
-compute. More than 200 projects were created and we welcomed 200 new users!
+compute. During the year, storage usage grew from 7.5 PB to 9.6 PB, and peaked
+at 10 PB.
+
+Last, but not least, welcome to the 200 users that joined us during 2021!
 
 Anders, Rasmus, and Dan
 
@@ -34,7 +37,8 @@ We're on Twitter
 
 We're now on social media as `@GenomeDK_AU <https://twitter.com/GenomeDK_AU>`_ -
 on Twitter. Follow us for casual status updates and other HPC-related content.
-Let us know if you have content ideas!
+Get in touch if you have ideas for content or users, projects or research we
+should feature.
 
 ISO 27001-compliance
 --------------------
@@ -43,8 +47,6 @@ GenomeDK is a ISO 27001-compliant HPC facility. This means that we have a formal
 information security management system (ISMS) in place to guide our information
 security choices and implementation, and that you can safely store your
 sensitive data on GenomeDK.
-
-This summer we completed an external audit and received an excellent report.
 
 Unstable faststorage
 --------------------
