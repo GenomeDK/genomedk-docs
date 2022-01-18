@@ -37,8 +37,8 @@ We're on Twitter
 
 We're now on social media as `@GenomeDK_AU <https://twitter.com/GenomeDK_AU>`_ -
 on Twitter. Follow us for casual status updates and other HPC-related content.
-Get in touch if you have ideas for content or users, projects or research we
-should feature.
+Get in touch if you have ideas for users, projects or research we should
+feature.
 
 ISO 27001-compliance
 --------------------
