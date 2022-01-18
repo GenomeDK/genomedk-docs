@@ -24,6 +24,12 @@ Anders, Rasmus, and Dan
 Updates
 =======
 
+New office location
+-------------------
+
+Our office has moved to the newly renovated buildings in the University City.
+You can now find us in building 1872, room 359.
+
 Disk-based backup
 -----------------
 
