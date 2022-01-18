@@ -11,9 +11,9 @@ Please direct any question and problem you encounter to:
 * Telephone: +45 87 15 55 68
 * Office:
 
-  | Bioinformatics Research Centre (BiRC)
-  | Building 1110
-  | Office 327
+  | University City
+  | Building 1872
+  | Office 359
 
 You are welcome to come by our office. It may be most practical for you to
 agree on a time first via mail or phone.
