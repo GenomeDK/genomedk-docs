@@ -21,8 +21,8 @@ Anders, Rasmus, and Dan
 **The GenomeDK Team**
 
 
-News
-====
+Updates
+=======
 
 Disk-based backup
 -----------------
@@ -58,6 +58,28 @@ described the actions we have taken to resolve these issues in detail. Since
 then we have introduced additional automation to self-heal faststorage and are
 working with the company behind BeeGFS to address any remaining issues.
 
+More detailed usage statistics
+------------------------------
+
+The :command:`space` command has been updated and now provides a monthly
+overview of billing hours used by users, projects, and all projects owned by
+you. To see a report for your user specifically:
+
+.. code-block:: console
+
+   [local]$ space user
+
+Or for a specific project:
+
+.. code-block:: console
+
+   [local]$ space project --project <name>
+
+Or get an overview for all projects owned by you:
+
+.. code-block:: console
+
+   [local]$ space overview
 
 Upcoming
 ========
@@ -78,6 +100,9 @@ We'll retire the s04 nodes during 2022 as they reach end-of-life.
 
 Tips and tricks
 ===============
+
+Always use Conda, when using Conda
+----------------------------------
 
 **Short version:** Always do ``conda install`` to install packages, no matter
 what language the package is for. Not doing so can cause hard-to-debug issues
