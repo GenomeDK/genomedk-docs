@@ -25,6 +25,17 @@ Recent
     We currently have an incident that influences some/all users. We are aware of the problem and working on a fix.
 
 .. event:: General maintenance
+   :uid: downtime-220209
+   :start: 2022-02-09 09:00 +0200
+   :end: 2022-02-09 11:00 +0200
+   :tags: BeeGFS maintenance
+
+   During this downtime we will implement a workaround for a BeeGFS bug.
+
+   This workaround is needed to fix a recurring faststorage problem 
+   we have seen the last couple of months.
+
+.. event:: General maintenance
    :uid: downtime-211201
    :start: 2021-12-01 08:00 +0200
    :end: 2021-12-01 16:00 +0200
