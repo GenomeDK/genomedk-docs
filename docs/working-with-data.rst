@@ -78,17 +78,17 @@ optimally.
 Backing up data
 ===============
 
-We provide backup on good old-fashioned tape to all users. To back up a file,
+We provide backup on to disk on a remote site to all users. To back up a file,
 it should be put in a directory called either :file:`BACKUP`, :file:`Backup` or
 :file:`backup`. The directory can be located in any other directory, but
 only some locations are eligible for backup (see :ref:`data_locations`).
 
-Data is backed up approximately once per week and is kept for 30 days.
+Data is backed up once per week and snapshots are kept for 90 days.
 
 .. warning::
 
     Do not back up temporary data files that can easily be reproduced.
-    Computation is cheap, but backup is *very* expensive. The backup is meant
+    Computation is cheap, but backup is expensive. The backup is meant
     for scripts/source code and important raw data.
 
 .. _snapshots:
