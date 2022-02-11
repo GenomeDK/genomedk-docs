@@ -50,21 +50,23 @@ or small and medium-sized enterprises (SMEs).
 What does it cost?
 ==================
 
-In 2021, the prices are:
+In 2022, the prices are:
 
 * 0.12 DKK/billing hour
+* 2.16 DKK/GPU hour
 * 250 DKK/TB/year
-* 700 DKK/TB/year in backup*
+* 500 DKK/TB/year in backup*
 
 One billing hour corresponds to one CPU core for one hour or 8 GB memory for
-one hour, whichever is highest.
+one hour, whichever is highest. One GPU hour is the same as 18 core hours
+(half of the cores of a GPU node).
 
 Prices are updated yearly and are subject to change. Do not hesitate to contact
 us if you have any questions.
 
 \* For example, if you store 1 TB of data in backup for a year you will be
-billed 250 + 700 DKK. 250 DKK for the on-disk copy and 700 DKK for the two
-off-site backup copies.
+billed 250 + 500 DKK. 250 DKK for the on-disk copy and 500 DKK for off-site
+backup copy.
 
 How do I pay?
 =============
