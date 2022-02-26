@@ -8,7 +8,6 @@ Support
 Please direct any question and problem you encounter to:
 
 * Mail: support@genome.au.dk
-* Telephone: +45 87 15 55 68
 * Office:
 
   | University City
@@ -16,7 +15,7 @@ Please direct any question and problem you encounter to:
   | Office 359
 
 You are welcome to come by our office. It may be most practical for you to
-agree on a time first via mail or phone.
+agree on a time first via mail.
 
 We also greatly appreciate your feedback on the documentation itself, so please
 let us know if you have any suggestions for improvements to the documentation.
@@ -35,9 +34,3 @@ System management
 
 | Rasmus Edgar Fink Jørgensen
 | Email: ref (at) genome.au.dk
-
-Hardware management
--------------------
-
-| Niels Carl W. Hansen
-| Tel: +45 87 15 54 01
