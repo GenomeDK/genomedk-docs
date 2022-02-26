@@ -26,7 +26,7 @@ pygments_style = "friendly"
 html_theme = "au"
 html_theme_options = {
     "sitename": "GenomeDK",
-    "phone": "+45 87 15 55 68",
+    "phone": "Not currently available",
     "email": "support@genome.au.dk",
     "show_breadcrumb": "no",
 }
