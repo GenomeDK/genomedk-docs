@@ -150,6 +150,9 @@ an overview of commonly used resource flags:
 The rest of the script is a normal Bash_ script which contains the commands
 that should be executed, when the job is started by Slurm.
 
+.. note::
+   The current maximum time a job can run is 7 days.
+
 To submit a job for this script, save it to a file (e.g. :file:`example.sh`)
 and run:
 
