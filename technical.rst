@@ -50,7 +50,7 @@ can reach an aggregated read/write performance of more than 35GB/s.
 Backup
 ======
 
-Backup is made to AU ITs IBM-TSM disk and tape archive.
+Backup is made to an offsite disk based solution on a weekly basis. Read more here: :ref:`working_with_data<Working with data>`
 
 Power
 =====
