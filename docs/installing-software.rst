@@ -252,7 +252,7 @@ Java Viewer". It downloads a ZIP archive which contains an executable JAR file.
 To use VNC you first need to login to the frontend and start a *VNC server*.
 Starting the server is done with the ``vncserver`` command and looks like this:
 
-.. code-block: console
+.. code-block:: console
     :emphasize-lines: 8
 
     [fe1]$ vncserver
