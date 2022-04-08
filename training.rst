@@ -17,6 +17,8 @@ some possible topics for a workshop:
 Previous workshops
 ==================
 
+* April 7, 2022, 13:00-14:00, "Questions on various topics", Department of Molecular Biology, Aarhus University.
+* March 10, 2022, 09:00-10:00, 5-minute presentation about GenomeDK at 1st meeting of the single-cell omics focus group, Aarhus University.
 * May 11, 2021, 13:30-14:30, "Project organization", "Managing software with Conda", "Overview of gwf", Department of Economics and Business Economics, Aarhus University.
 * Jan 22, 2021, 13-14, "Project organization", "Managing software with Conda", Psykiatrisk Center Sct. Hans, Region H.
 * Sep 29, 2020, 9-14, "Linux basics", "Project organization", "Managing software with Conda", "Overview of gwf", Department of Agroecology, Aarhus University.
