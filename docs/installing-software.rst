@@ -255,14 +255,14 @@ Starting the server is done with the ``vncserver`` command and looks like this:
 .. code-block:: console
     :emphasize-lines: 8
 
-    [fe1]$ vncserver
+    [fe-open-01]$ vncserver
 
     You will require a password to access your desktops.
 
     Password:
     Verify:
 
-    New 'fe1.genomedk.net:3 (user)' desktop is fe1.genomedk.net:3
+    New 'fe-open-01.genomedk.net:3 (user)' desktop is fe-open-01.genomedk.net:3
 
     Creating default startup script /home/user/.vnc/xstartup
     Starting applications specified in /home/user/.vnc/xstartup
