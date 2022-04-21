@@ -25,6 +25,18 @@ Recent
     We currently have an incident that influences some/all users. We are aware of the problem and working on a fix.
 
 .. event:: General maintenance
+   :uid: downtime-220427
+   :start: 2022-04-27 06:00 +0200
+   :end: 2022-04-27 12:00 +0200
+   :tags: storage network
+  
+    At the start of the maintenance we will close all open connections and shut off
+    access to the cluster for all users.
+
+    Queued jobs overlapping the maintenance window will not start. Running jobs
+    will be re-queued at the start of the maintenance.
+
+.. event:: General maintenance
    :uid: downtime-220209
    :start: 2022-02-09 09:00 +0200
    :end: 2022-02-09 11:00 +0200
