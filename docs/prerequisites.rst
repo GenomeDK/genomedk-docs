@@ -22,9 +22,9 @@ command on the frontend node, the prompt will instead say:
 
 .. code-block:: console
 
-    [fe1]$ echo hello
+    [fe-open-01]$ echo hello
 
-Here, **fe1** is the name of the frontend node. If you need to run a command
+Here, **fe-open-01** is the name of the frontend node. If you need to run a command
 on a compute node that you started an interactive job on (more about this
 later), it will be shown like this:
 

@@ -32,16 +32,16 @@ for example:
 
 .. code-block:: console
 
-    [fe1]$ conda activate myproject
-    (myproject) [fe1]$ conda install -c bioconda gatk
-    (myproject) [fe1]$ wget 'https://software.broadinstitute.org/gatk/download/auth?package=GATK-archive&version=3.8-1-0-gf15c1c3ef' -O GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2
-    (myproject) [fe1]$ gatk3-register GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2
+    [fe-open-01]$ conda activate myproject
+    (myproject) [fe-open-01]$ conda install -c bioconda gatk
+    (myproject) [fe-open-01]$ wget 'https://software.broadinstitute.org/gatk/download/auth?package=GATK-archive&version=3.8-1-0-gf15c1c3ef' -O GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2
+    (myproject) [fe-open-01]$ gatk3-register GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2
 
 You can now call GATK with the :program:`gatk3` command:
 
 .. code-block:: console
 
-    (myproject) [fe1]$ gatk3 --help
+    (myproject) [fe-open-01]$ gatk3 --help
 
 
 Python
@@ -150,16 +150,16 @@ installed or install it into an environment yourself
 
 .. code-block:: console
 
-    [fe1]$ conda install -n my-project rstudio r
-    [fe1]$ conda activate my-project
-    (my-project) [fe1]$ rstudio
+    [fe-open-01]$ conda install -n my-project rstudio r
+    [fe-open-01]$ conda activate my-project
+    (my-project) [fe-open-01]$ rstudio
 
 To run an analysis or computations in RStudio you will need to run RStudio in
 an interactive job on a compute node.
 
 .. code-block:: console
 
-   [fe1]$ srun --mem=4g -c 1 --time=10:0:0 --pty bash
+   [fe-open-01]$ srun --mem=4g -c 1 --time=10:0:0 --pty bash
    srun: job 3597082 queued and waiting for resources
    srun: job 3597082 has been allocated resources
    [s03n11]$ conda activate my-project
@@ -192,7 +192,7 @@ To start just run:
 
 .. code-block:: console
 
-    [fe1]$ cpan App::cpanminus
+    [fe-open-01]$ cpan App::cpanminus
 
 :file:`CPAN.pm` requires configuration, but most of it can be done
 automatically. If you answer *no* below, you will enter an interactive dialog
@@ -246,7 +246,7 @@ with :program:`cpanm` command, for example:
 
 .. code-block:: console
 
-    [fe1]$ cpanm DBD::mysql
+    [fe-open-01]$ cpanm DBD::mysql
     --> Working on DBD::mysql
     Fetching http://www.cpan.org/authors/id/C/CA/CAPTTOFU/DBD-mysql-4.046.tar.gz ... OK
     Configuring DBD-mysql-4.046 ... OK
@@ -265,7 +265,7 @@ with :program:`cpanm` command, for example:
     Building and testing DBD-mysql-4.046 ... OK
     Successfully installed DBD-mysql-4.046
     3 distributions installed
-    [fe1]$ perldoc -l DBD::mysql
+    [fe-open-01]$ perldoc -l DBD::mysql
     /home/xjk/perl5/lib/perl5/x86_64-linux-thread-multi/DBD/mysql.pm
 
 TexLive/LaTeX
@@ -281,44 +281,44 @@ To install TinyTex with conda in a new environment:
 
 .. code-block:: console
 
-   [fe1]$ conda create <name of project> -c genomedk tinytex
+   [fe-open-01]$ conda create <name of project> -c genomedk tinytex
 
 or if you have an existing environment where you want TinyTex installed:
 
 .. code-block:: console
    
-   [fe1]$ conda activate <existing project>
-   [fe1]$ conda install -c genomedk tinytex
+   [fe-open-01]$ conda activate <existing project>
+   [fe-open-01]$ conda install -c genomedk tinytex
 
 Compiling documents is done using the normal TexLive commands, i.e.:
 
 .. code-block:: console
 
-   [fe1]$ pdflatex test.tex
+   [fe-open-01]$ pdflatex test.tex
 
 To install LaTeX packages from CTAN:
 
 .. code-block:: console
 
-   [fe1]$ tlmgr install <package>
+   [fe-open-01]$ tlmgr install <package>
 
 Example for installing some packages:
 
 .. code-block:: console
 
-   [fe1]$ tlmgr install txfonts enumitem titlesec newpx
+   [fe-open-01]$ tlmgr install txfonts enumitem titlesec newpx
 
 Search for packages using tlmgr:
 
 .. code-block:: console
 
-   [fe1]$ tlmgr search <package name>
+   [fe-open-01]$ tlmgr search <package name>
 
 Search for specific file inside package using tlmgr (example):
 
 .. code-block:: console
 
-   [fe1]$ tlmgr info t1xtt.tfm
+   [fe-open-01]$ tlmgr info t1xtt.tfm
    
 .. _`TinyTex`: https://yihui.org/tinytex/
 

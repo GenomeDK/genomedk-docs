@@ -151,8 +151,8 @@ run:
 
 .. code-block:: console
 
-    [fe1]$ conda activate
-    (base) [fe1]$ conda create -n myproject python=3.5
+    [fe-open-01]$ conda activate
+    (base) [fe-open-01]$ conda create -n myproject python=3.5
 
 If the first command doesn't work, you're running an old version of Anaconda.
 Please download and install a newer version.
@@ -162,14 +162,14 @@ To enter the environment, use this command:
 
 .. code-block:: console
 
-    [fe1]$ source activate myproject
-    (myproject) [fe1]$
+    [fe-open-01]$ source activate myproject
+    (myproject) [fe-open-01]$
 
 Now check that the environment has been activated correctly by starting Python:
 
 .. code-block:: console
 
-    [fe1]$ python
+    [fe-open-01]$ python
     Python 3.5.1 |Continuum Analytics, Inc.| (default, Dec 7 2015, 11:24:55)
     [GCC 4.2.1 (Apple Inc. build 5577)] on darwin
     Type "help", "copyright", "credits" or "license" for more information.
@@ -187,7 +187,7 @@ run this command:
 
 .. code-block:: console
 
-    [fe1]$ conda install numpy
+    [fe-open-01]$ conda install numpy
 
 This will install the latest version of the numpy package into the current
 environment (you may have to say yes to installing the packages). Now try to
@@ -203,21 +203,21 @@ environment for working with another project, run the command:
 
 .. code-block:: console
 
-    [fe1]$ source deactivate
+    [fe-open-01]$ source deactivate
 
 That's fine, but we still need a way to export an environment and its packages
 to other people. We can do this with:
 
 .. code-block:: console
 
-    (myproject) [fe1]$ conda env export > environment.yml
+    (myproject) [fe-open-01]$ conda env export > environment.yml
 
 Which allows other members of the project to recreate your exact environment:
 
 .. code-block:: console
 
-    [fe1]$ conda env create -f environment.yml
-    [fe1]$ conda activate myproject
+    [fe-open-01]$ conda env create -f environment.yml
+    [fe-open-01]$ conda activate myproject
 
 You may think that Anaconda only works for Python and Python packages, however,
 Anaconda actually works for any program that is available as an Anaconda package
@@ -229,7 +229,7 @@ popular libraries used with R. To get access to the R channel run:
 
 .. code-block:: console
 
-    [fe1]$ conda config --add channels r
+    [fe-open-01]$ conda config --add channels r
 
 Another great channel is the Bioconda channel which provides access to
 hundreds of packages related to bioinformatics such as BWA, samtools, BLAST
@@ -237,7 +237,7 @@ etc.:
 
 .. code-block:: console
 
-    [fe1]$ conda config --add channels bioconda
+    [fe-open-01]$ conda config --add channels bioconda
 
 However, all of this hardly improves reproducibility. However, Anaconda allows
 you to specify an environment (a list of channels and packages with specific
@@ -260,13 +260,13 @@ Now, for the sake of clarity, let's remove our existing myproject environment.
 
 .. code-block:: console
 
-    [fe1]$ conda env remove -n myproject
+    [fe-open-01]$ conda env remove -n myproject
 
 We can now create the exact environment specified in environment.yml by simply running:
 
 .. code-block:: console
 
-    [fe1]$ conda env create
+    [fe-open-01]$ conda env create
 
 As you work you may need to change your environment, e.g. update a package to a
 more recent version, add or remove a package. To do this, just modify the
@@ -274,7 +274,7 @@ environment.yml file and then run:
 
 .. code-block:: console
 
-    [fe1]$ conda env update --prune
+    [fe-open-01]$ conda env update --prune
 
 Sanity check for repeatability
 ==============================

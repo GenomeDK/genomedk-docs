@@ -24,7 +24,7 @@ To get an overview of the available partitions:
 
 .. code-block:: console
 
-    [fe1]$ gnodes
+    [fe-open-01]$ gnodes
 
 This will list each partition and all of the compute nodes assigned to each
 partition. The header of each partitions lists the available resources such as
@@ -71,7 +71,7 @@ To submit an interactive job:
 
 .. code-block:: console
 
-    [fe1]$ srun --pty /bin/bash
+    [fe-open-01]$ srun --pty /bin/bash
     srun: job 17129453 queued and waiting for resources
     srun: job 17129453 has been allocated resources
     [s03n73]$
@@ -85,11 +85,11 @@ memory that should be allocated:
 
 .. code-block:: console
 
-    [fe1]$ srun --mem=16g --pty /bin/bash
+    [fe-open-01]$ srun --mem=16g --pty /bin/bash
 
 When running a job you have access to the same filesystems as when running on
 the frontend. Thus, you can access your home folder and project folders with
-the same paths as on *fe1*.
+the same paths as on *fe-open-01*.
 
 When you're done with your interactive session on the node, it can be exited
 by running the ``exit`` command or pressing :kbd:`Control + D`.
@@ -97,7 +97,7 @@ by running the ``exit`` command or pressing :kbd:`Control + D`.
 .. code-block:: console
 
         [s03n73]$ exit
-        [fe1]$
+        [fe-open-01]$
 
 You'll now be back on the frontend.
 
@@ -159,9 +159,9 @@ and run:
 
 .. code-block:: console
 
-    [fe1]$ sbatch example.sh
+    [fe-open-01]$ sbatch example.sh
     Submitted batch job 17129500
-    [fe1]$
+    [fe-open-01]$
 
 Contrary to :command:`srun`, this command returns immediately, giving us a job
 id to identify our job.
@@ -173,20 +173,20 @@ To check the status of a job:
 
 .. code-block:: console
 
-    [fe1]$ jobinfo 17129500
+    [fe-open-01]$ jobinfo 17129500
 
 To check the status of all of your submitted jobs:
 
 .. code-block:: console
 
-    [fe1]$ squeue -u USERNAME
+    [fe-open-01]$ squeue -u USERNAME
 
 You can also omit the username flag to get an overview of all jobs that have
 been submitted to the queue:
 
 .. code-block:: console
 
-    [fe1]$ squeue
+    [fe-open-01]$ squeue
 
 Cancelling a job
 ----------------
@@ -195,7 +195,7 @@ Jobs can be cancelled using the :program:`scancel` command:
 
 .. code-block:: console
 
-    [fe1]$ scancel 17129500
+    [fe-open-01]$ scancel 17129500
 
 Checking job priorities
 -----------------------
@@ -206,7 +206,7 @@ queue:
 
 .. code-block:: console
 
-    [fe1]$ priority -a
+    [fe-open-01]$ priority -a
 
 
 Why is the partition I chose being ignored?
@@ -235,13 +235,13 @@ restrict your job to only the older generations:
 
 .. code-block:: console
 
-    [fe1]$ sbatch --constraint "gen1|gen2|gen3" ...
+    [fe-open-01]$ sbatch --constraint "gen1|gen2|gen3" ...
 
 This also works for ``srun``:
 
 .. code-block:: console
 
-    [fe1]$ srun --constraint "gen1|gen2|gen3" ...
+    [fe-open-01]$ srun --constraint "gen1|gen2|gen3" ...
 
 You can get a list of all of the features you can constrain by with the
 ``scontrol show node`` command. For example, to get the features associated
@@ -250,7 +250,7 @@ with the ``s03n11`` node:
 .. code-block:: console
     :emphasize-lines: 4
 
-    [fe1]$ scontrol show node s03n11
+    [fe-open-01]$ scontrol show node s03n11
     NodeName=s03n11 Arch=x86_64 CoresPerSocket=8
         CPUAlloc=9 CPUTot=16 CPULoad=9.94
         AvailableFeatures=gen1,s03
@@ -293,7 +293,7 @@ submit an interactive job that will use just one GPU:
 
 .. code-block:: console
 
-    [fe1]$ srun --gres=gpu:1 -p gpu --pty /bin/bash
+    [fe-open-01]$ srun --gres=gpu:1 -p gpu --pty /bin/bash
 
 
 Extra credit

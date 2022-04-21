@@ -243,7 +243,7 @@ You can use :program:`wget` to download data from the Internet to the cluster:
 
 .. code-block:: console
 
-    [fe1]$ wget -c --timeout=120 --waitretry=60 \
+    [fe-open-01]$ wget -c --timeout=120 --waitretry=60 \
         --tries=10000 --retry-connrefused URL
 
 Remember to replace ``URL`` with the thing you want to download.
@@ -254,7 +254,7 @@ output to a file:
 
 .. code-block:: console
 
-    [fe1]$ wget -c --progress=dot:giga --timeout=120 --waitretry=60 \
+    [fe-open-01]$ wget -c --progress=dot:giga --timeout=120 --waitretry=60 \
         --tries=10000 --retry-connrefused URL
 
 Editing files
@@ -280,13 +280,13 @@ running the command:
 
 .. code-block:: console
 
-    [fe1]$ man nano
+    [fe-open-01]$ man nano
 
 You can open :program:`nano` by running:
 
 .. code-block:: console
 
-    [fe1]$ nano name-of-file.txt
+    [fe-open-01]$ nano name-of-file.txt
 
 Likewise, `vim`_ and `emacs`_ are already installed on the cluster.
 Documentation for each editor can be found on their respective websites.
@@ -305,7 +305,7 @@ run:
 
 .. code-block:: console
 
-    [fe1]$ gedit
+    [fe-open-01]$ gedit
 
 This will open the :program:`Gedit` editor in a new window. Since the editor
 runs on the frontend, you have access to all of your files on the cluster.
@@ -323,7 +323,7 @@ Encrypt:
 
 .. code-block:: console
 
-    [fe1]$ openssl aes-256-cbc -a -salt -in data.txt -out data.txt.enc
+    [fe-open-01]$ openssl aes-256-cbc -a -salt -in data.txt -out data.txt.enc
 
 This will encrypt :file:`data.txt` and write the encrypted data to
 :file:`data.txt.enc`. You will be prompted for a password which is needed to
@@ -333,7 +333,7 @@ Decrypt:
 
 .. code-block:: console
 
-    [fe1]$ openssl aes-256-cbc -d -a -in data.txt.enc -out data.txt.new
+    [fe-open-01]$ openssl aes-256-cbc -d -a -in data.txt.enc -out data.txt.new
 
 This will ask for the password used to encrypt the file. The decrypted contents
 are written to :file:`data.txt.new`.
@@ -346,7 +346,7 @@ Put the data in a separate folder and run:
 
 .. code-block:: console
 
-    [fe1]$ chmod -R a-w <folder name>
+    [fe-open-01]$ chmod -R a-w <folder name>
 
 Now you can't change, add or remove files in that folder or any of its
 subfolders.

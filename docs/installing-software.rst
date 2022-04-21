@@ -35,10 +35,10 @@ installer:
 
 .. code-block:: console
 
-   [fe1]$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-   [fe1]$ chmod +x miniconda.sh
-   [fe1]$ bash miniconda.sh -b
-   [fe1]$ ./miniconda3/bin/conda init bash
+   [fe-open-01]$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+   [fe-open-01]$ chmod +x miniconda.sh
+   [fe-open-01]$ bash miniconda.sh -b
+   [fe-open-01]$ ./miniconda3/bin/conda init bash
 
 That's it! The last two step makes sure that Conda will be available when you
 log in, so now is a good time to open a new connection and check that Conda is
@@ -55,10 +55,10 @@ are commonly used in bioinformatics:
 
 .. code-block:: console
 
-    [fe1]$ conda config --add channels defaults
-    [fe1]$ conda config --add channels bioconda
-    [fe1]$ conda config --add channels conda-forge
-    [fe1]$ conda config --add channels genomedk
+    [fe-open-01]$ conda config --add channels defaults
+    [fe-open-01]$ conda config --add channels bioconda
+    [fe-open-01]$ conda config --add channels conda-forge
+    [fe-open-01]$ conda config --add channels genomedk
 
 Conda creates a ``base`` environment which contains Conda itself. It's tempting
 to install packages in ``base``, but that might ruin your Conda installation.
@@ -70,7 +70,7 @@ in:
 
 .. code-block:: console
 
-    [fe1]$ conda config --set auto_activate_base false
+    [fe-open-01]$ conda config --set auto_activate_base false
 
 Searching for packages
 ======================
@@ -80,7 +80,7 @@ using the :command:`conda search` command:
 
 .. code-block:: console
 
-    [fe1]$ conda search rstudio
+    [fe-open-01]$ conda search rstudio
 
 Remember that the Conda package may not be called the exact official name of
 the software. For example, the Conda package for the software *biobambam2* is
@@ -95,8 +95,8 @@ When you just installed Conda, it comes with a single environment known as the
 
 .. code-block:: console
 
-    [fe1]$ conda activate
-    (base) [fe1]$
+    [fe-open-01]$ conda activate
+    (base) [fe-open-01]$
 
 You now have access to the software installed in the base environment.
 
@@ -112,8 +112,8 @@ environment, the environment needs to be activated first:
 
 .. code-block:: console
 
-    [fe1]$ conda activate amazing-project
-    (amazing-project) [fe1]$ python -c 'import pysam; print(pysam.__version__)'
+    [fe-open-01]$ conda activate amazing-project
+    (amazing-project) [fe-open-01]$ python -c 'import pysam; print(pysam.__version__)'
     0.6.0
 
 Notice that the prompt changed to show you that you're now in the
@@ -131,19 +131,19 @@ To install software in the currenctly activated environment:
 
 .. code-block:: console
 
-    (amazing-project) [fe1]$ conda install PACKAGE-NAME
+    (amazing-project) [fe-open-01]$ conda install PACKAGE-NAME
 
 To remove a software package from the currently activated environment:
 
 .. code-block:: console
 
-    (amazing-project) [fe1]$ conda remove PACKAGE-NAME
+    (amazing-project) [fe-open-01]$ conda remove PACKAGE-NAME
 
 To update a software package in the currently activated environment:
 
 .. code-block:: console
 
-    (amazing-project) [fe1]$ conda update PACKAGE-NAME
+    (amazing-project) [fe-open-01]$ conda update PACKAGE-NAME
 
 Since Conda knows about the entire environment you created, it can tell you
 exactly which packages are used in the environment. This is very useful for
@@ -154,7 +154,7 @@ To export your environment so that others can recreate it:
 
 .. code-block:: console
 
-    (amazing-project) [fe1]$ conda env export > environment.yml
+    (amazing-project) [fe-open-01]$ conda env export > environment.yml
 
 The :file:`environment.yml` file contains an exact specification of your
 environment and the packages installed. You can put this in your shared project
@@ -162,7 +162,7 @@ folder. Others will then be able to recreate your environment by running:
 
 .. code-block:: console
 
-    [fe1]$ conda env create -f environment.yml
+    [fe-open-01]$ conda env create -f environment.yml
 
 You can read more about using environments for projects
 :ref:`here <project_specific_environments>`. There's also also a `cheat sheet`_
@@ -188,6 +188,31 @@ I'm part of a project that dictates the software I should use
 .. _Conda: https://conda.io/docs/
 .. _Anaconda: https://www.anaconda.com/download/
 .. _cheat sheet: http://know.continuum.io/rs/387-XNW-688/images/conda-cheatsheet.pdf
+
+Mamba - a Conda alternative
+===========================
+
+Conda can take an extremely long time solve dependencies and sometimes Conda
+may never finish solving dependencies - this is where Mamba - the drop-in 
+replacement for Conda comes in.
+
+From the project description:
+
+  Mamba is a reimplementation of the conda package manager in C++.
+  
+  - parallel downloading of repository data and package files using
+    multi-threading
+  - libsolv for much faster dependency solving, a state of the art library 
+    used in the RPM package manager of Red Hat, Fedora and OpenSUSE
+  - core parts of mamba are implemented in C++ for maximum efficiency
+
+.. _Mamba: https://github.com/mamba-org/mamba
+
+It can be installed via Conda:
+
+.. code-block:: console
+
+   [fe-open-01]$ conda install mamba -n base -c conda-forge
 
 
 Using graphical interfaces
@@ -217,7 +242,7 @@ You should then be able to open e.g. Firefox on the frontend:
 
 .. code-block:: console
 
-    [fe1]$ firefox
+    [fe-open-01]$ firefox
 
 Since macOS does not include an X server, you will need to download and install
 XQuartz_ on your computer. When installed, reboot the computer. Now, you just
@@ -232,7 +257,7 @@ You should then be able to open e.g. Firefox on the frontend:
 
 .. code-block:: console
 
-    [fe1]$ firefox
+    [fe-open-01]$ firefox
 
 On Windows, we recommend that you use MobaXterm_ which has an integrated X
 server.
@@ -266,7 +291,7 @@ Starting the server is done with the ``vncserver`` command and looks like this:
 
     Creating default startup script /home/user/.vnc/xstartup
     Starting applications specified in /home/user/.vnc/xstartup
-    Log file is /home/user/.vnc/fe1.genomedk.net:3.log
+    Log file is /home/user/.vnc/fe-open-01.genomedk.net:3.log
 
 The display id (``:3`` in this example) is needed when you want to connect
 the VNC client.

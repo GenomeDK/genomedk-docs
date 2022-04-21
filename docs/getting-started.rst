@@ -104,7 +104,7 @@ logging in. Run the command:
 
 .. code-block:: console
 
-    [fe1]$ change-password
+    [fe-open-01]$ change-password
 
 It will ask you for your current password, then ask what your new password
 should be. Finally, it will ask you to confirm your new password by typing it
@@ -200,14 +200,14 @@ same :command:`ssh-keygen` command as before:
 
 .. code-block:: console
 
-    [fe1]$ ssh-keygen
+    [fe-open-01]$ ssh-keygen
 
 Again, just press :kbd:`Enter` to use the default values (and do not type in a
 password). Then run:
 
 .. code-block:: console
 
-    [fe1]$ cat ~/.ssh/id_rsa.pub >> authorized_keys
+    [fe-open-01]$ cat ~/.ssh/id_rsa.pub >> authorized_keys
 
 You will now be able to SSH between compute nodes without typing a password.
 

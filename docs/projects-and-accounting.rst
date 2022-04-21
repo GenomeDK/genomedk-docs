@@ -15,7 +15,7 @@ Run the following command to request a new project folder:
 
 .. code-block:: console
 
-    [fe1]$ gm-request-project -g <project name>
+    [fe-open-01]$ gm-request-project -g <project name>
 
 where **project name** is the desired name of the new project.
 
@@ -58,13 +58,13 @@ To get help for any of the commands, run the command without any parameters.
 
     .. code-block:: console
 
-        [fe1]$ finger <name, username or mail>
+        [fe-open-01]$ finger <name, username or mail>
 
     For example, to find all users with "anders" in their name:
 
     .. code-block:: console
 
-        [fe1]$ finger anders
+        [fe-open-01]$ finger anders
         aeh             Anders Egerup Halager <aeh@birc.au.dk>
         anders          Anders Boerglum <anders@biomed.au.dk>
         ...
@@ -85,7 +85,7 @@ To submit a job with an account:
 
 .. code-block:: console
 
-    [fe1]$ sbatch --account <project name> ...
+    [fe-open-01]$ sbatch --account <project name> ...
 
 Or in *gwf*:
 
@@ -124,7 +124,7 @@ execute the file with this command:
 
 .. code-block:: console
 
-    [fe1]$ chmod go-rwx <files>
+    [fe-open-01]$ chmod go-rwx <files>
 
 The :command:`chmod` command changes file permissions. The first parameter
 specifies that groups (g) and others (o) should have their read (r), write (w),
