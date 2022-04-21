@@ -196,7 +196,7 @@ Conda can take an extremely long time solve dependencies and sometimes Conda
 may never finish solving dependencies - this is where Mamba - the drop-in 
 replacement for Conda comes in.
 
-From the project description:
+From the `Mamba`_ project description:
 
   Mamba is a reimplementation of the conda package manager in C++.
   
@@ -206,14 +206,14 @@ From the project description:
     used in the RPM package manager of Red Hat, Fedora and OpenSUSE
   - core parts of mamba are implemented in C++ for maximum efficiency
 
-.. _Mamba: https://github.com/mamba-org/mamba
-
 It can be installed via Conda:
 
 .. code-block:: console
 
    [fe-open-01]$ conda install mamba -n base -c conda-forge
 
+
+.. _Mamba: https://github.com/mamba-org/mamba
 
 Using graphical interfaces
 ==========================
