@@ -230,46 +230,49 @@ While the compute nodes are almost identical, there are small differences
 such as CPU architecture. If your code depends on specific CPU features you
 must restrict your jobs to compute nodes supporting those features.
 
-For example, our 4th generation nodes do not support AVX2 instructions. To
-restrict your job to only the older generations:
+For example, our 4th generation nodes do not support AVX512 instructions. To
+restrict your job to only the s05 (gen3) nodes that do support it:
 
 .. code-block:: console
 
-    [fe-open-01]$ sbatch --constraint "gen1|gen2|gen3" ...
+    [fe-open-01]$ sbatch --constraint "gen3" ...
 
 This also works for ``srun``:
 
 .. code-block:: console
 
-    [fe-open-01]$ srun --constraint "gen1|gen2|gen3" ...
+    [fe-open-01]$ srun --constraint "gen3" ...
 
 You can get a list of all of the features you can constrain by with the
 ``scontrol show node`` command. For example, to get the features associated
-with the ``s03n11`` node:
+with the ``s21n21`` node:
 
 .. code-block:: console
     :emphasize-lines: 4
 
-    [fe-open-01]$ scontrol show node s03n11
-    NodeName=s03n11 Arch=x86_64 CoresPerSocket=8
-        CPUAlloc=9 CPUTot=16 CPULoad=9.94
-        AvailableFeatures=gen1,s03
-        ActiveFeatures=gen1,s03
+    [fe-open-01]$ scontrol show node s21n21
+    NodeName=s21n21 CoresPerSocket=32
+        CPUAlloc=0 CPUTot=64 CPULoad=N/A
+        AvailableFeatures=gen4,s21,512g
+        ActiveFeatures=gen4,s21,512g
         Gres=(null)
-        NodeAddr=s03n11 NodeHostName=s03n11 Version=20.02.3
-        OS=Linux 3.10.0-1062.1.1.el7.x86_64 #1 SMP Fri Sep 13 22:55:44 UTC 2019
-        RealMemory=131072 AllocMem=9216 FreeMem=63976 Sockets=2 Boards=1
-        State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=igrove(6490) MCS_label=N/A
+        NodeAddr=s21n21 NodeHostName=s21n21
+        RealMemory=515538 AllocMem=0 FreeMem=N/A Sockets=2 Boards=1
+        State=AVAILABLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
         Partitions=short
-        BootTime=2020-06-25T09:30:05 SlurmdStartTime=2020-07-15T14:40:42
-        CfgTRES=cpu=16,mem=128G,billing=16
-        AllocTRES=cpu=9,mem=9G
+        BootTime=None SlurmdStartTime=None
+        LastBusyTime=2022-05-02T13:01:48
+        CfgTRES=cpu=64,mem=515538M,billing=64
+        AllocTRES=
         CapWatts=n/a
         CurrentWatts=0 AveWatts=0
         ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
 
 Looking at the line that starts with ``AvailableFeatures`` we see that the node
-has the *gen1* and *s03* features associated to it.
+has the *gen4* and *s21* features associated to it.
+
+The `slurm documentation`_ has more info on how to ask for
+multiple features etc.
 
 .. _gpu_nodes:
 
@@ -306,6 +309,7 @@ to write entire pipelines consisting of thousands of separate jobs and submit
 those jobs to Slurm without writing job scripts.
 
 .. _Slurm: https://slurm.schedmd.com/
+.. _slurm documentation: https://slurm.schedmd.com/sbatch.html#OPT_constraint
 .. _Bash: https://www.gnu.org/software/bash/manual/bash.html
 .. _gwf: https://docs.gwf.app/en/latest/
 .. _snakemake: https://snakemake.readthedocs.io/
