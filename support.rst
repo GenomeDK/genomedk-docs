@@ -8,6 +8,7 @@ Support
 Please direct any question and problem you encounter to:
 
 * Mail: support@genome.au.dk
+* Phone: +45 93 52 26 33 (only open during normal office hours)
 * Office:
 
   | University City

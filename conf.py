@@ -16,7 +16,7 @@ master_doc = "index"
 
 project = "GenomeDK"
 copyright = "2018, The GenomeDK Team"
-author = "Anders Halager \\and Jaroslaw Kalinowski \\and Dan Søndergaard"
+author = "The GenomeDK Team"
 
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 pygments_style = "friendly"
@@ -26,7 +26,7 @@ pygments_style = "friendly"
 html_theme = "au"
 html_theme_options = {
     "sitename": "GenomeDK",
-    "phone": "Not currently available",
+    "phone": "+45 93 52 26 33",
     "email": "support@genome.au.dk",
     "show_breadcrumb": "no",
 }
