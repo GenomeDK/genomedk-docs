@@ -1,4 +1,6 @@
 
+.. _projects:
+
 =======================
 Projects and accounting
 =======================
