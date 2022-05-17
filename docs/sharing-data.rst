@@ -8,6 +8,10 @@ Inside GenomeDK, data is shared through :ref:`project folders <projects>`, but
 sometimes you need to share data with collaborators or services that do not have
 access to GenomeDK. You can do this with **data shares**.
 
+.. admonition:: Closed zone...
+
+    Data shares, of course, do not work in closed zones.
+
 Creating a share
 ================
 
