@@ -22,9 +22,9 @@ Creating a share is easy, just run:
     [fe-open-01]$ gdk-share-create
     wiKdTt3oFek 	 /faststorage/share/wiKdTt3oFek.tmp
 
-As you can see, the command outputs two things: an identifier, which uniquely
-identifies your share, and a path on the filesystem. You can now copy the data
-that you wish to share to the outputted path. For example:
+The command outputs two things: an identifier, which uniquely identifies your
+share, and a path on the filesystem. You can now copy the data that you wish to
+share to the outputted path. For example:
 
 .. code-block:: console
 
@@ -32,7 +32,7 @@ that you wish to share to the outputted path. For example:
 
 In this example we copy the file ``mydata.tar.gz`` to the share.
 
-You can of course inspect the share with ``ls``.
+You can inspect the share with ``ls``.
 
 .. code-block:: console
 
@@ -40,8 +40,8 @@ You can of course inspect the share with ``ls``.
     total 42
     -rw-rw-r-- 1 das das 42 2022-05-17 10:21 mydata.tar.gz
 
-When you have copied all of the files you wish to share to the share, it's time
-to publish it.
+When you have copied all of the files you wish to share to the share folder,
+it's time to publish it.
 
 Publishing a share
 ==================
@@ -81,6 +81,8 @@ your share to another HPC system, it is easier to use :program:`wget`:
 .. code-block:: console
 
     $ wget --mirror --no-parent --no-host-directories https://share.genome.au.dk/JTTwInSMXqU
+
+This will download all files in the share.
 
 Listing shares
 ==============
