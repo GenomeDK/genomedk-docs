@@ -104,7 +104,7 @@ in the previous step.
 
     [me@node ~]$ echo $UID
     1234
-    [me@node ~]$ echo $HOSTNAME
+    [me@node ~]$ hostname -s
     node
     [me@node ~]$ echo $USER
     me
