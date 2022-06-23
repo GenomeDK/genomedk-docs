@@ -28,15 +28,10 @@ Get access to the cluster
 
 You should check out our :ref:`terms`.
 
-We have several types of users. In most cases you'll want a normal user. To
-request this, `fill out the form for normal users <https://genomedk.wufoo.com/forms/request-access-to-cluster/>`_.
+To request a user, fill out the `user request form <https://console.genome.au.dk/user-requests/create/>`_.
 
-If you need a special user, e.g. for the iPSYCH part of the cluster,
-`fill out the form for special users <https://genomedk.wufoo.com/forms/request-access-to-cluster-ipsych-only/>`_
-instead.
-
-Once you've been granted access, you'll receive an e-mail with your password.
-You'll then be able to connect to the cluster.
+Once you've been granted access, you'll receive an e-mail. You'll then be able
+to connect to the cluster.
 
 .. _connecting_to_the_cluster:
 
