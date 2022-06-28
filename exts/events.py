@@ -115,6 +115,20 @@ class EventDirective(SphinxDirective):
 
         self.state.nested_parse(self.content, self.content_offset, event_node)
 
+        if actualend is None:
+            actualend = end
+        import json
+        print(self.content)
+        with open("downtimes.json", "a+") as file_obj:
+            json.dump({
+                "name": title,
+                "start_time": start.isoformat(),
+                "end_time": end.isoformat(),
+                "actual_end": actualend.isoformat(),
+                "description": '\n'.join(self.content).strip(),
+            }, file_obj)
+            file_obj.write("\n")
+
         lnk = eventlink()
         lnk['title'] = title
         lnk['uid'] = uid
@@ -216,6 +230,6 @@ def setup(app):
     app.connect('env-purge-doc', purge_events)
     return {
         'version': '1.0',
-        'parallel_read_safe': True,
-        'parallel_write_safe': True
+        'parallel_read_safe': False,
+        'parallel_write_safe': False
     }

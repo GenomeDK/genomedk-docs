@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath("exts"))
 
 # -- General configuration ------------------------------------------------
 
-extensions = ["events", "kill_html_js"]
+extensions = ["kill_html_js"]
 templates_path = ["_templates"]
 source_suffix = ".rst"
 master_doc = "index"

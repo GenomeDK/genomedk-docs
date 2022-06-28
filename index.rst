@@ -2,10 +2,6 @@
 Welcome to GenomeDK!
 ====================
 
-.. eventlist::
-    :status: ongoing
-    :quiet:
-
 .. container:: lead
 
   GenomeDK is a national high-performance computing facility for bioinformatics
@@ -93,7 +89,7 @@ directly from GenomeDK.
   governance
   publications
   technical
-  system-status
+  System status <https://console.genome.au.dk/status>
   terms
 
 .. toctree::
