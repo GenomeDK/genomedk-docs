@@ -6,12 +6,12 @@
 Newsletter, summer 2022
 =======================
 
-Hello!
+Hello everybody,
 
 Summer is upon us and so it is time for yet another newsletter from your
 favourite HPC facility.
 
-The past 12 months there's been submitted 15.7 mio. jobs that used a total of 30
+The past 12 months you all submitted 15.7 mio. jobs that used a total of 30
 mio. billing hours. At the moment we have 625 active users.
 
 Anders and Dan
@@ -39,7 +39,7 @@ News
   a password in cleartext to new users by mail.
 
 * There's a new `status page <https://console.genome.au.dk/status/>`_ which
-  makes it easy to see if there are any service interruptions or planned
+  makes it easy to see if there are any major service interruptions or planned
   downtimes.
 
 Hardware
