@@ -32,6 +32,3 @@ System management
 
 | Dan Søndergaard
 | Email: das (at) genome.au.dk
-
-| Rasmus Edgar Fink Jørgensen
-| Email: ref (at) genome.au.dk
