@@ -33,6 +33,18 @@ To request a user, fill out the `user request form <https://console.genome.au.dk
 Once you've been granted access, you'll receive an e-mail. You'll then be able
 to connect to the cluster.
 
+Cite us!
+========
+
+We provide GenomeDK as a resource to research. If you publish results from
+computations performed on GenomeDK, it is important that you acknowledge/cite
+GenomeDK in your publications. We recommend phrasing it like this:
+
+  *Some/all of the computing for this project was performed on the GenomeDK
+  cluster. We would like to thank GenomeDK and Aarhus University for providing
+  computational resources and support that contributed to these research
+  results.*
+
 .. _connecting_to_the_cluster:
 
 Connecting to the cluster
