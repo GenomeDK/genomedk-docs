@@ -1,12 +1,12 @@
-====================
-Welcome to GenomeDK!
-====================
+========================================================
+GenomeDK, a national high-performance computing facility
+========================================================
 
 .. container:: lead
 
-  GenomeDK is a national high-performance computing facility for bioinformatics
-  and life sciences managed by the Aarhus Genome Data Center, located at
-  Aarhus University, Denmark.
+  managed by the Aarhus Genome Data Center, located at Aarhus University,
+  Denmark. GenomeDK is for any field of research, but with a focus on
+  bioinformatics and the life sciences.
 
 ---
 
@@ -19,12 +19,12 @@ We know that you're busy so here are some shortcuts:
 Give me the numbers
 ===================
 
-GenomeDK comprises 185 nodes (6568 cores) connected with Infiniband. Each
-node has from 16 to 64 cores and either 128 GB, 256 GB, 384 GB or 512 GB
-of RAM for a total of 56 TB of memory.
+GenomeDK comprises 84 nodes (4380 cores) connected with Infiniband. Each
+node has from 36 to 64 cores and either 384 GB or 512 GB of RAM for a total of
+40 TB of memory.
 
-The cluster has been designed specifically for bioinformatic workloads and has
-a storage capacity of 12 PB. Do you want to know :ref:`more <technical>`?
+GenomeDK has a fast storage system with a total capacity of 12 PB. Do you want
+to know :ref:`more <technical>`?
 
 Where do I start?
 =================
