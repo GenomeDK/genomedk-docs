@@ -99,8 +99,8 @@ easier to clean up.
 
   sharing-data
 
-Sometimes you need to share files with collaborators or services that do not 
-have access to GenomeDK. This section describes how to do so with our 
+Sometimes you need to share files with collaborators or services that do not
+have access to GenomeDK. This section describes how to do so with our
 data shares.
 
 .. toctree::
@@ -115,10 +115,3 @@ with specific pieces of software that are commonly used.
   :maxdepth: 1
 
   software-specific
-
-Finally, here's an overview of the commands used in this documentation.
-
-.. toctree::
-  :maxdepth: 1
-
-  command-reference

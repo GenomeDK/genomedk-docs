@@ -7,6 +7,27 @@ Projects and accounting
 
 .. _collaborating:
 
+Listing projects
+================
+
+You can list all of the projects you're a member of with:
+
+.. code-block:: console
+
+    [fe-open-01]$ gdk-project-list
+
+You can also list all projects owned by you:
+
+.. code-block:: console
+
+    [fe-open-01]$ gdk-project-list -f owner
+
+Or just list all projects:
+
+.. code-block:: console
+
+    [fe-open-01]$ gdk-project-list -f all
+
 Requesting a project
 ====================
 
@@ -17,7 +38,7 @@ Run the following command to request a new project folder:
 
 .. code-block:: console
 
-    [fe-open-01]$ gm-request-project -g <project name>
+    [fe-open-01]$ gdk-project-request -g <project name>
 
 where **project name** is the desired name of the new project.
 
@@ -38,18 +59,17 @@ Managing a project
 Project owners and project members with administrative rights can manage their
 own projects through the following commands:
 
-:command:`gm-add-user -g <project name> -u <username>`
+:command:`gdk-project-add-user -g <project name> -u <username>`
     Add a user to a project.
-:command:`gm-remove-user  -g <project name> -u <username>`
+:command:`gdk-project-remove-user  -g <project name> -u <username>`
     Remove a user from a project.
-:command:`gm-grant-admin-rights-to-user -g <project name> -u <username>`
+:command:`gdk-project-promote-user -g <project name> -u <username>`
     Grant administrative rights to a user in a project.
-:command:`gm-revoke-admin-rights-from-user -g <project name> -u <username>`
+:command:`gdk-project-demote-user -g <project name> -u <username>`
     Revoke a users' administrative rights to a project.
-:command:`gm-list-admins <project name>`
-    List all members of a project with administrative rights.
-:command:`gm-list-members <project name>`
-    List all members of a project.
+:command:`gdk-project-show <project name>`
+    List various information about the project, e.g. who the current project
+    owner is, when the project was created, etc.
 
 To get help for any of the commands, run the command without any parameters.
 
@@ -88,6 +108,12 @@ To submit a job with an account:
 .. code-block:: console
 
     [fe-open-01]$ sbatch --account <project name> ...
+
+Or an interactive job:
+
+.. code-block:: console
+
+    [fe-open-01]$ srun --account <project name> --pty bash
 
 Or in *gwf*:
 
