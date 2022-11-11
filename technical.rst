@@ -10,15 +10,10 @@ Technical
     +---------------+--------+-------------------------------------------------------+
     | Nodes / cores | Prefix | Description                                           |
     +===============+========+=======================================================+
-    | 50 / 3200     | s21,   | -  2x AMD/"EPYC Rome" 7452 CPUs @                     |
+    | 52 / 3228     | s21,   | -  2x AMD/"EPYC Rome" 7452 CPUs @                     |
     |               | s22    |    2.35 GHz, 32 cores/CPU                             |
     |               |        | -  512 GB memory                                      |
     |               |        | -  Infiniband EDR                                     |
-    +---------------+--------+-------------------------------------------------------+
-    | 32 / 816      | s04    | -  2x Intel/"Haswell" E5-2680v3                       |
-    |               |        |    CPUs @ 2.5 Ghz, 12 cores/CPU                       |
-    |               |        | -  256 GB memory                                      |
-    |               |        | -  Infiniband FDR                                     |
     +---------------+--------+-------------------------------------------------------+
     | 30 / 1080     | s05    | -  2x Intel/"Skylake" Gold 6140                       |
     |               |        |    CPU @ 2.30GHz, 18 cores/CPU                        |
@@ -50,7 +45,8 @@ can reach an aggregated read/write performance of more than 35GB/s.
 Backup
 ======
 
-Backup is made to an offsite disk based solution on a weekly basis. Read more here: :ref:`Working with Data <working_with_data>`.
+Backup is made to an offsite disk based solution on a weekly basis. Read more
+here: :ref:`Working with Data <working_with_data>`.
 
 Power
 =====
