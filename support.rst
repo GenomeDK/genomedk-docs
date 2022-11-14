@@ -12,23 +12,20 @@ Please direct any question and problem you encounter to:
 * Office:
 
   | University City
-  | Building 1872
-  | Office 359
+  | Universitetsbyen 81, 8000 Aarhus C
+  | Building 1872, office 359
 
-You are welcome to come by our office. It may be most practical for you to
-agree on a time first via mail.
+You are welcome to come by our office. It may be most practical for you arrange
+a time first via mail.
 
 We also greatly appreciate your feedback on the documentation itself, so please
-let us know if you have any suggestions for improvements to the documentation.
+let us know if you have any suggestions for improvements.
 
 Staff
 =====
 
-System management
------------------
+| Anders Egerup Halager, senior consultant
+| Email: aeh@genome.au.dk
 
-| Anders Egerup Halager
-| Email: aeh (at) genome.au.dk
-
-| Dan Søndergaard
-| Email: das (at) genome.au.dk
+| Dan Søndergaard, senior consultant
+| Email: das@genome.au.dk
