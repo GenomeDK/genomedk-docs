@@ -32,6 +32,8 @@ queries = [
     ("Ebbe S Andersen", 2014),
     ("Kasper Munch", 2012),
     ("Torben Asp", 2014),
+    ("Philip Francis Thomsen", 2021),
+    ("Mads Reinholdt Jensen", 2021),
 ]
 
 blacklist = [
@@ -45,6 +47,14 @@ blacklist = [
     "10.1007/s00167-014-3149-4",
     "10.2106/jbjs.cc.n.00101",
     "10.1038/nature11539",
+]
+
+manually_reported_dois = [
+    "10.1002/edn3.340",
+    "10.1111/1755-0998.13293",
+    "10.1002/edn3.193",
+    "10.3389/fmars.2022.824100",
+    "10.1002/edn3.285",
 ]
 
 
@@ -83,7 +93,7 @@ def search(query):
     return data["resultList"]["result"]
 
 
-@disk_cache(filename="_publications-cache.json")
+@disk_cache(filename="citations-cache.json")
 def formatted_citation(doi, style="apa"):
     """Retrieve formatted citation from doi.org."""
     response = http.request(
@@ -92,106 +102,64 @@ def formatted_citation(doi, style="apa"):
         headers={"Accept": "text/x-bibliography; style={}".format(style),},
     )
     if response.status != 200:
-        return None
+        raise Exception("Could not get formatted citation")
     tmp = response.data.decode("utf-8").strip().replace("\n", "")
     return " ".join(tmp.split())
 
 
-def read_index():
-    try:
-        with open(INDEX_FILENAME) as index_file:
-            return set(line.strip() for line in index_file)
-    except FileNotFoundError:
-        return set()
-
-
-def write_index(index):
-    with open(INDEX_FILENAME, "w") as index_file:
-        for doi in index:
-            print(doi, file=index_file)
-
-
-def diff_index(old, new):
-    if not old.issubset(new):
-        print("Some publications that were previously included have disappeared")
-    return new.difference(old)
+@disk_cache(filename="publications-cache.json")
+def lookup_publication(doi):
+    response = http.request(
+        "GET",
+        "https://api.crossref.org/works/{}".format(doi),
+        headers={"Accept": "application/json"}
+    )
+    if response.status != 200:
+        raise Exception("Could not look up metadata")
+    return json.loads(response.data.decode("utf-8"))["message"]
 
 
 def main():
-    index = read_index()
+    dois = set(manually_reported_dois)
 
-    total_citations = 0
-
-    publications = []
-    citations = []
-    seen_ids = set()
     for author, publications_since in queries:
         for publication in search(author):
+            doi = publication.get("doi")
+            if doi is None or doi in dois:
+                continue
+
+            if publication["doi"] in blacklist:
+                continue
+
             year = int(publication["pubYear"])
             if year < publications_since:
                 continue
-            if publication["id"] in seen_ids:
-                continue
-            if "doi" not in publication:
-                continue
-            if publication["doi"] in blacklist:
-                continue
-            publications.append(publication)
-            seen_ids.add(publication["id"])
 
-            citations.append(formatted_citation(publication["doi"]))
+            dois.add(doi)
 
-    combined = [
-        (pub, cit) for pub, cit in zip(publications, citations) if cit is not None
-    ]
-    new_index = set(pub["doi"] for pub, _ in combined)
+    publications = []
+    for doi in dois:
+        try:
+            citation = formatted_citation(doi)
+            metadata = lookup_publication(doi)
+            published_date = tuple(metadata["published"]["date-parts"][0])
+            publications.append((published_date, doi, citation))
+        except Exception as exc:
+            print("Skipped publication {}: {}".format(doi, exc))
+            continue
 
-    diff = diff_index(index, new_index)
-    if not diff:
-        print("No new publications found")
-    else:
-        print("The following publications were added:")
-        for doi in diff:
-            print("{}".format(doi))
-
-    from collections import Counter
-
-    c = Counter()
-    j = Counter()
-
-    print(len(combined))
     last_updated = date.today()
     with open("_publications.rst", "w") as fileobj:
         print(
             "*{} publications listed, last updated on {}*. Sorted by first publication date.".format(
-                len(combined), last_updated
+                len(publications), last_updated
             ),
             file=fileobj,
         )
+
         print(file=fileobj)
-        for publication, citation in sorted(
-            combined, key=lambda p: p[0]["firstPublicationDate"], reverse=True
-        ):
-            total_citations += publication["citedByCount"]
-            j[publication.get("journalTitle")] += 1
-            c[publication["citedByCount"]] += 1
-
+        for _, _, citation in sorted(publications, key=lambda p: p[0], reverse=True):
             print("* {}".format(citation), file=fileobj)
-
-            print("(DO={})".format(publication["doi"]), end=" OR ")
-            # if publication.get('journalTitle') is None:
-            #    print(citation)
-
-    write_index(new_index)
-
-    print("Total citations: {}".format(total_citations))
-    # for i, x in sorted(c.items(), key=lambda k: k[1]):
-    #    print(i, x)
-
-    for i, x in sorted(j.items(), key=lambda k: k[1]):
-        if x > 1:
-            print(i, x)
-
 
 if __name__ == "__main__":
     main()
