@@ -17,6 +17,7 @@ some possible topics for a workshop:
 Previous workshops
 ==================
 
+* December 1, 2022, 13:00-15:30, "GenomeDK basics", "Managing software with Conda", Department of Clinical Biochemistry, Aarhus University.
 * April 21, 2022, 13:00-15:00, "Project organization", "Managing software with Conda", "Overview of gwf", Department of Molecular Biology, Aarhus University.
 * April 7, 2022, 13:00-14:00, "Questions on various topics", Department of Molecular Biology, Aarhus University.
 * March 10, 2022, 09:00-10:00, 5-minute presentation about GenomeDK at 1st meeting of the single-cell omics focus group, Aarhus University.
