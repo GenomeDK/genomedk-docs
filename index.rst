@@ -4,10 +4,9 @@ GenomeDK, a national high-performance computing facility
 
 .. container:: lead
 
-  managed by the Aarhus Genome Data Center at Aarhus University.
-
-  GenomeDK is for any field of research, but with a strong track record in
-  bioinformatics and the life sciences.
+  managed by the Aarhus Genome Data Center at Aarhus University. GenomeDK is for
+  any field of research, but with a strong track record in bioinformatics and
+  the life sciences.
 
   GenomeDK is ISO 27001-certified and receives yearly ISAE-3000 declarations
   with a focus on GDPR.
