@@ -4,17 +4,13 @@ GenomeDK, a national high-performance computing facility
 
 .. container:: lead
 
-  managed by the Aarhus Genome Data Center, located at Aarhus University,
-  Denmark. GenomeDK is for any field of research, but with a focus on
+  managed by the Aarhus Genome Data Center at Aarhus University.
+
+  GenomeDK is for any field of research, but with a strong track record in
   bioinformatics and the life sciences.
 
----
-
-We know that you're busy so here are some shortcuts:
-
-* :ref:`Request an account <request_access>`
-* :ref:`Get started <connecting_to_the_cluster>` using the cluster
-* :ref:`Contact us <contact>` if you need help
+  GenomeDK is ISO 27001-certified and receives yearly ISAE-3000 declarations
+  with a focus on GDPR.
 
 Give me the numbers
 ===================
@@ -25,17 +21,6 @@ node has from 36 to 64 cores and either 384 GB or 512 GB of RAM for a total of
 
 GenomeDK has a fast storage system with a total capacity of 12 PB. Do you want
 to know :ref:`more <technical>`?
-
-Where do I start?
-=================
-
-If you're new to GenomeDK, please read through the :ref:`documentation <docs>`.
-This will help do common things like handling data, submitting jobs and
-installing software, as well as how to request an account.
-
-Once you're comfortable with performing routine tasks on the cluster, read
-the :ref:`Best practices <best_practices>`, which contains suggestions and
-patterns for organizing your projects and keeping your research reproducible.
 
 Who can get an account?
 =======================
@@ -69,7 +54,7 @@ How do I pay?
 
 Costs are associated with *project folders*. The owner of a project folder is
 responsible for the costs associated with the project. The project owner will
-be charged yearly based on actual usage.
+be charged yearly (in January) based on actual usage.
 
 If the project owner is associated with either:
 
@@ -80,23 +65,9 @@ If the project owner is associated with either:
 then the usage is paid internally and the project owner will not receive a bill
 directly from GenomeDK.
 
-
 .. toctree::
-  :maxdepth: 1
-  :hidden:
-  :caption: Main
-
-  governance
-  publications
-  technical
-  System status <https://console.genome.au.dk/status>
-  terms
-
-.. toctree::
-  :maxdepth: 3
+  :maxdepth: 2
   :hidden:
   :caption: Help
 
-  support
-  training
   docs/index
