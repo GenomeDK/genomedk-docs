@@ -65,8 +65,21 @@ then the usage is paid internally and the project owner will not receive a bill
 directly from GenomeDK.
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
+  :hidden:
+  :caption: Main
+
+  governance
+  publications
+  technical
+  System status <https://console.genome.au.dk/status>
+  terms
+
+.. toctree::
+  :maxdepth: 3
   :hidden:
   :caption: Help
 
+  support
+  training
   docs/index
