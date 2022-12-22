@@ -30,10 +30,10 @@ or small and medium-sized enterprises (SMEs).
 What does it cost?
 ==================
 
-In 2022, the prices are:
+In 2023, the prices are:
 
-* 0.12 DKK/billing hour
-* 2.16 DKK/GPU hour
+* 0.13 DKK/billing hour
+* 2.34 DKK/GPU hour
 * 250 DKK/TB/year
 * 500 DKK/TB/year in backup*
 
