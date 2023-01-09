@@ -45,13 +45,12 @@ where **project name** is the desired name of the new project.
 .. warning::
 
     When you request a project you're officially the project owner. This means
-    that you're responsible for the compute and storage used by the project.
+    that you're responsible for the ressources used by the project.
     Thus, you should familiarize yourself with the tools provided for
     monitoring the resources used by you and your projects (described later).
 
-When your request has been accepted, you  will have access to a shared folder
-in :file:`/faststorage/project/<project name>` where *project name* is the name
-requested for your project.
+When your request has been accepted, you will receive an e-mail with
+further instructions.
 
 Managing a project
 ==================
@@ -69,7 +68,12 @@ own projects through the following commands:
     Revoke a users' administrative rights to a project.
 :command:`gdk-project-show <project name>`
     List various information about the project, e.g. who the current project
-    owner is, when the project was created, etc.
+    owner is, when the project was created, etc. Also provides an overview of
+    the total number of billing hours used by the given project, as well as the
+    current storage and backup usage.
+:command:`gdk-project-usage`
+    Provides a detailed listing of the ressources used by all projects owned by
+    you.
 
 To get help for any of the commands, run the command without any parameters.
 
@@ -90,56 +94,6 @@ To get help for any of the commands, run the command without any parameters.
         aeh             Anders Egerup Halager <aeh@birc.au.dk>
         anders          Anders Boerglum <anders@biomed.au.dk>
         ...
-
-
-.. _jobs_with_project:
-
-Submitting jobs under a project
-===============================
-
-All projects are given an account that can be used to submit jobs belonging to
-the project. The account name is the same as the project name.
-
-Submitting jobs with the project account has the benefit that jobs submitted
-with a project account get much higher priority than non-project jobs.
-
-To submit a job with an account:
-
-.. code-block:: console
-
-    [fe-open-01]$ sbatch --account <project name> ...
-
-Or an interactive job:
-
-.. code-block:: console
-
-    [fe-open-01]$ srun --account <project name> --pty bash
-
-Or in *gwf*:
-
-.. code-block:: python
-
-  gwf = Workflow(defaults={"account": "<project name>"})
-
-
-Keeping track of resource usage
-===============================
-
-To help you keep up to date on how much compute and storage is used by you and
-your projects, you can use the :command:`space` command.
-
-:command:`space user`
-    Provides an overview of your own resource usage, that is, the storage used
-    by files owned by you, as well as the billing hours you have used across
-    all projects.
-:command:`space overview`
-    Provides you with an overview of the compute usage over time, as well as
-    storage usage accounting, of all of the projects you own.
-:command:`space project <project name>`
-    Shows detailed compute and storage accounting for a specific project.
-    For example, you can see how much compute and storage is used by each
-    member of the project. All members of the project can run this command.
-
 
 Data access in project folders
 ==============================

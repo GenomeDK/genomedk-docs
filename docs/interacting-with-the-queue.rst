@@ -12,15 +12,15 @@ The queueing system used at GenomeDK is Slurm_. Users that are familiar with
 Sun Grid Engine (SGE) or Portable Batch System (PBS), will find Slurm very
 familiar.
 
-.. note::
+The queueing system allows us to either submit an *interactive* or *batch* job.
+An interactive job effectively gives you a shell on a compute node so that you
+can type commands and run programs that will run on that node. This is great
+for experimenting and debugging problems.
 
-    A node can be shared by multiple users, so you should always take extra
-    care in requesting to correct amount of resources (nodes, cores and
-    memory). There is no reason to occupy an entire node if you are only using
-    a single core and a few gigabytes of memory. Always make sure to utillize
-    the resources on the requested nodes efficiently.
+Partitions and nodes
+--------------------
 
-To get an overview of the available partitions:
+To get an overview of the available nodes:
 
 .. code-block:: console
 
@@ -31,38 +31,40 @@ partition. The header of each partitions lists the available resources such as
 the number of cores per node, available memory per node, and the maximum
 walltime (running time) a job in the partition can have.
 
-The queueing system allows us to either submit an *interactive* or *batch* job.
-An interactive job effectively gives you a shell on a compute node so that you
-can type commands and run programs that will run on that node. This is great
-for experimenting and debugging problems.
+Submitting jobs under a project
+-------------------------------
 
-.. warning::
+All projects are given an account that can be used to submit jobs belonging to
+the project. The account name is the same as the project name.
 
-    By default, you have a very small quota for running jobs **without
-    specifying a project**. We allow this so that new users can familiarize
-    themselves with GenomeDK and the queueing system without requesting or
-    joining a project.
+When submitting jobs, you should always specify which account should be used:
 
-    However, when this small quota is used, you will no longer be able to
-    submit jobs and ``jobinfo`` will show something like this (note the
-    highlighted lines):
+* By default, you have a very small quota for running jobs **without specifying a
+  project**. We allow this so that new users can familiarize themselves with
+  GenomeDK and the queueing system without requesting or joining a project.
 
-    .. code-block:: console
-        :emphasize-lines: 3,4,9
+  However, when this small quota is used, you will no longer be able to submit
+  jobs and ``jobinfo`` will show something like this (note the highlighted lines):
 
-        Name                : bash
-        User                : das
-        Account             : --
-            Note: You haven't specified a project. You have a limited number of billing hours!
-        Partition           : short,normal
-        Nodes               : None assigned
-        Cores               : 1
-        GPUs                : 0
-        State               : PENDING (AssocMaxWallDurationPerJobLimit)
-        ...
+  .. code-block:: console
+      :emphasize-lines: 3,4,9
 
-    To be able to submit jobs again, you must specify an account when
-    submitting jobs (see :ref:`jobs_with_project`).
+      Name                : bash
+      User                : das
+      Account             : --
+          Note: You haven't specified a project. You have a limited number of billing hours!
+      Partition           : short,normal
+      Nodes               : None assigned
+      Cores               : 1
+      GPUs                : 0
+      State               : PENDING (AssocMaxWallDurationPerJobLimit)
+      ...
+
+  To be able to submit jobs again, you must specify an account.
+
+* Submitting jobs with the project account also has the benefit that jobs
+  submitted with a project account get much higher priority than non-project
+  jobs.
 
 Interactive jobs
 ----------------
@@ -71,7 +73,7 @@ To submit an interactive job:
 
 .. code-block:: console
 
-    [fe-open-01]$ srun --pty /bin/bash
+    [fe-open-01]$ srun --account <project name> --pty bash
     srun: job 17129453 queued and waiting for resources
     srun: job 17129453 has been allocated resources
     [s03n73]$
@@ -85,7 +87,7 @@ memory that should be allocated:
 
 .. code-block:: console
 
-    [fe-open-01]$ srun --mem=16g --pty /bin/bash
+    [fe-open-01]$ srun --account <project name> --mem 16g --pty bash
 
 When running a job you have access to the same filesystems as when running on
 the frontend. Thus, you can access your home folder and project folders with
@@ -115,44 +117,40 @@ the queue like interactive jobs, but they don't give you a shell to run
 commands. Instead, you must write a *job script* which contains the commands
 that needs to be run.
 
-A job script looks like this:
+The most minimal job script you can write looks like this:
 
 .. code-block:: shell
 
     #!/bin/bash
-    #SBATCH --partition normal
-    #SBATCH --mem-per-cpu 4G
-    #SBATCH -c 1
+    #SBATCH --account my_project
 
-    echo hello world > result.txt
+    echo hello world
 
-The job script specifies which resources are needed as well as the commands to
-be run. Line 2 specifies that this job should be submitted to the *normal*
-partition. Line 3 specifies that we want 4G of memory per allocated core, and
-line 4 specifies that we want a single core to run on. See the table below for
-an overview of commonly used resource flags:
+This specifies that you want to submit the job under the ``my_project`` project
+folder. The rest of the script is a normal Bash_ script which contains the
+commands that should be executed, when the job is started by Slurm.
 
-.. csv-table:: Resource flags
-    :header: "Short flag", "Long flag", "Description"
-    :align: left
-    :widths: 10, 40, 50
+To specify which ressources are needed by the job:
 
-    "``-A``", "``--account``", "Account to submit the job under. See :ref:`jobs_with_project`."
-    "``-p``", "``--partition``", "One or more comma-separated partitions that the job may run on. Jobs submitted to the *gpu* partition should also use the *--gres* flag."
-    "", "``--mem-per-cpu``", "Memory allocated per allocated CPU core."
-    "``-c``", "``--cpus-per-task``", "Number of cores allocated for the job. All cores will be on the same node."
-    "``-n``", "``--ntasks``", "Number of cores allocated for the job. Cores may be allocated on different nodes."
-    "``-N``", "``--nodes``", "Number of nodes allocated for the job. Can be combined with ``-n`` and ``-c``."
-    "``-t``", "``--time``", "Maximum time the job will be allowed to run."
-    "``-C``", "``--constraint``", "Constrain nodes to be allocated."
-    "", "``--gres=gpu:<number of gpu's>``", "Number of GPU cards to be used in case the job is being submitted to the *gpu* partition. If not defined the job will not have access to GPU cards, even if it is running on a proper node."
+.. code-block:: shell
 
-The rest of the script is a normal Bash_ script which contains the commands
-that should be executed, when the job is started by Slurm.
+    #!/bin/bash
+    #SBATCH --account my_project
+    #SBATCH -c 8
+    #SBATCH --mem 16g
+
+    echo hello world
+
+This specifies that you want eight cores and 16 GB of memory allocated to the
+job.
 
 .. note::
 
-   The current maximum time a job can run is 7 days.
+    A node can be shared by multiple users, so you should always take extra
+    care in requesting to correct amount of resources (nodes, cores and
+    memory). There is no reason to occupy an entire node if you are only using
+    a single core and a few gigabytes of memory. Always make sure to utillize
+    the resources on the requested nodes efficiently.
 
 To submit a job for this script, save it to a file (e.g. :file:`example.sh`)
 and run:
@@ -165,6 +163,43 @@ and run:
 
 Contrary to :command:`srun`, this command returns immediately, giving us a job
 id to identify our job.
+
+Most people find it annoying to write these job script for each step in their
+workflow and instead use a workflow engine such as gwf_ (developed at
+GenomeDK) or snakemake_ (quite popular in bioinformatics). Such tools allow you
+to write entire pipelines consisting of thousands of separate jobs and submit
+those jobs to Slurm without writing job scripts manually.
+
+Flags for ressource allocation
+------------------------------
+
+The below table contains the most commonly used flags for ``srun``/``sbatch``.
+
+.. csv-table:: Resource flags
+    :header: "Short flag", "Long flag", "Description"
+    :align: left
+    :widths: 10, 30, 60
+
+    "``-A``", "``--account``", "Account to submit the job under. Always specify this."
+    "``-p``", "``--partition``", "One or more comma-separated partitions that the job may run on [#f1]_. Jobs submitted to the *gpu* partition should also use the *--gres* flag [#f2]_."
+    "", "``--mem``", "Total memory that should be allocated for the job, e.g. `16g`."
+    "``-c``", "``--cpus-per-task``", "Number of cores allocated for the job. All cores will be on the same node."
+    "``-N``", "``--nodes``", "Number of nodes allocated for the job."
+    "``-t``", "``--time``", "Maximum time the job will be allowed to run."
+    "``-C``", "``--constraint``", "Constrain nodes to be allocated."
+    "", "``--gres=gpu:<number of gpu's>``", "Number of GPU cards to be used in case the job is being submitted to the *gpu* partition. If not defined the job will not have access to GPU cards, even if it is running on a proper node."
+
+.. [#f1] Unless you specify a partition other that short/normal, like *fat2* or
+   *express*, the partition parameter is largely ignored and your jobs are
+   actually submitted to both partitions. When they start, they are moved to a
+   single partition, in which they are started. This is done to avoid waiting in
+   the *short* queue if normal nodes are empty.
+
+   Long story short: don't worry, just submit the job asking for an appropriate
+   time limit and it will start in an appropriate place. Unless you want *fat2* or
+   *express*, you can forget about the partition parameter.
+
+.. [#f2] See :ref:`gpu_nodes` for more.
 
 Checking job status
 -------------------
@@ -207,21 +242,6 @@ queue:
 .. code-block:: console
 
     [fe-open-01]$ priority -a
-
-
-Why is the partition I chose being ignored?
--------------------------------------------
-
-Unless you specify a partition other that short/normal, like *fat2* or
-*express*, the partition parameter is largely ignored and your jobs are
-actually submitted to both partitions. When they start, they are moved to a
-single partition, in which they are started. This is done to avoid waiting in
-the *short* queue if normal nodes are empty.
-
-Long story short: don't worry, just submit the job asking for an appropriate
-time limit and it will start in an appropriate place. Unless you want *fat2* or
-*express*, you can forget about the partition parameter.
-
 
 Constraining jobs to certain nodes
 ----------------------------------
@@ -298,15 +318,6 @@ submit an interactive job that will use just one GPU:
 
     [fe-open-01]$ srun --gres=gpu:1 -p gpu --pty /bin/bash
 
-
-Extra credit
-------------
-
-Most people find it annoying to write these job script for each step in their
-workflows and instead use a workflow engine such as gwf_ (developed at
-GenomeDK) or snakemake_ (quite popular in bioinformatics). Such tools allow you
-to write entire pipelines consisting of thousands of separate jobs and submit
-those jobs to Slurm without writing job scripts.
 
 .. _Slurm: https://slurm.schedmd.com/
 .. _slurm documentation: https://slurm.schedmd.com/sbatch.html#OPT_constraint
