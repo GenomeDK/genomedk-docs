@@ -5,21 +5,20 @@ GenomeDK, a national high-performance computing facility
 .. container:: lead
 
   managed by the Aarhus Genome Data Center at Aarhus University. GenomeDK is for
-  any field of research, but with a strong track record in bioinformatics and
-  the life sciences.
+  any field of research, with a strong track record in bioinformatics and the
+  life sciences.
 
   GenomeDK is ISO 27001-certified and receives yearly ISAE-3000 declarations
   with a focus on GDPR.
 
-Give me the numbers
-===================
-
 GenomeDK comprises 84 nodes (4380 cores) connected with Infiniband. Each
 node has from 36 to 64 cores and either 384 GB or 512 GB of RAM for a total of
-40 TB of memory.
+40 TB of memory. GenomeDK has a fast storage system with a total capacity of 12
+PB.
 
-GenomeDK has a fast storage system with a total capacity of 12 PB. Do you want
-to know :ref:`more <technical>`?
+GenomeDK provides **strong security by default**. Our *closed zones* build on
+top of this by adding data export mechanisms, isolating computations, and
+limiting access to the Internet. You can :ref:`read more here <about_zones>`.
 
 Who can get an account?
 =======================
