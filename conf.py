@@ -23,19 +23,9 @@ pygments_style = "friendly"
 
 # -- Options for HTML output ----------------------------------------------
 
-html_theme = "au"
-html_theme_options = {
-    "sitename": "GenomeDK",
-    "phone": "+45 93 52 26 33",
-    "email": "support@genome.au.dk",
-    "show_breadcrumb": "no",
-}
+html_theme = "theme"
+html_theme_path = ["."]
 html_static_path = ["_static"]
-
-
-def setup(app):
-    app.add_css_file("gdk.css")
-
 
 # -- Custom shell session lexer -------------------------------------------
 

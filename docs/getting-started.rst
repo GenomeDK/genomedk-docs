@@ -50,9 +50,13 @@ GenomeDK in your publications. We recommend phrasing it like this:
 Connecting to the cluster
 =========================
 
-.. admonition:: Closed zone...
+GenomeDK is divided into multiple *zones*. Most users belong to the open zone.
+If you're in doubt about which zone you belong to, check your account
+confirmation e-mail. If it doesn't mention a specific zone, you belong to the
+open zone. If still in doubt, please contact support.
 
-    Follow the :ref:`zones` instructions.
+Connecting to the open zone
+---------------------------
 
 On Linux, open the terminal of your choice. On macOS, you may use
 :program:`Terminal.app` which can be found in the
@@ -77,28 +81,43 @@ you will need to install an alternative yourself. We recommend MobaXterm_.
 
     Access to GenomeDK is restricted to the internal network at Aarhus University.
     However, if you need access from abroad or for some other reason can not
-    connect connect from AU, feel free to :ref:`contact us <contact>` to get
-    whitelisted.
+    connect connect from AU, feel free to :ref:`contact us <contact>` to have
+    your IP whitelisted. You can see what your IP is at https://ifconfig.co/ip.
+
+.. _zone_connect:
+
+Connecting to a closed zone
+---------------------------
+
+#. Download and install the remote desktop client for your operating system on
+   your local machine.
+
+   * `Download client for Windows <https://www.nomachine.com/download/download&id=8>`_
+   * `Download client for macOS <https://www.nomachine.com/download/download&id=7>`_
+   * `Download client for Linux <https://www.nomachine.com/download/linux&id=1>`_
+
+#. Download and install FreeOTP, Google Authenticator or any similar app on your
+   phone. If you are at AU you probably already have Microsoft Authenticator
+   installed.
+
+#. Download the connection file for the zone you wish to connect to:
+
+    .. toctree::
+        :maxdepth: 1
+
+        zones/ipsych
+        zones/brain
+
+#. Using the login information received in your mailbox. Login by entering your
+   username and password.
+
+   Assuming you entered correctly you will get access to the virtual desktop.
+
+   Open the the authenticator app on your phone and scan the :file:`QRCode.png`
+   located on your NoMachine desktop. From now on you will need to generate a
+   one-time password with the authenticator app every time you log in.
 
 .. _MobaXterm: https://mobaxterm.mobatek.net/
-
-.. todo::
-
-    Two-factor authentication
-    =========================
-
-    * FreeOTP (recommended)
-    * NetIQ Advanced Authentication
-    * Google Authenticator
-
-
-Why can't I connect?
---------------------
-
-We only allow incoming connections from a whitelisted set of IPs, so if you get
-a *connection refused* you should send us an email with the IP you are
-connecting from. You can see what your IP is on https://ifconfig.co/ip.
-
 
 .. _change_password:
 

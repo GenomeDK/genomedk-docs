@@ -4,14 +4,14 @@
 Working with data
 =================
 
+On your laptop, all files reside on your local hard disk. However, on GenomeDK
+that is not the case. To achieve high performance and accommodate the huge
+amounts of data located on the cluster, data is saved on network file systems.
+
 .. _data_locations:
 
 Where to put your data
 ======================
-
-On your laptop, all files reside on your local hard disk. However, on GenomeDK
-that is not the case. To achieve high performance and accommodate the huge
-amounts of data located on the cluster, data is saved on network file systems.
 
 Each of these file systems have their own advantages and disadvantages. Thus,
 you need to put your data on the right file system to utilize the cluster
@@ -181,10 +181,9 @@ To unmount the directory, run:
 Copying data
 ============
 
-.. admonition:: Closed zone...
-
-    To copy data from the cluster, see :ref:`gdk-export`
-    To copy data to the cluster, see :ref:`gdk-import`
+Users in the open zone can freely transfer files to and from GenomeDK. However,
+users in a closed zone must use the **data lock** to import and export data.
+See :ref:`Using the data lock`.
 
 From your own machine to/from the cluster
 -----------------------------------------
@@ -265,6 +264,68 @@ output to a file:
 
     [fe-open-01]$ wget -c --progress=dot:giga --timeout=120 --waitretry=60 \
         --tries=10000 --retry-connrefused URL
+
+
+Using the data lock
+===================
+
+.. _gdk-export:
+
+Exporting files
+---------------
+
+If you have many files you should pack them up in a tar/zip. Use
+:program:`gdk-export` on the file to be exported and then send an email to
+the zone owner and CC us so we can see when it is approved.
+
+When the export has been approved you can download the file with:
+
+.. code-block:: console
+
+    [local]$ sftp <username>@185.45.23.195:test.fa .
+
+Alternatively, use a graphical SFTP client such as WinSCP, FileZilla or
+Cyberduck with host 185.45.23.195 and port 22.
+
+
+Listing pending exports
+-----------------------
+
+You can list your pending (unapproved) exports with :program:`gdk-export-list`.
+
+Deleting pending exports
+------------------------
+
+You can delete a pending export with :program:`gdk-export-delete <filename>`.
+
+.. _gdk-import:
+
+Importing files
+---------------
+
+Transferring data into a closed zone isn't restricted, but we still have to go
+through an intermediate step for security reasons.
+
+First, upload the file to the data lock:
+
+.. code-block:: console
+
+    [local]$ echo put test.fa . | sftp <username>@185.45.23.195
+
+Alternatively, use a graphical SFTP client such as WinSCP, FileZilla or
+Cyberduck with host 185.45.23.195 and port 22.
+
+You can now access the file from the inside at
+:file:`/data-lock/public/<username>`. However, the file will be read-only. To
+use the file, copy it to some other location, for example a relevant project
+folder.
+
+Cleanup
+-------
+
+Files in the public part of the data lock are automatically deleted after 60
+days.
+
 
 Editing files
 =============

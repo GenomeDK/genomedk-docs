@@ -46,18 +46,18 @@ section covers the basics and a bit more. Read this for a head start.
 
   getting-started
 
-The queueing system is a central part of any high-performance computing system.
-Here you learn the most common commands and how to work with both interactive
-and batch jobs.
+How do I request a project folder? How many resources am I using? How do I keep
+an eye on what other members of my project are doing? In this section we aim to
+answer these questions.
 
 .. toctree::
   :maxdepth: 1
 
-  ../zones/index
+  projects-and-accounting
 
-These are instructions for the users who are working in a closed zone
-(primarily iPSYCH).
-If you are not working in a closed zone you can skip this part.
+The queueing system is a central part of any high-performance computing system.
+Here you learn the most common commands and how to work with both interactive
+and batch jobs.
 
 .. toctree::
   :maxdepth: 1
@@ -79,15 +79,6 @@ get data in and out of GenomeDK.
   :maxdepth: 1
 
   working-with-data
-
-How do I request a project folder? How many resources am I using? How do I keep
-an eye on what other members of my project are doing? In this section we aim to
-answer these questions.
-
-.. toctree::
-  :maxdepth: 1
-
-  projects-and-accounting
 
 Knowledge is power and so is your data. Therefore you should take great care
 when handling your data. In this section you'll learn how to organize your
