@@ -183,7 +183,7 @@ Copying data
 
 Users in the open zone can freely transfer files to and from GenomeDK. However,
 users in a closed zone must use the **data lock** to import and export data.
-See :ref:`Using the data lock`.
+See `Using the data lock`_.
 
 From your own machine to/from the cluster
 -----------------------------------------
@@ -265,6 +265,7 @@ output to a file:
     [fe-open-01]$ wget -c --progress=dot:giga --timeout=120 --waitretry=60 \
         --tries=10000 --retry-connrefused URL
 
+.. _using_the_data_lock:
 
 Using the data lock
 ===================
