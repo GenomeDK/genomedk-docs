@@ -105,8 +105,8 @@ Connecting to a closed zone
     .. toctree::
         :maxdepth: 1
 
-        zones/ipsych
-        zones/brain
+        ../zones/ipsych
+        ../zones/brain
 
 #. Using the login information received in your mailbox. Login by entering your
    username and password.
