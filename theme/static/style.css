@@ -437,3 +437,12 @@ em {
 .doc blockquote {
     margin: 1em;
 }
+
+.doc .footnote {
+    font-size: 0.889rem;
+}
+
+.doc .footnote .label {
+    float: left;
+    margin-right: 0.5em;
+}
