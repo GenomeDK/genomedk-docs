@@ -30,8 +30,8 @@
 </head>
 
 <body>
-    <div class="outer-container">
-        <div id="container" class="container">
+    <div class="bg-white">
+        <div class="container w-wide">
             <header>
                 <a href="{{ pathto('index') }}" class="logo">
                     <svg viewBox="0 0 130 13" xmlns="http://www.w3.org/2000/svg">
@@ -58,6 +58,11 @@
                         account</a>
                 </nav>
             </header>
+        </div>
+    </div>
+    {% block content %}
+    <div class="bg-white">
+        <div class="container w-wide">
             <div id="content" class="centered">
                 {% if pagename.startswith('docs/') %}
                 <div class="sidebar">
@@ -72,6 +77,7 @@
             </div>
         </div>
     </div>
+    {% endblock %}
     <footer>
         <div class="container">
             <object type="image/svg+xml" data="{{ pathto('_static/au_segl.svg', 1) }}" class="seal"></object>
@@ -81,7 +87,6 @@
             <p>&copy; GenomeDK, Aarhus University</p>
         </div>
     </footer>
-    <script src="_static/scripts.js"></script>
 </body>
 
 </html>

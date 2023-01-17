@@ -21,6 +21,8 @@ author = "The GenomeDK Team"
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 pygments_style = "friendly"
 
+html_additional_pages = {"index": "front.html"}
+
 # -- Options for HTML output ----------------------------------------------
 
 html_theme = "theme"
