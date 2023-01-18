@@ -59,6 +59,7 @@ are commonly used in bioinformatics:
     [fe-open-01]$ conda config --add channels bioconda
     [fe-open-01]$ conda config --add channels conda-forge
     [fe-open-01]$ conda config --add channels genomedk
+    [fe-open-01]$ conda config --set channel_priority strict
 
 Conda creates a ``base`` environment which contains Conda itself. It's tempting
 to install packages in ``base``, but that might ruin your Conda installation.
@@ -80,7 +81,7 @@ using the :command:`conda search` command:
 
 .. code-block:: console
 
-    [fe-open-01]$ conda search rstudio
+    [fe-open-01]$ conda search rstudio-desktop
 
 Remember that the Conda package may not be called the exact official name of
 the software. For example, the Conda package for the software *biobambam2* is
@@ -89,16 +90,6 @@ results.
 
 Using environments
 ==================
-
-When you just installed Conda, it comes with a single environment known as the
-*base* environment. To activate the base environment, just type:
-
-.. code-block:: console
-
-    [fe-open-01]$ conda activate
-    (base) [fe-open-01]$
-
-You now have access to the software installed in the base environment.
 
 Here is how the usage might look if we want to create a new environment with
 the newest version of `PySAM`_:
@@ -188,32 +179,6 @@ I'm part of a project that dictates the software I should use
 .. _Conda: https://conda.io/docs/
 .. _Anaconda: https://www.anaconda.com/download/
 .. _cheat sheet: http://know.continuum.io/rs/387-XNW-688/images/conda-cheatsheet.pdf
-
-Mamba - a Conda alternative
-===========================
-
-Conda can take an extremely long time solve dependencies and sometimes Conda
-may never finish solving dependencies - this is where Mamba - the drop-in 
-replacement for Conda comes in.
-
-From the `Mamba`_ project description:
-
-  Mamba is a reimplementation of the conda package manager in C++.
-  
-  - parallel downloading of repository data and package files using
-    multi-threading
-  - libsolv for much faster dependency solving, a state of the art library 
-    used in the RPM package manager of Red Hat, Fedora and OpenSUSE
-  - core parts of mamba are implemented in C++ for maximum efficiency
-
-It can be installed via Conda:
-
-.. code-block:: console
-
-   [fe-open-01]$ conda install mamba -n base -c conda-forge
-
-
-.. _Mamba: https://github.com/mamba-org/mamba
 
 Using graphical interfaces
 ==========================
