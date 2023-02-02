@@ -20,11 +20,15 @@ We're now ISO 27001-certified
 
 The year 2022 was also the year where we received our ISO 27001-certification.
 
-PIC
+.. figure:: certificate.png
+  :scale: 50
+  :alt: ISO 27001 certificate from PwC.
 
-We hope that the certification means that you now feel even safer storing your
-data on GenomeDK. Naturally, as we're also the first unit at AU to obtain such
-a certificate, it resulted in a bit of media coverage:
+  ISO 27001 certificate from PwC.
+
+We hope that the certification means that you now feel even more confident
+storing your data on GenomeDK. Naturally, as we're also the first unit at AU to
+obtain such a certificate, it resulted in a bit of media coverage:
 
 * https://health.au.dk/display/artikel/har-du-brug-for-en-supercomputer
 * https://www.deic.dk/da/news/2023-1-26/genomedk-supercomputer-er-iso-27001-certificeret
@@ -37,7 +41,10 @@ weeks we will configure and tune the system for optimal performance. After that,
 data will be migrated over several months. This process will be transparent to
 our users.
 
-PIC
+.. figure:: new-storage.jpg
+  :alt: The new storage hardware being unloaded from the truck.
+
+  The new storage hardware being unloaded from the truck.
 
 The new storage system has a total capacity of approximately 25 PB (current
 capacity is 10.5 PB) and consists of more than 20 servers and 1500 disks. The
@@ -51,7 +58,10 @@ featuring the GenomeDK logo! We have mugs featuring the "formal" logo, but it's
 also still possible to get one featuring the unique and eye-catching "party"
 logo.
 
-PIC
+.. figure:: mugs.jpg
+  :alt: The brand new GenomeDK merchandise!
+
+  The brand new GenomeDK merchandise!
 
 Come by our office to get your mug!
 
@@ -59,7 +69,7 @@ Unified management tools
 ========================
 
 We have unified our management tools. Previously, some tools had the ``gm``
-prefix, while more recent tools (liek our data shares), used the ``gdk`` prefix.
+prefix, while more recent tools (like our data shares), used the ``gdk`` prefix.
 All tools now have a ``gdk`` prefix and many tools have been completely renamed
 to ensure more consistent naming.
 
@@ -67,7 +77,7 @@ This change makes it easy to discover which tools are available by typing
 ``gdk-<TAB>`` in your terminal.
 
 We also provide more tools, e.g. ``gdk-project-list`` for listing projects,
-``gdk-project-usage`` for detailed usage numbers, and ``gdk-export-list`` for 
+``gdk-project-usage`` for detailed usage numbers, and ``gdk-export-list`` for
 listing active exports
 
 Updated website
@@ -80,7 +90,7 @@ Your responsibility
 ===================
 
 Finally, we urge you to stay up to date with your responsibilities regarding
-hosting your data on GenomeDK by reading our TERMS OF SERVICE.
+hosting your data on GenomeDK by reading our :ref:`terms`.
 
 ---
 
