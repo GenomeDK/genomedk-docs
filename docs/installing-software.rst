@@ -35,10 +35,10 @@ installer:
 
 .. code-block:: console
 
-   [fe-open-01]$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-   [fe-open-01]$ chmod +x miniconda.sh
-   [fe-open-01]$ bash miniconda.sh -b
-   [fe-open-01]$ ./miniconda3/bin/conda init bash
+   [fe-open-01]$ wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh -O miniforge.sh
+   [fe-open-01]$ chmod +x miniforge.sh
+   [fe-open-01]$ bash miniforge.sh -b
+   [fe-open-01]$ ./miniforge3/bin/conda init bash
 
 That's it! The last two step makes sure that Conda will be available when you
 log in, so now is a good time to open a new connection and check that Conda is
@@ -55,9 +55,7 @@ are commonly used in bioinformatics:
 
 .. code-block:: console
 
-    [fe-open-01]$ conda config --add channels defaults
     [fe-open-01]$ conda config --add channels bioconda
-    [fe-open-01]$ conda config --add channels conda-forge
     [fe-open-01]$ conda config --add channels genomedk
     [fe-open-01]$ conda config --set channel_priority strict
 
@@ -72,6 +70,19 @@ in:
 .. code-block:: console
 
     [fe-open-01]$ conda config --set auto_activate_base false
+
+Once you have done these steps, you should have a config file in your
+home folder called :file:`.condarc` that looks like this:
+
+.. code-block:: console
+
+    [fe-open-01]$ cat $HOME/.condarc
+    channels:
+      - genomedk
+      - bioconda
+      - conda-forge
+    channel_priority: strict
+    auto_activate_base: false
 
 Searching for packages
 ======================
