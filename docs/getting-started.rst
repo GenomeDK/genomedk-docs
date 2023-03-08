@@ -79,10 +79,11 @@ you will need to install an alternative yourself. We recommend MobaXterm_.
 
 .. note::
 
-    Access to GenomeDK is restricted to the internal network at Aarhus University.
-    However, if you need access from abroad or for some other reason can not
-    connect connect from AU, feel free to :ref:`contact us <contact>` to have
-    your IP whitelisted. You can see what your IP is at https://ifconfig.co/ip.
+    Access to GenomeDK is restricted to the internal network at Aarhus
+    University. However, if you need access from abroad or for some other reason
+    can not connect connect from AU, feel free to :ref:`contact us <contact>` to
+    have your IP whitelisted. You can see what your IP is at
+    https://console.genome.au.dk/ip.
 
 .. _zone_connect:
 
