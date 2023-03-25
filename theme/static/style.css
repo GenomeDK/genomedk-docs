@@ -486,6 +486,7 @@ em {
     margin-top: 0;
 }
 
+.doc img,
 .doc figure img {
     display: block;
     max-width: 90%;
