@@ -24,17 +24,16 @@
         }
 
     </style>
-    <!--<link rel="stylesheet" href="/_static/reset.css" />-->
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-    <link rel="stylesheet" href="/_static/style.css" />
+    <link rel="stylesheet" href="{{ pathto('_static/style.css', 1) }}" />
 
     {% if pagename.startswith('docs/') or pagename.startswith('search') %}
     {%- for scriptfile in script_files %}
     {{ js_tag(scriptfile) }}
     {%- endfor %}
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="searchindex.js" defer=""></script>
+    <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+    <script src="{{ pathto('_static/language_data.js', 1) }}"></script>
+    <script src="{{ pathto('searchindex.js', 1) }}" defer></script>
     {% endif %}
 </head>
 
