@@ -141,6 +141,8 @@ def main():
     for doi in dois:
         try:
             citation = formatted_citation(doi)
+            if citation is None:
+                continue
             metadata = lookup_publication(doi)
             published_date = tuple(metadata["published"]["date-parts"][0])
             publications.append((published_date, doi, citation))
