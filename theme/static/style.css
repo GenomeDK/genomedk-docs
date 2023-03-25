@@ -259,6 +259,68 @@ a.logo svg {
     }
 }
 
+.searchbox .highlight-link {
+    display: none;
+}
+
+.searchbox form {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.889em;
+    align-items: stretch;
+}
+
+.searchbox.dedicated form {
+    font-size: 1.66em;
+}
+
+.searchbox input[type="text"] {
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    width: 100%;
+    margin-right: 0.5em;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.searchbox input[type="text"]:focus {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.searchbox.dedicated input[type="text"] {
+    background-color: var(--neutral-color);
+}
+
+.searchbox button {
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    background-color: var(--primary-color);
+    color: white;
+    outline: none;
+    appearance: none;
+}
+
+.searchbox button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+ul.search li {
+    font-weight: bold;
+}
+
+ul.search li .context {
+    font-weight: normal;
+}
+
+#searchbox input[type="submit"]:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.highlighted {
+    background-color: var(--warning-color-light);
+}
+
 .sidebar {
     background-color: var(--neutral-color);
     border-radius: 0.25em;
@@ -367,13 +429,15 @@ em {
 }
 
 /* Sphinx */
+
 .toc ul {
     list-style: none;
+    font-size: 0.889rem;
 }
 
 .toc ul li {
-    margin-left: 1em;
     padding: 0.2em 0;
+    margin-left: 0.6em;
 }
 
 .toc ul li a {

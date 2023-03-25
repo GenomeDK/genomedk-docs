@@ -27,6 +27,15 @@
     <!--<link rel="stylesheet" href="/_static/reset.css" />-->
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="/_static/style.css" />
+
+    {% if pagename.startswith('docs/') or pagename.startswith('search') %}
+    {%- for scriptfile in script_files %}
+    {{ js_tag(scriptfile) }}
+    {%- endfor %}
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js" defer=""></script>
+    {% endif %}
 </head>
 
 <body>
@@ -66,12 +75,24 @@
             <div id="content" class="centered">
                 {% if pagename.startswith('docs/') %}
                 <div class="sidebar">
+                    <div id="searchbox" class="searchbox" role="search">
+                        <div class="searchformwrapper">
+                            <form class="search" action="{{ pathto('search') }}" method="get">
+                                <input type="text" name="q" placeholder="Tell me about..." />
+                                <button type="submit">
+                                    Search
+                                </button>
+                                <input type="hidden" name="check_keywords" value="yes" />
+                                <input type="hidden" name="area" value="default" />
+                            </form>
+                        </div>
+                    </div>
                     <div class="toc">
                         {{ toctree(includehidden=True) }}
                     </div>
                 </div>
                 {% endif %}
-                <div class="doc">
+                <div class="doc" role="main">
                     {% block body %}{% endblock %}
                 </div>
             </div>
