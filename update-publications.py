@@ -1,6 +1,7 @@
 import json
 from datetime import date
 
+import certifi
 import urllib3
 
 urllib3.disable_warnings()
@@ -8,7 +9,10 @@ urllib3.disable_warnings()
 
 INDEX_FILENAME = "_publications-index.txt"
 
-http = urllib3.PoolManager()
+http = urllib3.PoolManager(
+    cert_reqs="CERT_REQUIRED",
+    ca_certs=certifi.where()
+)
 
 
 queries = [
@@ -88,6 +92,7 @@ def search(query):
         "GET",
         "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
         fields={"query": query, "format": "json", "pageSize": 1000,},
+        
     )
     data = json.loads(response.data.decode("utf-8"))
     return data["resultList"]["result"]
