@@ -32,17 +32,15 @@ Technical
 Storage
 =======
 
-The total storage space available is 12 PB.
+Data may be located either on our NFS servers or on fast storage, our 23 PB
+BeeGFS distributed file system (fast storage).
 
-Data may be located either on our NFS servers or on fast storage, our
-11.5 PB BeeGFS distributed file system (fast storage).
-
-Home folders are located on NFS storage by default. Project folders are located
-on fast storage. Fast storage is reserved for large data files involved in
-I/O intensive computations.
+Home folders are located on NFS. Project folders are located on fast storage.
+Fast storage is reserved for large data files involved in I/O intensive
+computations.
 
 NFS can deliver read/write performance of up to 700MB/s, while fast storage
-can reach an aggregated read/write performance of more than 35GB/s.
+can reach an aggregated read/write performance of more than 45 GB/s.
 
 Backup
 ======
