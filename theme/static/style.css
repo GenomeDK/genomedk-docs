@@ -56,6 +56,14 @@ body {
     margin: 0 auto;
 }
 
+.align-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
 .s-display {
     font-size: 5rem;
 }
@@ -164,6 +172,16 @@ body {
 .my-2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .lg {
