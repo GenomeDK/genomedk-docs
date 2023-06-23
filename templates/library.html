@@ -14,13 +14,15 @@
                     <th>ID</th>
                     <th>Publication date</th>
                     <th>Title</th>
+                    <th>Access type</th>
                 </thead>
                 <tbody>
                     {% for page in section.pages %}
                     <tr>
-                        <td>{{ page.extra.id }}</td>
+                        <td><a href="{{ page.permalink }}">{{ page.extra.id }}</a></td>
                         <td>{{ page.date }}</td>
-                        <td><a href="{{ page.permalink }}">{{ page.title }}</a></td>
+                        <td>{{ page.title }}</td>
+                        <td>{{ page.extra.access_type }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
