@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="bg-white">
+    <div class="container w-narrow pb-2">
+        <div class="centered">
+            <h1 class="title">{{ section.title }}</h1>
+            <section class="prose">
+            <p class="lead">The GenomeDK Data Library is an index for data sets made available by users of GenomeDK. Data sets in the library can be made available directly on GenomeDK or shared using GenomeDK's data shares.</p>
+            </section>
+            <section class="prose">
+                <table class="w-full">
+                <thead>
+                    <th>ID</th>
+                    <th>Publication date</th>
+                    <th>Title</th>
+                </thead>
+                <tbody>
+                    {% for page in section.pages %}
+                    <tr>
+                        <td>{{ page.extra.id }}</td>
+                        <td>{{ page.date }}</td>
+                        <td><a href="{{ page.permalink }}">{{ page.title }}</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+            </section>
+            <p><small>The data in the library is not owned or administered by GenomeDK.</small></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -7,8 +7,6 @@ import urllib3
 urllib3.disable_warnings()
 
 
-INDEX_FILENAME = "_publications-index.txt"
-
 http = urllib3.PoolManager(
     cert_reqs="CERT_REQUIRED",
     ca_certs=certifi.where()
@@ -92,13 +90,13 @@ def search(query):
         "GET",
         "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
         fields={"query": query, "format": "json", "pageSize": 1000,},
-        
+
     )
     data = json.loads(response.data.decode("utf-8"))
     return data["resultList"]["result"]
 
 
-@disk_cache(filename="citations-cache.json")
+@disk_cache(filename="cache-citations.json")
 def formatted_citation(doi, style="apa"):
     """Retrieve formatted citation from doi.org."""
     response = http.request(
@@ -112,7 +110,7 @@ def formatted_citation(doi, style="apa"):
     return " ".join(tmp.split())
 
 
-@disk_cache(filename="publications-cache.json")
+@disk_cache(filename="cache-publications.json")
 def lookup_publication(doi):
     response = http.request(
         "GET",
@@ -156,7 +154,7 @@ def main():
             continue
 
     last_updated = date.today()
-    with open("_publications.rst", "w") as fileobj:
+    with open("_publications.md", "w") as fileobj:
         print(
             "*{} publications listed, last updated on {}*. Sorted by first publication date.".format(
                 len(publications), last_updated

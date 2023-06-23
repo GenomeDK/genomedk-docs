@@ -1,0 +1,53 @@
+.admonition {
+    padding: 1.25em;
+    border-radius: 0.25em;
+    margin: 1em 0;
+}
+
+.admonition :first-child {
+    margin-top: 0;
+}
+
+.admonition :last-child {
+    margin-bottom: 0;
+}
+
+.admonition.note {
+    background: var(--ok-color-light);
+    color: var(--ok-color-dark);
+
+    a {
+        color: var(--ok-color-dark);
+    }
+
+    a:hover {
+        color: var(--ok-color);
+    }
+}
+
+
+.admonition.warning {
+    background: var(--warning-color-light);
+    color: var(--warning-color-dark);
+
+    a {
+        color: var(--warning-color-dark);
+    }
+
+    a:hover {
+        color: var(--warning-color);
+    }
+}
+
+.admonition.danger {
+    background: var(--danger-color-light);
+    color: var(--danger-color-dark);
+
+    a {
+        color: var(--danger-color-dark);
+    }
+
+    a:hover {
+        color: var(--danger-color);
+    }
+}

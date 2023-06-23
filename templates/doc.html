@@ -1,0 +1,39 @@
+{% extends "docs.html" %}
+
+{% block doc %}
+<h1 class="title">{{ page.title }}</h1>
+<div class="prose">
+{{ page.content | safe }}
+</div>
+
+<nav class="pagination">
+{% if page.smaller %}
+<a class="previous" href="{{ page.smaller.permalink | safe }}">&lsaquo; Previous</a>
+{% else %}
+    {# No page before, find the link for the section it's in if there is one #}
+    {% set parent = get_section(path=page.ancestors | reverse | first) %}
+    <a class="previous" href="{{ parent.permalink | safe }}">&lsaquo; Previous</a>
+{% endif %}
+
+{% if page.higher %}
+<a class="next" href="{{ page.higher.permalink | safe }}">Next &rsaquo;</a>
+{% else %}
+    {# No page after, find the link for the following section #}
+    {% set index = get_section(path="_index.md") %}
+    {% set found_current = false %}
+    {% for s in index.subsections %}
+        {% set subsection = get_section(path=s) %}
+        {% if found_current %}
+            <a class="next" href="{{ subsection.permalink | safe }}">Next &rsaquo;</a>
+            {# no break #}
+            {% set_global found_current = false %}
+        {% endif %}
+        {% for p in subsection.pages %}
+            {% if p.permalink == page.permalink %}
+                {% set_global found_current = true %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+</nav>
+{% endblock %}

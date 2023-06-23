@@ -1,0 +1,169 @@
+.prose {
+    line-height: 1.65;
+
+    p {
+        font-size: 1em;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin: 2rem 0 0.6rem;
+        font-weight: normal;
+        line-height: 1.15;
+    }
+
+    h1 {
+        font-size: var(--text-size-4xl);
+    }
+
+    h2 {
+        font-size: var(--text-size-3xl);
+    }
+
+    h3 {
+        font-size: var(--text-size-2xl);
+    }
+
+    h4 {
+        font-size: var(--text-size-xl);
+    }
+
+    .text-caption {
+        font-size: var(--text-size-sm);
+    }
+
+    small {
+        font-size: var(--text-size-xs);
+    }
+
+    .lead {
+        font-size: var(--text-size-xl);
+        margin: 1em 0;
+    }
+
+    .anchor-link {
+        font-weight: normal;
+        font-size: 16px;
+        text-decoration: none;
+        color: black;
+        vertical-align: super;
+    }
+
+    small {
+        font-size: 0.889rem;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    p code,
+    pre {
+        font-family: ui-monospace,
+            Menlo, Monaco,
+            "Cascadia Mono", "Segoe UI Mono",
+            "Roboto Mono",
+            "Oxygen Mono",
+            "Ubuntu Monospace",
+            "Source Code Pro",
+            "Fira Mono",
+            "Droid Sans Mono",
+            "Courier New", monospace;
+        font-size: var(--text-size-sm);
+    }
+
+    pre {
+        padding: 1.25rem;
+        overflow-x: scroll;
+        overflow-y: scroll;
+        line-height: 1.65;
+        max-height: 200px;
+    }
+
+    img,
+    figure img {
+        display: block;
+        max-width: 90%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    figure figcaption {
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    ul {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        padding-left: 1rem;
+        list-style-type: "\203A";
+        list-style-position: outside;
+    }
+
+    ul li {
+        margin: 0;
+        padding-left: 0.5rem;
+    }
+
+    ol {
+        margin-bottom: 1em;
+    }
+
+    ol li {
+        margin-left: 1em;
+    }
+
+    ul ul,
+    ol ul,
+    ul ol,
+    ol ol,
+    dl ul,
+    dl ol {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    dl dt {
+        margin-top: 1em;
+        font-weight: bold;
+    }
+
+    dl dd {
+        margin-left: 1em;
+    }
+
+    dl dd p:first-child {
+        margin-top: 0;
+    }
+
+    table {
+        margin: 0 auto;
+        background-color: var(--neutral-color);
+        border-radius: 0.25em;
+        text-align: left;
+        padding: 1em 0;
+        border-collapse: collapse;
+    }
+
+    table td,
+    table th {
+        padding: 0.5em 1em;
+    }
+
+    table th {
+        font-weight: bold;
+        border-bottom: 2px solid white;
+    }
+
+    table td {
+        border-bottom: 1px solid white;
+    }
+}

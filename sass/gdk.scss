@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+@use "normalize";
+@use "vars";
+@use "layout";
+@use "prose";
+@use "utils";
+
+@use "components/admonition";
+
+
+@font-face {
+    font-family: "AUPassata";
+    src: url("/assets/aupassata_rg-webfont.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AUPassata";
+    src: url("/assets/aupassata_bold-webfont.woff2") format("woff2");
+    font-weight: 600;
+    font-style: bold;
+    font-display: swap;
+}
+
+* {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: AUPassata, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    font-size: 16px;
+    background: var(--primary-color-dark);
+    color: #444;
+}
+
+.logo {
+    display: inline-flex;
+}
+
+a.logo {
+    text-decoration: none;
+}
+
+a.logo svg {
+    height: 1em;
+    padding: 1em 0;
+}
+
+.display-item {
+    margin-bottom: 1rem
+}
+
+.display-item .label {
+    text-transform: uppercase;
+    margin-left: .25rem
+}
+
+.s-display {
+    font-size: 5rem;
+}
+
+.boring-details {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    dt {
+        font-weight: bold;
+    }
+
+    ul {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        padding-left: 1rem;
+        list-style-type: "\203A";
+        list-style-position: outside;
+    }
+
+    ul li {
+        margin: 0;
+        padding-left: 0.5rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .boring-details {
+        grid-template-columns: max-content auto;
+    }
+}
+
+.sidenav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 0.5em 0;
+}
+
+.toc ul li:hover {
+    background-color: var(--neutral-color);
+}
+
+.sidenav ul a {
+    text-decoration: none;
+}
+
+.sidenav ul ul {
+    margin-left: 1em;
+    font-size: var(--text-size-sm);
+}
+
+h1.title {
+    font-weight: normal;
+    font-size: var(--text-size-5xl);
+    color: var(--primary-color-dark);
+    margin-top: 0;
+}
+
+.pagination {
+    padding-top: 2em;
+    text-align: center;
+    display: block;
+
+    a {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1em 1em;
+        text-transform: uppercase;
+        font-size: var(--text-size-sm);
+        letter-spacing: 0.025rem;
+        display: inline-block;
+        text-decoration: none;
+        width: 20ch;
+        font-weight: bold;
+    }
+
+    a:hover {
+        background-color: var(--primary-color-dark);
+        color: white;
+    }
+
+    a.previous {
+        border-radius: 0.25em 0 0 0.25em;
+        margin-right: 0.1rem;
+    }
+
+    a.next {
+        border-radius: 0 0.25em 0.25em 0;
+    }
+}
+
+a {
+    color: var(--primary-color-dark);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+h1.caption {
+    text-transform: uppercase;
+    font-size: var(--text-size-sm);
+    letter-spacing: 0.025rem;
+    color: var(--primary-color-dark);
+    margin-top: 0;
+}
+
+.lead-grid {
+    display: grid;
+    gap: 1em 3em;
+
+    .illustration1 {
+        grid-area: ill1;
+    }
+
+    .illustration2 {
+        grid-area: ill2;
+    }
+
+    .illustration3 {
+        grid-area: ill3;
+    }
+
+    .description1 {
+        grid-area: de1;
+    }
+
+    .description2 {
+        grid-area: de2;
+    }
+
+    .description3 {
+        grid-area: de3;
+    }
+
+    grid-template-areas: "de1"
+    "de2"
+    "de3";
+
+    @media (min-width: 800px) {
+        grid-template-areas: "ill1 de1 de1"
+            "de2 de2 ill2"
+            "ill3 de3 de3";
+    }
+}
+
+.label {
+    font-family: ui-monospace,
+        Menlo, Monaco,
+        "Cascadia Mono", "Segoe UI Mono",
+        "Roboto Mono",
+        "Oxygen Mono",
+        "Ubuntu Monospace",
+        "Source Code Pro",
+        "Fira Mono",
+        "Droid Sans Mono",
+        "Courier New", monospace;
+    font-size: var(--text-size-sm);
+    background-color: var(--danger-color-dark);
+    color: white;
+    padding: 0.2rem 0.25rem;
+    display: inline-block;
+    border-radius: 0.25em;
+}

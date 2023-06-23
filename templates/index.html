@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="bg-white">
+    <div class="container flex w-wide centered flex-col lead-grid align-items-center pb-2">
+        <div class="illustration1 sm-hide">
+            <object type="image/svg+xml" data="assets/undraw_speed_test_wxl0.svg"
+                class="w-full"></object>
+        </div>
+        <div class="description1">
+            <h1 class="text-primary-dark text">High-performance computing facility for bioinformatics and life sciences
+            </h1>
+            <p class="lg text">As the first high-performance computing facility for the life sciences in Denmark, we have
+                more than 10 years of experience serving scientists, students and SMEs.</p>
+        </div>
+
+        <div class="illustration2 sm-hide">
+            <object type="image/svg+xml" data="assets/undraw_coming_home_52ir.svg"
+                class="w-full"></object>
+        </div>
+        <div class="description2">
+            <h1 class="text-primary-dark text">A safe home for your sensitive data</h1>
+            <p class="lg text">ISO-27001 certified with yearly ISAE 3000 declarations. Got special compliance
+                requirements? Get your own <a href="{{ get_url(path="zones/") }}">closed
+                    zone for
+                    extra
+                    control</a>.</p>
+        </div>
+
+        <div class="illustration3 sm-hide">
+            <object type="image/svg+xml" data="assets/undraw_science_fqhl.svg"
+                class="w-full"></object>
+        </div>
+        <div class="description3">
+            <h1 class="text-primary-dark text">Empowers scientists to utilize big data and perform leading research</h1>
+            <p class="lg text">We provide up-to-date documentation, friendly support, and workshops so that you can get
+                the help
+                you
+                need and concentrate <a href="{{ get_url(path="publications") }}">on the science</a>.</p>
+        </div>
+    </div>
+    <div class="bg-neutral py-2">
+        <div class="container w-wide centered">
+            <div class="flex w-full space-evenly" style="flex-flow: row wrap;">
+                <div class="display-item"><span class="s-display">4500</span><span class="label">cores</span></div>
+                <div class="display-item"><span class="s-display">39</span><span class="label">TB memory</span></div>
+                <div class="display-item"><span class="s-display">23</span><span class="label">PB storage</span></div>
+                <div class="display-item"><span class="s-display">730</span></span><span class="label">million
+                        files</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white py-2">
+        <div class="container w-wide centered">
+            <div class="flex w-full space-evenly" style="flex-flow: row wrap;">
+                <div class="display-item"><span class="s-display">670</span><span class="label">users</span></div>
+                <div class="display-item"><span class="s-display">690</span><span class="label">projects</span></div>
+                <div class="display-item"><span class="s-display">800</span><span class="label">publications</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-primary text-white">
+        <div class="container w-wide centered py-2">
+            <h1>The boring details</h1>
+            <dl class="boring-details py-2">
+                <dt><p class="prose">Who can get an account?</p></dt>
+                <dd class="prose">
+                    <p>We are open to account requests from people associated with a university
+                        or small and medium-sized enterprises (SMEs).</p>
+                </dd>
+                <dt><p class="prose">What does it cost?</p></dt>
+                <dd class="prose">
+                    <p>In 2023, the prices are:</p>
+
+                    <div class="flex w-full space-evenly" style="flex-flow: row wrap;">
+                        <div class="display-item">
+                            <span class="lg">0.13</span>
+                            <span class="label">DKK/billing hour</span>
+                            <span class="label">CPU</span>
+                        </div>
+                        <div class="display-item">
+                            <span class="lg">2.34</span>
+                            <span class="label">DKK/billing hour</span>
+                            <span class="label">GPU</span>
+                        </div>
+                        <div class="display-item">
+                            <span class="lg">250</span>
+                            <span class="label">DKK/TB/year</span>
+                            <span class="label">storage</span>
+                        </div>
+                        <div class="display-item">
+                            <span class="lg">500</span>
+                            <span class="label">DKK/TB/year</span>
+                            <span class="label">backup*</span>
+                        </div>
+                    </div>
+
+                    <p>One billing hour corresponds to one CPU core for one hour or 8 GB memory for
+                        one hour, whichever is highest. One GPU hour is the same as 18 core hours
+                        (half of the cores of a GPU node).</p>
+                    <p>Prices are updated yearly and are subject to change. Do not hesitate to contact
+                        us if you have any questions.</p>
+                    <p>* For example, if you store 1 TB of data in backup for a year you will be
+                        billed 250 + 500 DKK. 250 DKK for the on-disk copy and 500 DKK for off-site
+                        backup copy.</p>
+                </dd>
+                <dt><p class="prose">How do I pay?</p></dt>
+                <dd class="prose">
+                    <p>Costs are associated with <em>project folders</em>. The owner of a project folder is
+                        responsible for the costs associated with the project. The project owner will
+                        be charged yearly (in January) based on actual usage.</p>
+                    <p>If the project owner is associated with either:</p>
+                    <ul>
+                        <li>Faculty of Health, Aarhus University,</li>
+                        <li>Faculty of Natural Sciences, Aarhus University,</li>
+                        <li>Central Region Denmark (Region Midt),</li>
+                    </ul>
+                    <p>then the usage is paid internally and the project owner will not receive a bill
+                        directly from GenomeDK.</p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+{% endblock %}

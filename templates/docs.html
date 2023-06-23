@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="bg-white">
+    <div class="container w-wide">
+        <div class="wrapper pb-2">
+            <div class="sidebar">
+            <div class="toc sidenav">
+                <h1 class="caption">Contents</h1>
+                {% set section = get_section(path=page.ancestors | reverse | first) %}
+                {% if section.pages %}
+                <ul>
+                {% for doc in section.pages %}
+                    <li>
+                        <a href="{{ doc.permalink | safe }}">{{ doc.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            </div>
+            <div class="outline sidenav mt-2">
+                {% if page.toc %}
+                    <h1 class="caption">On this page</h1>
+                    <ul>
+                    {% for h1 in page.toc %}
+                        <li>
+                            <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+                            {% if h1.children %}
+                                <ul>
+                                    {% for h2 in h1.children %}
+                                        <li>
+                                            <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            </div>
+            <div class="doc">
+                {% block doc %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

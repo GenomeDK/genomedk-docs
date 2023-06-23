@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GenomeDK</title>
+    <link rel="stylesheet" href="{{ get_url(path="gdk.css") | safe }}" />
+</head>
+<body>
+    <div class="bg-white">
+        <div class="container w-wide py-1">
+            <header>
+                <a href="{{ get_url(path="/") }}" class="logo">
+                    <svg viewBox="0 0 130 13" xmlns="http://www.w3.org/2000/svg">
+                        <text fill="#003e5c" style="font-weight: bold;" x="0" y="12" letter-spacing="0">
+                            <tspan style="fill: #003e5c;">G</tspan>
+                            <tspan style="fill: #003e5c;">E</tspan>
+                            <tspan style="fill: #003e5c;">N</tspan>
+                            <tspan style="fill: #003e5c;">O</tspan>
+                            <tspan style="fill: #003e5c;">M</tspan>
+                            <tspan style="fill: #003e5c;">E</tspan>
+                            <tspan style="fill: #003e5c;">|</tspan>
+                            <tspan style="fill: #37a0cb;">D</tspan>
+                            <tspan style="fill: #37a0cb;">K</tspan>
+                        </text>
+                    </svg>
+                </a>
+                <nav role="navigation">
+                    <a href="{{ get_url(path="docs") }}">Documentation</a>
+                    <a href="{{ get_url(path="support") }}">Support</a>
+                    <a href="{{ get_url(path="training") }}">Training</a>
+                    <a href="https://console.genome.au.dk/status">Status</a>
+                    <a class="flashy-link" href="https://console.genome.au.dk/user-requests/create/">Request
+                        account</a>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <div class="text-primary-dark pb-2">
+    {% block content %}{% endblock content %}
+    </div>
+    <footer>
+        <div class="container">
+            <object type="image/svg+xml" data="{{ get_url(path="/assets/au_segl.svg") }}" class="seal"></object>
+            <p><a href="{{ get_url(path="terms") }}">Terms of service</a> | <a
+                    href="{{ get_url(path="governance") }}">Governance</a> | <a
+                    href="{{ get_url(path="publications") }}">Publications</a></p>
+            <p>&copy; GenomeDK, Aarhus University</p>
+        </div>
+    </footer>
+</body>
+
+</html>
