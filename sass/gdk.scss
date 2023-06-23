@@ -28,6 +28,7 @@
 * {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -36,9 +37,7 @@ html {
 
 body {
     font-family: AUPassata, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-    font-size: 16px;
     background: var(--primary-color-dark);
-    color: #444;
 }
 
 .logo {
