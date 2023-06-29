@@ -1,6 +1,25 @@
 ---
-title: Training
+title: Help
+aliases: ["support", "training"]
 ---
+
+Please direct any question or problem you encounter to:
+
+* Mail: <support@genome.au.dk>
+* Phone: +45 93 52 26 33
+* Address:
+  * University City
+  * Building 1872, office 359
+  * Universitetsbyen 81, 8000 Aarhus C
+
+You are welcome to come by our office. It may be most practical for you to arrange a time first via mail.
+
+Permanent staff:
+
+* [Anders Egerup Halager, senior consultant](mailto:aeh@genome.au.dk)
+* [Dan Søndergaard, senior consultant](mailto:das@genome.au.dk)
+
+# Training
 
 We are happy to provide on-location workshops on request. Send us an
 e-mail with your wishes for the workshop and approximate size of the
@@ -13,7 +32,7 @@ group. Here are some possible topics for a workshop:
 -   just want to know if high-performance computing can help you solve
     your problems.
 
-# Previous workshops
+## Previous workshops
 
 -   December 1, 2022, 13:00-15:30, "GenomeDK basics", "Managing
     software with Conda", Department of Clinical Biochemistry, Aarhus

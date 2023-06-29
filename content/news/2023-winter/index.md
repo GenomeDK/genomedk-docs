@@ -11,6 +11,8 @@ In 2022 we were happy to welcome 188 new users. 124 new projects were
 created. You also all managed to spend 28 mio. billing hours spread over
 15 mio. jobs!
 
+<!-- more -->
+
 At the time of writing we host 10344 TB of data and 1.066.060.678 files.
 These numbers could have been much higher if it wasn't because we were
 reaching max capacity on our storage systems. Thank you for cleaning up

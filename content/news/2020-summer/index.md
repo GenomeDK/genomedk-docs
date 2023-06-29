@@ -9,6 +9,8 @@ It's time for the summer edition of your favourite newsletter! We've
 had a strange spring where COVID-19 forced most of us to work from home.
 However, that didn't stop you from using GenomeDK, as we'll see later.
 
+<!-- more -->
+
 We would like to feature **your** scientific work with GenomeDK in
 future newsletters. If you'd like to write a few lines about your
 research and how it's being supported by GenomeDK, please get in touch!
@@ -56,26 +58,11 @@ It's always a good idea to keep track of your resource usage on
 GenomeDK. We extended the `space` command so that it now has three
 subcommands:
 
-::: glossary
+* `space user`: Show compute and storage numbers for a single user across projects and home folders. Useful for keeping track of your own resource usage.
 
-space user
+* `space project <project name>`: Show compute and storage numbers for a given project. The resource usage of individual project members is shown. Useful for project owners that wish to identify which project members are using resources in the project.
 
-:   Show compute and storage numbers for a single user across projects
-    and home folders. Useful for keeping track of your own resource
-    usage.
-
-space project \<project name\>
-
-:   Show compute and storage numbers for a given project. The resource
-    usage of individual project members is shown. Useful for project
-    owners that wish to identify which project members are using
-    resources in the project.
-
-space overview
-
-:   Show compute and storage numbers for all projects owned by you. This
-    is primarly relevant for project owners.
-:::
+* `space overview`: Show compute and storage numbers for all projects owned by you. This is primarly relevant for project owners.
 
 To further increase awareness of the resources used on GenomeDK we will
 also soon send out a monthly summary of your consumed billing hours and
@@ -122,7 +109,7 @@ We even hosted a workshop via Zoom during the shutdown!
 -   We host workshops for your research group on request. A workshop can
     be tailored to your needs and previous experience with HPC. Read
     more about our workshops and see a list of previous workshops
-    [here](@/training.md).
+    [here](@/help.md).
 
 -   Do you want **faster and more stable** access to files in your home
     folder? We can now offer to move your NFS home folder to a new,

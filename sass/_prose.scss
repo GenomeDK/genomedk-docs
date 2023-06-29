@@ -1,10 +1,9 @@
 .prose {
-    line-height: 1.65;
-
     p {
-        font-size: 1em;
+        font-size: 1rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        line-height: $line-height;
     }
 
     h1,
@@ -14,36 +13,35 @@
     h5 {
         margin: 2rem 0 0.6rem;
         font-weight: normal;
-        line-height: 1.15;
         overflow-wrap: break-word;
     }
 
     h1 {
-        font-size: var(--text-size-4xl);
+        font-size: $text-size-4xl;
     }
 
     h2 {
-        font-size: var(--text-size-3xl);
+        font-size: $text-size-3xl;
     }
 
     h3 {
-        font-size: var(--text-size-2xl);
+        font-size: $text-size-2xl;
     }
 
     h4 {
-        font-size: var(--text-size-xl);
+        font-size: $text-size-xl;
     }
 
     .text-caption {
-        font-size: var(--text-size-sm);
+        font-size: $text-size-sm;
     }
 
     small {
-        font-size: var(--text-size-xs);
+        font-size: $text-size-xs;
     }
 
     .lead {
-        font-size: var(--text-size-xl);
+        font-size: $text-size-xl;
         margin: 1em 0;
     }
 
@@ -75,24 +73,28 @@
             "Fira Mono",
             "Droid Sans Mono",
             "Courier New", monospace;
-        font-size: var(--text-size-sm);
+        font-size: $text-size-sm;
     }
 
     pre {
         padding: 1.25rem;
         overflow-x: scroll;
         overflow-y: scroll;
-        line-height: 1.65;
+        line-height: $line-height;
         max-height: 200px;
     }
 
     img,
     figure img {
         display: block;
-        max-width: 90%;
+        max-width: 50ch;
         margin: 0 auto;
         margin-top: 2rem;
         margin-bottom: 1rem;
+    }
+
+    img {
+        border-radius: 0.25em;
     }
 
     figure figcaption {
@@ -107,6 +109,7 @@
         padding-left: 1rem;
         list-style-type: "\203A";
         list-style-position: outside;
+        line-height: $line-height;
     }
 
     ul li {
@@ -147,7 +150,7 @@
 
     table {
         margin: 0 auto;
-        background-color: var(--neutral-color);
+        background-color: $neutral-color;
         border-radius: 0.25em;
         text-align: left;
         padding: 1em 0;

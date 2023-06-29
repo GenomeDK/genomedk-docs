@@ -12,6 +12,8 @@ that will be introduced over the coming months. We also look back at
 some of the work that has been done to reorganize our storage. And then
 we are now a DeiC national HPC facility! Read more below.
 
+<!-- more -->
+
 Enjoy!
 
 *The GenomeDK Team*

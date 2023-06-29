@@ -10,6 +10,8 @@ newsletter.
 
 Enjoy!
 
+<!-- more -->
+
 *The GenomeDK Team*
 
 # A few updates

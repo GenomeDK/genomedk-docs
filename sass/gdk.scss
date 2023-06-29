@@ -1,12 +1,14 @@
 @charset "utf-8";
 
-@use "normalize";
-@use "vars";
-@use "layout";
-@use "prose";
-@use "utils";
+@import "normalize";
 
-@use "components/admonition";
+@import "vars";
+@import "layout";
+@import "prose";
+@import "utils";
+
+@import "components/admonition";
+@import "components/timeline";
 
 
 @font-face {
@@ -36,8 +38,9 @@ html {
 }
 
 body {
-    font-family: AUPassata, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-    background: var(--primary-color-dark);
+    font-family: $sans-font;
+    background: $primary-color-dark;
+    color: $primary-color-dark;
 }
 
 .logo {
@@ -105,7 +108,7 @@ a.logo svg {
 }
 
 .toc ul li:hover {
-    background-color: var(--neutral-color);
+    background-color: $neutral-color;
 }
 
 .sidenav ul a {
@@ -114,62 +117,64 @@ a.logo svg {
 
 .sidenav ul ul {
     margin-left: 1em;
-    font-size: var(--text-size-sm);
+    font-size: $text-size-sm;
 }
 
 h1.title {
     font-weight: normal;
-    font-size: var(--text-size-5xl);
-    color: var(--primary-color-dark);
+    font-size: $text-size-5xl;
+    color: $primary-color-dark;
     margin-top: 0;
 }
 
 .pagination {
-    padding-top: 2em;
-    text-align: center;
     display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
 
     a {
-        background-color: var(--primary-color);
-        color: white;
-        padding: 1em 1em;
+        /*background-color: $primary-color;*/
+        color: $primary-color;
+        /*color: white;*/
         text-transform: uppercase;
-        font-size: var(--text-size-sm);
+        font-size: $text-size-sm;
         letter-spacing: 0.025rem;
-        display: inline-block;
         text-decoration: none;
-        width: 20ch;
         font-weight: bold;
+        padding: 1rem 0;
     }
 
     a:hover {
-        background-color: var(--primary-color-dark);
-        color: white;
+        color: $primary-color-dark;
     }
 
-    a.previous {
-        border-radius: 0.25em 0 0 0.25em;
-        margin-right: 0.1rem;
+    a.inactive {
+        color: $neutral-color-dark;
+        cursor: not-allowed;
     }
+
+    a.previous {}
 
     a.next {
-        border-radius: 0 0.25em 0.25em 0;
+
+        text-align: right;
     }
 }
 
 a {
-    color: var(--primary-color-dark);
+    color: $primary-color-dark;
 }
 
 a:hover {
-    color: var(--primary-color);
+    color: $primary-color;
 }
 
 h1.caption {
     text-transform: uppercase;
-    font-size: var(--text-size-sm);
+    font-size: $text-size-sm;
     letter-spacing: 0.025rem;
-    color: var(--primary-color-dark);
+    color: $primary-color-dark;
     margin-top: 0;
 }
 
@@ -213,20 +218,15 @@ h1.caption {
 }
 
 .metadata {
-    font-family: ui-monospace,
-        Menlo, Monaco,
-        "Cascadia Mono", "Segoe UI Mono",
-        "Roboto Mono",
-        "Oxygen Mono",
-        "Ubuntu Monospace",
-        "Source Code Pro",
-        "Fira Mono",
-        "Droid Sans Mono",
-        "Courier New", monospace;
-    font-size: var(--text-size-sm);
-    background-color: var(--danger-color-dark);
+    font-family: $monospace-font;
+    font-size: $text-size-sm;
+    background-color: $danger-color-dark;
     color: white;
-    padding: 0.2rem 0.25rem;
+    padding: 6px 6px;
     display: inline-block;
     border-radius: 0.25em;
+}
+
+.address-map {
+    text-align: center;
 }

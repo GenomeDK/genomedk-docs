@@ -1,3 +1,16 @@
+@mixin admonition($bg, $fg, $hover) {
+    background: $bg;
+    color: $fg;
+
+    a {
+        color: $fg;
+    }
+
+    a:hover {
+        color: $hover;
+    }
+}
+
 .admonition {
     padding: 1.25em;
     border-radius: 0.25em;
@@ -13,41 +26,19 @@
 }
 
 .admonition.note {
-    background: var(--ok-color-light);
-    color: var(--ok-color-dark);
-
-    a {
-        color: var(--ok-color-dark);
-    }
-
-    a:hover {
-        color: var(--ok-color);
-    }
+    @include admonition($bg: $ok-color-light,
+        $fg: $ok-color-dark,
+        $hover: $ok-color );
 }
 
-
 .admonition.warning {
-    background: var(--warning-color-light);
-    color: var(--warning-color-dark);
-
-    a {
-        color: var(--warning-color-dark);
-    }
-
-    a:hover {
-        color: var(--warning-color);
-    }
+    @include admonition($bg: $warning-color-light,
+        $fg: $warning-color-dark,
+        $hover: $warning-color );
 }
 
 .admonition.danger {
-    background: var(--danger-color-light);
-    color: var(--danger-color-dark);
-
-    a {
-        color: var(--danger-color-dark);
-    }
-
-    a:hover {
-        color: var(--danger-color);
-    }
+    @include admonition($bg: $danger-color-light,
+        $fg: $danger-color-dark,
+        $hover: $danger-color );
 }

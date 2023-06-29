@@ -11,6 +11,8 @@ favourite HPC facility.
 The past 12 months you all submitted 15.7 mio. jobs that used a total of
 30 mio. billing hours. At the moment we have 625 active users.
 
+<!-- more -->
+
 Anders and Dan
 
 **The GenomeDK Team**

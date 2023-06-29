@@ -33,7 +33,7 @@
 }
 
 .bg-neutral {
-    background-color: var(--neutral-color);
+    background-color: $neutral-color;
 }
 
 .bg-white {
@@ -41,7 +41,7 @@
 }
 
 .bg-primary {
-    background-color: var(--primary-color);
+    background-color: $primary-color;
 }
 
 .text-white {
@@ -49,7 +49,7 @@
 }
 
 .text-primary-dark {
-    color: var(--primary-color);
+    color: $primary-color;
 }
 
 .gap-y-1 {
@@ -95,9 +95,25 @@
 }
 
 .text {
-    line-height: 1.65;
+    line-height: 1.5;
 }
 
 .text-primary-dark {
-    color: var(--primary-color-dark);
+    color: $primary-color-dark;
+}
+
+.nowrap {
+    word-break: keep-all;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-wide {
+    max-width: 1024px;
+}
+
+.w-narrow {
+    max-width: 800px;
 }

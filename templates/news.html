@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="bg-white">
+    <div class="container w-narrow pb-2">
+        <div class="centered">
+            <h1 class="title">{{ section.title }}</h1>
+            <div class="listing">
+            {% for page in section.pages|slice(end=5) %}
+            <article class="listing-post">
+                <div class="listing-post-metadata">{{ page.date | date(format='%b %d, %Y') }}</div>
+                <div class="listing-post-timeline"></div>
+                <div class="listing-post-timeline-bullet"><div class="inner"></div></div>
+                <div class="listing-post-summary prose">
+                    <h1><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
+                    <section>
+                        {% if page.summary %}
+                        {{ page.summary | safe }}
+                        <a href="{{ page.permalink }}">Continue reading...</a>
+                        {% else %}
+                        {{ page.content | safe}}
+                        {% endif %}
+                    </section>
+                </div>
+            </article>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

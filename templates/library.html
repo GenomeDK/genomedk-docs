@@ -20,7 +20,7 @@
                     {% for page in section.pages %}
                     <tr>
                         <td><a href="{{ page.permalink }}">{{ page.extra.id }}</a></td>
-                        <td>{{ page.date }}</td>
+                        <td class="nowrap">{{ page.date }}</td>
                         <td>{{ page.title }}</td>
                         <td>{{ page.extra.access_type }}</td>
                     </tr>

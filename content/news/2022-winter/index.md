@@ -14,6 +14,8 @@ PB, and peaked at 10 PB.
 Last, but not least, welcome to the 200 users that joined us during
 2021!
 
+<!-- more -->
+
 Anders, Rasmus, and Dan
 
 **The GenomeDK Team**

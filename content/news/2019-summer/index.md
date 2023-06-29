@@ -12,6 +12,8 @@ We've collected numbers that demonstrate how we're growing, how the cluster is
 used, and who the users are and where they come from. We also have a few tips
 for you, as well as updates from the last year.
 
+<!-- more -->
+
 We would like to feature **your** scientific work with GenomeDK in future
 newsletters. If you'd like to write a few lines about your research and how it's
 being supported by GenomeDK, please get in touch!

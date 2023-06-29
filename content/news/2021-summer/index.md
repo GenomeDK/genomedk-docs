@@ -9,6 +9,8 @@ Summer is upon us and so it has become time for the 2021 summer
 newsletter. There's plenty to cover this time as the past six months
 have been both eventful and busy at GenomeDK.
 
+<!-- more -->
+
 We wish you all a great summer vacation!
 
 Anders, Rasmus, and Dan

@@ -1,18 +1,6 @@
 .container {
     margin: 0 auto;
-    padding: 0 2em;
-}
-
-.w-full {
-    width: 100%;
-}
-
-.w-wide {
-    max-width: 1024px;
-}
-
-.w-narrow {
-    max-width: 800px;
+    padding: 0 1em;
 }
 
 header {
@@ -31,9 +19,9 @@ header nav {
 header nav a {
     text-transform: uppercase;
     letter-spacing: 0.025rem;
-    font-size: var(--text-size-sm);
+    font-size: $text-size-sm;
     text-decoration: none;
-    color: var(--primary-color);
+    color: $primary-color;
     font-weight: bold;
     padding: 1em 1.25em;
     border-radius: 0.25em;
@@ -41,7 +29,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: var(--primary-color-dark);
+    color: $primary-color-dark;
 }
 
 header nav a.flashy-link {
@@ -82,7 +70,7 @@ footer .seal {
 }
 
 footer p {
-    font-size: var(--text-size-sm);
+    font-size: $text-size-sm;
     padding-top: 1em;
 }
 
@@ -96,7 +84,7 @@ footer a:hover {
 }
 
 .sidebar {
-    background-color: var(--neutral-color);
+    background-color: $neutral-color;
     padding: 1em;
     border-radius: 0.25em;
 }
