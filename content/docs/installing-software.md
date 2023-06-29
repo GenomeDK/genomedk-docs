@@ -48,8 +48,8 @@ Conda can install packages from different *channels*. This is similar to
 that are commonly used in bioinformatics:
 
 ```bash
-[fe-open-01]$ conda config --add channels bioconda
-[fe-open-01]$ conda config --add channels genomedk
+[fe-open-01]$ conda config --append channels bioconda
+[fe-open-01]$ conda config --append channels genomedk
 [fe-open-01]$ conda config --set channel_priority strict
 ```
 
@@ -67,18 +67,30 @@ you log in:
 ```
 
 Once you have done these steps, you should have a config file in your
-home folder called `.condarc` that looks
-like this:
+home folder called `.condarc` that looks like this:
 
 ```bash
 [fe-open-01]$ cat $HOME/.condarc
 channels:
-  - genomedk
-  - bioconda
   - conda-forge
+  - bioconda
+  - genomedk
 channel_priority: strict
 auto_activate_base: false
 ```
+
+# Making Conda faster
+
+Conda can be quite slow, especially when installing packages with many
+dependencies. To speed up Conda, you can install a faster dependency solver:
+
+```bash
+[fe-open-01]$ conda install -n base --yes conda-libmamba-solver
+[fe-open-01]$ conda config --set solver libmamba
+```
+
+The `libmamba` solver is still experimental, but in our experience it's a lot
+faster and better than the default solver.
 
 # Searching for packages
 
