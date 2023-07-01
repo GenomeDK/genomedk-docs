@@ -134,9 +134,7 @@ h1.title {
     column-gap: 1rem;
 
     a {
-        /*background-color: $primary-color;*/
         color: $primary-color;
-        /*color: white;*/
         text-transform: uppercase;
         font-size: $text-size-sm;
         letter-spacing: 0.025rem;
@@ -153,8 +151,6 @@ h1.title {
         color: $neutral-color-dark;
         cursor: not-allowed;
     }
-
-    a.previous {}
 
     a.next {
 

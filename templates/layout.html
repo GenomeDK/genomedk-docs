@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GenomeDK</title>
-    <link rel="stylesheet" href="{{ get_url(path="gdk.css") | safe }}" />
+    <link rel="stylesheet" href="{{ get_url(path='gdk.css') | safe }}#{{ get_hash(path='gdk.css', sha_type=384, base64=true) | safe }}" />
 </head>
 <body>
     <div class="bg-white">
         <div class="container w-wide py-1">
             <header>
-                <a href="{{ get_url(path="/") }}" class="logo">
+                <a href="{{ get_url(path="/") }}" alt="The name GenomeDK spelled out in capital letters using Aarhus University colors." class="logo">
                     <svg viewBox="0 0 130 13" xmlns="http://www.w3.org/2000/svg">
                         <text fill="#003e5c" style="font-weight: bold;" x="0" y="12" letter-spacing="0">
                             <tspan style="fill: #003e5c;">G</tspan>
@@ -27,9 +27,14 @@
                     </svg>
                 </a>
                 <nav role="navigation">
-                    <a href="{{ get_url(path="docs") }}">Documentation</a>
-                    <a href="{{ get_url(path="news") }}">News</a>
-                    <a href="{{ get_url(path="help") }}">Help</a>
+                    {% set items = [
+                        get_section(path="docs/_index.md"),
+                        get_section(path="news/_index.md"),
+                        get_page(path="help.md")
+                    ] %}
+                    {% for item in items %}
+                        <a {% if item.path in current_path %}class="active"{% endif %} href="{{ get_url(path=item.path) }}">{{ item.title }}</a>
+                    {% endfor %}
                     <a href="https://console.genome.au.dk/status">Status</a>
                     <a class="flashy-link" href="https://console.genome.au.dk/user-requests/create/">Request
                         account</a>

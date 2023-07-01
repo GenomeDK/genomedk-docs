@@ -24,7 +24,6 @@ header nav a {
     color: $primary-color;
     font-weight: bold;
     padding: 1em 1.25em;
-    border-radius: 0.25em;
     text-align: center;
 }
 
@@ -32,10 +31,15 @@ header nav a:hover {
     color: $primary-color-dark;
 }
 
+header nav a.active {
+    color: $primary-color-dark;
+}
+
 header nav a.flashy-link {
     background-color: #e2007a;
     color: white !important;
     margin-left: 1.25em;
+    border-radius: 0.25em;
 }
 
 header nav a.flashy-link:hover {
