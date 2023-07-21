@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="bg-white">
+    <div class="container flex w-wide centered flex-col">
+        <div class="bg-white py-2 w-full">
+            <div class="w-wide centered contact-grid">
+                <div class="pb-2 text">
+                    <h1 class="pb-1">Need help?</h1>
+                    <p class="text-lg">Or want to learn more about what GenomeDK can offer? Don't hesitate to get in touch.</p>
+                    <div class="mb-1">
+                        Building 1872, office 359<br />
+                        Universitetsbyen 81<br />
+                        8000 Aarhus C
+                    </div>
+                    <div class="mb-2">
+                        Phone: {{ page.extra.phone }}
+                    </div>
+                    <div class="">
+                        <a class="btn btn-magenta" href="mailto:{{ page.extra.email }}">Send us an e-mail</a>
+                    </div>
+                </div>
+                <div>
+                    <iframe id="map" class="rounded" style="height: 60vh;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=10.20545393228531%2C56.16976763341712%2C10.208567976951601%2C56.17084875073287&amp;layer=mapnik&amp;marker=56.17030819587982%2C10.207010954618454"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-neutral">
+    <div class="container w-wide centered py-2 text flex align-items-center">
+        <p class="mr-2">Or contact our staff directly...</p>
+        <div class="flex-grow flex justify-evenly align-items-center">
+            {% for person in page.extra.staff %}
+            <a class="contact-card" alt="Send an e-mail to {{ person.name }}" href="mailto:{{ person.email }}">
+                <div>
+                    <div class="name">{{ person.name }}</div>
+                    <div class="title">{{ person.title }}</div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="bg-primary text-white">
+    <div class="container w-wide centered py-2 text">
+        <h1>Training</h1>
+        <p class="text-2xl pb-1">Our workshops are tailored to your needs and experience. We provide workshops on request to groups of five people or more.</p>
+        <p>Previous workshops:</p>
+        <ul>
+            {% for workshop in page.extra.workshops %}
+            <li>{{ workshop|markdown|safe }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

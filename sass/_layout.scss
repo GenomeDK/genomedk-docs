@@ -8,42 +8,20 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
 
-header nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-header nav a {
-    text-transform: uppercase;
-    letter-spacing: 0.025rem;
-    font-size: $text-size-sm;
-    text-decoration: none;
-    color: $primary-color;
-    font-weight: bold;
-    padding: 1em 1.25em;
-    text-align: center;
-}
+        a.active {
+            color: $color-primary-dark;
+        }
 
-header nav a:hover {
-    color: $primary-color-dark;
-}
-
-header nav a.active {
-    color: $primary-color-dark;
-}
-
-header nav a.flashy-link {
-    background-color: #e2007a;
-    color: white !important;
-    margin-left: 1.25em;
-    border-radius: 0.25em;
-}
-
-header nav a.flashy-link:hover {
-    background-color: #5f0030;
+        a:last-child {
+            margin-left: 1.25em;
+        }
+    }
 }
 
 @media (min-width: 800px) {
@@ -64,31 +42,32 @@ footer {
     text-align: center;
     padding: 2em;
     color: white;
+
+    .seal {
+        width: 6em;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 1em;
+    }
+
+    p {
+        font-size: $text-size-sm;
+        padding-top: 1em;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
-footer .seal {
-    width: 6em;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 1em;
-}
-
-footer p {
-    font-size: $text-size-sm;
-    padding-top: 1em;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
 
 .sidebar {
-    background-color: $neutral-color;
+    background-color: $color-neutral;
     padding: 1em;
     border-radius: 0.25em;
 }

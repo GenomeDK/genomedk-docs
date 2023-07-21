@@ -26,19 +26,19 @@
 }
 
 .admonition.note {
-    @include admonition($bg: $ok-color-light,
-        $fg: $ok-color-dark,
-        $hover: $ok-color );
+    @include admonition($bg: $color-ok-light,
+        $fg: $color-ok-dark,
+        $hover: $color-ok );
 }
 
 .admonition.warning {
-    @include admonition($bg: $warning-color-light,
-        $fg: $warning-color-dark,
-        $hover: $warning-color );
+    @include admonition($bg: $color-warning-light,
+        $fg: $color-warning-dark,
+        $hover: $color-warning );
 }
 
 .admonition.danger {
-    @include admonition($bg: $danger-color-light,
-        $fg: $danger-color-dark,
-        $hover: $danger-color );
+    @include admonition($bg: $color-danger-light,
+        $fg: $color-danger-dark,
+        $hover: $color-danger );
 }

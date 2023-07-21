@@ -1,0 +1,26 @@
+.btn {
+    border-radius: 0.25em;
+    color: $color-primary;
+    font-size: $text-size-sm;
+    font-weight: bold;
+    letter-spacing: 0.025rem;
+    padding: 1em 1.25em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 0.25s;
+    transition-property: color, background-color;
+
+    &:hover {
+        color: $color-primary-dark;
+    }
+}
+
+.btn-magenta {
+    background-color: $color-magenta;
+    color: white !important;
+
+    &:hover {
+        background-color: $color-magenta-dark;
+    }
+}

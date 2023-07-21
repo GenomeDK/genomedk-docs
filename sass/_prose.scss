@@ -54,7 +54,7 @@
     }
 
     small {
-        font-size: 0.889rem;
+        font-size: $text-size-sm;
     }
 
     em {
@@ -77,11 +77,12 @@
     }
 
     pre {
-        padding: 1.25rem;
+        padding: 1rem;
         overflow-x: scroll;
         overflow-y: scroll;
         line-height: $line-height;
         max-height: 200px;
+        border-radius: 0.25em;
     }
 
     img,
@@ -150,7 +151,7 @@
 
     table {
         margin: 0 auto;
-        background-color: $neutral-color;
+        background-color: $color-neutral;
         border-radius: 0.25em;
         text-align: left;
         padding: 1em 0;

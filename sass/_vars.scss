@@ -1,24 +1,27 @@
 $text-size: 16px;
 $line-height: 1.5;
 
-$primary-color-light: #BBD9EB;
-$primary-color: #37a0cb;
-$primary-color-dark: #003e5c;
-$secondary-color-light: #D1D4DC;
-$secondary-color-dark: #002546;
-$secondary-color: #003d73;
-$ok-color-dark: #425821;
-$ok-color: #8bad3f;
-$ok-color-light: #CDDAA9;
-$danger-color: #ee7f00;
-$danger-color-dark: #5b0c0c;
-$danger-color: #e2001a;
-$danger-color-light: #F9C8CE;
-$warning-color-dark: #634b03;
-$warning-color: #fabb00;
-$warning-color-light: #FCD04D;
-$neutral-color: #f5f5f5;
-$neutral-color-dark: #a5a5a5;
+$color-primary-light: #BBD9EB;
+$color-primary: #37a0cb;
+$color-primary-dark: #003e5c;
+$color-secondary-light: #D1D4DC;
+$color-secondary-dark: #002546;
+$color-secondary: #003d73;
+$color-ok-dark: #425821;
+$color-ok: #8bad3f;
+$color-ok-light: #CDDAA9;
+$color-danger: #ee7f00;
+$color-danger-dark: #5b0c0c;
+$color-danger: #e2001a;
+$color-danger-light: #F9C8CE;
+$color-warning-dark: #634b03;
+$color-warning: #fabb00;
+$color-warning-light: #FCD04D;
+$color-neutral: #f5f5f5;
+$color-neutral-dark: #a5a5a5;
+
+$color-magenta: #e2007a;
+$color-magenta-dark: #5f0030;
 
 $text-size-xs: 0.69rem;
 $text-size-sm: 0.83rem;
@@ -30,28 +33,65 @@ $text-size-3xl: 2.07rem;
 $text-size-4xl: 2.49rem;
 $text-size-5xl: 2.99rem;
 
-$sans-font: AUPassata, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-$monospace-font: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+$text-sizes: (
+    "xs": 0.69rem,
+    "sm": 0.83rem,
+    "md": 1rem,
+    "lg": 1.2rem,
+    "xl": 1.44rem,
+    "2xl": 1.73rem,
+    "3xl": 2.07rem,
+    "4xl": 2.49rem,
+    "5xl": 2.99rem,
+);
 
 $spacing: (
-    "0": 0,
-    "px": 1,
-    "0.5": 2,
-    "1": 4,
-    "1.5": 6,
-    "2": 8,
-    "2.5": 10,
-    "3": 12,
-    "3.5": 14,
-    "4": 16,
-    "5": 20,
-    "6": 24,
-    "7": 28,
-    "8": 32,
-    "9": 36,
-    "10": 40,
-    "11": 44,
-    "12": 48,
-    "14": 56,
-    "16": 64,
+    "0": "0",
+    "px": "1px",
+    "0.5": "2rem",
+    "1": "4rem",
+    "1.5": "6rem",
+    "2": "8rem",
+    "2.5": "10rem",
+    "3": "12rem",
+    "3.5": "14rem",
+    "4": "16rem",
+    "5": "20rem",
+    "6": "24rem",
+    "7": "28rem",
+    "8": "32rem",
+    "9": "36rem",
+    "10": "40rem",
+    "11": "44rem",
+    "12": "48rem",
+    "14": "56rem",
+    "16": "64rem",
 );
+
+$sans-font: AUPassata,
+    -apple-system,
+    BlinkMacSystemFont,
+    avenir next,
+    avenir,
+    segoe ui,
+    helvetica neue,
+    helvetica,
+    Cantarell,
+    Ubuntu,
+    roboto,
+    noto,
+    arial,
+    sans-serif;
+$monospace-font: ui-monospace,
+    Menlo,
+    Monaco,
+    "Cascadia Mono",
+    "Segoe UI Mono",
+    "Roboto Mono",
+    "Oxygen Mono",
+    "Ubuntu Monospace",
+    "Source Code Pro",
+    "Fira Mono",
+    "Droid Sans Mono",
+    "Courier New",
+    monospace;

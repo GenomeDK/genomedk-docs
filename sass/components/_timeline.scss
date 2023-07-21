@@ -17,7 +17,7 @@
 }
 
 .listing-post-timeline {
-    background-color: $neutral-color;
+    background-color: $color-neutral;
     flex-basis: 2px;
     flex-grow: 0;
     flex-shrink: 0;
@@ -25,7 +25,7 @@
 
 .listing-post-timeline-bullet {
     align-items: center;
-    background: $neutral-color-dark;
+    background: $color-neutral-dark;
     border: none;
     border-radius: 50%;
     box-sizing: border-box;
@@ -50,6 +50,6 @@
 
     h1 a {
         text-decoration: none;
-        color: $primary-color-dark;
+        color: $color-primary-dark;
     }
 }

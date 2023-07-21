@@ -33,10 +33,10 @@
                         get_page(path="help.md")
                     ] %}
                     {% for item in items %}
-                        <a {% if item.path in current_path %}class="active"{% endif %} href="{{ get_url(path=item.path) }}">{{ item.title }}</a>
+                        <a class="btn {% if item.path in current_path %}active{% endif %}" href="{{ get_url(path=item.path) }}">{{ item.title }}</a>
                     {% endfor %}
-                    <a href="https://console.genome.au.dk/status">Status</a>
-                    <a class="flashy-link" href="https://console.genome.au.dk/user-requests/create/">Request
+                    <a class="btn" href="https://console.genome.au.dk/status">Status</a>
+                    <a class="btn btn-magenta" href="https://console.genome.au.dk/user-requests/create/">Request
                         account</a>
                 </nav>
             </header>
