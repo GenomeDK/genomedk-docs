@@ -6,7 +6,7 @@
         <div class="centered">
             <h1 class="title">{{ section.title }}</h1>
             <div class="listing">
-            {% for page in section.pages|slice(end=5) %}
+            {% for page in section.pages | filter(attribute="extra.published", value=true) | slice(end=5) %}
             <article class="listing-post">
                 <div class="listing-post-metadata">{{ page.date | date(format='%b %d, %Y') }}</div>
                 <div class="listing-post-timeline"></div>

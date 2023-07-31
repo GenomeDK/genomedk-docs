@@ -1,6 +1,8 @@
 ---
 title: Newsletter, winter 2020
 date: 2020-01-09
+extra:
+    published: true
 ---
 
 Hello!

@@ -1,6 +1,8 @@
 ---
 title: Newsletter, summer 2022
 date: 2022-07-01
+extra:
+    published: true
 ---
 
 Hello everybody,

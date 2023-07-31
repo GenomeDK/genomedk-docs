@@ -1,6 +1,8 @@
 ---
 title: Newsletter, summer 2020
 date: 2020-07-03
+extra:
+    published: true
 ---
 
 Hello!

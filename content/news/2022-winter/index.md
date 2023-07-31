@@ -1,6 +1,8 @@
 ---
 title: Newsletter, winter 2022
 date: 2022-01-18
+extra:
+    published: true
 ---
 
 Hello!
