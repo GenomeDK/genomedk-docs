@@ -1,6 +1,7 @@
-.prose {
+@mixin prose-base($scalingFactor: 1) {
+    font-size: 1rem*$scalingFactor;
+
     p {
-        font-size: 1rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
         line-height: $line-height;
@@ -41,20 +42,20 @@
     }
 
     .lead {
-        font-size: $text-size-xl;
+        font-size: $text-size-xl*$scalingFactor;
         margin: 1em 0;
     }
 
     .anchor-link {
         font-weight: normal;
-        font-size: 16px;
+        font-size: 16px*$scalingFactor;
         text-decoration: none;
         color: black;
         vertical-align: super;
     }
 
     small {
-        font-size: $text-size-sm;
+        font-size: $text-size-sm*$scalingFactor;
     }
 
     em {
@@ -73,14 +74,14 @@
             "Fira Mono",
             "Droid Sans Mono",
             "Courier New", monospace;
-        font-size: $text-size-sm;
+        font-size: $text-size-sm*$scalingFactor;
     }
 
     pre {
         padding: 1rem;
         overflow-x: scroll;
         overflow-y: scroll;
-        line-height: $line-height;
+        line-height: $line-height*$scalingFactor;
         max-height: 200px;
         border-radius: 0.25em;
     }
@@ -171,4 +172,12 @@
     table td {
         border-bottom: 1px solid white;
     }
+}
+
+.prose {
+    @include prose-base();
+}
+
+.prose-lg {
+    @include prose-base($scalingFactor: 1.4);
 }

@@ -268,3 +268,9 @@ h1.caption {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 2px solid $color-neutral;
+}
