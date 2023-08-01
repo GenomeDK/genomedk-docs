@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GenomeDK</title>
-    <link rel="stylesheet" href="{{ get_url(path='gdk.css') | safe }}#{{ get_hash(path='gdk.css', sha_type=384, base64=true) | safe }}" />
+    <link rel="stylesheet" href="{{ get_url(path='gdk.css', cachebust=True) | safe }}" />
 </head>
 <body>
     <div class="bg-white">
