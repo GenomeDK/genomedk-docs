@@ -240,11 +240,17 @@ h1.caption {
 
 #map {
     border: none;
-    display: inline-block;
+    display: block;
     width: 100%;
-    height: 60vh;
     border-radius: 0.25em;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 12px;
+}
+
+#map iframe {
+    display: inline-block;
+    min-height: 400px;
+    max-height: 0.5vw;
+    width: 100%;
 }
 
 .contact-card {
