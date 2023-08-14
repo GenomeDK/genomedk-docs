@@ -3,7 +3,7 @@ title = "Newsletter, summer 2023"
 date = 2023-08-01
 
 [extra]
-published = false
+published = true
 +++
 
 It's no exaggeration to say that GenomeDK is growing in almost all aspects, in particular thanks to our very [productive and dedicated user base](@/publications.md), and substantial extra funding from [DeiC](https://deic.dk) and [the Ministry of Higher Education and Science](https://ufm.dk/en/?set_language=en).
@@ -11,10 +11,6 @@ It's no exaggeration to say that GenomeDK is growing in almost all aspects, in p
 In this newsletter we will explore the changes that have already happened, and are going to happen, in 2023.
 
 <!-- more -->
-
-# Data is power
-
-In the last newsletter we covered the arrival of the hardware for our latest storage expansion. The expansion was put into production on July 4th and has been running smooth like butter ever since. The total storage capacity of the storage system is now 23 PB and we currently host 14 PB of data.
 
 # Our largest compute expansion to date
 
@@ -30,13 +26,17 @@ While this is exciting in and by itself, there's much more to this purchase than
 
 Two-factor authentication (2FA) comes in many forms. The most well known is probably 2FA where one factor is a username/password pair, and the other factor is an authentication token or approval provided by a smartphone app. Users on our closed zones have used 2FA with an authentication token for a long time, while the second factor for users on the open zone has been IP whitelisting.
 
-In the coming months, we will unify our 2FA setup. This means that all users on the open zone will be migrated to the authentication token-based 2FA (some will know this as TOTP-based 2FA), meaning that you will need a smartphone with an authenticator app (or some other device that understands TOTP and can generate tokens for you).
+In the coming months, we will unify our 2FA setup. This means that all users on the open zone will be migrated to the authentication token-based 2FA (some will know this as TOTP-based 2FA), meaning that you will **need a smartphone with an authenticator app** (or some other device that understands TOTP and can generate tokens for you).
 
-The change will be rolled out gradually. You will receive further instructions when your user is ready to be migrated.
+The change will be rolled out gradually. You do not have to do anything right now. You will receive further instructions when your user is ready to be migrated.
 
 # No news...
 
 ... is good news, but to be able to provide you with more regular updates, official announcements, and technical posts, we've introduced a [news section](@/news/_index.md) on our website (you're looking at it right now!). Check out this space for future news. You can also still [follow us on Twitter](https://twitter.com/genomedk_au) (or X or whatever it's called today).
+
+# Data is power
+
+In the last newsletter we covered the arrival of the hardware for our latest storage expansion. The expansion was put into production on July 4th and has been running smooth like butter ever since. The total storage capacity of the storage system is now 23 PB and we currently host 14 PB of data.
 
 # Enter the classroom
 
