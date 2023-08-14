@@ -26,6 +26,14 @@ To be precise, **11520 cores** will be added to GenomeDK! To put this into conte
 
 While this is exciting in and by itself, there's much more to this purchase than we can write here. You'll hear more later.
 
+# Introducing two-factor with authenticator app
+
+Two-factor authentication (2FA) comes in many forms. The most well known is probably 2FA where one factor is a username/password pair, and the other factor is an authentication token or approval provided by a smartphone app. Users on our closed zones have used 2FA with an authentication token for a long time, while the second factor for users on the open zone has been IP whitelisting.
+
+In the coming months, we will unify our 2FA setup. This means that all users on the open zone will be migrated to the authentication token-based 2FA (some will know this as TOTP-based 2FA), meaning that you will need a smartphone with an authenticator app (or some other device that understands TOTP and can generate tokens for you).
+
+The change will be rolled out gradually. You will receive further instructions when your user is ready to be migrated.
+
 # No news...
 
 ... is good news, but to be able to provide you with more regular updates, official announcements, and technical posts, we've introduced a [news section](@/news/_index.md) on our website (you're looking at it right now!). Check out this space for future news. You can also still [follow us on Twitter](https://twitter.com/genomedk_au) (or X or whatever it's called today).
@@ -38,7 +46,7 @@ We will give a full-day introduction to GenomeDK and computing on a HPC system o
 
 If you're an employee at AU, we strongly encourage you to familiarize yourself with the excellent [data protection ressources](https://medarbejdere.au.dk/informationssikkerhed/databeskyttelse/saerligt-om-forskning) published by the AU Information Security department. The ressources are a good introduction to GDPR and your responsibilities as an AU employee/student.
 
-# Still a few mugs left
+# Still a few free mugs left
 
 We still have a few GenomeDK mugs left (only the "formal" style though - sorry!). You're welcome to [pop by our office](@/help.md) and grab an exclusive first-edition mug. Got ideas for new merch? [Get in touch](mailto:support@genome.au.dk).
 
