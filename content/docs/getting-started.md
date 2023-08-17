@@ -86,7 +86,7 @@ whitelisted. You can see what your IP is at
 
 3.  Download the connection file for the zone you wish to connect to:
 
-    * [iPSYCH](/zones/ipsych.nxs)
+    * [iPSYCH](/zones/ipsych.nxs) ([guidelines](/assets/iPSYCH_Guidelines_GDK_2021_04_13.pdf))
     * [Brain](/zones/brain.nxs)
 
 4.  Using the login information received in your mailbox. Login by
