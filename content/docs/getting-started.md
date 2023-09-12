@@ -36,69 +36,85 @@ zone. If you're in doubt about which zone you belong to, check your
 account confirmation e-mail. If it doesn't mention a specific zone, you
 belong to the open zone. If still in doubt, please contact support.
 
+## Prepare for two-factor authentication
+
+You must first install an authenticator app on your phone (if you don't already
+have one). Popular authenticator apps include:
+
+* Microsoft Authenticator
+* Google Authenticator
+* FreeOTP
+
+All of these apps will allow you to scan a QR code and generate tokens for
+future logins.
+
 ## Connecting to the open zone
 
-On Linux, open the terminal of your choice. On macOS, you may use
-`Terminal.app` which can be found in
-the `/Applications/Utilities` folder. In
-both cases, you should now be able to log in to the frontend by typing
-this command:
+{% warning() %}
+On your first login, you must set up two-factor authentication. If you do not
+set up two-factor on the first login, you will not be able to access your
+account. Read the instructions to the end before logging in for the first time.
+{% end %}
+
+On Linux, open the terminal of your choice. On macOS, you may use `Terminal.app`
+which can be found in the `/Applications/Utilities` folder. In both cases, you
+should now be able to log in to the frontend by typing this command:
 
 ```bash
 [local]$ ssh USERNAME@login.genome.au.dk
 ```
 
-On Windows, you have multiple options. On Windows 10, open
-`PowerShell`. You should then be able
-to type:
+On Windows, you have multiple options. On Windows 10, open `PowerShell`. You
+should then be able to type:
 
 ```bash
 [local]$ ssh.exe USERNAME@login.genome.au.dk
 ```
 
-Older versions of Windows do not include the `ssh` command and thus you will need to install an alternative
-yourself. We recommend [MobaXterm](https://mobaxterm.mobatek.net/).
+Older versions of Windows do not include the `ssh` command and thus you will
+need to install an alternative yourself. We recommend
+[MobaXterm](https://mobaxterm.mobatek.net/).
 
-{% note() %}
-Access to GenomeDK is restricted to the internal network at Aarhus
-University. However, if you need access from abroad or for some other
-reason can not connect connect from AU, feel free to
-[contact us](/support) to have your IP
-whitelisted. You can see what your IP is at
-<https://console.genome.au.dk/ip>.
-{% end %}
+### Set up two-factor
+
+You must now set up two-factor authentication. Run the following command on
+GenomeDK:
+
+    gdk-auth-show-qr
+
+This will show a QR code in your terminal. Open the the authenticator app on
+your phone and scan the QR code.
 
 ## Connecting to a closed zone {#zone_connect}
 
-1.  Download and install the remote desktop client for your operating
-    system on your local machine.
+{% warning() %}
+On your first login, you must set up two-factor authentication. If you do not
+set up two-factor on the first login, you will not be able to access your
+account. Read the instructions to the end before logging in for the first time.
+{% end %}
 
-    -   [Download client for
-        Windows](https://www.nomachine.com/download/download&id=8)
-    -   [Download client for
-        macOS](https://www.nomachine.com/download/download&id=7)
-    -   [Download client for
-        Linux](https://www.nomachine.com/download/linux&id=1)
+Download and install the remote desktop client for your operating system on your
+local machine.
 
-2.  Download and install FreeOTP, Google Authenticator or any similar
-    app on your phone. If you are at AU you probably already have
-    Microsoft Authenticator installed.
+- [Download client for Windows](https://www.nomachine.com/download/download&id=8)
+- [Download client for macOS](https://www.nomachine.com/download/download&id=7)
+- [Download client for Linux](https://www.nomachine.com/download/linux&id=1)
 
-3.  Download the connection file for the zone you wish to connect to:
+Download the connection file for the zone you wish to connect to:
 
-    * [iPSYCH](/zones/ipsych.nxs) ([guidelines](/assets/iPSYCH_Guidelines_GDK_2021_04_13.pdf))
-    * [Brain](/zones/brain.nxs)
+* [iPSYCH](/zones/ipsych.nxs) ([guidelines](/assets/iPSYCH_Guidelines_GDK_2021_04_13.pdf))
+* [Brain](/zones/brain.nxs)
 
-4.  Using the login information received in your mailbox. Login by
-    entering your username and password.
+Using the login information received in your mailbox. Login by entering your
+username and password.
 
-    Assuming you entered correctly you will get access to the virtual
-    desktop.
+Assuming you entered correctly you will get access to the virtual desktop.
 
-    Open the the authenticator app on your phone and scan the
-    `QRCode.png` located on your
-    NoMachine desktop. From now on you will need to generate a one-time
-    password with the authenticator app every time you log in.
+### Set up two-factor
+
+Open the the authenticator app on your phone and scan the `QRCode.png` located
+on your NoMachine desktop. From now on you will need to generate a one-time
+password with the authenticator app every time you log in.
 
 # Changing your password {#change_password}
 
