@@ -1,4 +1,4 @@
-FROM rust:slim AS zola-builder
+FROM rust:slim-buster AS zola-builder
 
 RUN apt-get update -y && \
     apt-get install -y make g++ libssl-dev zip wget && \
