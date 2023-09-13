@@ -40,7 +40,7 @@ In the last newsletter we covered the arrival of the hardware for our latest sto
 
 # Enter the classroom
 
-We will give a full-day introduction to GenomeDK and computing on a HPC system on the first day of the recently announced [Single cell and spatial OMICS](https://au.phd-courses.dk/CourseCatalog/ShowCourse/1249?returnUrl=https%3A%2F%2Fau.phd-courses.dk%2FCourseCatalog%2FShowCourses%2F%3Fquery%3DLin%2520lin%26showOpen%3Dtrue%26sortOrder%3DStartDate) PhD course headed by Lin Lin at the Faculty of Health.
+We will give a full-day introduction to GenomeDK and computing on a HPC system on the first day of the recently announced [Single cell and spatial OMICS](https://au.phd-courses.dk/CourseCatalog/ShowCourse/1249) PhD course headed by Lin Lin at the Faculty of Health.
 
 # Data protection ressources
 
