@@ -17,7 +17,7 @@
                     <th>Access type</th>
                 </thead>
                 <tbody>
-                    {% for page in section.pages %}
+                    {% for page in section.pages|sort(attribute="extra.id")|reverse %}
                     <tr>
                         <td><a href="{{ page.permalink }}">{{ page.extra.id }}</a></td>
                         <td class="nowrap">{{ page.date }}</td>
