@@ -9,6 +9,9 @@
 
             <div class="metadata">{{ page.date | date(format='%b %d, %Y') }}</div>
             <h1 class="title">{{ page.title }}</h1>
+            {% if page.extra.illustration %}
+                <img class="listing-post-illustration" src="{{ page.path }}/{{ page.extra.illustration }}" />
+            {% endif %}
             <div class="prose prose-lg">
             {{ page.content | safe }}
             </div>

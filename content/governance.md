@@ -23,9 +23,7 @@ Technical steering committee members (in alphabetical order):
 - Anders Børglum
 - Anders Egerup Halager
 - Anne Hedemand
-- Britt Elmedal Laursen
 - Dan Søndergaard
-- Deirdre Cronin Fenton
 - Jakob Grove
 - Jakob Skou Pedersen
 - Mikkel Schierup

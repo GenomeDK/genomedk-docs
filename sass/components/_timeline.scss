@@ -23,6 +23,19 @@
     flex-shrink: 0;
 }
 
+.listing-post-summary h1 {
+    margin: 2rem 0 0.6rem;
+    font-weight: normal;
+    overflow-wrap: break-word;
+}
+
+.listing-post-illustration {
+    width: 100%;
+    max-width: 100%;
+    margin: 1em 0.1em;
+    border-radius: 0.25em;
+}
+
 .listing-post-timeline-bullet {
     align-items: center;
     background: $color-neutral-dark;

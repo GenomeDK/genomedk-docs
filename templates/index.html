@@ -42,10 +42,10 @@
     <div class="bg-neutral py-2">
         <div class="container w-wide centered">
             <div class="flex w-full space-evenly" style="flex-flow: row wrap;">
-                <div class="display-item"><span class="s-display">4500</span><span class="label">cores</span></div>
-                <div class="display-item"><span class="s-display">39</span><span class="label">TB memory</span></div>
+                <div class="display-item"><span class="s-display">14000</span><span class="label">cores</span></div>
+                <div class="display-item"><span class="s-display">110</span><span class="label">TB memory</span></div>
                 <div class="display-item"><span class="s-display">23</span><span class="label">PB storage</span></div>
-                <div class="display-item"><span class="s-display">730</span></span><span class="label">million
+                <div class="display-item"><span class="s-display">800</span></span><span class="label">million
                         files</span></div>
             </div>
         </div>
@@ -53,74 +53,32 @@
     <div class="bg-white py-2">
         <div class="container w-wide centered">
             <div class="flex w-full space-evenly" style="flex-flow: row wrap;">
-                <div class="display-item"><span class="s-display">670</span><span class="label">users</span></div>
-                <div class="display-item"><span class="s-display">690</span><span class="label">projects</span></div>
+                <div class="display-item"><span class="s-display">700</span><span class="label">users</span></div>
+                <div class="display-item"><span class="s-display">850</span><span class="label">projects</span></div>
                 <div class="display-item"><span class="s-display">800</span><span class="label">publications</span>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bg-primary text-white">
-        <div class="container w-wide centered py-2">
-            <h1>The boring details</h1>
-            <dl class="boring-details py-2">
-                <dt><p class="prose">Who can get an account?</p></dt>
-                <dd class="prose">
-                    <p>We are open to account requests from people associated with a university
-                        or small and medium-sized enterprises (SMEs).</p>
-                </dd>
-                <dt><p class="prose">What does it cost?</p></dt>
-                <dd class="prose">
-                    <p>In 2023, the prices are:</p>
-
-                    <div class="flex w-full space-evenly" style="flex-flow: row wrap;">
-                        <div class="display-item">
-                            <span class="text-xl">0.13</span>
-                            <span class="label">DKK/billing hour</span>
-                            <span class="label">CPU</span>
-                        </div>
-                        <div class="display-item">
-                            <span class="text-xl">2.34</span>
-                            <span class="label">DKK/billing hour</span>
-                            <span class="label">GPU</span>
-                        </div>
-                        <div class="display-item">
-                            <span class="text-xl">250</span>
-                            <span class="label">DKK/TB/year</span>
-                            <span class="label">storage</span>
-                        </div>
-                        <div class="display-item">
-                            <span class="text-xl">500</span>
-                            <span class="label">DKK/TB/year</span>
-                            <span class="label">backup*</span>
-                        </div>
-                    </div>
-
-                    <p>One billing hour corresponds to one CPU core for one hour or 8 GB memory for
-                        one hour, whichever is highest. One GPU hour is the same as 18 core hours
-                        (half of the cores of a GPU node).</p>
-                    <p>Prices are updated yearly and are subject to change. Do not hesitate to contact
-                        us if you have any questions.</p>
-                    <p>* For example, if you store 1 TB of data in backup for a year you will be
-                        billed 250 + 500 DKK. 250 DKK for the on-disk copy and 500 DKK for off-site
-                        backup copy.</p>
-                </dd>
-                <dt><p class="prose">How do I pay?</p></dt>
-                <dd class="prose">
-                    <p>Costs are associated with <em>project folders</em>. The owner of a project folder is
-                        responsible for the costs associated with the project. The project owner will
-                        be charged yearly (in January) based on actual usage.</p>
-                    <p>If the project owner is associated with either:</p>
-                    <ul>
-                        <li>Faculty of Health, Aarhus University,</li>
-                        <li>Faculty of Natural Sciences, Aarhus University,</li>
-                        <li>Central Region Denmark (Region Midt),</li>
-                    </ul>
-                    <p>then the usage is paid internally and the project owner will not receive a bill
-                        directly from GenomeDK.</p>
-                </dd>
-            </dl>
+    {% set news = get_section(path="news/_index.md") %}
+    {% set page = news.pages | filter(attribute="extra.published", value=true) | filter(attribute="extra.highlight", value=true) | first %}
+    {% if page %}
+    <div class="bg-primary text-white py-2">
+        <div class="container w-wide centered">
+            <h1>Hot off the press</h1>
+            <article class="news-highlight">
+                <img class="illustration shadow" src="{{ page.path }}/{{ page.extra.illustration }}" />
+                <div>
+                    <div class="metadata">{{ page.date | date(format='%b %d, %Y') }}</div>
+                    <h1 class="news-highlight-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
+                    <section class="prose mb-2">
+                        {{ page.summary | safe }}
+                    </section>
+                    <a class="btn btn-magenta" href="{{ page.permalink }}">Continue reading...</a>
+                </div>
+            </article>
         </div>
     </div>
+    {% endif %}
 </div>
 {% endblock %}

@@ -29,8 +29,9 @@
                 <nav role="navigation">
                     {% set items = [
                         get_section(path="docs/_index.md"),
+                        get_page(path="help.md"),
                         get_section(path="news/_index.md"),
-                        get_page(path="help.md")
+                        get_page(path="pricing.md"),
                     ] %}
                     {% for item in items %}
                         <a class="btn {% if item.path in current_path %}active{% endif %}" href="{{ get_url(path=item.path) }}">{{ item.title }}</a>

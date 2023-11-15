@@ -68,7 +68,7 @@ it should be put in a directory called either `BACKUP`, `Backup` or `backup`.
 The directory can be located in any other directory, but only some locations are
 eligible for backup.
 
-Data is backed up once per week and snapshots are kept for 90 days.
+Data is backed up once per week and snapshots are kept for 14 days.
 
 {% warning() %} Do not back up temporary data files that can easily be
 reproduced. Computation is cheap, but backup is expensive. The backup is meant

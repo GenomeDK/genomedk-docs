@@ -11,9 +11,12 @@
                 <div class="listing-post-metadata">{{ page.date | date(format='%b %d, %Y') }}</div>
                 <div class="listing-post-timeline"></div>
                 <div class="listing-post-timeline-bullet"><div class="inner"></div></div>
-                <div class="listing-post-summary prose">
+                <div class="listing-post-summary">
                     <h1><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
-                    <section>
+                    {% if page.extra.illustration %}
+                    <img class="listing-post-illustration" src="{{ page.path }}/{{ page.extra.illustration }}" />
+                    {% endif %}
+                    <section class="prose">
                         {% if page.summary %}
                         {{ page.summary | safe }}
                         <a href="{{ page.permalink }}">Continue reading...</a>

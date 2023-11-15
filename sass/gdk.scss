@@ -217,7 +217,7 @@ h1.caption {
 .metadata {
     font-family: $monospace-font;
     font-size: $text-size-sm;
-    background-color: $color-danger-dark;
+    background-color: $color-primary-dark;
     color: white;
     padding: 6px 6px;
     display: inline-block;
@@ -279,4 +279,16 @@ hr {
     margin: 2rem 0;
     border: none;
     border-top: 2px solid $color-neutral;
+}
+
+.news-highlight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+    align-items: center;
+}
+
+.news-highlight-title a {
+    color: white;
+    text-decoration: none;
 }

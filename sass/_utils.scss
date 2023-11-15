@@ -180,3 +180,12 @@ $value in $text-sizes {
 .flex-wrap {
     flex-wrap: wrap;
 }
+
+.shadow {
+    box-shadow: 0 0 20px rgba(black, .25);
+}
+
+.illustration {
+    width: 100%;
+    border-radius: 0.25em;
+}
