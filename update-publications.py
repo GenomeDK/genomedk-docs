@@ -36,6 +36,7 @@ queries = [
     ("Torben Asp", 2014),
     ("Philip Francis Thomsen", 2021),
     ("Mads Reinholdt Jensen", 2021),
+    ("Doug Speed", 2020),
 ]
 
 blacklist = [
@@ -114,7 +115,7 @@ def formatted_citation(doi, style="apa"):
 def lookup_publication(doi):
     response = http.request(
         "GET",
-        "https://api.crossref.org/works/{}".format(doi),
+        f"https://api.crossref.org/works/{doi}",
         headers={"Accept": "application/json"}
     )
     if response.status != 200:
@@ -141,7 +142,7 @@ def main():
             dois.add(doi)
 
     publications = []
-    for doi in dois:
+    for doi in sorted(dois):
         try:
             citation = formatted_citation(doi)
             if citation is None:
@@ -154,17 +155,24 @@ def main():
             continue
 
     last_updated = date.today()
-    with open("_publications.md", "w") as fileobj:
-        print(
-            "*{} publications listed, last updated on {}*. Sorted by first publication date.".format(
-                len(publications), last_updated
-            ),
-            file=fileobj,
-        )
 
-        print(file=fileobj)
-        for _, _, citation in sorted(publications, key=lambda p: p[0], reverse=True):
-            print("* {}".format(citation), file=fileobj)
+    data = {
+        "last_updated": last_updated.isoformat(),
+        "publications": [citation for _, _, citation in sorted(publications, key=lambda p: p[0], reverse=True)]
+    }
+    with open("publications.json", "w") as fileobj:
+        json.dump(data, fileobj)
+
+        # print(
+        #     "*{} publications listed, last updated on {}*. Sorted by first publication date.".format(
+        #         len(publications), last_updated
+        #     ),
+        #     file=fileobj,
+        # )
+
+        # print(file=fileobj)
+        # for _, _, citation in sorted(publications, key=lambda p: p[0], reverse=True):
+        #     print("* {}".format(citation), file=fileobj)
 
 if __name__ == "__main__":
     main()

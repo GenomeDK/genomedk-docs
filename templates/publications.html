@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% set data = load_data(path="publications.json") %}
+<div class="bg-white">
+    <div class="container w-narrow">
+        <div class="centered pb-2">
+            <h1 class="title">{{ page.title }}</h1>
+            <div class="prose">
+                {{ page.content | safe }}
+
+                {{ data["publications"] | length }} publications listed, last updated on {{ data["last_updated"] }}. Sorted by first publication date.
+
+                <hr />
+
+                <ul>
+                    {% for pub in data["publications"] %}
+                    <li>{{ pub | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
