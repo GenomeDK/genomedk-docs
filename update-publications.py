@@ -50,6 +50,7 @@ blacklist = [
     "10.1007/s00167-014-3149-4",
     "10.2106/jbjs.cc.n.00101",
     "10.1038/nature11539",
+    "10.1016/j.asmr.2023.100759",
 ]
 
 manually_reported_dois = [
