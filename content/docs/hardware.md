@@ -7,6 +7,10 @@ This page contains details about the hardware and infrastructure that is availab
 
 # Inventory
 
+* cn-\[1001-1060\] (60 nodes, 11520 cores)
+    * 2x AMD/"EPYC Genoa" 9654 CPUs @ 3.7 GHz, 96 cores/CPU
+    * 1.5 TB memory
+    * Infiniband HDR
 * s21, s22 (52 nodes, 3228 cores)
     * 2x AMD/"EPYC Rome" 7452 CPUs @ 2.35 GHz, 32 cores/CPU
     * 512 GB memory
