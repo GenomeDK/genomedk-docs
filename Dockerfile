@@ -1,5 +1,4 @@
 FROM ghcr.io/getzola/zola:v0.18.0 AS builder
-
 WORKDIR /app
 COPY . .
 RUN ["zola", "build"]
