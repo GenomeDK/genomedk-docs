@@ -290,7 +290,7 @@ NodeName=cn-1001 Arch=x86_64 CoresPerSocket=96
 
 Looking at the line that starts with `AvailableFeatures` we see that the
 node has the *gen5*, *amd* and *avx512* features associated to it.
-So in our ealier example we could have constrained on `avx512` instead of a
+So in our earlier example we could have constrained on `avx512` instead of a
 certain type of machine.
 
 The [slurm
