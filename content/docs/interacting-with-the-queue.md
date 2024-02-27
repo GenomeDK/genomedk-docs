@@ -250,17 +250,17 @@ CPU features you must restrict your jobs to compute nodes supporting
 those features.
 
 For example, our 4th generation nodes do not support AVX512
-instructions. To restrict your job to only the s05 (gen3) nodes that do
+instructions. To restrict your job to only the 5th generation nodes that do
 support it:
 
 ```bash
-[fe-open-01]$ sbatch --constraint "gen3" ...
+[fe-open-01]$ sbatch --constraint "gen5" ...
 ```
 
 This also works for `srun`:
 
 ```bash
-[fe-open-01]$ srun --constraint "gen3" ...
+[fe-open-01]$ srun --constraint "gen5" ...
 ```
 
 You can get a list of all of the features you can constrain by with the
@@ -268,27 +268,30 @@ You can get a list of all of the features you can constrain by with the
 associated with the `s21n21` node:
 
 ```bash
-[fe-open-01]$ scontrol show node s21n21
-NodeName=s21n21 CoresPerSocket=32
-    CPUAlloc=0 CPUTot=64 CPULoad=N/A
-    AvailableFeatures=gen4,s21,512g
-    ActiveFeatures=gen4,s21,512g
-    Gres=(null)
-    NodeAddr=s21n21 NodeHostName=s21n21
-    RealMemory=515538 AllocMem=0 FreeMem=N/A Sockets=2 Boards=1
-    State=AVAILABLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
-    Partitions=short
-    BootTime=None SlurmdStartTime=None
-    LastBusyTime=2022-05-02T13:01:48
-    CfgTRES=cpu=64,mem=515538M,billing=64
-    AllocTRES=
-    CapWatts=n/a
-    CurrentWatts=0 AveWatts=0
-    ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
+[fe-open-01]$ scontrol show node cn-1001
+NodeName=cn-1001 Arch=x86_64 CoresPerSocket=96
+   CPUAlloc=26 CPUEfctv=192 CPUTot=192 CPULoad=27.92
+   AvailableFeatures=gen5,amd,avx512
+   ActiveFeatures=gen5,amd,avx512
+   Gres=(null)
+   NodeAddr=cn-1001 NodeHostName=cn-1001 Version=23.11.2
+   OS=Linux 4.18.0-477.27.2.el8_8.x86_64 #1 SMP Fri Sep 29 08:21:01 EDT 2023
+   RealMemory=1547000 AllocMem=1433600 FreeMem=392897 Sockets=2 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=default
+   Partitions=normal
+   BootTime=2023-12-08T16:08:20 SlurmdStartTime=2024-02-14T15:51:08
+   LastBusyTime=2024-02-22T04:02:40 ResumeAfterTime=None
+   CfgTRES=cpu=192,mem=1547000M,billing=192
+   AllocTRES=cpu=26,mem=1400G
+   CapWatts=n/a
+   CurrentWatts=0 AveWatts=0
+   ExtSensorsJoules=n/a ExtSensorsWatts=0 ExtSensorsTemp=n/a
 ```
 
 Looking at the line that starts with `AvailableFeatures` we see that the
-node has the *gen4* and *s21* features associated to it.
+node has the *gen5*, *amd* and *avx512* features associated to it.
+So in our ealier example we could have constrained on `avx512` instead of a
+certain type of machine.
 
 The [slurm
 documentation](https://slurm.schedmd.com/sbatch.html#OPT_constraint) has
