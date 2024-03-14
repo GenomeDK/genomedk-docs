@@ -1,0 +1,14 @@
+.gallery {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: auto auto;
+}
+
+.gallery a {
+    display: block;
+}
+
+.gallery a img {
+    margin: 0;
+    padding: 0;
+}
