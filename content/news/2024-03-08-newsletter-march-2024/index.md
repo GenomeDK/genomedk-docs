@@ -1,7 +1,7 @@
 ---
 title: Newsletter, March 2024
 extra:
-    published: false
+    published: true
 ---
 
 We're now well into 2024 and it's time for the 10th edition of the newsletter.
