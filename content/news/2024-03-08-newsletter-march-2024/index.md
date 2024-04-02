@@ -80,8 +80,10 @@ your code on the frontend, please ensure that:
 * it is only using a single core,
 * you kill it after at most 10 minutes.
 
-File downloads are exempted from these rules. It's perfectly fine to download files
-on the frontend. In fact, you should never submit a job for downloading data.
+File downloads, moving files, and copying files (more generally things that
+mostly or only do I/O) is exempted from these rules. It's perfectly fine to
+download files on the frontend. In fact, you should never submit a job for
+downloading data.
 
 ## Keep track of your usage
 
