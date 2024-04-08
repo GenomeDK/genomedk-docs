@@ -8,7 +8,7 @@
             <div class="metadata">{{ page.extra.id }}</div>
             <h1 class="title">{{ page.title }}</h1>
             <div class="prose">
-                <p>All inquiries regarding this data set should be directed towards the owners:</p>
+                <p>All inquiries regarding this data set should be directed towards the following contact persons:</p>
                 <ul class="contacts">
                     {% for contact in page.extra.contacts %}
                     <li><a href="mailto:{{ contact.email }}">{{ contact.name }}</a></li>
