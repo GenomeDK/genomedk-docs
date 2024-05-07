@@ -205,24 +205,6 @@ cluster without typing your password. Test this by runnning:
 
 You should not be prompted for a password.
 
-Now, set up public-key access to all compute nodes. On the frontend, run
-the same `ssh-keygen` command as
-before:
-
-```bash
-[fe-open-01]$ ssh-keygen
-```
-
-Again, just press `Enter` to use the
-default values (and do not type in a password). Then run:
-
-```bash
-[fe-open-01]$ cat ~/.ssh/id_rsa.pub >> authorized_keys
-```
-
-You will now be able to SSH between compute nodes without typing a
-password.
-
 # Using a terminal multiplexer
 
 Using a terminal multiplexer allows you to keep your session open, even
