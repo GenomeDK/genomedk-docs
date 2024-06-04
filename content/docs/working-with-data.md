@@ -128,7 +128,7 @@ Now mount the filesystem by running this command:
 ```bash
 [local]$ sshfs USERNAME@login.genome.au.dk:/home/USERNAME ~/GenomeDK
     -o idmap=none -o uid=$(id -u),gid=$(id -g)
-    -o allow_other -o umask=077 -o follow_symlinks
+    -o umask=077 -o follow_symlinks
 ```
 
 Where *USERNAME* should be replaced with your GenomeDK username. You should now
