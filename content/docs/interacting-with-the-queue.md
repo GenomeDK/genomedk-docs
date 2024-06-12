@@ -35,7 +35,7 @@ resources such as the number of cores per node, available memory per
 node, and the maximum walltime (running time) a job in the partition can
 have.
 
-{% info() %}
+{% note() %}
 There is a global seven day time limit. Submitting a job requesting more
 than seven days will result in an error.
 {% end %}
