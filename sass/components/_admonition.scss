@@ -12,9 +12,17 @@
 }
 
 .admonition {
-    padding: 1.25em;
+    padding: 1em 1.25em;
     border-radius: 0.25em;
     margin: 1em 0;
+    display: grid;
+    grid-template-columns: min-content auto;
+    align-items: start;
+    column-gap: 0.75em;
+
+    svg {
+        padding-top: 4px;
+    }
 }
 
 .admonition :first-child {
@@ -35,10 +43,4 @@
     @include admonition($bg: $color-warning-light,
         $fg: $color-warning-dark,
         $hover: $color-warning );
-}
-
-.admonition.danger {
-    @include admonition($bg: $color-danger-light,
-        $fg: $color-danger-dark,
-        $hover: $color-danger );
 }

@@ -1,29 +1,21 @@
 ---
 title: Installing and using software
-weight: 50
+weight: 40
 ---
 
 We recommend that you install and use the [Conda](https://conda.io/docs/)
-package manager to install software on GenomeDK. However, we used to have
-another mechanism for installing software that has now been deprecated. If you
-used this mechanism before, please read through the next section for
-instructions on how to transition safely to Conda. If you're a new user you may
-skip the next section and jump directly to [Installing Conda](#installing_conda).
+package manager to install software on GenomeDK.
 
-**Why Conda?** The clever thing about Conda is that it allows you to use
-separate environments for separate projects. If you have a project where you've
-installed a bunch packages for Python or R there is no reason for those to
-accidentally seep in to your next project. If you want to try different versions
-of some package you can just create separate environments for them instead of
-installing and uninstalling multiple times. With separate environments you force
-yourself to make the dependencies for each project explicit which in turn makes
-it easier for collaborators to run your code and improves reproducibility.
+Conda can install any kind of software. This means that your entire
+setup can be installed through Conda (if there's packages for it all).
+For example, you can create an environment with Rstudio, R, and ggplot2
+with a single command.
 
-Conda also provides access to thousands of packages used in data science and
+Conda provides access to thousands of packages used in data science and
 bioinformatics. These packages can be installed with a single command, so you
 don't have to worry about compilers, dependencies, and where to put binaries.
 
-# Installing the Conda package manager {#installing_conda}
+# Installing Conda {#installing_conda}
 
 Downloading and installing Conda is very simple, you just download and
 run the installer:
@@ -107,6 +99,10 @@ name of the software. For example, the Conda package for the software
 *biobambam2* is just called *biobambam*, so searching for *biobambam2*
 would not return any results.
 
+If you can't find a suitable Conda package, contact us and we will build a Conda
+package for you (when possible). Sometimes building a Conda package is not
+viable and in that case we will build a Singularity/Apptainer image instead.
+
 # Using environments
 
 Here is how the usage might look if we want to create a new environment
@@ -131,31 +127,6 @@ first:
 Notice that the prompt changed to show you that you're now in the
 *amazing-project* environment.
 
-Conda can install any kind of software. This means that your entire
-setup can be installed through Conda (if there's packages for it all).
-For example, you can create an environment with Rstudio, R, and ggplot2
-with a single command.
-
-# Command reference
-
-To install software in the currenctly activated environment:
-
-```bash
-(amazing-project) [fe-open-01]$ conda install PACKAGE-NAME
-```
-
-To remove a software package from the currently activated environment:
-
-```bash
-(amazing-project) [fe-open-01]$ conda remove PACKAGE-NAME
-```
-
-To update a software package in the currently activated environment:
-
-```bash
-(amazing-project) [fe-open-01]$ conda update PACKAGE-NAME
-```
-
 Since Conda knows about the entire environment you created, it can tell
 you exactly which packages are used in the environment. This is very
 useful for collaborating with others, since your collaborators can
@@ -177,14 +148,6 @@ recreate your environment by running:
 ```
 
 You can read more about [using environments for projects](/docs/best-practices/).
-
-There's also also a [cheatsheet](http://know.continuum.io/rs/387-XNW-688/images/conda-cheatsheet.pdf) with Conda commands available.
-
-# I don't think I can use Conda because...
-
-* *A Conda package is not available...* In this case you can contact us and we will build a Conda package for you (when possible). Sometimes building a Conda package is not viable and in that case we will build a Singularity/Apptainer image instead.
-
-* *I'm part of a project that dictates the software I should use...* In this case the project should and probably will supply you for either a set of Conda packages or Singularity/Apptainer images. If not, most or all of the software will probably be available through Conda anyway, so you can still set up an environment with the software.
 
 # Using graphical interfaces
 

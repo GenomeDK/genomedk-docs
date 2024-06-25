@@ -1,6 +1,6 @@
 ---
 title: Interacting with the queue
-weight: 40
+weight: 45
 ---
 
 Since GenomeDK is a shared system, all computations must be carried out

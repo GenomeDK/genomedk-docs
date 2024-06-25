@@ -15,10 +15,6 @@ This page contains details about the hardware and infrastructure that is availab
     * 2x AMD/"EPYC Rome" 7452 CPUs @ 2.35 GHz, 32 cores/CPU
     * 512 GB memory
     * Infiniband EDR
-* s05 (30 nodes, 1080 cores)
-    * 2x Intel/"Skylake" Gold 6140 CPU @ 2.30GHz, 18 cores/CPU
-    * 384 GB memory
-    * Infiniband FDR
 * s10 (2 nodes, 72 cores)
     * 2x Intel/"Skylake" Gold 6140 CPU @ 2.30GHz, 18 cores/CPU
     * 384 GB memory

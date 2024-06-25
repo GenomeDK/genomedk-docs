@@ -1,6 +1,6 @@
 ---
 title: Working with data
-weight: 60
+weight: 35
 ---
 
 On your laptop, all files reside on your local hard disk. However, on GenomeDK

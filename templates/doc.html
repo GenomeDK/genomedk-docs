@@ -5,17 +5,4 @@
 <div class="prose">
 {{ page.content | safe }}
 </div>
-
-<nav class="pagination">
-{% if page.smaller %}
-<a class="previous" href="{{ page.smaller.permalink | safe }}">&lsaquo; Previous</a>
-{% else %}
-<a class="previous inactive" href="#">&lsaquo; Previous</a>
-{% endif %}
-{% if page.higher %}
-<a class="next" href="{{ page.higher.permalink | safe }}">Next &rsaquo;</a>
-{% else %}
-<a class="next inactive" href="#">Next &rsaquo;</a>
-{% endif %}
-</nav>
 {% endblock %}

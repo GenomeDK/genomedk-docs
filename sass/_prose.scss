@@ -18,19 +18,20 @@
     }
 
     h1 {
-        font-size: $text-size-4xl;
-    }
-
-    h2 {
         font-size: $text-size-3xl;
     }
 
+    h2 {
+        font-size: $text-size-xl;
+    }
+
     h3 {
-        font-size: $text-size-2xl;
+        font-size: $text-size-lg;
     }
 
     h4 {
-        font-size: $text-size-xl;
+        font-size: $text-size-md;
+        font-weight: normal;
     }
 
     .text-caption {

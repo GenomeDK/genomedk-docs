@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="bg-white">
-    <div class="container w-narrow">
-        <div class="centered pb-2">
+    <div class="container w-narrow py-2">
+        <div class="centered">
             {% set parent = get_section(path=page.ancestors | reverse | first) %}
             <div class="pb-2"><a href="{{ get_url(path=parent.path) }}">&lsaquo; Go back</a></div>
 

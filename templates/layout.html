@@ -13,7 +13,7 @@
     <div class="bg-white">
         <div class="container w-wide py-1">
             <header>
-                <a href="{{ get_url(path="/") }}" alt="The name GenomeDK spelled out in capital letters using Aarhus University colors." class="logo">
+                <a href="{{ get_url(path="/") }}" class="font-bold" alt="The name GenomeDK spelled out in capital letters using Aarhus University colors." class="logo">
                     <svg viewBox="0 0 130 13" xmlns="http://www.w3.org/2000/svg">
                         <text fill="#003e5c" style="font-weight: bold;" x="0" y="12" letter-spacing="0">
                             <tspan style="fill: #003e5c;">G</tspan>
@@ -30,10 +30,10 @@
                 </a>
                 <nav role="navigation">
                     {% set items = [
-                        get_section(path="docs/_index.md"),
-                        get_page(path="help.md"),
                         get_section(path="news/_index.md"),
                         get_page(path="pricing.md"),
+                        get_section(path="docs/_index.md"),
+                        get_page(path="help.md"),
                     ] %}
                     {% for item in items %}
                         <a class="btn {% if item.path in current_path %}active{% endif %}" href="{{ get_url(path=item.path) }}">{{ item.title }}</a>
