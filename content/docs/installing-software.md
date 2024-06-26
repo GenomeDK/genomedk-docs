@@ -235,3 +235,14 @@ sufficient:
 Note the "Port" field! The number specified must be 5900 plus the
 display ID, which in this example was :3. Thus, the port number becomes
 5903.
+
+# Using a terminal multiplexer
+
+Using a terminal multiplexer allows you to keep your session open, even
+when you disconnect from the cluster. You can even reconnect from a
+different computer and get your session back.
+
+We recommend that you use either `tmux` or `screen`.
+
+-   [tmux](https://github.com/tmux/tmux/wiki)
+-   [screen](https://www.gnu.org/software/screen/manual/screen.html).

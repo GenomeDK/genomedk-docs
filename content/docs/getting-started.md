@@ -130,15 +130,9 @@ Send an e-mail to support to request a password reset.
 # Public-key authentication
 
 A public-key setup is a way to be able to access one computer from
-another computer securely, but without typing a password every time you
+another computer with SSH, but without typing a password every time you
 want to log in. This is practical if you often log in to the frontend of
-the cluster. However, we can also use a public-key setup to allow you to
-access any compute node on the cluster from the frontend without typing
-your password every time. This is especially handy when you're
-debugging a problem on the compute nodes.
-
-Here, we will first set up a public key for accessing the frontend.
-Then, we'll set up a key for accessing compute nodes from the frontend.
+the cluster.
 
 On your own computer, open the terminal of your choice and type:
 
@@ -192,17 +186,6 @@ cluster without typing your password. Test this by runnning:
 ```
 
 You should not be prompted for a password.
-
-# Using a terminal multiplexer
-
-Using a terminal multiplexer allows you to keep your session open, even
-when you disconnect from the cluster. You can even reconnect from a
-different computer and get your session back.
-
-We recommend that you use either `tmux` or `screen`.
-
--   [tmux](https://github.com/tmux/tmux/wiki)
--   [screen](https://www.gnu.org/software/screen/manual/screen.html).
 
 # Cite us!
 
