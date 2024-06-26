@@ -3,6 +3,14 @@ title: Projects and accounting
 weight: 30
 ---
 
+A project folder is a workspace with access control and usage management tools.
+You can request project folders as you need them or manage access to project
+folders with the tools covered in this section. A project folder is the only way
+to *share* data between users on GenomeDK.
+
+Project folders do not have any resource limits, but we send notifications to the
+project owner if resource usage in the project has increased significantly.
+
 # Listing projects {#collaborating}
 
 You can list all of the projects you're a member of with:
@@ -37,7 +45,7 @@ Run the following command to request a new project folder:
 where **project name** is the desired name of the new project.
 
 {% warning() %} When you request a project you're officially the project owner.
-This means that you're responsible for the ressources used by the project. Thus,
+This means that you're responsible for the resources used by the project. Thus,
 you should familiarize yourself with the tools provided for monitoring the
 resources used by you and your projects (described later). {% end %}
 
@@ -82,7 +90,7 @@ storage and backup usage:
 $ gdk-project-show <project name>
 ```
 
-Provides a detailed listing of the ressources used by all projects owned by you:
+Provides a detailed listing of the resources used by all projects owned by you:
 
 ```bash
 $ gdk-project-usage

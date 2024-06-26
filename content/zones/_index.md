@@ -19,8 +19,8 @@ existing security solutions.
 A zone is not a "cloud" (we're not even sure exactly what that means). Cloud
 solutions are flexible, but most users don't need that flexibility. The
 flexibility also comes at a cost: very bad efficiency. With most cloud
-solutions, you will have to allocate a specific amount of ressources up front.
-If you don't need all of those ressources all of the time, they will be wasted,
+solutions, you will have to allocate a specific amount of resources up front.
+If you don't need all of those resources all of the time, they will be wasted,
 but you will still have paid for them.
 {% end %}
 
@@ -44,8 +44,8 @@ A closed zone provides:
 
 This comes with the same benefits as using the open zone:
 
-* No need to pre-allocate ressources.
-* No waste of ressources, you use what you use and pay for only that.
+* No need to pre-allocate resources.
+* No waste of resources, you use what you use and pay for only that.
 
 A closed zone is not tied to a single project -- one or more project
 folders belong to the zone, so users in a zone can still organize and

@@ -42,9 +42,9 @@ In the last newsletter we covered the arrival of the hardware for our latest sto
 
 We will give a full-day introduction to GenomeDK and computing on a HPC system on the first day of the recently announced [Single cell and spatial OMICS](https://au.phd-courses.dk/CourseCatalog/ShowCourse/1249) PhD course headed by Lin Lin at the Faculty of Health.
 
-# Data protection ressources
+# Data protection resources
 
-If you're an employee at AU, we strongly encourage you to familiarize yourself with the excellent [data protection ressources](https://medarbejdere.au.dk/informationssikkerhed/databeskyttelse/saerligt-om-forskning) published by the AU Information Security department. The ressources are a good introduction to GDPR and your responsibilities as an AU employee/student.
+If you're an employee at AU, we strongly encourage you to familiarize yourself with the excellent [data protection resources](https://medarbejdere.au.dk/informationssikkerhed/databeskyttelse/saerligt-om-forskning) published by the AU Information Security department. The resources are a good introduction to GDPR and your responsibilities as an AU employee/student.
 
 # Still a few free mugs left
 

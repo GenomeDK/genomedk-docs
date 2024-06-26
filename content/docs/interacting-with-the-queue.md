@@ -5,21 +5,7 @@ weight: 45
 
 Since GenomeDK is a shared system, all computations must be carried out
 through a queue. Users submit jobs to the queue and the jobs then run
-when it's their turn. To cater for different workloads, jobs can be
-submitted to one or more *partitions*, which are essentially queues that
-have been assigned certain restrictions such as the maximum running
-time.
-
-The queueing system used at GenomeDK is
-[Slurm](https://slurm.schedmd.com/). Users that are familiar with Sun
-Grid Engine (SGE) or Portable Batch System (PBS), will find Slurm very
-familiar.
-
-The queueing system allows us to either submit an *interactive* or
-*batch* job. An interactive job effectively gives you a shell on a
-compute node so that you can type commands and run programs that will
-run on that node. This is great for experimenting and debugging
-problems.
+when it's their turn.
 
 # Partitions and nodes
 
@@ -78,6 +64,11 @@ used:
   non-project jobs.
 
 # Interactive jobs
+
+An interactive job effectively gives you a shell on a
+compute node so that you can type commands and run programs that will
+run on that node. This is great for experimenting and debugging
+problems.
 
 To submit an interactive job:
 
@@ -142,7 +133,7 @@ project folder. The rest of the script is a normal
 contains the commands that should be executed, when the job is started
 by Slurm.
 
-To specify which ressources are needed by the job:
+To specify which resources are needed by the job:
 
 ```bash
 #!/bin/bash
