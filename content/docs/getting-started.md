@@ -104,28 +104,26 @@ Open the the authenticator app on your phone and scan the `QRCode.png` located
 on your NoMachine desktop. From now on you will need to generate a one-time
 password with the authenticator app every time you log in.
 
-# Changing your password {#change_password}
+# I forgot my password
 
-This is important! Since e-mail is not secure, someone may get access to
-the password that we sent to you. Thus, you should change it immediately
-after logging in. Run the command:
+If you forgot your password, send an e-mail to support to request a password
+reset. You will receive a password reset mail with a new, temporary password.
+
+You should change the temporary password immediately after logging in (see the
+next section).
+
+# Change your password {#change_password}
+
+You may change your password at any time using the `gdk-auth-change-password`
+command.
 
 ```bash
 [fe-open-01]$ gdk-auth-change-password
 ```
 
-It will ask you for your current password, then ask what your new
-password should be. Finally, it will ask you to confirm your new
-password by typing it again.
-
-{% warning() %}
-Do not use `passwd`, `yppasswd` or `ipsych-passwd` to change your password.
-These commands won't work in all cases or at all.
-{% end %}
-
-# I forgot my password
-
-Send an e-mail to support to request a password reset.
+It will ask you for your current password, then ask what your new password
+should be. Finally, it will ask you to confirm your new password by typing it
+again.
 
 # Public-key authentication
 
