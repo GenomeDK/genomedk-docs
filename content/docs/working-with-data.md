@@ -273,7 +273,7 @@ If you [mounted](#mounting) GenomeDK on your computer, you can edit files
 directly by just opening them with your prefered text editor on your computer.
 Otherwise you can use one of the solutions listed here.
 
-## Nano, vim, emacs
+## Terminal-based editors
 
 With editors like `nano`, `vim` and `emacs` you can edit files directly on the
 cluster. The editor itself also runs on the cluster and thus your editor
@@ -296,10 +296,7 @@ You can open `nano` by running:
 [fe-open-01]$ nano name-of-file.txt
 ```
 
-Likewise, [vim](https://www.vim.org/) and
-[emacs](https://www.gnu.org/software/emacs/index.html) are already installed on
-the cluster. Documentation for each editor can be found on their respective
-websites.
+Documentation for each editor can be found on their respective websites.
 
 ## Gedit with X-forwarding
 
