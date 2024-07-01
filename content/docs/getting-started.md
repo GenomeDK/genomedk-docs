@@ -127,70 +127,49 @@ again.
 
 # Public-key authentication
 
+{% note() %}
+These instructions are for Mac/Linux only.
+{% end %}
+
 A public-key setup is a way to be able to access one computer from
 another computer with SSH, but without typing a password every time you
-want to log in. This is practical if you often log in to the frontend of
-the cluster.
+want to log in.
 
 On your own computer, open the terminal of your choice and type:
 
 ```bash
-[local]$ ssh-keygen
+[local]$ ssh-keygen -t ed25519 -q -N ""
 ```
 
-You'll be asked several questions. The defaults are just fine, so just
-press the `Enter` for all of them. Make
-sure to leave the passphrase empty!
+This will generate a private/public key-pair with no password. If you
+have a key already, you can just use that (the command will warn you
+if you do).
 
-The output should look similar to this:
-
-```txt
-Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/das/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /Users/das/.ssh/id_rsa.
-Your public key has been saved in /Users/das/.ssh/id_rsa.pub.
-The key fingerprint is:
-SHA256:XxSd35yPd1bUoIJQDBCAvxDu+pB25ipYpcmp+VEh5JE das@jorn
-The key's randomart image is:
-+---[RSA 2048]----+
-| .+oooo+.   ...o.|
-|ooE.   ...   oo o|
-|.oo .   . . o  +o|
-|......     o   .=|
-|.o *.   S   .  .o|
-| oB.     . .  . =|
-|==.o      .    o.|
-|B.+.             |
-|.++.             |
-+----[SHA256]-----+
-```
-
-Note the path of the public key (on the highlighted line). To copy the
-public key to the cluster, run:
+Now copy the public key to GenomeDK:
 
 ```bash
-[local]$ ssh-copy-id -i PUBLIC-KEY-PATH USERNAME@login.genome.au.dk
+[local]$ ssh-copy-id -i ~/.ssh/id_ed25519 <username>@login.genome.au.dk
 ```
 
-Replace *PUBLIC-KEY-PATH* with the path to your public key and
-*USERNAME* with your cluster username. You will be asked to enter your
-password for the cluster. You should now be able to log in to the
-cluster without typing your password. Test this by runnning:
+You will be asked to enter your password for the cluster to transfer the
+public key.
+
+You should now be able to log in to the cluster without typing your password.
+Test this by runnning:
 
 ```bash
-[local]$ ssh USERNAME@login.genome.au.dk
+[local]$ ssh <username>@login.genome.au.dk
 ```
 
-You should not be prompted for a password.
+You should not be prompted for a password this time.
 
 # Cite us!
 
 We provide GenomeDK as a resource to research. If you publish results
 from computations performed on GenomeDK, it is important that you
-acknowledge/cite GenomeDK in your publications. We recommend phrasing it
-like this:
+acknowledge/cite GenomeDK in your publications.
+
+We recommend phrasing it like this:
 
 > *Some/all of the computing for this project was performed on the
 > GenomeDK cluster. We would like to thank GenomeDK and Aarhus
