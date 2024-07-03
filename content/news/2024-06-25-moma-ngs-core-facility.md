@@ -19,11 +19,11 @@ The MOMA NGS Core Center offers short-read next-generation sequencing using Illu
 
 Established in January 2012 by Aarhus University Hospital, the Faculty of Health at Aarhus University, and MOMA scientists, our Core Center provides a team of highly trained personnel who offer expert guidance and advice for sequencing projects.
 
-## Equipment
+# Equipment
 
 Our fully equipped lab, featuring automation with liquid handling robots, supports all common sequencing applications and the development of new methodologies and protocols. We provide comprehensive solutions from sample to data, including sample extraction, library preparation, QC, sequencing, and data analysis, as well as sequencing of pre-prepared library pools in full flow cells or single lanes.
 
-## Data Analysis
+# Data Analysis
 
 Upon request, MOMA can perform initial bioinformatics data analysis (e.g., data cleanup, mapping to reference genome, generation of gene count tables) with our dedicated staff. The data can be delivered on physical media, over the Internet or directly to a project folder on GenomeDK for further processing.
 
