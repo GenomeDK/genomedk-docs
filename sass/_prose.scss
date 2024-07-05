@@ -2,7 +2,7 @@
     font-size: 1rem*$scalingFactor;
 
     p {
-        margin-top: 1rem;
+        margin-top: 0rem;
         margin-bottom: 1rem;
         line-height: $line-height;
     }
@@ -12,7 +12,7 @@
     h3,
     h4,
     h5 {
-        margin: 2rem 0 0.6rem;
+        margin: 1.5rem 0 0.5rem 0;
         font-weight: normal;
         overflow-wrap: break-word;
     }
@@ -107,8 +107,7 @@
     }
 
     ul {
-        margin-top: 0.25em;
-        margin-bottom: 0.25em;
+        margin-bottom: 1rem;
         padding-left: 1rem;
         list-style-type: "\203A";
         list-style-position: outside;
