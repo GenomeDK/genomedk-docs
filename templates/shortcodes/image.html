@@ -1,0 +1,5 @@
+{% set image = resize_image(path=page.colocated_path ~ path, height=600, op="fit_height") %}
+<figure>
+<img src="{{ image.url }}" alt="{{ body }}" />
+<figcaption>{{ body }}</figcaption>
+</figure>

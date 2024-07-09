@@ -19,10 +19,9 @@ We are thrilled to welcome 175 new users to the GenomeDK community (so far) this
 
 We are excited to announce that we just this week expanded our computational capabilities with the addition of two new GPU nodes, each featuring 8 [Nvidia L40S GPUs](https://www.nvidia.com/en-us/data-center/l40s/), for a total of 16 GPUs! These nodes are designed to enhance performance for tasks requiring GPU-optimized computations, such as deep learning and AI.
 
-<figure>
-<img src="GenomeDK_GPU_2024.jpeg" alt="Front of the new GPU nodes. Each node has 8 Nvidia L40S GPUs. Although these are data center GPUs, each GPU has 4 HDMI ports, so you could actually connect a TV to these things!" />
-<figcaption>Front of the new GPU nodes. Each node has 8 Nvidia L40S GPUs. Although these are data center GPUs, each GPU has 4 HDMI ports, so you could actually connect a TV to these things!</figcaption>
-</figure>
+{% image(path="GenomeDK_GPU_2024.jpeg") %}
+Front of the new GPU nodes. Each node has 8 Nvidia L40S GPUs. Although these are data center GPUs, each GPU has 4 HDMI ports, so you could actually connect a TV to these things!
+{% end %}
 
 There's instructions for using the GPU nodes [in our documentation](@/docs/interacting-with-the-queue.md#gpu_nodes). Remember that compiling code for the GPU must also happen on one of the GPU nodes (in a job). The pricing is unchanged at 2.43 DKK/GPU billing hour.
 
@@ -31,6 +30,12 @@ These nodes will replace our current GPU nodes (two nodes with two Nvidia V100 1
 ## MOMA NGS Core Facility collaboration
 
 The [MOMA NGS Core Facility](https://www.moma.dk/services/ngs-core-center) is a long-time collaborator of GenomeDK. A recent announcement from Institute of Biomedicine at Aarhus University, prohibits use of Chinese sequencing companies such as BGI. We therefore wish to highlight the [MOMA NGS Core Facility as an excellent local alternative](@/news/2024-06-25-moma-ngs-core-facility.md), with the option to have your data delivered directly to a project folder on GenomeDK.
+
+## Time for a summer cleaning
+
+Did you clean up temporary or unused data from your projects lately? If not, now is the time to do it. You can use `gdk-project-usage -p <project name>` to see the usage of a project over time. If a project has grown considerably you should consider if any of the data can be removed.
+
+You should also check if any old projects can be deleted entirely. You can get a list of all of your projects with `gdk-project-list -f owner`.
 
 ## Notice: Long downtime in August
 
@@ -53,17 +58,17 @@ Also, remember that [only data marked for backup is transferred to the backup](@
 
 To maintain optimal performance and storage efficiency, please remember to clean up any unused or temporary data regularly. Additionally, compress your data whenever possible, especially large VCF files. This helps free up space and improves overall system performance.
 
-## Avoid submitting short jobs
+## Avoid submitting many short jobs
 
-Please refrain from submitting jobs that run for less than 10 minutes. Such jobs can disrupt the queue and reduce system efficiency. Consider batching smaller tasks together into longer-running jobs by putting multiple commands in your batch script.
+Please refrain from submitting thousands of jobs that run for less than 10 minutes. Such workloads can disrupt the queue and reduce system efficiency. Consider batching smaller tasks together into longer-running jobs by putting multiple commands in your batch script/workflow target.
 
 ## Do not run on the frontend
 
-Running computational tasks on the frontend nodes can severely impact the performance and stability of the system for all users. Always use the appropriate compute nodes for your jobs. If in doubt, consult the documentation on how to use the queuing system.
+Running computational tasks on the frontend nodes can severely impact the performance and stability of the system for all users. Always use the appropriate compute nodes for your jobs. If in doubt, [consult the documentation](@/docs/interacting-with-the-queue.md) on how to use the queuing system.
 
 ## Avoid writing data to disk if you can
 
-We regularly see jobs that look like this:
+We sometimes see jobs that look like this:
 
 ```bash
 bedtools coverage ... > output_file1
