@@ -90,7 +90,8 @@
     img,
     figure img {
         display: block;
-        max-width: 50ch;
+        max-width: 100%;
+        max-height: 400px;
         margin: 0 auto;
         margin-top: 2rem;
         margin-bottom: 1rem;
