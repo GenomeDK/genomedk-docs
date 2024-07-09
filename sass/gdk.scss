@@ -33,6 +33,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
 }
 
 html {
@@ -88,6 +89,7 @@ hr {
     text-decoration: none;
 
     svg {
+        box-sizing: content-box;
         height: 1em;
         padding: 1em 0;
     }
@@ -273,12 +275,18 @@ hr {
 
 .news-highlight {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     column-gap: 2em;
     align-items: center;
+    padding: 1em 0;
+}
+
+.news-highlight-title {
+    margin: 0.25em 0;
 }
 
 .news-highlight-title a {
     color: white;
     text-decoration: none;
+    display: block;
 }

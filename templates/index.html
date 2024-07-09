@@ -73,10 +73,10 @@
             <h1>Hot off the press</h1>
             <article class="news-highlight">
                 <img class="illustration shadow" src="{{ page.path }}/{{ page.extra.illustration }}" />
-                <div>
+                <div class="news-highlight-body">
                     <div class="metadata">{{ page.date | date(format='%b %d, %Y') }}</div>
                     <h1 class="news-highlight-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
-                    <section class="prose mb-2">
+                    <section class="prose mb-1">
                         {{ page.summary | safe }}
                     </section>
                     <a class="btn btn-magenta" href="{{ page.permalink }}">Continue reading...</a>
