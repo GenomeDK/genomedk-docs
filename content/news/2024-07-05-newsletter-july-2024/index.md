@@ -2,7 +2,7 @@
 title = "Newsletter, July 2024"
 
 [extra]
-published = false
+published = true
 highlight = true
 illustration = "Sommer2017_Søauditorier_MY_2972.jpg"
 +++
