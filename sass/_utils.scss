@@ -32,16 +32,15 @@
     padding-bottom: 2rem;
 }
 
-.w-narrow {
-    max-width: 75ch;
-}
-
-.w-wide {
-    max-width: 1024px;
-}
-
+.w-narrow,
+.w-wide,
 .w-full {
     width: 100%;
+    max-width: 1000px;
+}
+
+.w-narrow {
+    max-width: 680px;
 }
 
 .bg-neutral {

@@ -1,35 +1,30 @@
-{% extends "layout.html" %}
+{% extends "layout_with_title.html" %}
 
-{% block content %}
+{% block body %}
 <div class="bg-white">
-    <div class="container w-narrow py-2">
-        <div class="centered">
-            <h1 class="title">{{ section.title }}</h1>
-            <section class="prose">
+    <div class="container w-narrow pb-2">
+        <section class="prose">
             <p class="lead">The GenomeDK Data Library is an index for data sets made available by users of GenomeDK. Data sets in the library can be made available directly on GenomeDK or shared using GenomeDK's data shares.</p>
-            </section>
-            <section class="prose">
-                <table class="w-full">
-                <thead>
-                    <th>ID</th>
-                    <th>Publication date</th>
-                    <th>Title</th>
-                    <th>Access type</th>
-                </thead>
-                <tbody>
-                    {% for page in section.pages|sort(attribute="extra.id")|reverse %}
-                    <tr>
-                        <td><a href="{{ page.permalink }}">{{ page.extra.id }}</a></td>
-                        <td class="nowrap">{{ page.date }}</td>
-                        <td>{{ page.title }}</td>
-                        <td>{{ page.extra.access_type }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-                </table>
-            </section>
-            <p><small>The data in the library is not owned or administered by GenomeDK.</small></p>
-        </div>
+            <table>
+            <thead>
+                <th>ID</th>
+                <th>Publication date</th>
+                <th>Title</th>
+                <th>Access type</th>
+            </thead>
+            <tbody>
+                {% for page in section.pages|sort(attribute="extra.id")|reverse %}
+                <tr>
+                    <td><a href="{{ page.permalink }}">{{ page.extra.id }}</a></td>
+                    <td class="nowrap">{{ page.date }}</td>
+                    <td>{{ page.title }}</td>
+                    <td>{{ page.extra.access_type }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+        </section>
+        <p><small>The data in the library is not owned or administered by GenomeDK.</small></p>
     </div>
 </div>
 {% endblock %}

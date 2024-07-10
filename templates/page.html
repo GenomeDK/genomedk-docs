@@ -1,14 +1,9 @@
-{% extends "layout.html" %}
+{% extends "layout_with_title.html" %}
 
-{% block content %}
+{% block body %}
 <div class="bg-white">
-    <div class="container w-narrow py-2">
-        <div class="centered">
-            <h1 class="title">{{ page.title }}</h1>
-            <div class="prose">
-            {{ page.content | safe }}
-            </div>
-        </div>
+    <div class="container w-narrow prose pb-2">
+        {{ page.content | safe }}
     </div>
 </div>
 {% endblock %}

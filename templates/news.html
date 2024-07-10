@@ -3,32 +3,23 @@
 {% block content %}
 <div class="bg-white">
     <div class="container w-narrow py-2">
-        <div class="centered">
-            <h1 class="title">{{ section.title }}</h1>
-            <div class="listing">
-            {% for page in section.pages | filter(attribute="extra.published", value=true) | slice(end=5) %}
-            <article class="listing-post">
-                <div class="listing-post-metadata">{{ page.date | date(format='%b %d, %Y') }}</div>
-                <div class="listing-post-timeline"></div>
-                <div class="listing-post-timeline-bullet"><div class="inner"></div></div>
-                <div class="listing-post-summary">
-                    <h1><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
-                    {% if page.extra.illustration %}
-                    <img class="listing-post-illustration" src="{{ page.path }}/{{ page.extra.illustration }}" />
-                    {% endif %}
-                    <section class="prose">
-                        {% if page.summary %}
-                        {{ page.summary | safe }}
-                        <a href="{{ page.permalink }}">Continue reading...</a>
-                        {% else %}
-                        {{ page.content | safe}}
-                        {% endif %}
-                    </section>
-                </div>
-            </article>
-            {% endfor %}
-            </div>
-        </div>
+        {% for page in section.pages | filter(attribute="extra.published", value=true) | slice(end=5) %}
+        <article class="news-summary">
+            <div class="metadata">{{ page.date | date(format='%b %d, %Y') }}</div>
+            <h1 class="title"><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
+            {% if page.extra.illustration %}
+            <img class="news-illustration" src="{{ page.path }}/{{ page.extra.illustration }}" />
+            {% endif %}
+            <section class="prose">
+                {% if page.summary %}
+                {{ page.summary | safe }}
+                <a href="{{ page.permalink }}">Continue reading...</a>
+                {% else %}
+                {{ page.content | safe}}
+                {% endif %}
+            </section>
+        </article>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

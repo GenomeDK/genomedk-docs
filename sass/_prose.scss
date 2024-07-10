@@ -1,8 +1,6 @@
-@mixin prose-base($scalingFactor: 1) {
-    font-size: 1rem*$scalingFactor;
-
+.prose {
     p {
-        margin-top: 0rem;
+        margin-top: 0;
         margin-bottom: 1rem;
         line-height: $line-height;
     }
@@ -10,11 +8,17 @@
     h1,
     h2,
     h3,
-    h4,
-    h5 {
-        margin: 1.5rem 0 0.5rem 0;
+    h4 {
+        margin: 2rem 0 0.5rem 0;
         font-weight: normal;
         overflow-wrap: break-word;
+    }
+
+    h1 a,
+    h2 a,
+    h3 a,
+    h4 a {
+        text-decoration: none;
     }
 
     h1 {
@@ -43,20 +47,20 @@
     }
 
     .lead {
-        font-size: $text-size-xl*$scalingFactor;
-        margin: 1em 0;
+        font-size: $text-size-xl;
+        margin-bottom: 1rem;
     }
 
     .anchor-link {
         font-weight: normal;
-        font-size: 16px*$scalingFactor;
+        font-size: 16px;
         text-decoration: none;
         color: black;
         vertical-align: super;
     }
 
     small {
-        font-size: $text-size-sm*$scalingFactor;
+        font-size: $text-size-sm;
     }
 
     em {
@@ -75,14 +79,14 @@
             "Fira Mono",
             "Droid Sans Mono",
             "Courier New", monospace;
-        font-size: $text-size-sm*$scalingFactor;
+        font-size: $text-size-sm;
     }
 
     pre {
         padding: 1rem;
         overflow-x: scroll;
         overflow-y: scroll;
-        line-height: $line-height*$scalingFactor;
+        line-height: $line-height;
         max-height: 200px;
         border-radius: 0.25em;
     }
@@ -98,7 +102,7 @@
     }
 
     img {
-        border-radius: 0.25em;
+        border-radius: 0.25rem;
     }
 
     figure figcaption {
@@ -121,11 +125,11 @@
     }
 
     ol {
-        margin-bottom: 1em;
+        margin-bottom: 1rem;
     }
 
     ol li {
-        margin-left: 1em;
+        margin-left: 1rem;
     }
 
     ul ul,
@@ -139,12 +143,13 @@
     }
 
     dl dt {
-        margin-top: 1em;
+        margin-bottom: 1rem;
         font-weight: bold;
     }
 
     dl dd {
-        margin-left: 1em;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
     }
 
     dl dd p:first-child {
@@ -152,7 +157,7 @@
     }
 
     table {
-        margin: 2em auto;
+        margin-inline: auto;
         background-color: $color-neutral;
         border-radius: 0.25em;
         text-align: left;
@@ -162,7 +167,7 @@
 
     table td,
     table th {
-        padding: 0.5em 1em;
+        padding: 0.5rem 1rem;
     }
 
     table th {
@@ -173,12 +178,4 @@
     table td {
         border-bottom: 1px solid white;
     }
-}
-
-.prose {
-    @include prose-base();
-}
-
-.prose-lg {
-    @include prose-base($scalingFactor: 1.4);
 }

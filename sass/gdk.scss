@@ -8,9 +8,9 @@
 @import "utils";
 
 @import "components/admonition";
-@import "components/timeline";
 @import "components/button";
 @import "components/gallery";
+@import "components/prices";
 
 
 @font-face {
@@ -49,24 +49,57 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
+    margin: 2rem 0 0.5rem 0;
     font-weight: normal;
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: $text-size-3xl;
+}
+
+h2 {
+    font-size: $text-size-xl;
+}
+
+h3 {
+    font-size: $text-size-lg;
+}
+
+h4 {
+    font-size: $text-size-md;
+    font-weight: normal;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+    text-decoration: none;
 }
 
 h1.title {
     font-weight: normal;
     font-size: $text-size-4xl;
     color: $color-primary-dark;
-    margin-top: 0;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+h1.page-title {
+    font-weight: normal;
+    font-size: $text-size-4xl;
+    color: $color-primary-dark;
+    margin: 0;
+    padding: 1rem 0;
 }
 
 h1.caption {
     text-transform: uppercase;
     font-size: $text-size-sm;
     letter-spacing: 0.025rem;
-    color: $color-secondary;
+    font-weight: bold;
     margin-top: 0;
 }
 
@@ -87,11 +120,11 @@ hr {
 .logo {
     display: inline-flex;
     text-decoration: none;
+    margin: 1em 0;
 
     svg {
         box-sizing: content-box;
         height: 1em;
-        padding: 1em 0;
     }
 }
 
@@ -106,34 +139,6 @@ hr {
 
 .s-display {
     font-size: 5rem;
-}
-
-.boring-details {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    dt {
-        font-weight: bold;
-    }
-
-    ul {
-        margin-top: 0.25em;
-        margin-bottom: 0.25em;
-        padding-left: 1rem;
-        list-style-type: "\203A";
-        list-style-position: outside;
-    }
-
-    ul li {
-        margin: 0;
-        padding-left: 0.5rem;
-    }
-}
-
-@media (min-width: 800px) {
-    .boring-details {
-        grid-template-columns: max-content auto;
-    }
 }
 
 .sidebar {
@@ -273,10 +278,30 @@ hr {
     }
 }
 
+.news-summary {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid $color-neutral;
+}
+
+.news-illustration {
+    display: block;
+    max-width: 100%;
+    max-height: 400px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+.news-illustration {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
 .news-highlight {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    column-gap: 2em;
+    gap: 2em;
     align-items: center;
     padding: 1em 0;
 }

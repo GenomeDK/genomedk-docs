@@ -3,18 +3,16 @@
 {% block content %}
 <div class="bg-white">
     <div class="container w-narrow py-2">
-        <div class="centered">
-            {% set parent = get_section(path=page.ancestors | reverse | first) %}
-            <div class="pb-2"><a href="{{ get_url(path=parent.path) }}">&lsaquo; Go back</a></div>
+        {% set parent = get_section(path=page.ancestors | reverse | first) %}
+        <div class="pb-2"><a href="{{ get_url(path=parent.path) }}">&lsaquo; Go back</a></div>
 
-            <div class="metadata">{{ page.date | date(format='%b %d, %Y') }}</div>
-            <h1 class="title">{{ page.title }}</h1>
-            {% if page.extra.illustration %}
-                <img class="listing-post-illustration" src="{{ page.path }}/{{ page.extra.illustration }}" />
-            {% endif %}
-            <div class="prose">
-            {{ page.content | safe }}
-            </div>
+        <div class="metadata">{{ page.date | date(format='%b %d, %Y') }}</div>
+        <h1 class="title">{{ page.title }}</h1>
+        {% if page.extra.illustration %}
+            <img class="news-illustration" src="{{ page.path }}/{{ page.extra.illustration }}" />
+        {% endif %}
+        <div class="prose">
+        {{ page.content | safe }}
         </div>
     </div>
 </div>

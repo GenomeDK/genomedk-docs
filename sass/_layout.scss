@@ -1,6 +1,6 @@
 .container {
-    margin: 0 auto;
     padding: 0 1em;
+    margin-inline: auto;
 }
 
 header {
@@ -67,13 +67,12 @@ footer {
 
 .wrapper {
     align-items: start;
-    padding-bottom: 2em;
 }
 
 @media (min-width: 800px) {
     .wrapper {
         gap: 0 2em;
         display: grid;
-        grid-template-columns: auto 75ch;
+        grid-template-columns: auto 625px;
     }
 }

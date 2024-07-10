@@ -1,53 +1,48 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div class="bg-primary text-white">
+    <div class="container w-narrow py-1">
+        <div class="price-grid py-1">
+            <div class="service-item">
+                <h1 class="caption">CPU</h1>
+                <span class="price">0.13</span>
+                <span class="unit">DKK/billing hour</span>
+            </div>
+            <div class="service-item">
+                <h1 class="caption">GPU</h1>
+                <span class="price">2.34</span>
+                <span class="unit">DKK/billing hour</span>
+            </div>
+            <div class="service-item">
+                <h1 class="caption">storage</h1>
+                <span class="price">250</span>
+                <span class="unit">DKK/TB/year</span>
+            </div>
+            <div class="service-item">
+                <h1 class="caption">backup</h1>
+                <span class="price">500</span>
+                <span class="unit">DKK/TB/year</span>
+            </div>
+        </div>
+        <div class="prose text-sm">
+            <p>One billing hour corresponds to one CPU core for one hour or 8 GB memory for
+                one hour, whichever is highest.</p>
+            <p>If you store 1 TB of data in backup for a year you will be
+                billed 250 + 500 DKK. 250 DKK for the on-disk copy and 500 DKK for off-site
+                backup copy.</p>
+            <p>Prices are updated yearly and are subject to change.</p>
+        </div>
+    </div>
+</div>
 <div class="bg-white">
-    <div class="container w-narrow py-2">
-        <div class="centered">
-        <h1 class="title">Pricing</h1>
-        <dl class="boring-details py-2">
-            <dt><p class="prose">Who can get an account?</p></dt>
-            <dd class="prose">
+    <div class="container w-narrow py-1">
+        <div class="prose">
+            <h1>Who can get an account?</h1>
                 <p>We are open to account requests from people associated with a university
                     or small and medium-sized enterprises (SMEs).</p>
-            </dd>
-            <dt><p class="prose">What does it cost?</p></dt>
-            <dd class="prose">
-                <p>In 2024, the prices are:</p>
-
-                <div class="flex w-full space-evenly" style="flex-flow: row wrap;">
-                    <div class="display-item">
-                        <span class="text-xl">0.13</span>
-                        <span class="label">DKK/billing hour</span>
-                        <span class="label">CPU</span>
-                    </div>
-                    <div class="display-item">
-                        <span class="text-xl">2.34</span>
-                        <span class="label">DKK/billing hour</span>
-                        <span class="label">GPU</span>
-                    </div>
-                    <div class="display-item">
-                        <span class="text-xl">250</span>
-                        <span class="label">DKK/TB/year</span>
-                        <span class="label">storage</span>
-                    </div>
-                    <div class="display-item">
-                        <span class="text-xl">500</span>
-                        <span class="label">DKK/TB/year</span>
-                        <span class="label">backup*</span>
-                    </div>
-                </div>
-
-                <p>One billing hour corresponds to one CPU core for one hour or 8 GB memory for
-                    one hour, whichever is highest. One GPU hour is the same as 18 core hours.</p>
-                <p>Prices are updated yearly and are subject to change. Do not hesitate to contact
-                    us if you have any questions.</p>
-                <p>* For example, if you store 1 TB of data in backup for a year you will be
-                    billed 250 + 500 DKK. 250 DKK for the on-disk copy and 500 DKK for off-site
-                    backup copy.</p>
-            </dd>
-            <dt><p class="prose">How do I pay?</p></dt>
-            <dd class="prose">
+            
+            <h1>How do I pay?</h1>
                 <p>Costs are associated with <em>project folders</em>. The owner of a project folder is
                     responsible for the costs associated with the project. The project owner will
                     be charged yearly (in January) based on actual usage.</p>
@@ -59,9 +54,7 @@
                 </ul>
                 <p>then the usage is paid internally and the project owner will not receive a bill
                     directly from GenomeDK.</p>
-            </dd>
-        </dl>
-    </div>
+                </div>
     </div>
 </div>
 {% endblock %}
