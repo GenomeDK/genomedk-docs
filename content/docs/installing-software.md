@@ -196,45 +196,50 @@ server.
 
 ## VNC
 
-If you want to use a full virtual desktop you can use a VNC program.
-There are lots of options but we recommend
-[TightVNC](https://www.tightvnc.com/download.php) 2.x which works on
-both Linux, macOS, and Windows. When downloading TightVNC we recommend
-to get "TightVNC Java Viewer". It downloads a ZIP archive which
-contains an executable JAR file.
+{% note() %}
+We're working on a better solution for virtual desktops on
+GenomeDK. These instructions only work if you run Linux or macOS on your own
+computer.
+{% end %}
 
-To use VNC you first need to login to the frontend and start a *VNC
-server*. Starting the server is done with the `vncserver` command and
-looks like this:
+If you want to use a full virtual desktop you can use a VNC client. Any VNC
+client will do. [Remote Ripple](https://remoteripple.com/) works on many
+different platforms and is free.
+
+First, ensure that your VNC client of choice is installed on your computer.
+
+Next, log on to GenomeDK and start a *VNC server*:
 
 ```bash
 [fe-open-01]$ vncserver
+WARNING: vncserver has been replaced by a systemd unit and is now considered deprecated and removed in upstream.
+Please read /usr/share/doc/tigervnc/HOWTO.md for more information.
 
-You will require a password to access your desktops.
+New 'fe-open-02:1 (das)' desktop is fe-open-02:1
 
-Password:
-Verify:
-
-New 'fe-open-01.genomedk.net:3 (user)' desktop is fe-open-01.genomedk.net:3
-
-Creating default startup script /home/user/.vnc/xstartup
-Starting applications specified in /home/user/.vnc/xstartup
-Log file is /home/user/.vnc/fe-open-01.genomedk.net:3.log
+Starting applications specified in /home/das/.vnc/xstartup
+Log file is /home/das/.vnc/fe-open-02:1.log
 ```
 
-The display id (`:3` in this example) is needed when you want to connect
-the VNC client.
+(You can ignore the warning).
 
-To connect to the running VNC server the SSH tunnel through the login
-node has to be established. In case of TightVNC, the tunneling option is
-included in the software itself and following settings should be
-sufficient:
+If this is the first time, you will be asked to specify a password for accessing
+the desktop. Enter a password of your choice.
 
-![TightVNC connection dialog](../tightvnc.png)
+The display id (`:1` in the example output above) is needed when you want to
+connect to the desktop with your VNC client.
 
-Note the "Port" field! The number specified must be 5900 plus the
-display ID, which in this example was :3. Thus, the port number becomes
-5903.
+You must compute 5900 + the display id, which is the port number you will use to
+connect to the remote desktop. So in this example, the port number is 5901.
+
+On your own computer, start an SSH tunnel to the VNC server:
+
+```bash
+[local]$ ssh -N -L 5901:localhost:5901 <username>@login.genome.au.dk
+```
+
+Now open your VNC client and connect to host `localhost` and the port number you
+calculated. You will be asked for the password you specified earlier.
 
 # Using a terminal multiplexer
 
