@@ -1,12 +1,18 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
+{% if page is defined %}
+{% set section = get_section(path=page.ancestors | reverse | first) %}
+{% else %}
+{% set page = section %}
+{% endif %}
+
 <div class="bg-white">
     <div class="container w-wide py-2">
         <div class="wrapper">
             <nav class="sidebar">
                 <h1 class="caption">Contents</h1>
-                {% set section = get_section(path=page.ancestors | reverse | first) %}
                 {% if section.pages %}
                 <ul class="toc">
                 {% for doc in section.pages %}
