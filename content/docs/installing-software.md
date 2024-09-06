@@ -3,8 +3,16 @@ title: Installing and using software
 weight: 40
 ---
 
-We recommend that you install and use the [Conda](https://conda.io/docs/)
-package manager to install software on GenomeDK.
+For most use cases, we recommend that you install and use the
+[Conda](https://conda.io/docs/) package manager to install software on GenomeDK.
+Conda provides access to thousands of software packages and is easy to get
+started with.
+
+For more advanced use cases, or where there's a substantial need for
+reproducibility, we recommend [Apptainer](https://apptainer.org/), which is also
+supported on GenomeDK.
+
+# Software installation with Conda
 
 Conda can install any kind of software. This means that your entire
 setup can be installed through Conda (if there's packages for it all).
@@ -15,7 +23,7 @@ Conda provides access to thousands of packages used in data science and
 bioinformatics. These packages can be installed with a single command, so you
 don't have to worry about compilers, dependencies, and where to put binaries.
 
-# Installing Conda {#installing_conda}
+## Installing Conda {#installing_conda}
 
 Downloading and installing Conda is very simple, you just download and
 run the installer:
@@ -33,7 +41,7 @@ check that Conda is available.
 
 Now let's configure Conda to make it super useful.
 
-# Configuring Conda
+## Configuring Conda
 
 Conda can install packages from different *channels*. This is similar to
 *repositories* in other package managers. Here we'll add a few channels
@@ -82,14 +90,14 @@ dependencies. To speed up Conda, you can install a faster dependency solver:
 The `libmamba` solver is still experimental, but in our experience it's a lot
 faster and better than the default solver.
 
-# Searching for Conda packages
+## Finding Conda packages
 
 You can easily search for Conda packages through the website
 [anaconda.org](https://anaconda.org/) or using the
 `conda search` command:
 
 ```bash
-[fe-open-01]$ conda search rstudio-desktop
+[fe-open-01]$ conda search samtools
 ```
 
 Remember that the Conda package may not be called the exact official
@@ -101,7 +109,7 @@ If you can't find a suitable Conda package, contact us and we will build a Conda
 package for you (when possible). Sometimes building a Conda package is not
 viable and in that case we will build a Singularity/Apptainer image instead.
 
-# Installing Conda packages
+## Installing Conda packages
 
 Here is how the usage might look if we want to create a new environment
 with the newest version of
@@ -154,37 +162,6 @@ to be called "Singularity". If you're familiar with Docker, Apptainer will seem
 familiar and Apptainer can convert most Docker images to its own (SIF) format
 and run them without issues.
 
-Apptainer is already installed and configured on GenomeDK, and you should be
-able to pull and run containers without any further setup:
-
-```bash
-[fe-open-01] apptainer pull docker://biocontainers/blast:2.2.31
-```
-
-This will pull the Docker image for BLAST and convert it to SIF, so it may take
-a while. In this case, the image will be put in your current working directory as  `blast_2.2.31.sif`.
-
-{% note() %}
-The images are quite large, so consider putting them in a relevant project
-folder.
-{% end %}
-
-You can now run a command inside the image:
-
-```bash
-[fe-open-01] apptainer run blast_2.2.31.sif blastp -version
-blastp: 2.2.31+
-Package: blast 2.2.31, build Apr 23 2016 15:49:47
-```
-
-You can of course do this in job scripts also, but be aware that you should
-pull and convert images *once* before submitting jobs. That is, never put
-`apptainer pull` in a job script.
-
-See the [Apptainer
-documentation](https://apptainer.org/docs/user/latest/quick_start.html#overview-of-the-apptainer-interface)
-for more details.
-
 ## Finding Apptainer images
 
 There's a multitude of repositories for Docker/Apptainer images:
@@ -195,7 +172,37 @@ There's a multitude of repositories for Docker/Apptainer images:
 * [Quay.io](https://quay.io/)
 * [BioContainers](https://biocontainers.pro/registry)
 
-## Using GPUs with Apptainer
+## Pull an image
+
+Apptainer is already installed and configured on GenomeDK, and you should be
+able to pull and run containers without any further setup.
+
+```bash
+[fe-open-01] apptainer pull docker://biocontainers/blast:2.2.31
+```
+
+This will pull the Docker image for BLAST and convert it to SIF, so it may take
+a while. In this case, the image will be put in your current working directory as  `blast_2.2.31.sif`.
+
+Be aware that you should pull and convert images *once* before submitting jobs.
+That is, never put `apptainer pull` in a job script.
+
+{% note() %}
+The images are quite large, so consider putting them in a relevant project
+folder.
+{% end %}
+
+## Run a container
+
+You can now run a command inside the image:
+
+```bash
+[fe-open-01] apptainer run blast_2.2.31.sif blastp -version
+blastp: 2.2.31+
+Package: blast 2.2.31, build Apr 23 2016 15:49:47
+```
+
+You can of course do this in job scripts also.
 
 Apptainer supports the use of GPUs in containers, for example:
 
@@ -206,8 +213,10 @@ Apptainer supports the use of GPUs in containers, for example:
 Then, on a GPU node (either in an interactive or batch job):
 
 ```bash
-[gn-1001] apptainer run --nv ./tensorflow_23.08-tf2-py3.sif python3 mnist_classify.py
+[gn-1001] apptainer run --nv tensorflow_23.08-tf2-py3.sif python3 mnist_classify.py
 ```
+
+Note the use of the `--nv` flag.
 
 # Using graphical interfaces
 
