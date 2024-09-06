@@ -147,118 +147,23 @@ srun: job 3597082 has been allocated resources
 RStudio is automatically terminated if it allocates more than the reserved 4GB,
 the 10 hours expires or the connection is lost. So remember to save your work!
 
-# Perl
-
-{% warning() %} As of June 26, 2018 the old Perl module collection present in
-`/com/extra/perl-cpan` will not work and support for it has been dropped. {% end
-%}
-
-{% note() %} Perl and Perl modules can be installed through Conda, which is also
-the recommended method. The method described here should only be used in cases
-where no Conda package exists for the module or it has been decided that Conda
-should not be used at all. See [Installing and using
-software](/docs/installing-software/) for help with Conda. {% end %}
-
-For installation of Perl modules from CPAN a simple command line tool can be
-installed, and just one command will install it for you.
-
-To start just run:
-
-```bash
-[fe-open-01]$ cpan App::cpanminus
-```
-
-`CPAN.pm` requires configuration, but most of it can be done automatically. If
-you answer *no* below, you will enter an interactive dialog for each
-configuration option instead.
-
-```txt
-Would you like to configure as much as possible automatically? [yes]
-and just answer 'yes'
-
-<install_help>
-
-Warning: You do not have write permission for Perl library directories.
-
-To install modules, you need to configure a local Perl library directory or
-escalate your privileges.  CPAN can help you by bootstrapping the local::lib
-module or by configuring itself to use 'sudo' (if available).  You may also
-resolve this problem manually if you need to customize your setup.
-
-What approach do you want?  (Choose 'local::lib', 'sudo' or 'manual')
-here you want local::lib
-
-Autoconfigured everything but 'urllist'.
-
-Now you need to choose your CPAN mirror sites.  You can let me
-pick mirrors for you, you can select them from a list or you
-can enter them by hand.
-
-Would you like me to automatically choose some CPAN mirror
-sites for you? (This means connecting to the Internet) [yes]
-```
-
-For this, just answer *yes*. Then a lot of output follows, what is actually
-important is:
-
-```
-local::lib is installed. You must now add the following environment variables
-to your shell configuration files (or registry, if you are on Windows) and
-then restart your command line shell and CPAN before installing modules:
-
-PATH="/home/xjk/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/xjk/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/xjk/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base "/home/xjk/perl5""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/xjk/perl5"; export PERL_MM_OPT;
-```
-
-You need to put these lines into you `~/.bashrc` file.
-
-After all that you need to start a new session, and you can install new modules
-with `cpanm` command, for example:
-
-```bash
-[fe-open-01]$ cpanm DBD::mysql
---> Working on DBD::mysql
-Fetching http://www.cpan.org/authors/id/C/CA/CAPTTOFU/DBD-mysql-4.046.tar.gz ... OK
-Configuring DBD-mysql-4.046 ... OK
-==> Found dependencies: Test::Deep
---> Working on Test::Deep
-Fetching http://www.cpan.org/authors/id/R/RJ/RJBS/Test-Deep-1.128.tar.gz ... OK
-Configuring Test-Deep-1.128 ... OK
-==> Found dependencies: Test::Tester
---> Working on Test::Tester
-Fetching http://www.cpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302136.tar.gz ... OK
-Configuring Test-Simple-1.302136 ... OK
-Building and testing Test-Simple-1.302136 ... OK
-Successfully installed Test-Simple-1.302136
-Building and testing Test-Deep-1.128 ... OK
-Successfully installed Test-Deep-1.128
-Building and testing DBD-mysql-4.046 ... OK
-Successfully installed DBD-mysql-4.046
-3 distributions installed
-[fe-open-01]$ perldoc -l DBD::mysql
-/home/xjk/perl5/lib/perl5/x86_64-linux-thread-multi/DBD/mysql.pm
-```
-
 # TeXLive/LaTeX
 
-TeXLive is available on GenomeDK in the form of TinyTex, which is a stripped
+TeXLive is available on GenomeDK in the form of TinyTeX, which is a stripped
 down version of TeXLive. See [TinyTex](https://yihui.org/tinytex/) for more
 details.
 
-The conda provided package is for CLI or script usage, the R integration has not
-been tested and should probably be done using the guide described on the TinyTex
-home page found above.
+The Conda provided package is for CLI or script usage, the R integration has not
+been tested and should probably be done using the guide described on the TinyTeX
+home page.
 
-To install TinyTex with conda in a new environment:
+To install TinyTeX with Conda in a new environment:
 
 ```bash
 [fe-open-01]$ conda create <name of project> -c genomedk tinytex
 ```
 
-or if you have an existing environment where you want TinyTex installed:
+or if you have an existing environment where you want TinyTeX installed:
 
 ```bash
 [fe-open-01]$ conda activate <existing project>
@@ -277,46 +182,8 @@ To install LaTeX packages from CTAN:
 [fe-open-01]$ tlmgr install <package>
 ```
 
-Example for installing some packages:
-
-```bash
-[fe-open-01]$ tlmgr install txfonts enumitem titlesec newpx
-```
-
 Search for packages using tlmgr:
 
 ```bash
-[fe-open-01]$ tlmgr search <package name>
+[fe-open-01]$ tlmgr search <package>
 ```
-
-Search for specific file inside package using tlmgr (example):
-
-```bash
-[fe-open-01]$ tlmgr info t1xtt.tfm
-```
-
-# SSH-agent with password protected keys
-
-An SSH agent is a program which caches your decrypted private keys and provides
-them to SSH client programs on your behalf. In this arrangement, you must only
-provide your passphrase once, when adding your private key to the agent's cache.
-This facility can be of great convenience when making frequent SSH connections.
-
-To avoid problems when running starting new sessions when the ssh-agent is
-already running, add the following to your .bashrc
-
-```bash
-if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-   eval "$(ssh-agent)"
-   ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
-fi
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-ssh-add -l > /dev/null || ssh-add ~/.ssh/id_rsa
-```
-
-The above snippet checks if a softlink to the ssh auth socket is valid, if not
-it will run a ssh-agent process, and save the output thereof. It will then
-create a softlink to socket, which will be used for the session.
-
-Adjust the last line of the above code to fit the name of your password
-protected private key.
