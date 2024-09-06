@@ -3,18 +3,6 @@ title: Software-specific documentation
 weight: 90
 ---
 
-# Singularity
-
-Singularity is a container technology for HPC. If you're familiar with Docker,
-Singularity will seem familiar. Singularity is a fine, but slightly more
-complicated, alternative to using Conda for managing software.
-
-Singularity 2.6 is already installed and configured on GenomeDK, and you should
-be able to pull and run containers without any further setup. See the
-[Singularity
-documentation](https://sylabs.io/guides/3.3/user-guide/quick_start.html#overview-of-the-singularity-interface)
-for more details.
-
 # GATK
 
 GATK 4 can be installed through Conda with:

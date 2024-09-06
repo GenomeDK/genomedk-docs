@@ -71,8 +71,6 @@ channel_priority: strict
 auto_activate_base: false
 ```
 
-# Making Conda faster
-
 Conda can be quite slow, especially when installing packages with many
 dependencies. To speed up Conda, you can install a faster dependency solver:
 
@@ -84,7 +82,7 @@ dependencies. To speed up Conda, you can install a faster dependency solver:
 The `libmamba` solver is still experimental, but in our experience it's a lot
 faster and better than the default solver.
 
-# Searching for packages
+# Searching for Conda packages
 
 You can easily search for Conda packages through the website
 [anaconda.org](https://anaconda.org/) or using the
@@ -103,15 +101,15 @@ If you can't find a suitable Conda package, contact us and we will build a Conda
 package for you (when possible). Sometimes building a Conda package is not
 viable and in that case we will build a Singularity/Apptainer image instead.
 
-# Using environments
+# Installing Conda packages
 
 Here is how the usage might look if we want to create a new environment
 with the newest version of
 [PySAM](http://pysam.readthedocs.io/en/stable/):
 
-::: {.literalinclude language="console"}
-examples/conda-create-env
-:::
+```bash
+[fe-open-01]$ conda create -n amazing-project pysam
+```
 
 This gives us a clean environment with just the minimal number of
 packages necessary to support PySAM. To use the software that was
@@ -148,6 +146,68 @@ recreate your environment by running:
 ```
 
 You can read more about [using environments for projects](/docs/best-practices/).
+
+# Containers with Apptainer/Singularity
+
+[Apptainer](https://apptainer.org/) is a container technology for HPC that used
+to be called "Singularity". If you're familiar with Docker, Apptainer will seem
+familiar and Apptainer can convert most Docker images to its own (SIF) format
+and run them without issues.
+
+Apptainer is already installed and configured on GenomeDK, and you should be
+able to pull and run containers without any further setup:
+
+```bash
+[fe-open-01] apptainer pull docker://biocontainers/blast:2.2.31
+```
+
+This will pull the Docker image for BLAST and convert it to SIF, so it may take
+a while. In this case, the image will be put in your current working directory as  `blast_2.2.31.sif`.
+
+{% note() %}
+The images are quite large, so consider putting them in a relevant project
+folder.
+{% end %}
+
+You can now run a command inside the image:
+
+```bash
+[fe-open-01] apptainer run blast_2.2.31.sif blastp -version
+blastp: 2.2.31+
+Package: blast 2.2.31, build Apr 23 2016 15:49:47
+```
+
+You can of course do this in job scripts also, but be aware that you should
+pull and convert images *once* before submitting jobs. That is, never put
+`apptainer pull` in a job script.
+
+See the [Apptainer
+documentation](https://apptainer.org/docs/user/latest/quick_start.html#overview-of-the-apptainer-interface)
+for more details.
+
+## Finding Apptainer images
+
+There's a multitude of repositories for Docker/Apptainer images:
+
+* [Docker Hub](https://hub.docker.com/)
+* [NVIDIA GPU Cloud](https://ngc.nvidia.com/catalog/containers)
+* [Singularity Cloud Library](https://cloud.sylabs.io/library)
+* [Quay.io](https://quay.io/)
+* [BioContainers](https://biocontainers.pro/registry)
+
+## Using GPUs with Apptainer
+
+Apptainer supports the use of GPUs in containers, for example:
+
+```bash
+[fe-open-01] apptainer pull docker://nvcr.io/nvidia/tensorflow:23.08-tf2-py3
+```
+
+Then, on a GPU node (either in an interactive or batch job):
+
+```bash
+[gn-1001] apptainer run --nv ./tensorflow_23.08-tf2-py3.sif python3 mnist_classify.py
+```
 
 # Using graphical interfaces
 
