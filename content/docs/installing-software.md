@@ -79,17 +79,6 @@ channel_priority: strict
 auto_activate_base: false
 ```
 
-Conda can be quite slow, especially when installing packages with many
-dependencies. To speed up Conda, you can install a faster dependency solver:
-
-```bash
-[fe-open-01]$ conda install -n base --yes conda-libmamba-solver
-[fe-open-01]$ conda config --set solver libmamba
-```
-
-The `libmamba` solver is still experimental, but in our experience it's a lot
-faster and better than the default solver.
-
 ## Finding Conda packages
 
 You can easily search for Conda packages through the website
@@ -133,6 +122,12 @@ first:
 Notice that the prompt changed to show you that you're now in the
 *amazing-project* environment.
 
+You can install further packages in the environment with:
+
+```bash
+(amazing-project) [fe-open-01]$ conda install r-ggplot2
+```
+
 Since Conda knows about the entire environment you created, it can tell
 you exactly which packages are used in the environment. This is very
 useful for collaborating with others, since your collaborators can
@@ -144,16 +139,13 @@ To export your environment so that others can recreate it:
 (amazing-project) [fe-open-01]$ conda env export > environment.yml
 ```
 
-The `environment.yml` file contains an
-exact specification of your environment and the packages installed. You
-can put this in your shared project folder. Others will then be able to
-recreate your environment by running:
+The `environment.yml` file contains an exact specification of your environment
+and the packages installed. You can put this in your shared project folder.
+Others will then be able to recreate your environment by running:
 
 ```bash
 [fe-open-01]$ conda env create -f environment.yml
 ```
-
-You can read more about [using environments for projects](/docs/best-practices/).
 
 # Containers with Apptainer/Singularity
 
