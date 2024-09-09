@@ -4,16 +4,17 @@ weight: 30
 ---
 
 A project folder is a workspace with access control and usage management tools.
-You can request project folders as you need them or manage access to project
-folders with the tools covered in this section. A project folder is the only way
-to *share* data between users on GenomeDK.
+You can request project folders as you need them and manage access to project
+folders with the tools covered in this section. A project folder is how multiple
+users on GenomeDK can collaborate.
 
 Project folders do not have any resource limits, but we send notifications to the
-project owner if resource usage in the project has increased significantly.
+project owner if resource usage in the project has increased significantly, as
+well as monthly usage summaries.
 
 # Listing projects {#collaborating}
 
-You can list all of the projects you're a member of with:
+You can list all of the projects you're a member of:
 
 ```bash
 [fe-open-01]$ gdk-project-list
@@ -60,25 +61,25 @@ own projects.
 Add a user to a project:
 
 ```bash
-$ gdk-project-add-user -g <project name> -u <username>
+[fe-open-01]$ gdk-project-add-user -g <project name> -u <username>
 ```
 
-$ Remove a user from a project:
+Remove a user from a project:
 
 ```bash
-$ gdk-project-remove-user  -g <project name> -u <username>
+[fe-open-01]$ gdk-project-remove-user  -g <project name> -u <username>
 ```
 
 Grant administrative rights to a user in a project:
 
 ```bash
-$ gdk-project-promote-user -g <project name> -u <username>
+[fe-open-01]$ gdk-project-promote-user -g <project name> -u <username>
 ```
 
 Revoke a users' administrative rights to a project:
 
 ```bash
-$ gdk-project-demote-user -g <project name> -u <username>
+[fe-open-01]$ gdk-project-demote-user -g <project name> -u <username>
 ```
 
 List various information about the project, e.g. who the current project owner
@@ -87,18 +88,23 @@ number of billing hours used by the given project, as well as the current
 storage and backup usage:
 
 ```bash
-$ gdk-project-show <project name>
+[fe-open-01]$ gdk-project-show <project name>
 ```
 
 Provides a detailed listing of the resources used by all projects owned by you:
 
 ```bash
-$ gdk-project-usage
+[fe-open-01]$ gdk-project-usage
 ```
 
-To get help for any of the commands, run the command without any parameters.
+To get help for any of the commands, run the command with `-h`, for example:
 
-{% note() %} Don't know the username of one of your collaborators? You can use
+```bash
+[fe-open-01]$ gdk-project-usage -h
+```
+
+{% note() %}
+Don't know the username of one of your collaborators? You can use
 the `finger` command to get information about any user on GenomeDK:
 
 ```bash
