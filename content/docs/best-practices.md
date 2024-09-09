@@ -3,8 +3,6 @@ title: Best practices
 weight: 80
 ---
 
-# Structure and document your projects
-
 Using the same project structure for all of your projects provide a lot of
 benefits. We recommend that you follow the structure shown below. It is flexible
 enough to work for a wide variety of data analysis projects, but feel free to
@@ -38,58 +36,34 @@ myproject/
     ...
 ```
 
-This may seem like a large structure for a simple project, but remember that you
-can always scale down this structure. E.g. for small projects you may drop the
-`docs` folder and simply document how to run your analyses in
-`myproject/README.txt`. Each folder contains a `README.txt` file which documents
-the purpose and contents of the folder. You don't have to write a lot, just
-what's necessary to understand your project and its different parts.
-
-{% warning() %} If you consider modifying the basic project structure, make sure
-that you thought about what it means for the reproducibility of your project!
-Consider whether it is necessary to change the structure or if you're just being
-lazy. {% end %}
-
 Let's have a look at the goal of each folder:
 
-## data
-
-This folder should contain your raw/original data files. You should consider
+**data**: This folder should contain your raw/original data files. You should consider
 this directory read-only (even better: make it read-only). However, it is okay
 to add new files to the folder, as long as you don't modify or delete other
 files in the folder.
 
-## steps
-
-This folder contains data files produced by various steps in your analysis. If
+**steps**: This folder contains data files produced by various steps in your analysis. If
 you're using a workflow tool like GWF, this directory is where you would put the
 output of your targets. For large workflows it may be a good idea to make
 subfolders for each step.
 
-## results
-
-This folder contains the final data files (not plots) produced by your analysis.
+**results**: This folder contains the final data files (not plots) produced by your analysis.
 Again, you may want to put these in subfolders for large workflows with many
 result files.
 
-## plots
-
-This directory contains scripts for generating plots from the result files and
+**plots**: This directory contains scripts for generating plots from the result files and
 the resulting plots in one or more formats. For example, you could have a script
 called `plot_distribution_of_tumor_purities.py` which produces a plot called
 `distribution_of_tumor_purities.pdf`.
 
-## scripts
+**scripts**: This directory contains the scripts you wrote for your analysis,
+e.g. those used by your workflow. Use file names that describe the purpose of
+the scripts. At the top of each script, insert a comment that briefly describes
+the input, output and purpose of the script. Again, a few sentences is better
+than nothing and may often be enough.
 
-This directory contains the scripts you wrote for your analysis, e.g. those used
-by your workflow. Use file names that describe the purpose of the scripts. At
-the top of each script, insert a comment that briefly describes the input,
-output and purpose of the script. Again, a few sentences is better than nothing
-and may often be enough.
-
-## docs
-
-This folder is mainly for large projects where it may be nice to document each
+**docs**: This folder is mainly for large projects where it may be nice to document each
 analysis in its own file. If you use plain text files as shown above, remember
 to give them numbers to make it easier for the reader to figure out where to
 begin.
@@ -97,7 +71,7 @@ begin.
 In addition to the folders described above, the project root should also contain
 at least two files: a file documenting your project structure (this could just
 contain a short introduction to the project and a link to this page) and a file
-describing your environment.
+describing the software requirements for your project.
 
 # Multi-user project
 
@@ -134,150 +108,9 @@ produced a result `foo.txt` and user B wants to use this file. User B can then
 create a symlink from `myproject/people/A/results/foo.txt` to
 `/myproject/results/foo.txt`.
 
-# Use project-specific environments {#project_specific_environments}
-
-An environment is a isolated collection of programs and libraries. You can have
-multiple environments (e.g. one for each project) and these environments can
-have different software and even different versions of the same software
-installed simultaneously. To use an environment you must *activate* it. This
-will load all of the software available in the environment into your shell so
-that it is available as any other program installed on the machine.
-
-First, download and install the Anaconda distribution according to the
-instructions for your platform. Instructions can be found here along with
-detailed documentation on how to use the `conda` command. Then run:
-
-```bash
-[fe-open-01]$ conda activate
-(base) [fe-open-01]$ conda create -n myproject python=3.5
-```
-
-If the first command doesn't work, you're running an old version of Anaconda.
-Please download and install a newer version.
-
-This will create an environment called *myproject* with Python 3.5 installed. To
-enter the environment, use this command:
-
-```bash
-[fe-open-01]$ source activate myproject
-(myproject) [fe-open-01]$
-```
-
-Now check that the environment has been activated correctly by starting Python:
-
-```bash
-[fe-open-01]$ python
-Python 3.5.1 |Continuum Analytics, Inc.| (default, Dec 7 2015, 11:24:55)
-[GCC 4.2.1 (Apple Inc. build 5577)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> import numpy
-Traceback (most recent call last):
-File "<stdin>", line 1, in <module>
-ImportError: No module named 'numpy'
-```
-
-As you can see running the python command now opens Python 3.5.1 and we can also
-see that the Python installation was provided by Continuum, the company
-providing Anaconda. However, if we try to import e.g. numpy we get an error
-because this package has not been installed in the environment. Let's try to
-install it. Press `Control-d` to close the Python interpreter and then run this
-command:
-
-```bash
-[fe-open-01]$ conda install numpy
-```
-
-This will install the latest version of the numpy package into the current
-environment (you may have to say yes to installing the packages). Now try to
-open Python again and import numpy. It should work this time.
-
-The conda install command lets you choose exactly which version of the package
-to install. When we created the `myproject` environment which chose to
-specifically install Python version 3.5 using the `=` character. This syntax
-also works for conda install, e.g. `conda install numpy=1.9.1`.
-
-When you are done working with your project, or you want to switch to another
-environment for working with another project, run the command:
-
-```bash
-[fe-open-01]$ source deactivate
-```
-
-That's fine, but we still need a way to export an environment and its packages
-to other people. We can do this with:
-
-```bash
-(myproject) [fe-open-01]$ conda env export > environment.yml
-```
-
-Which allows other members of the project to recreate your exact environment:
-
-```bash
-[fe-open-01]$ conda env create -f environment.yml
-[fe-open-01]$ conda activate myproject
-```
-
-You may think that Anaconda only works for Python and Python packages, however,
-Anaconda actually works for any program that is available as an Anaconda package
-(which may Python, R or any other language, including binaries). Packages are
-provided through channels. While the official Anaconda channel contains
-thousands of popular packages, other channels provide even more packages. One
-such channel is the R channel which provides access to the R programming
-language and many popular libraries used with R. To get access to the R channel
-run:
-
-```bash
-[fe-open-01]$ conda config --add channels r
-```
-
-Another great channel is the Bioconda channel which provides access to hundreds
-of packages related to bioinformatics such as BWA, samtools, BLAST etc.:
-
-```bash
-[fe-open-01]$ conda config --add channels bioconda
-```
-
-However, all of this hardly improves reproducibility. However, Anaconda allows
-you to specify an environment (a list of channels and packages with specific
-versions) in an environment file. Create a file called `environment.yml` in the
-project folder and put this in the file:
-
-```yaml
-name: myproject
-channels:
-  - r
-  - bioconda
-dependencies:
-  - python=3.4
-  - numpy=1.9.2
-  - r-essentials=1.4
-  - bwa=0.7.15
-```
-
-Now, for the sake of clarity, let's remove our existing myproject environment.
-
-```bash
-[fe-open-01]$ conda env remove -n myproject
-```
-
-We can now create the exact environment specified in environment.yml by simply
-running:
-
-```bash
-[fe-open-01]$ conda env create
-```
-
-As you work you may need to change your environment, e.g. update a package to a
-more recent version, add or remove a package. To do this, just modify the
-environment.yml file and then run:
-
-```bash
-[fe-open-01]$ conda env update --prune
-```
-
 # Sanity check for repeatability
 
 To check whether your project can easily be run by another person, package it
 into a zip-file and send it to one of your colleagues. They should be able to
 run your analysis with no help from you and by only reading the documentation in
-your project (and maybe this document).
+your project.
