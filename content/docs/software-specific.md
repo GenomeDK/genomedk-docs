@@ -28,28 +28,47 @@ You can now call GATK with the `gatk3` command:
 (myproject) [fe-open-01]$ gatk3 --help
 ```
 
-# Python
+# Matlab
 
-Different Python versions can be installed through the Conda package manager.
-For example, for a project that needs Python 2.7, create an environment like
-this:
+Matlab can be installed easily in user-space, but you must bring your own license.
 
-```bash
-$ conda activate
-$ conda create -n myproject python=2.7
-$ conda activate myproject
-$ python --version
-```
+First, [download your desired version](https://se.mathworks.com/downloads/) for Linux and put it in your home folder.
 
-If you need Python 3.6 for another project, just create another environment for
-that project:
+Unzip the file in a new folder, e.g.:
 
 ```bash
-$ conda deactivate # exit the myproject environment
-$ conda create -n mynewproject python=3.6
-$ conda activate mynewproject
-$ python --version
+$ unzip matlab_R2023a_glnxa64.zip -d matlab_R2023_glnxa64
 ```
+
+Go to the folder and execute the install script. This will make a Matlab window pop up.
+
+```bash
+$ ./install -agreeToLicense yes
+```
+
+Specify the installation folder as `/home/<username>/matlab/glnxa64`.
+
+You then need to activate your license.
+
+Go to folder `/home/<username>/matlab/glnxa64/bin` and execute the activation file:
+
+```bash
+$ ./activate_matlab.sh
+```
+
+Matlab is now installed. To use it in a batch script, you must ensure that the `matlab` executable is in your `$PATH`. You can do this in your batch script/workflow file or put it in your `.bashrc`:
+
+```
+export PATH=/home/<username>/matlab/glnxa64/bin/:$PATH
+```
+
+You can then run a Matlab script like this:
+
+```bash
+$ matlab -nodisplay -nosplash -r "<filename>; exit;"
+```
+
+where `<filename>` is the name of your script, without the `.m` extension.
 
 # Jupyter Notebook/Lab
 
