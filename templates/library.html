@@ -5,26 +5,40 @@
     <div class="container w-narrow pb-2">
         <section class="prose">
             <p class="lead">The GenomeDK Data Library is an index for data sets made available by users of GenomeDK. Data sets in the library can be made available directly on GenomeDK or shared using GenomeDK's data shares.</p>
-            <table>
-            <thead>
-                <th>ID</th>
-                <th>Publication date</th>
-                <th>Title</th>
-                <th>Access type</th>
-            </thead>
-            <tbody>
-                {% for page in section.pages|sort(attribute="extra.id")|reverse %}
-                <tr>
-                    <td><a href="{{ page.permalink }}">{{ page.extra.id }}</a></td>
-                    <td class="nowrap">{{ page.date }}</td>
-                    <td>{{ page.title }}</td>
-                    <td>{{ page.extra.access_type }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-            </table>
         </section>
-        <p><small>The data in the library is not owned or administered by GenomeDK.</small></p>
+    </div>
+</div>
+
+<div class="bg-white">
+    <div class="container w-wide pb-2">
+        <section class="prose">
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Publication date</th>
+                    <th>Title</th>
+                    <th>Access type</th>
+                </thead>
+                <tbody>
+                    {% for page in section.pages|sort(attribute="extra.id")|reverse %}
+                    <tr>
+                        <td><a href="{{ page.permalink }}">{{ page.extra.id }}</a></td>
+                        <td class="nowrap">{{ page.date }}</td>
+                        <td>{{ page.title }}</td>
+                        <td>{{ page.extra.access_type }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+        </section>
+    </div>
+</div>
+
+<div class="bg-white">
+    <div class="container w-narrow pb-2">
+        <section class="prose">
+            <p><small>The data in the library is not owned or administered by GenomeDK.</small></p>
+        </section>
     </div>
 </div>
 {% endblock %}
