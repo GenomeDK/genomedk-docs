@@ -210,7 +210,7 @@ Then, on a GPU node (either in an interactive or batch job):
 
 Note the use of the `--nv` flag.
 
-# Using graphical interfaces
+# Using graphical interfaces {#graphical}
 
 There's two options for using programs with a graphical user interface
 on GenomeDK.
