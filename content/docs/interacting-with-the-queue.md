@@ -147,30 +147,6 @@ echo hello world
 This specifies that you want eight cores and 16 GB of memory allocated
 to the job.
 
-Here's a more complicated job script:
-
-```bash
-#!/bin/bash
-#SBATCH --account my_project
-#SBATCH -c 8
-#SBATCH --mem 16g
-#SBATCH --partition gpu
-#SBATCH --gres=gpu:1
-#SBATCH --time 04:00:00
-
-echo hello world
-```
-
-Unless you specify a partition other that short/normal, like *fat2* or
-*express*, the partition parameter is largely ignored and your jobs are actually
-submitted to both partitions. When they start, they are moved to a single
-partition, in which they are started. This is done to avoid waiting in the
-*short* queue if normal nodes are empty.
-
-Long story short: don't worry, just submit the job asking for an appropriate
-time limit and it will start in an appropriate place. Unless you want *fat2* or
-*express*, you can forget about the partition parameter.
-
 {% note() %}
 A node can be shared by multiple users, so you should always take extra
 care in requesting to correct amount of resources (nodes, cores and
@@ -198,6 +174,34 @@ their workflow and instead use a workflow engine such as
 bioinformatics). Such tools allow you to write entire pipelines
 consisting of thousands of separate jobs and submit those jobs to Slurm
 without writing job scripts manually.
+
+# Asking for GPUs {#gpu_nodes}
+
+To to run a job on a node with a GPU device you need to submit it to the
+*gpu* partition and specify how many GPU devices you are going to use.
+
+For example, to submit an interactive job that will use just one GPU:
+
+```bash
+[fe-open-01]$ srun --gres=gpu:1 -p gpu --pty /bin/bash
+```
+
+In a batch script it looks like this. Here we ask for four GPUs:
+
+```bash
+#!/bin/bash
+#SBATCH --account my_project
+#SBATCH -c 8
+#SBATCH --mem 16g
+#SBATCH --partition gpu
+#SBATCH --gres=gpu:4
+#SBATCH --time 04:00:00
+
+echo hello world
+```
+
+Note that the software you're using must support using multiple GPUs,
+otherwise allocating more GPUs will not make a difference.
 
 # Checking job status
 
@@ -292,25 +296,3 @@ certain type of machine.
 The [slurm
 documentation](https://slurm.schedmd.com/sbatch.html#OPT_constraint) has
 more info on how to ask for multiple features etc.
-
-# Working on GPU nodes {#gpu_nodes}
-
-There are currently two compute nodes on the cluster that are equipped
-with GPU cards with two devices per node. There are currently no
-frontends equipped with GPU devices.
-
-If you need to compile a piece of software that is supposed to use GPU's
-you most likely have to do it in a job on one of the compute nodes with
-such devices, since headers required for compilation are only located
-there.
-
-Headers and libraries for compilation are located in
-`/usr/local/cuda/targets/x86_64-linux`.
-
-To to run a job on a node with a GPU device you need to submit it to the
-*gpu* partition and specify how many GPU devices you are going to use,
-for example to submit an interactive job that will use just one GPU:
-
-```bash
-[fe-open-01]$ srun --gres=gpu:1 -p gpu --pty /bin/bash
-```

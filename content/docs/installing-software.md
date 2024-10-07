@@ -210,7 +210,28 @@ Then, on a GPU node (either in an interactive or batch job):
 
 Note the use of the `--nv` flag.
 
-# Using graphical interfaces {#graphical}
+# Building software for CUDA
+
+If you need to compile a piece of software that is supposed to use GPUs you most
+likely have to do it in a job on one of the GPU nodes, since headers required
+for compilation are only located there.
+
+You can get a list of GPU nodes with:
+
+```bash
+[fe-open-01] sinfo -p gpu -N
+NODELIST   NODES PARTITION STATE
+gn-1001        1       gpu mix
+gn-1002        1       gpu alloc
+```
+
+Headers and libraries for compilation are located in
+`/usr/local/cuda/targets/x86_64-linux`.
+
+Read more about how to submit jobs for the GPU nodes
+[here](@/docs/interacting-with-the-queue.md#gpu_nodes).
+
+# Using graphical interfaces
 
 There's two options for using programs with a graphical user interface
 on GenomeDK.
