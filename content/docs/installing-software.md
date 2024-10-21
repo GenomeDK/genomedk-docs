@@ -231,7 +231,7 @@ Headers and libraries for compilation are located in
 Read more about how to submit jobs for the GPU nodes
 [here](@/docs/interacting-with-the-queue.md#gpu_nodes).
 
-# Using graphical interfaces
+# Using graphical interfaces {#graphical}
 
 There's two options for using programs with a graphical user interface
 on GenomeDK.
