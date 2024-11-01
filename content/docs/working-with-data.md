@@ -10,69 +10,48 @@ amounts of data located on the cluster, data is saved on network file systems.
 # Where to put your data {#data_locations}
 
 Each of these file systems have their own advantages and disadvantages. Thus,
-you need to put your data on the right file system to utilize the cluster
+you need to put your data on the right file system to utilize GenomeDK
 optimally.
 
-## /home/\<username\>
-
-Your home folder is on a file system called NFS. This file system handles many
-small files well, but not big files. It's also rather slow to access this file
-system from many compute nodes at the same time and your home folder is limited
-to 100 GB.
-
-We do *not* recommend storing raw data files, temporary files or results on this
-file system. However, it's fine for small documents like notes, programs and
-your Conda installation.
-
-This location IS NOT eligible for backup. Instead we perform regular snapshots
-(see the section on [snapshots](#snapshots)).
-
-## /faststorage/project/\<project name\>
-
-All projects get their own folder on fast storage. All files related to the
-project should be placed in this folder. Project folders have no quota and can
-be accessed by all members of the project.
-
-This location IS eligible for backup.
-
-## /faststorage/home/\<username\>
-
-Users created before June 23, 2022 have a home folder located on faststorage at
-`/faststorage/home/<username>`. More recent users do not have this directory and
-are instead encouraged to use project folders to organize their data.
-
-There is no limit on the amount of data that can be stored in this folder, but
-the data can only be accessed by your user.
-
-This location IS eligible for backup.
-
-## /scratch/$SLURM_JOB_ID, $TMPDIR, $TMP
-
-All jobs get access shared, local disk. Files written to this space are only
-available on the given node (that is, you can not access files written here from
-other nodes).
-
-This folder is deleted when the job finishes! Any files written here, that you
-wish to keep, should be moved to *faststorage* as the last step in your job
-script.
-
-Use this for (1) temporary files that are not needed later, or (2) for output
-files that are written in small chunks.
-
-This location is NOT eligible for backup.
+* `/home/<username>`
+  * **Filesystem:** NFS
+  * **Quota:** 100 GB
+  * **Backup:** No
+  * **Snapshots:** Yes
+  * **Persistent:** Yes, data stays until it is deleted by the user.
+  * **Note:** Only you can access this folder. Subfolders can not be shared with other users.
+* `/faststorage/project/<project name>` or `/faststorage/jail/project/<project name>`
+  * **Filesystem:** BeeGFS
+  * **Quota:** None
+  * **Backup:** Yes, this location is eligible for backup.
+  * **Snapshots:** No
+  * **Persistent:** Yes, data stays until it is deleted by the user.
+  * **Note:** Can be accessed by all members of the project in question.
+* `/tmp/$SLURM_JOB_ID`, `$TMPDIR`, `$TMP`
+  * **Filesystem:** XFS
+  * **Quota:** Limited the the available scratch disk space on the particular compute node.
+  * **Backup:** No
+  * **Snapshots:** No
+  * **Persistent:** No, data is deleted whenever the job in question finishes.
+  * **Note:** Can not be accessed from multiple nodes. Use this for (1) temporary files that
+    are not needed later, or (2) for output files that are written in small chunks.
 
 # Backing up data {#backup}
 
-We provide backup on to disk on a remote site to all users. To back up a file,
-it should be put in a directory called either `BACKUP`, `Backup` or `backup`.
-The directory can be located in any other directory, but only some locations are
-eligible for backup.
+We provide backup on to disk on a remote site to all users. By default, nothing
+is backed up.
+
+To back up a file, it should be put in a directory called either `BACKUP`,
+`Backup` or `backup`. The directory can be located in any directory that is
+eligible for backup (see above).
 
 Data is backed up once per week and snapshots are kept for 14 days.
 
-{% warning() %} Do not back up temporary data files that can easily be
-reproduced. Computation is cheap, but backup is expensive. The backup is meant
-for scripts/source code and important raw data. {% end %}
+{% warning() %}
+Do not back up temporary data files that can easily be reproduced. Computation
+is cheap, but backup is expensive. The backup is meant for scripts/source code
+and important raw data.
+{% end %}
 
 # Snapshots {#snapshots}
 
@@ -80,7 +59,7 @@ All home folders are automatically snapshotted. As a user you do not have to do
 anything to enable this.
 
 Snapshots do not provide the same data safety as a backup since the data is not
-stored at an offsite location. Instead, a snapshot of the data is taken on a
+stored at an off-site location. Instead, a snapshot of the data is taken on a
 regular basis and stored on the local server. This means that if you e.g.
 deleted a file by mistake, the file can be recovered from a previous snapshot.
 
@@ -91,6 +70,8 @@ Snapshots are currently taken with the following intervals and retention times:
 -   24 hours, last 31 are kept
 -   Weekly, last 8 are kept
 -   Monthly, last 12 are kept
+
+Contact support if you need to recover a file from a snapshot.
 
 # Accessing your files locally {#mounting}
 
