@@ -12,6 +12,9 @@ For more advanced use cases, or where there's a substantial need for
 reproducibility, we recommend [Apptainer](https://apptainer.org/), which is also
 supported on GenomeDK.
 
+You can of course also compile software yourself, but you must provide all of the
+necessary dependencies (compilers, libraries) for the build, e.g. using Conda.
+
 # Software installation with Conda
 
 Conda can install any kind of software. This means that your entire
