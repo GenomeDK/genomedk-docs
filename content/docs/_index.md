@@ -47,16 +47,25 @@ run a command on a compute node that you started an interactive job on
 (more about this later), it will be shown like this:
 
 ```bash
-[s03n11]$ echo hello
+[cn-1004]$ echo hello
 ```
 
-In this case the compute node is **s03n11**, but anything that has the
-format **sXXnYY** is a compute node.
+In this case the compute node is **cn-1004**.
 
 # Learning to use the shell
 
-When interacting with the cluster you will be using a *shell* on a
+When interacting with GenomeDK you will be using a *shell* on a
 Linux/UNIX system. If you are not familiar with these concepts we
 recommend the [Shell
 novice](https://swcarpentry.github.io/shell-novice/) tutorial from
 Software Carpentry.
+
+If you are affiliated with Aarhus University or the Central Denmark
+Region (RM), there's also excellent local training and consultancy
+initiatives available at:
+
+* [Bioinformatics Core Facility](https://biomed.au.dk/bioinformatics-core-facility) - provides basic (bioinformatics) data analysis training and consultancy services.
+* [Accessible Bioinformatics Café](https://abc.au.dk/) - regular, informal cafés covering basic Linux, programming, and data analysis.
+
+If your research group, company or department needs training for
+GenomeDK specifically, we also [offer workshops based on your needs](@/help.md).
