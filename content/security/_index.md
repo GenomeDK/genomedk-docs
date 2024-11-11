@@ -15,7 +15,7 @@ Here are some of the things we do:
 * We never store confidential information outside our secure perimeters, and we use encrypted channels for all communication in and out of GenomeDK.
 * We employ TOTP-based two-factor authentication for all users.
 * We continuously update our information security management system according to international best practices, including ISO 27001.
-* We ensure that our employees know our rules about data confidentiality and data security. All employees sign a confidentiality agreement violations will have serious consequences for employment.
+* We ensure that our employees know our rules about data confidentiality and data security. All employees sign a confidentiality agreement and violations will have serious consequences for employment.
 * We continuously monitor relevant channels for newly discovered bugs and security holes that may affect GenomeDK's systems and update our systems accordingly.
 * We maintain a small attack surface, with only the required software installed on the base system.
 
