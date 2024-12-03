@@ -50,7 +50,7 @@ h1,
 h2,
 h3,
 h4 {
-    margin: 2rem 0 0.5rem 0;
+    margin: 0 0 0.5em 0;
     font-weight: normal;
     overflow-wrap: break-word;
 }
@@ -206,6 +206,12 @@ hr {
         grid-area: de3;
     }
 
+    .description1 h1,
+    .description2 h1,
+    .description3 h1 {
+        margin: 1rem 0 0.5rem 0;
+    }
+
     grid-template-areas: "de1"
     "de2"
     "de3";
@@ -239,6 +245,19 @@ hr {
         column-gap: 2em;
         grid-template-columns: 1fr 1fr;
     }
+}
+
+.contact-cards {
+    display: grid;
+    row-gap: 1em;
+    column-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
 }
 
 #map {

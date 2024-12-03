@@ -28,16 +28,15 @@
     </div>
 </div>
 <div class="bg-neutral">
-    <div class="container w-wide centered py-2 text flex flex-wrap align-items-center">
-        <p class="mr-2">Or contact our staff directly...</p>
-        <div class="flex-grow flex justify-evenly align-items-center">
+    <div class="container w-wide centered py-2">
+        <h1 class="">Meet the team</h1>
+        <div class="contact-cards py-1">
             {% for person in page.extra.staff %}
-            <a class="contact-card" alt="Send an e-mail to {{ person.name }}" href="mailto:{{ person.email }}">
-                <div>
-                    <div class="name">{{ person.name }}</div>
-                    <div class="title">{{ person.title }}</div>
-                </div>
-            </a>
+            <div class="contact-card">
+                <div class="name"><strong>{{ person.name }}</strong></div>
+                <div class="title">{{ person.title }}</div>
+                <div class="email">Mail: <a alt="Send an e-mail to {{ person.name }}" href="mailto:{{ person.email }}">{{ person.email }}</a></div>
+            </div>
             {% endfor %}
         </div>
     </div>

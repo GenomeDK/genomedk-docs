@@ -16,6 +16,12 @@ extra:
         - name: Dan Søndergaard
           title: Senior consultant
           email: das@genome.au.dk
+        - name: Keld Erik Knudsen
+          title: Special consultant
+          email: kkn@genome.au.dk
+        - name: Samuele Soraggi
+          title: Special consultant
+          email: samuele@birc.au.dk
     workshops:
         -   March 5, 2024, "Linux basics", "Project organization",
             "Managing software with Conda", "Overview of gwf", (Samuele Soraggi), Department of
