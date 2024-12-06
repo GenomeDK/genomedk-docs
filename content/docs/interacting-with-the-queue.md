@@ -224,6 +224,32 @@ have been submitted to the queue:
 [fe-open-01]$ squeue
 ```
 
+# Connecting to a running job
+
+You can quite easily get a shell inside a job that is running, for example
+to debug issues or check if the job is utilizing resources correctly:
+
+```bash
+[fe-open-01]$ srun --jobid <job id> --overlap --pty bash
+```
+
+This will start a shell inside the job, which also means that the session
+is subject to the resource limits specified for the job.
+
+If you do this often, consider adding this to your `~/.bashrc`:
+
+```bash
+sshell() {
+  srun --jobid $1 --overlap --pty bash
+}
+```
+
+After logging out and in again, you can now use:
+
+```bash
+sshell <job id>
+```
+
 # Cancelling a job
 
 Jobs can be cancelled using the `scancel` command:
