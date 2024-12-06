@@ -66,13 +66,19 @@ footer {
 }
 
 .wrapper {
-    align-items: start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-@media (min-width: 800px) {
-    .wrapper {
-        gap: 0 2em;
-        display: grid;
-        grid-template-columns: auto 625px;
-    }
+.sidebar {
+    flex-basis: 20rem;
+    flex-grow: 1;
+    border-right: 2px solid $color-neutral;
+}
+
+.doc {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 50%;
 }
