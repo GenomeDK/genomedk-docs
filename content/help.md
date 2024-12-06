@@ -21,7 +21,7 @@ extra:
           email: kkn@genome.au.dk
         - name: Samuele Soraggi
           title: Special consultant
-          email: samuele@birc.au.dk
+          email: samuele@genome.au.dk
     workshops:
         -   March 5, 2024, "Linux basics", "Project organization",
             "Managing software with Conda", "Overview of gwf", (Samuele Soraggi), Department of
