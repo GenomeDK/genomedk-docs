@@ -18,7 +18,7 @@ you must download a licensed copy of GATK from
 ```bash
 [fe-open-01]$ conda activate myproject
 (myproject) [fe-open-01]$ conda install -c bioconda gatk
-(myproject) [fe-open-01]$ wget 'https://software.broadinstitute.org/gatk/download/auth?package=GATK-archive&version=3.8-1-0-gf15c1c3ef' -O GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2
+(myproject) [fe-open-01]$ wget https://storage.googleapis.com/gatk-software/package-archive/gatk/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2
 (myproject) [fe-open-01]$ gatk3-register GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2
 ```
 
