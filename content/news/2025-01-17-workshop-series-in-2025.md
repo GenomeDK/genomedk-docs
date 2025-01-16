@@ -15,9 +15,13 @@ Then join us in this series of GenomeDK workshops where we guide you from a gene
 
 <!-- more -->
 
+Each workshop is scheduled for four hours, including a 45 min. lunch break.
+
+There will be cake, coffee, and tea for attendants, so please remember to sign up.
+
 # Getting started with high-performance computing on GenomeDK
 
-**20 February 2025, TBA:TBA @ TBA**
+**February 26, 2025, 10:00-14:00 @ 1253-317 (William Scharff)**
 
 **Intended audience:** For new or potential users of GenomeDK, or existing users with limited experience.
 
@@ -38,7 +42,7 @@ This workshop will be hosted by Samuele Soraggi (BiRC, MBG) and Dan Søndergaard
 
 # Advanced use of GenomeDK
 
-**10 April 2025, TBA:TBA @ TBA**
+**April 10, 2025, 10:00-14:00 @ 1253-317 (William Scharff)**
 
 **Intended audience:** For all users of GenomeDK, especially those already with some knowledge of the system.
 
@@ -56,7 +60,7 @@ This workshop will be hosted by Samuele Soraggi (BiRC, MBG) and Dan Søndergaard
 
 # Pipelines on GenomeDK
 
-**4 Juni 2025, TBA:TBA @ TBA**
+**June 4, 2025, 10:00-14:00 @ 1253-317 (William Scharff)**
 
 **Intended audience:** For users of GenomeDK who want to learn building complex and reproducible pipelines. Some of the content might be bioinformatics-specific.
 
