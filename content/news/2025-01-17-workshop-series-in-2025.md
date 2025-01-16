@@ -2,7 +2,7 @@
 title = "Workshop series in 2025"
 
 [extra]
-published = false
+published = true
 +++
 
 {% note() %}
