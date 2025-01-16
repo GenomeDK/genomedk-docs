@@ -26,7 +26,7 @@ Here are some of the things we do:
 
 ISO 27001 is an internationally recognized standard for managing information security, providing a systematic approach to protecting sensitive data through a robust Information Security Management System (ISMS).
 
-This certification signifies that GenomeDK has implemented rigorous policies, procedures, and controls to safeguard data against threats such as unauthorized access, cyber-attacks, and data breaches. Achieving ISO 27001 certification involves thorough risk assessments, continuous monitoring, and regular audits to ensure compliance and effectiveness.
+This certification signifies that GenomeDK has implemented policies, procedures, and controls based on the requirements of ISO 27001 for an information security management system. Achieving ISO 27001 certification involves thorough risk assessments, continuous monitoring, and regular audits to validate our compliance and effectiveness.
 
 # ISAE 3000 compliance
 
