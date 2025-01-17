@@ -239,14 +239,58 @@ Read more about how to submit jobs for the GPU nodes
 There's two options for using programs with a graphical user interface
 on GenomeDK.
 
+## GenomeDK Desktop {#desktop}
+
+The most convenient and reliable way to get a graphical interface on GenomeDK is
+through the [GenomeDK Desktop](https://desktop.genome.au.dk/). You can log in
+with your existing (open) user credentials and two-factor token.
+
+The Desktop provides a full virtual desktop inside your browser and requires no
+software to be installed on your own machine. Once connected, you can access all
+of your projects as usual and launch graphical applications directly.
+
+The desktop environment runs on the frontend, so **all of the usual guidelines
+about not running computations on the frontend still apply**. However, you can
+start an interactive jobs and launch a graphical application (e.g. Rstudio)
+inside the job.
+
+### Session persistence
+
+Desktop sessions are *persistent*, meaning that you can log out of the Desktop and
+log in later and all of your applications, windows, etc. will still be available.
+
+However, sessions time out after 72 hours of inactivity (not logging in or using
+the session). This kills all processes in the session. Unsaved files will be lost.
+
+### Clipboard
+
+The Desktop runs directly in your browser and is thus limited by browser functionality
+and security measures. This is mostly noticeable in the way copy-paste is handled, as
+browsers do not allow direct access for the Desktop to manipulate your clipboard.
+
+To paste text from your local computer into the Desktop:
+
+* copy the text as usual on your local computer,
+* go to the Desktop and click "Show clipboard" in the top menu,
+* paste the text into the text area and click "Hide clipboard",
+* inside the Desktop session, focus the application you wish to paste into,
+  then right-click and select "Paste".
+
+To copy text from inside the Desktop to your local computer:
+
+* inside the Desktop, select the text you wish to copy,
+* click "Show clipboard" in the top menu,
+* the text you selected should be present in the text area,
+* select the text, right click and select "Copy",
+* you can now paste the text into any application on your local computer.
+
 ## X-forwarding {#xforwarding}
 
-You can use X-forwarding to tunnel individual graphical programs to your
-local desktop. This works well for many programs, but programs that do
-fancy graphics or anything animated might not work well.
+You can use X-forwarding to tunnel individual graphical programs to your local
+desktop.
 
-On Linux you simply need to tell SSH that you wish to enable
-X-forwarding. To do this, add `-X` to the `ssh` command when logging in to the cluster, for example:
+On Linux you simply need to tell SSH that you wish to enable X-forwarding. To do
+this, add `-X` to the `ssh` command when logging in to the cluster, for example:
 
 ```bash
 [local]$ ssh -X USERNAME@login.genome.au.dk
@@ -279,58 +323,11 @@ On Windows, we recommend that you use
 [MobaXterm](https://mobaxterm.mobatek.net/) which has an integrated X
 server.
 
-## VNC
-
-{% note() %}
-We're working on a better solution for virtual desktops on
-GenomeDK. These instructions only work if you run Linux or macOS on your own
-computer.
-{% end %}
-
-If you want to use a full virtual desktop you can use a VNC client. Any VNC
-client will do. [Remote Ripple](https://remoteripple.com/) works on many
-different platforms and is free.
-
-First, ensure that your VNC client of choice is installed on your computer.
-
-Next, log on to GenomeDK and start a *VNC server*:
-
-```bash
-[fe-open-01]$ vncserver
-WARNING: vncserver has been replaced by a systemd unit and is now considered deprecated and removed in upstream.
-Please read /usr/share/doc/tigervnc/HOWTO.md for more information.
-
-New 'fe-open-02:1 (das)' desktop is fe-open-02:1
-
-Starting applications specified in /home/das/.vnc/xstartup
-Log file is /home/das/.vnc/fe-open-02:1.log
-```
-
-(You can ignore the warning).
-
-If this is the first time, you will be asked to specify a password for accessing
-the desktop. Enter a password of your choice.
-
-The display id (`:1` in the example output above) is needed when you want to
-connect to the desktop with your VNC client.
-
-You must compute 5900 + the display id, which is the port number you will use to
-connect to the remote desktop. So in this example, the port number is 5901.
-
-On your own computer, start an SSH tunnel to the VNC server:
-
-```bash
-[local]$ ssh -N -L 5901:localhost:5901 <username>@login.genome.au.dk
-```
-
-Now open your VNC client and connect to host `localhost` and the port number you
-calculated. You will be asked for the password you specified earlier.
-
 # Using a terminal multiplexer
 
-Using a terminal multiplexer allows you to keep your session open, even
-when you disconnect from the cluster. You can even reconnect from a
-different computer and get your session back.
+Using a terminal multiplexer allows you to keep your SSH session open, even when
+you disconnect from the cluster. You can even reconnect from a different
+computer and get your session back.
 
 We recommend that you use either `tmux` or `screen`.
 

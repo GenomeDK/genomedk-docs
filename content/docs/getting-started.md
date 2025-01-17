@@ -24,7 +24,15 @@ zone. If you're in doubt about which zone you belong to, check your
 account confirmation e-mail. If it doesn't mention a specific zone, you
 belong to the open zone. If still in doubt, please contact support.
 
-## Prepare for two-factor authentication
+There are three ways to connect to GenomeDK:
+
+* [Connecting with SSH (open zone)](#ssh)
+* [Connecting with GenomeDK Desktop (open zone)](#desktop)
+* [Connecting with NoMachine (closed zones)](#zone_connect)
+
+In any case, you must first [prepare for two-factor authentication](#2fa).
+
+## Prepare for two-factor authentication {#2fa}
 
 You must first install an authenticator app on your phone (if you don't already
 have one). Popular authenticator apps include:
@@ -36,7 +44,7 @@ have one). Popular authenticator apps include:
 All of these apps will allow you to scan a QR code and generate tokens for
 future logins.
 
-## Connecting to the open zone
+## Connecting to the open zone with SSH {#ssh}
 
 {% warning() %}
 On your first login, you must set up two-factor authentication. If you do not
@@ -72,6 +80,26 @@ GenomeDK:
 
 This will show a QR code in your terminal. Open the the authenticator app on
 your phone and scan the QR code.
+
+## Connecting via the GenomeDK Desktop {#desktop}
+
+GenomeDK Desktop provides access to a graphical desktop environment (virtual
+desktop) running on the frontend node of the open zone. The Desktop is available
+directly in your browser.
+
+* Go to the [GenomeDK Desktop](https://desktop.genome.au.dk/) and log in with
+  your usual GenomeDK credentials.
+* Choose the service you wish to connect to (in most cases "Frontend - Open", to
+  access the frontend in the open zone).
+* If this is your first login, you will be guided through the process of setting
+  up two-factor authentication.
+
+Once logged in, a virtual desktop will appear within a few seconds.
+
+Please note that the session **should not be used for heavy computations**.
+Instead, submit a job to the queuing system inside your Desktop session.
+
+You can [learn more about using the Desktop here](@/docs/installing-software.md#desktop).
 
 ## Connecting to a closed zone {#zone_connect}
 
