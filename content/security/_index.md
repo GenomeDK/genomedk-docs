@@ -22,7 +22,7 @@ Here are some of the things we do:
 # ISO 27001 certification
 
 * Key documents:
-    * [ISO 27001 certificate](./FINAL-ISO27001%20Certificate-Aarhus.pdf)
+    * [ISO 27001 certificate](./iso27001-certificate.pdf)
 
 ISO 27001 is an internationally recognized standard for managing information security, providing a systematic approach to protecting sensitive data through a robust Information Security Management System (ISMS).
 
