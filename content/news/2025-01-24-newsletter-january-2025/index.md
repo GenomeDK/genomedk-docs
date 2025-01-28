@@ -17,6 +17,22 @@ In 2024, we ran 13.5 mio. jobs totalling 62.5 mio. core-hours. We're also happy 
 
 <!-- more -->
 
+# Announcing the GenomeDK Desktop
+
+We're excited to announce the [GenomeDK Desktop](https://desktop.genome.au.dk), a browser-based solution that gives you a graphical desktop environment on GenomeDK!
+
+Here's what it looks like:
+
+{% image(path="genomedk-desktop.png") %}
+The GenomeDK Desktop running in a browser.
+{% end %}
+
+The Desktop is available to all users in the "open" zone. You can try it out [as of now](https://desktop.genome.au.dk)!
+
+With this solution you can log in with your usual GenomeDK credentials and get a full-blown graphical desktop environment right in your browser.
+
+The desktop environment runs on the frontend, so **all of the usual guidelines about not running computations on the frontend still apply**. However, the GenomeDK Desktop provides a significantly easier and more responsive way to get a graphical environment on GenomeDK. We have [updated our documentation in this area](@/docs/installing-software.md#graphical) accordingly.
+
 # Growing the team
 
 We have doubled the size of the GenomeDK team -- which now counts a total of four people!
@@ -40,22 +56,6 @@ Please help us circulate the workshop invitations to any relevant departments/gr
 We also offer on-request workshops, and with Samuele on the team we are now able to take on more of these. The only requirement is that you must be at least five persons attending the workshop. If you're interested in this offering, [get in touch](mailto:support@genome.au.dk).
 
 (Yes, we even do these workshops outside of Aarhus, but you'll pay for transport and accommodation).
-
-# Announcing the GenomeDK Desktop
-
-We're excited to announce the [GenomeDK Desktop](https://desktop.genome.au.dk), a browser-based solution that gives you a graphical desktop environment on GenomeDK!
-
-Here's what it looks like:
-
-{% image(path="genomedk-desktop.png") %}
-The GenomeDK Desktop running in a browser.
-{% end %}
-
-The Desktop is available to all users in the "open" zone. You can try it out [as of now](https://desktop.genome.au.dk)!
-
-With this solution you can log in with your usual GenomeDK credentials and get a full-blown graphical desktop environment right in your browser.
-
-The desktop environment runs on the frontend, so **all of the usual guidelines about not running computations on the frontend still apply**. However, the GenomeDK Desktop provides a significantly easier and more responsive way to get a graphical environment on GenomeDK. We have [updated our documentation in this area](@/docs/installing-software.md#graphical) accordingly.
 
 # Upcoming storage expansion
 
