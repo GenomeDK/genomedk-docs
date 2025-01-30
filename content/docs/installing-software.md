@@ -251,7 +251,7 @@ of your projects as usual and launch graphical applications directly.
 
 The desktop environment runs on the frontend, so **all of the usual guidelines
 about not running computations on the frontend still apply**. However, you can
-start an interactive jobs and launch a graphical application (e.g. Rstudio)
+start an interactive job and launch a graphical application (e.g. Rstudio)
 inside the job.
 
 ### Session persistence
