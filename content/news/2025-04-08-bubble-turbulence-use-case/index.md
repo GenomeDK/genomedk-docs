@@ -2,14 +2,14 @@
 title = "Use-case: High-fidelity simulations of bubble dynamics for maritime drag reduction"
 
 [extra]
-published = false
+published = true
 highlight = true
 illustration = "bubbles.jpg"
 +++
 
 Unlike what the name, GenomeDK, might suggest, we have users from a wide range of fields, including those that are not related to genomes!
 
-We are therefore very happy to present this slightly unusual use-case from Sina Nozarian, who is a PhD student at the Department of Mechanical & Production Engineering, Faculty of Technical Sciences (Tech) at Aarhus University.
+We are therefore very happy to present this slightly unusual use-case from Sina Nozarian, a PhD student at the Department of Mechanical & Production Engineering, Faculty of Technical Sciences (Tech) at Aarhus University.
 
 Sina is supervised by associate professors Pourya Forooghi and Mahdi Abkar, and is currently on a research mobility stay at TU Wien (in Vienna), collaborating with Professor Alfredo Soldati specifically on the topic presented here.
 
