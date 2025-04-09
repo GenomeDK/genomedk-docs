@@ -169,7 +169,7 @@ returns immediately, giving us a job id to identify our job.
 
 Most people find it annoying to write these job script for each step in
 their workflow and instead use a workflow engine such as
-[gwf](https://docs.gwf.app/en/latest/) (developed at GenomeDK) or
+[gwf](https://docs.gwf.app/) (developed at GenomeDK) or
 [snakemake](https://snakemake.readthedocs.io/) (quite popular in
 bioinformatics). Such tools allow you to write entire pipelines
 consisting of thousands of separate jobs and submit those jobs to Slurm
