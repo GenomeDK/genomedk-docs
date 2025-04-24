@@ -10,8 +10,6 @@
     </div>
 </div>
 
-<script src="http://elasticlunr.com/elasticlunr.min.js"></script>
-
 <script>
   function debounce(func, wait) {
     var timeout;
@@ -200,12 +198,6 @@
   }
 
 
-  if (document.readyState === "complete" ||
-      (document.readyState !== "loading" && !document.documentElement.doScroll)
-  ) {
-    initSearch();
-  } else {
     document.addEventListener("DOMContentLoaded", initSearch);
-  }
     </script>
 {% endblock %}
