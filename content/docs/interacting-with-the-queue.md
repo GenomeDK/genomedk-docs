@@ -21,10 +21,17 @@ resources such as the number of cores per node, available memory per
 node, and the maximum walltime (running time) a job in the partition can
 have.
 
-{% note() %}
-There is a global seven day time limit. Submitting a job requesting more
-than seven days will result in an error.
-{% end %}
+# Resource limits
+
+All users/jobs are subject to the following limits:
+
+* A user can at most use 3600 cores at once.
+* A user can at most use 12 GPUs at once.
+* A job can at most declare 1000 dependencies. Exceeding the limit results in an error when the job is submitted.
+* A job can at most request a time limit of 7 days. Exceeding the limit results in an error when the job is submitted.
+* A job array can at most have a length of 150000. Exceeding the limit results in an error when the job is submitted.
+
+The limits are subject to change at any time.
 
 # Submitting jobs under a project
 
