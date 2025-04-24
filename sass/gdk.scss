@@ -320,3 +320,36 @@ hr {
     text-decoration: none;
     display: block;
 }
+
+#search {
+    width: 100%;
+    font-size: $text-size-xl;
+    padding: 0.75em;
+    border: 1px solid #eee;
+    margin-bottom: 1em;
+}
+
+.search-result-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+.search-result-item a {
+    font-weight: bold;
+    padding-bottom: 0.25em;
+    display: block;
+}
+
+#search-button svg {
+    display: block;
+    box-sizing: content-box;
+    width: 22px;
+    height: 22px;
+}
