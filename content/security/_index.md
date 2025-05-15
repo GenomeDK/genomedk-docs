@@ -39,4 +39,6 @@ By complying with ISAE 3000, GenomeDK demonstrates its dedication to robust data
 
 # GDPR compliance
 
-GenomeDK is fully compliant with GDPR, ensuring the protection and privacy of personal data. We store minimal user data and never share this information with third parties. Our practices align with GDPR requirements, reflecting our commitment to maintaining user trust and data integrity.
+At GenomeDK, we are committed to protecting your privacy and handling your personal data with transparency and care. Our [privacy policy](@/privacy.md) outlines how we collect, use, and safeguard your information in compliance with the General Data Protection Regulation (GDPR). We collect and process minimal personal data necessary for providing our services, such as your name, email address, affiliation, and login activity. This information is used solely to manage your account, ensure system security, and provide support. We do not share your personal data with third parties, except when required by law or with your explicit consent.
+
+You have rights under GDPR, including access to your data, rectification, erasure, and more. To learn more about how we handle your personal data and your rights, please read our full [privacy policy](@/privacy.md).
