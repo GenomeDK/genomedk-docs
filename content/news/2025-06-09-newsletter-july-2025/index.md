@@ -3,13 +3,15 @@ title = "Newsletter, July 2025"
 
 [extra]
 published = false
+highlight = true
+illustration = "Uniparken_IJ_195-preview.jpg"
 +++
 
-As summer settles in, we’d like to share a few important updates and announcements from the GenomeDK platform, including:
+As summer settles in, we’d like to share a few important updates and announcements from GenomeDK, including:
 
 * HPC review process at AU: we need your support!
 * 10 PB storage expansion now in production and available to all users.
-* All DeIC projects GenomeDK end on April 1, 2024.
+* All DeIC projects GenomeDK end on April 1, 2026.
 * GenomeDK and DST collaborating to enable researchers to access DST data on GenomeDK.
 
 Thank you for being part of the GenomeDK community. We wish you a great summer!
@@ -24,7 +26,7 @@ _The GenomeDK Team_
 
 Aarhus University is currently conducting an internal process to clarify the future need for high-performance computing (HPC) across its research communities, including the role of local HPC facilities like GenomeDK.
 
-This process will help determine where future HPC funding should be directed, and user feedback will play an important role. If GenomeDK is critical to your research, **we strongly encourage you to contact your local institute or faculty leadership** to let them know how important GenomeDK is to your work, research collaborations, and future research.
+This process will help determine where future HPC funding should be directed, and user feedback will play an important role. Most likely, you will be contacted by your faculty/institute to take part in the process. If not, **we strongly encourage you to contact your local institute or faculty leadership** to let them know how important GenomeDK is to your work, research collaborations, and future research.
 
 Your voice matters --- thank you for helping us advocate for the infrastructure that supports your science.
 
@@ -32,7 +34,11 @@ Your voice matters --- thank you for helping us advocate for the infrastructure 
 
 We’ve expanded our infrastructure with an additional **10 petabytes (PB)** of storage, bringing our **total capacity to 33 PB**. This upgrade ensures better performance and more room for large-scale genomic data projects. The new storage is now live and available to users.
 
-**Fun fact:** Our primary storage system (*faststorage*) now consists of 2060 hard drives --- and our in-house backup system adds another **980 drives** to the mix!
+{% warning() %}
+While we are happy to store your data, please remember to (1) clean up your projects regularly to remove temporary files, and (2) compress data where it makes sense to save space, especially for long-term storage.
+{% end %}
+
+**Fun fact:** Our primary storage system (*faststorage*) now consists of 2060 hard drives --- and our in-house backup system adds another 980 drives to the mix!
 
 ## DeIC funding ending April 2026
 
@@ -40,7 +46,7 @@ As previously announced, funding from **DeIC (Danish e-Infrastructure Cooperatio
 
 GenomeDK has been part of the DeIC High-Throughput Computing Consortium, which supports large-scale, compute-intensive projects across the life sciences.
 
-With this funding ending, DeIC-supported projects on GenomeDK will be charged for their resource usage from **April 1, 2026 and onwards**.
+With this funding ending, DeIC-supported projects (projects with a name prefixed with `DeIC-`) on GenomeDK will be charged for their resource usage from **April 1, 2026 and onwards** if they choose to continue the projects on GenomeDK.
 
 We are working to ensure a smooth transition and will contact affected projects owners with further details in the coming months.
 
@@ -48,7 +54,7 @@ We are working to ensure a smooth transition and will contact affected projects 
 
 GenomeDK has entered into a new collaboration with DST (Statistics Denmark) to enable integration between our high-performance computing infrastructure and DST's data resources.
 
-We are currently testing this integration and **invite interested users to help us with early testing**. If you’re interested in participating, please contact us at **[support@genome.au.dk](mailto:support@genome.au.dk)**. 
+We are currently testing this integration and **invite interested users to help us with early testing**. If you’re interested in participating, please contact us at [support@genome.au.dk](mailto:support@genome.au.dk).
 
 Note that this is still early days and that we can only handle a limited number of test users right now. However, we are very interested in hearing from you if you have an interest in this solution.
 
