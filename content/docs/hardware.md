@@ -5,7 +5,7 @@ weight: 100
 
 This page contains details about the hardware and infrastructure that is available on GenomeDK.
 
-# Inventory
+# Compute nodes
 
 * cn-\[1001-1060\] (60 nodes, 11520 cores)
     * 2x AMD/"EPYC Genoa" 9654 CPUs @ 3.7 GHz, 96 cores/CPU
@@ -23,16 +23,11 @@ This page contains details about the hardware and infrastructure that is availab
 
 # Storage
 
-Data may be located either on our NFS servers or on fast storage, our 23
-PB BeeGFS distributed file system (fast storage).
+Data may be located either on our NFS servers or on faststorage, our BeeGFS
+distributed file system.
 
-Home folders are located on NFS. Project folders are located on fast
-storage. Fast storage is reserved for large data files involved in I/O
-intensive computations.
-
-NFS can deliver read/write performance of up to 700MB/s, while fast
-storage can reach an aggregated read/write performance of more than 45
-GB/s.
+Home folders are located on NFS. Project folders are located on fast storage.
+Project folders are stored on faststorage which can reach an aggregated read/write performance of more than 100 GB/s.
 
 # Backup
 
