@@ -26,9 +26,9 @@ _The GenomeDK Team_
 
 Aarhus University is currently conducting an internal process to clarify the future need for high-performance computing (HPC) across its research communities, including the role of local HPC facilities like GenomeDK.
 
-This process will help determine where future HPC funding should be directed, and user feedback will play an important role. Most likely, you will be contacted by your faculty/institute to take part in the process. If not, **we strongly encourage you to contact your local institute or faculty leadership** to let them know how important GenomeDK is to your work, research collaborations, and future research.
+This process will help determine where future HPC funding should be directed, and user feedback will play an important role. Most likely, you will be contacted by your faculty/institute to take part in the process. **If you do not hear from your faculty/institute before September 21st, we strongly encourage you to contact your local institute or faculty leadership** to let them know how important GenomeDK is to your work, research collaborations, and future research.
 
-Your voice matters --- thank you for helping us advocate for the infrastructure that supports your science.
+Your voice truly matters, whether you are a student, PhD, post doc, or VIP --- thank you for helping us advocate for the infrastructure that supports your science.
 
 ## 10 PB storage expansion completed
 
