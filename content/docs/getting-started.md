@@ -99,7 +99,7 @@ Once logged in, a virtual desktop will appear within a few seconds.
 Please note that the session **should not be used for heavy computations**.
 Instead, submit a job to the queuing system inside your Desktop session.
 
-You can [learn more about using the Desktop here](@/docs/installing-software.md#desktop).
+You can [learn more about using the Desktop here](@/docs/using-graphical-interfaces.md#desktop).
 
 ## Connecting to a closed zone {#zone_connect}
 
@@ -190,6 +190,20 @@ Test this by runnning:
 ```
 
 You should not be prompted for a password this time.
+
+# Using a terminal multiplexer
+
+Using a terminal multiplexer allows you to keep your SSH session open, even when
+you disconnect from the cluster. You can even reconnect from a different
+computer and get your session back. This is especially useful when downloading
+large amounts of data, as you can keep the download running even if your
+connection to GenomeDK is lost, or if intentionally logging out.
+
+We recommend that you use either `tmux` or `screen`.
+
+-   [tmux](https://github.com/tmux/tmux/wiki)
+-   [screen](https://www.gnu.org/software/screen/manual/screen.html).
+
 
 # Cite us!
 

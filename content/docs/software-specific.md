@@ -56,7 +56,7 @@ Go to folder `/home/<username>/matlab/glnxa64/bin` and execute the activation fi
 $ ./activate_matlab.sh
 ```
 
-Activating the license requires a [graphical environment](@/docs/installing-software.md#graphical).
+Activating the license requires a [graphical environment](@/docs/using-graphical-interfaces.md).
 
 Matlab is now installed. To use it in a batch script, you must ensure that the `matlab` executable is in your `$PATH`. You can do this in your batch script/workflow file or put it in your `.bashrc`:
 

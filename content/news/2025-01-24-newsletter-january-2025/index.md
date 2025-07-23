@@ -31,7 +31,7 @@ The Desktop is available to all users in the "open" zone. You can try it out [as
 
 With this solution you can log in with your usual GenomeDK credentials and get a full-blown graphical desktop environment right in your browser.
 
-The desktop environment runs on the frontend, so **all of the usual guidelines about not running computations on the frontend still apply**. However, the GenomeDK Desktop provides a significantly easier and more responsive way to get a graphical environment on GenomeDK. We have [updated our documentation in this area](@/docs/installing-software.md#graphical) accordingly.
+The desktop environment runs on the frontend, so **all of the usual guidelines about not running computations on the frontend still apply**. However, the GenomeDK Desktop provides a significantly easier and more responsive way to get a graphical environment on GenomeDK. We have [updated our documentation in this area](@/docs/using-graphical-interfaces.md) accordingly.
 
 # Growing the team
 
