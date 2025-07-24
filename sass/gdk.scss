@@ -12,6 +12,9 @@
 @import "components/gallery";
 @import "components/prices";
 
+:root {
+    font-size: calc(1rem + 0.125vw);
+}
 
 * {
     text-rendering: optimizeLegibility;
