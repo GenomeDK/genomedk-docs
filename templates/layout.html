@@ -31,20 +31,8 @@
     <div class="bg-white">
         <div class="container w-wide py-1">
             <header>
-                <a href="{{ get_url(path="/") }}" class="font-bold" alt="The name GenomeDK spelled out in capital letters using Aarhus University colors." class="logo">
-                    <svg viewBox="0 0 130 13" xmlns="http://www.w3.org/2000/svg">
-                        <text fill="#003e5c" style="font-weight: bold;" x="0" y="12" letter-spacing="0">
-                            <tspan style="fill: #003e5c;">G</tspan>
-                            <tspan style="fill: #003e5c;">E</tspan>
-                            <tspan style="fill: #003e5c;">N</tspan>
-                            <tspan style="fill: #003e5c;">O</tspan>
-                            <tspan style="fill: #003e5c;">M</tspan>
-                            <tspan style="fill: #003e5c;">E</tspan>
-                            <tspan style="fill: #003e5c;">|</tspan>
-                            <tspan style="fill: #37a0cb;">D</tspan>
-                            <tspan style="fill: #37a0cb;">K</tspan>
-                        </text>
-                    </svg>
+                <a class="text-logo" href="{{ get_url(path="/") }}" alt="The name GenomeDK spelled out in capital letters using Aarhus University colors.">
+                    <span>GENOME|</span><span>DK</span>
                 </a>
                 <nav role="navigation">
                     {% set items = [

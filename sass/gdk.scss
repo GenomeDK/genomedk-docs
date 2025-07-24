@@ -104,14 +104,16 @@ hr {
     border-top: 2px solid $color-neutral;
 }
 
-.logo {
-    display: inline-flex;
+.text-logo {
+    font-size: 1.35rem;
+    letter-spacing: 20%;
     text-decoration: none;
-    margin: 1em 0;
+    margin: 1rem 0;
+    font-weight: bold;
+    white-space: nowrap;
 
-    svg {
-        box-sizing: content-box;
-        height: 1em;
+    span:nth-child(2) {
+        color: #37a0cb;
     }
 }
 
