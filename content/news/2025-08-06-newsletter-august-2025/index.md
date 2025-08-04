@@ -1,5 +1,5 @@
 +++
-title = "Newsletter, July 2025"
+title = "Newsletter, August 2025"
 
 [extra]
 published = false
@@ -12,7 +12,6 @@ As summer settles in, we’d like to share a few important updates and announcem
 * HPC review process at AU: we need your support!
 * 10 PB storage expansion now in production and available to all users.
 * All DeIC projects GenomeDK end on April 1, 2026.
-* GenomeDK and DST collaborating to enable researchers to access DST data on GenomeDK.
 
 Thank you for being part of the GenomeDK community. We wish you a great summer!
 
@@ -26,7 +25,9 @@ _The GenomeDK Team_
 
 Aarhus University is currently conducting an internal process to clarify the future need for high-performance computing (HPC) across its research communities, including the role of local HPC facilities like GenomeDK.
 
-This process will help determine where future HPC funding should be directed, and user feedback will play an important role. Most likely, you will be contacted by your faculty/institute to take part in the process. **If you do not hear from your faculty/institute before September 21st, we strongly encourage you to contact your local institute or faculty leadership** to let them know how important GenomeDK is to your work, research collaborations, and future research.
+This process will help determine where future HPC funding should be directed, and user feedback will play an important role.
+
+Most likely, you will be contacted by your faculty/institute to take part in the process. **If you do not hear from your faculty/institute before September 21st, we strongly encourage you to contact your local institute or faculty leadership** to let them know how important GenomeDK is to your work, research collaborations, teaching, and future research.
 
 Your voice truly matters, whether you are a student, PhD, post doc, or VIP --- thank you for helping us advocate for the infrastructure that supports your science.
 
@@ -50,21 +51,11 @@ With this funding ending, DeIC-supported projects (projects with a name prefixed
 
 We are working to ensure a smooth transition and will contact affected projects owners with further details in the coming months.
 
-## New collaboration with Statistics Denmark – testers welcome
-
-GenomeDK has entered into a new collaboration with DST (Statistics Denmark) to enable integration between our high-performance computing infrastructure and DST's data resources.
-
-We are currently testing this integration and **invite interested users to help us with early testing**. If you’re interested in participating, please contact us at [support@genome.au.dk](mailto:support@genome.au.dk).
-
-Note that this is still early days and that we can only handle a limited number of test users right now. However, we are very interested in hearing from you if you have an interest in this solution.
-
 ## Share your use case – help us promote your work
 
 We’re always looking to **highlight the diverse and impactful research** done on GenomeDK. If you have a project or use case you'd like to share, please get in touch! These stories help us communicate the platform’s value to funders, collaborators, and new users.
 
-Our most recent featured use case is [High‑fidelity simulations of bubble dynamics for maritime drag reduction](https://genome.au.dk/news/bubble-turbulence-use-case/), led by Sina Nozarian, a PhD student in the Department of Mechanical & Production Engineering, Faculty of Technical Sciences at Aarhus University.
-
-The project explores bubble–turbulence interactions and surface effects to reduce drag (and fuel consumption) in maritime vessels.
+Our most recent featured use case is [Transforming the NGS Summer School with the GenomeDK Desktop](https://genome.au.dk/news/ngs-course-use-case/) by Samuele Saroggi, showcasing Samuele's use of GenomeDK's infrastructure for the "Introduction to NGS Data Analysis" summer school.
 
 Contact us at [support@genome.au.dk](mailto:support@genome.au.dk) to share your story or learn more.
 
