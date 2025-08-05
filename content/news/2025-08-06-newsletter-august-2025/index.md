@@ -7,13 +7,13 @@ highlight = true
 illustration = "Uniparken_IJ_195-preview.jpg"
 +++
 
-As summer settles in, we’d like to share a few important updates and announcements from GenomeDK, including:
+We hope you’ve had a good summer break. As we return to our regular routines, we’d like to share a few important updates and announcements from GenomeDK:
 
 * HPC review process at AU: we need your support!
 * 10 PB storage expansion now in production and available to all users.
 * All DeIC projects GenomeDK end on April 1, 2026.
 
-Thank you for being part of the GenomeDK community. We wish you a great summer!
+Thank you for being part of the GenomeDK community!
 
 Best regards,
 
