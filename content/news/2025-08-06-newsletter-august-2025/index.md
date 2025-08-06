@@ -45,7 +45,7 @@ While we are happy to store your data, please remember to (1) clean up your proj
 
 As previously announced, funding from **DeIC (Danish e-Infrastructure Cooperation)** will end on **April 1, 2026**. DeIC is a national organization under the Danish Ministry of Higher Education and Science responsible for coordinating and supporting research infrastructure, including data storage, computing, and networking for the Danish universities.
 
-GenomeDK has been part of the DeIC High-Throughput Computing Consortium, which supports large-scale, compute-intensive projects across the life sciences.
+GenomeDK has been part of the DeIC High-Throughput Computing Consortium, which supports large-scale, compute-intensive projects across the Danish universities.
 
 With this funding ending, DeIC-supported projects (projects with a name prefixed with `DeIC-`) on GenomeDK will be charged for their resource usage from **April 1, 2026 and onwards** if they choose to continue the projects on GenomeDK.
 
