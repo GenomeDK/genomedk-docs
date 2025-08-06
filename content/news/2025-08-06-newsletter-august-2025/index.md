@@ -2,7 +2,7 @@
 title = "Newsletter, August 2025"
 
 [extra]
-published = false
+published = true
 highlight = true
 illustration = "Uniparken_IJ_195-preview.jpg"
 +++
