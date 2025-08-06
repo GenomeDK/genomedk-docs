@@ -62,3 +62,7 @@ Contact us at [support@genome.au.dk](mailto:support@genome.au.dk) to share your 
 ## New privacy policy available
 
 GenomeDK now has a dedicated [privacy policy](@/privacy.md) outlining how we handle and protect user data. We encourage all users to review the policy, available on our website, to stay informed about data governance and user rights.
+
+## Follow us on LinkedIn
+
+We're happy to say that we in the past month **passed 200 followers** on [our LinkedIn page](https://www.linkedin.com/company/genomedk)! Please help us share the word about GenomeDK by **following and sharing the page** with your friends and colleagues!
