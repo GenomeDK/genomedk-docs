@@ -222,7 +222,7 @@ If you want to download data from the cluster:
 You may want to add the `--progress` flag to all of these commands if you're
 downloading/uploading large amounts of data.
 
-## From the Internet to the cluster
+## From the Internet to the cluster (HTTP/HTTPS)
 
 You can use `wget` to download data from the Internet to the cluster:
 
@@ -240,6 +240,78 @@ to a file:
 ```bash
 [fe-open-01]$ wget -c --progress=dot:giga --timeout=120 --waitretry=60
     --tries=10000 --retry-connrefused URL
+```
+
+## To/from the Internet to the cluster (FTP)
+
+To transfer data using the [FTP
+protocol](https://en.wikipedia.org/wiki/File_Transfer_Protocol), you may use
+`lftp`, which is pre-installed on GenomeDK.
+
+Start an interactive session from your local machine:
+
+```bash
+[local]$ lftp ftp://<remote username>@<remote host>
+```
+
+You will be asked to enter your password for the remote user.
+
+Once connected, you can run the following commands:
+
+| Command                 | Description                                       |
+| ----------------------- | ------------------------------------------------- |
+| `ls`                    | List files in current directory on the FTP server |
+| `cd <dir>`              | Change directory on the FTP server                |
+| `lcd <dir>`             | Change local directory                            |
+| `get <file>`            | Download a single file                            |
+| `put <file>`            | Upload a single file                              |
+| `mget <files>`          | Download multiple files (supports wildcards)      |
+| `mput <files>`          | Upload multiple files (supports wildcards)        |
+| `mirror <src> <dst>`    | Recursively download a directory                  |
+| `mirror -R <src> <dst>` | Recursively upload a directory                    |
+| `bye`                   | Exit the session                                  |
+
+To upload a file from GenomeDK to the remote host:
+
+```bash
+lftp> put mydata.fastq
+```
+
+To download multiple files from the remote host to GenomeDK:
+
+```bash
+lftp> mget *.fastq
+```
+
+If you're uploading or downloading very large files, it may speed up things if
+you use parallel transfers:
+
+```bash
+lftp> pput -n 4 bigfile.fastq
+lftp> pget -n 4 bigfile.fastq
+```
+
+Usually, 4-8 parallel transfers is enough to provide a dramatic speed-up.
+Increasing the number of transfers too much will cause the transfer to
+become slower. Never run more than 16 parallel transfers.
+
+To synchronize a directory on GenomeDK to the remote:
+
+```bash
+lftp> mirror -R /faststorage/project/myproject/data/foo .
+```
+
+If a transfer is interrupted, lftp can continue where it left off. Use the `-c`
+(continue) option with the `get`, `put`, or `mirror` commands. For example:
+
+```bash
+lftp> mirror -c -R /faststorage/project/myproject/data/foo .
+```
+
+When you're done transferring files, you can exit the session with:
+
+```bash
+lftp> bye
 ```
 
 # Using the data lock {#using_the_data_lock}
