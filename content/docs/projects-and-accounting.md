@@ -82,6 +82,13 @@ Revoke a users' administrative rights to a project:
 [fe-open-01]$ gdk-project-demote-user -g <project name> -u <username>
 ```
 
+Obtain a list of events for one of your projects. This will list membership
+changes, backup runs, and other events related to the project:
+
+```bash
+[fe-open-01]$ gdk-project-events <project name>
+```
+
 List various information about the project, e.g. who the current project owner
 is, when the project was created, etc. Also provides an overview of the total
 number of billing hours used by the given project, as well as the current
