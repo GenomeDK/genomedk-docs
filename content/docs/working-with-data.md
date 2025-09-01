@@ -38,20 +38,61 @@ optimally.
 
 # Backing up data {#backup}
 
-We provide backup on to disk on a remote site to all users. By default, nothing
-is backed up.
+We provide backup to our own disk-based backup solution at a remote site. By
+default, *nothing is backed up*.
+
+## Marking files for backup
 
 To back up a file, it should be put in a directory called either `BACKUP`,
-`Backup` or `backup`. The directory can be located in any directory that is
-eligible for backup (see above).
+`Backup` or `backup`. The directory can be located in any location that is
+eligible for backup (see above). You may have many `backup` directories in
+such a location.
 
-Data is backed up once per week and snapshots are kept for 14 days.
+To check if you have correctly marked data for backup, you can use the `realpath`
+command:
 
-{% warning() %}
-Do not back up temporary data files that can easily be reproduced. Computation
-is cheap, but backup is expensive. The backup is meant for scripts/source code
-and important raw data.
-{% end %}
+```bash
+[fe-open-01]$ realpath path/to/file
+```
+
+This will output the full, canonical path to the file. If the output contains either
+`BACKUP`, `Backup` or `backup`, the file is correctly marked for backup and will be
+included in the next backup run.
+
+## Listing backup runs
+
+Backup runs are initiated once per week with a retention period of 14 days.
+
+You can see the time and duration of the last backup run with:
+
+```bash
+[fe-open-01]$ gdk-project-events <project name>
+```
+
+You may see that one or more of the backup runs for a project have timed out.
+This happens when a lot of new data has been added to a project and thus must be
+transferred to the backup location. If a run takes more than 120 hours (5 days),
+it will time out, but will start where it left off at the next backup run.
+Eventually, all of the data will have been synchronized.
+
+## Recommended backup use
+
+It is important to be considerate when using the backup:
+
+* Do not back up temporary data files that can easily be reproduced. Computation
+  is cheap, but backup is expensive. The backup is meant for scripts/source code
+  and important raw data.
+* When data is marked for backup, moving or renaming files and directories will
+  cause _a complete re-transfer_ of the data. To the backup mechanism, it's
+  simply new data. Please think of data in backup folders as "archived". You may
+  add new data and remove files when necessary, but do not modify, rename or
+  move the files around.
+* Compress files before marking them for backup. For example, store your raw FASTQ
+  files outside of backup, but put compressed SPRING files in the backup.
+
+Also, note that marking data for backup will not affect the performance of
+accessing the data, as it doesn't move the data to another filesystem. Instead,
+the data is copied to the backup location
 
 # Snapshots {#snapshots}
 
