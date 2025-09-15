@@ -5,10 +5,6 @@ title = "Workshop series in 2025 H2"
 published = true
 +++
 
-{% note() %}
-Please help us circulate the workshop invitations to any relevant departments/groups, thanks!
-{% end %}
-
 The first series of workshops was a great success, so we're doing another round!
 
 Are you a student or academic, current or future user of the GenomeDK high-performance computing (HPC) system? Or are you just curious about HPC and how you can utilize it in your work? Do you need to learn to use GenomeDK, or wish to become a better and more organized user?
@@ -19,7 +15,13 @@ Then join us in this series of GenomeDK workshops where we guide you from a gene
 
 Each workshop is scheduled for four hours, including a 45 min. lunch break.
 
-There will be cake, coffee, and tea for attendants, so please remember to sign up.
+There will be cake, coffee, and tea for attendants, so please remember to sign
+up **no later than 3 days** before the workshop. Workshops with less than 10
+sign-ups will be cancelled.
+
+{% note() %}
+Please help us circulate the workshop invitations to any relevant departments/groups, thanks!
+{% end %}
 
 # Getting started with high-performance computing on GenomeDK
 
