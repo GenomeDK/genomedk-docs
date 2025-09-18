@@ -46,7 +46,7 @@ This workshop will be hosted by Samuele Soraggi. There are 30 seats available.
 
 # Advanced use of GenomeDK
 
-**October 10, 2025, 10:00-15:00 @ 1613-109**
+**October 9, 2025, 10:00-15:00 @ 1613-109**
 
 **Intended audience:** For all users of GenomeDK, especially those already with some knowledge of the system.
 
