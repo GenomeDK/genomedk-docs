@@ -53,6 +53,18 @@ resources used by you and your projects (described later). {% end %}
 When your request has been accepted, you will receive an e-mail with further
 instructions.
 
+Do not request a lot of small projects that are related, for example with different 
+analyses of the same data. Instead, make one larger or more comprehensive one. 
+
+- No-go examples: Three projects `bulkRNA_mouse`, `bulkRNA_human`, `bulkRNA_apes`
+  with the same or similar users in that project, and where each data came from
+  the same research study.
+- Good example: One project `bulkRNA`, that has subfolders `mouse`, `human`, `apes`.
+
+Why structure it this way? Because for legal reasons, projects cannot be deleted,
+so all these small projects will start accumulating and filling out the 
+`faststorage/project/` with these small project names.
+
 # Managing a project
 
 Project owners and project members with administrative rights can manage their
