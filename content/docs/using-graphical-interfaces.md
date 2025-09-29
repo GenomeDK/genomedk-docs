@@ -6,7 +6,7 @@ weight: 60
 There's two options for using programs with a graphical user interface
 on GenomeDK.
 
-## GenomeDK Desktop {#desktop}
+# GenomeDK Desktop (recommended) {#desktop}
 
 The most convenient and reliable way to get a graphical interface on GenomeDK is
 through the [GenomeDK Desktop](https://desktop.genome.au.dk/). You can log in
@@ -21,7 +21,7 @@ about not running computations on the frontend still apply**. However, you can
 start an interactive job and launch a graphical application (e.g. Rstudio)
 inside the job.
 
-### Session persistence
+## Session persistence
 
 Desktop sessions are *persistent*, meaning that you can log out of the Desktop and
 log in later and all of your applications, windows, etc. will still be available.
@@ -29,7 +29,7 @@ log in later and all of your applications, windows, etc. will still be available
 However, sessions time out after 72 hours of inactivity (not logging in or using
 the session). This kills all processes in the session. Unsaved files will be lost.
 
-### Clipboard
+## Clipboard
 
 The Desktop runs directly in your browser and is thus limited by browser functionality
 and security measures. This is mostly noticeable in the way copy-paste is handled, as
@@ -51,7 +51,7 @@ To copy text from inside the Desktop to your local computer:
 * select the text, right click and select "Copy",
 * you can now paste the text into any application on your local computer.
 
-## X-forwarding {#xforwarding}
+# X-forwarding (legacy) {#xforwarding}
 
 You can use X-forwarding to tunnel individual graphical programs to your local
 desktop.
