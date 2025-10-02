@@ -3,3 +3,7 @@
 public/
 static/processed_images
 .DS_Store
+
+# pixi environments
+.pixi
+*.egg-info

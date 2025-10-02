@@ -1,0 +1,12 @@
+[workspace]
+authors = ["Dan Søndergaard <das@genome.au.dk>"]
+channels = ["conda-forge"]
+name = "genomedk-docs"
+platforms = ["osx-arm64", "linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+urllib3 = ">=2.5.0,<3"
+certifi = ">=2025.8.3,<2026"
