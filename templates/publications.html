@@ -6,15 +6,19 @@
     <div class="container w-narrow prose py-1">
         {{ page.content | safe }}
 
-        {{ data["publications"] | length }} publications listed, last updated on {{ data["last_updated"] }}. Sorted by first publication date.
+        {{ data["publications"] | length }} publications listed, last updated on {{ data["last_updated"] }}.
 
         <hr />
 
+        {% for year, pubs in data["publications"] | group_by(attribute="year") %}
+        <h2>{{ year }}</h2>
+        <p>({{ pubs | length }} publications)</p>
         <ul>
-            {% for pub in data["publications"] %}
-            <li>{{ pub | safe }}</li>
+            {% for pub in pubs %}
+            <li>{{ pub["citation"] | safe }}</li>
             {% endfor %}
         </ul>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

@@ -7,10 +7,7 @@ import urllib3
 urllib3.disable_warnings()
 
 
-http = urllib3.PoolManager(
-    cert_reqs="CERT_REQUIRED",
-    ca_certs=certifi.where()
-)
+http = urllib3.PoolManager(cert_reqs="CERT_REQUIRED", ca_certs=certifi.where())
 
 
 queries = [
@@ -37,6 +34,7 @@ queries = [
     ("Philip Francis Thomsen", 2021),
     ("Mads Reinholdt Jensen", 2021),
     ("Doug Speed", 2020),
+    ("Jesper Smærup Bechsgaard", 2024),
 ]
 
 blacklist = [
@@ -91,8 +89,11 @@ def search(query):
     response = http.request(
         "GET",
         "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
-        fields={"query": query, "format": "json", "pageSize": 1000,},
-
+        fields={
+            "query": query,
+            "format": "json",
+            "pageSize": 500,
+        },
     )
     data = json.loads(response.data.decode("utf-8"))
     return data["resultList"]["result"]
@@ -104,7 +105,9 @@ def formatted_citation(doi, style="apa"):
     response = http.request(
         "GET",
         "https://doi.org/{}".format(doi),
-        headers={"Accept": "text/x-bibliography; style={}".format(style),},
+        headers={
+            "Accept": "text/x-bibliography; style={}".format(style),
+        },
     )
     if response.status != 200:
         raise Exception("Could not get formatted citation")
@@ -116,12 +119,12 @@ def formatted_citation(doi, style="apa"):
 def lookup_publication(doi):
     response = http.request(
         "GET",
-        f"https://api.crossref.org/works/{doi}",
-        headers={"Accept": "application/json"}
+        f"https://citation.doi.org/metadata?doi={doi}",
+        headers={"Accept": "application/json"},
     )
     if response.status != 200:
         raise Exception("Could not look up metadata")
-    return json.loads(response.data.decode("utf-8"))["message"]
+    return json.loads(response.data.decode("utf-8"))
 
 
 def main():
@@ -145,12 +148,12 @@ def main():
     publications = []
     for doi in sorted(dois):
         try:
-            citation = formatted_citation(doi)
-            if citation is None:
-                continue
             metadata = lookup_publication(doi)
-            published_date = tuple(metadata["published"]["date-parts"][0])
-            publications.append((published_date, doi, citation))
+            citation = formatted_citation(doi)
+            if metadata is None or citation is None:
+                continue
+            published_data = tuple(metadata["published"]["date-parts"][0])
+            publications.append((published_data, doi, citation))
         except Exception as exc:
             print("Skipped publication {}: {}".format(doi, exc))
             continue
@@ -159,21 +162,14 @@ def main():
 
     data = {
         "last_updated": last_updated.isoformat(),
-        "publications": [citation for _, _, citation in sorted(publications, key=lambda p: p[0], reverse=True)]
+        "publications": [
+            {"year": published_date[0], "citation": citation}
+            for published_date, _, citation in publications
+        ],
     }
     with open("publications.json", "w") as fileobj:
         json.dump(data, fileobj)
 
-        # print(
-        #     "*{} publications listed, last updated on {}*. Sorted by first publication date.".format(
-        #         len(publications), last_updated
-        #     ),
-        #     file=fileobj,
-        # )
-
-        # print(file=fileobj)
-        # for _, _, citation in sorted(publications, key=lambda p: p[0], reverse=True):
-        #     print("* {}".format(citation), file=fileobj)
 
 if __name__ == "__main__":
     main()
