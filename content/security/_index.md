@@ -31,7 +31,7 @@ This certification signifies that GenomeDK has implemented policies, procedures,
 # ISAE 3000 compliance
 
 * Key documents:
-    * [ISAE 3000 audit report](./ISAE_3000_ITGC_-_GenomeDK_2024_UK.pdf)
+    * [ISAE 3000 audit report](./ISAE_3000_ITGC_-_GenomeDK_2025_UK.pdf)
 
 ISAE 3000 is an international standard for assurance over non-financial information, ensuring that our processes and controls meet stringent criteria for integrity and reliability.
 
