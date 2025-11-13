@@ -7,7 +7,7 @@ published = true
 
 In the wake of the recent announcement from the Institute of Biomedicine, Faculty of Health, Aarhus University, where the use of Chinese sequencing companies and collaboration with Chinese universities was prohibited, many with sequencing needs must find alternatives.
 
-We are happy to distribute this announcement from our close collaborators at the [MOMA NGS Core Facility](https://www.moma.dk/services/ngs-core-center). Note that the MOMA NGS Core Facility can deliver your sequencing data directly to a project folder on GenomeDK.
+We are happy to distribute this announcement from our close collaborators at the [MOMA NGS Core Facility](https://www.moma.dk/services/moma-core-center). Note that the MOMA NGS Core Facility can deliver your sequencing data directly to a project folder on GenomeDK.
 
 <!-- more -->
 
@@ -29,4 +29,4 @@ Upon request, MOMA can perform initial bioinformatics data analysis (e.g., data 
 
 For further downstream analysis support, we refer to our collaborators at the [Bioinformatics Core, Biomedicine](https://biomed.au.dk/bioinformatics-core-facility), or [CONNECT - Center for Clinical and Genomic Data](https://www.en.auh.dk/Research/connect/connect/).
 
-If you are interested in our services, please contact us via our [service desk](https://ngscore.moma.dk/desk/categories/core). We will do our best to meet your NGS needs. In this urgent situation, you may also reach out directly via email or phone (4032 8083) to arrange a meeting.
+If you are interested in our services, please contact us via our [service desk](https://core.moma.dk/desk). We will do our best to meet your NGS needs. In this urgent situation, you may also reach out directly via email or phone (4032 8083) to arrange a meeting.
