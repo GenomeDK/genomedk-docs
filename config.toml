@@ -12,6 +12,11 @@ minify_html = true
 
 ignored_content = ["*.rst", "*.ipynb"]
 
+generate_feeds = false
+
+title = "GenomeDK"
+author = "The GenomeDK Team"
+
 [slugify]
 paths = "safe"
 
