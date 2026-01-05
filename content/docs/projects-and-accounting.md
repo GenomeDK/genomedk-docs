@@ -129,6 +129,34 @@ anders          Anders Boerglum <anders@biomed.au.dk>
 
 {% end %}
 
+# Resource quotas
+
+As a project owner you can set quotas on resources with:
+
+```bash
+[fe-open-01]$ gdk-project-set-quota -p <project name> -h <max billing hours> -s <max storage> -b <max backup>
+```
+
+The arguments are described in detail in the command help (`gdk-project-set-quota -h`).
+
+Only the project owner can set and change quotas.
+
+When quotas are set, the project owner will receive a warning by e-mail when
+the usage exceeds >90% of the specified quota.
+
+It's important to understand that the quotas are not strict:
+
+* A project may exceed its billing hour quota somewhat, as the quota is checked 
+  on an hourly basis. If the quota is reached, all running jobs will be 
+  cancelled and new jobs will not be able to start until the quota has been
+  increased.
+* Storage and backup usage is measured on a weekly basis and thus projects may
+  exceed the specified quota substantially. Even though the quota is exceeded,
+  data may still be written to and read from the project folder. It's up to the
+  project owner to either increase the quota or delete data to obey the quota.
+
+Once set, a quota cannot be decreased, only increased.
+
 # Data access in project folders
 
 All members can add, edit, and delete files in the project folder unless
