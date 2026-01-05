@@ -8,10 +8,6 @@ You can request project folders as you need them and manage access to project
 folders with the tools covered in this section. A project folder is how multiple
 users on GenomeDK can collaborate.
 
-Project folders do not have any resource limits, but we send notifications to the
-project owner if resource usage in the project has increased significantly, as
-well as monthly usage summaries.
-
 # Listing projects {#collaborating}
 
 You can list all of the projects you're a member of:
@@ -58,6 +54,22 @@ instructions.
 Project owners and project members with administrative rights can manage their
 own projects.
 
+You can list various information about the project, e.g. who the current project
+owner is, when the project was created, etc. Also provides an overview of the
+total number of billing hours used by the given project, as well as the current
+storage and backup usage:
+
+```bash
+[fe-open-01]$ gdk-project-show <project name>
+```
+
+Obtain a list of events for one of your projects. This will list membership
+changes, backup runs, and other events related to the project:
+
+```bash
+[fe-open-01]$ gdk-project-events <project name>
+```
+
 Add a user to a project:
 
 ```bash
@@ -82,34 +94,6 @@ Revoke a users' administrative rights to a project:
 [fe-open-01]$ gdk-project-demote-user -g <project name> -u <username>
 ```
 
-Obtain a list of events for one of your projects. This will list membership
-changes, backup runs, and other events related to the project:
-
-```bash
-[fe-open-01]$ gdk-project-events <project name>
-```
-
-List various information about the project, e.g. who the current project owner
-is, when the project was created, etc. Also provides an overview of the total
-number of billing hours used by the given project, as well as the current
-storage and backup usage:
-
-```bash
-[fe-open-01]$ gdk-project-show <project name>
-```
-
-Provides a detailed listing of the resources used by all projects owned by you:
-
-```bash
-[fe-open-01]$ gdk-project-usage
-```
-
-To get help for any of the commands, run the command with `-h`, for example:
-
-```bash
-[fe-open-01]$ gdk-project-usage -h
-```
-
 {% note() %}
 Don't know the username of one of your collaborators? You can use
 the `finger` command to get information about any user on GenomeDK:
@@ -129,6 +113,48 @@ anders          Anders Boerglum <anders@biomed.au.dk>
 
 {% end %}
 
+# Resource monitoring
+
+Project folders do not have any resource limits by default. However, project
+owners can monitor the resource usage of their projects with:
+
+```bash
+[fe-open-01]$ gdk-project-usage [-o <username>] [-p <project name>] [-y <year>] [-u] [--csv]
+```
+
+For example, to get a usage report for all of your own projects for the current
+year, just run:
+
+
+```bash
+[fe-open-01]$ gdk-project-usage
+```
+
+You can expand limit to a specific project with:
+
+```bash
+[fe-open-01]$ gdk-project-usage -p MyProject
+```
+
+Sometimes you want to see which user is causing an increase in usage. To usage
+per user:
+
+```bash
+[fe-open-01]$ gdk-project-usage -p MyProject -u
+```
+
+Or show usage for a specific year:
+
+```bash
+[fe-open-01]$ gdk-project-usage -p MyProject -y 2024
+```
+
+In addition to this, project owners receive:
+
+* a monthly e-mail with a usage summary for all of their projects,
+* a high-activity warning e-mail if the project consumes grows quickly in 
+  resource usage.
+
 # Resource quotas
 
 As a project owner you can set quotas on resources with:
@@ -139,12 +165,16 @@ As a project owner you can set quotas on resources with:
 
 The arguments are described in detail in the command help (`gdk-project-set-quota -h`).
 
-Only the project owner can set and change quotas.
+You can see quotas set on a project, if any, with:
+
+```bash
+gdk-project-show <project name>
+```
 
 When quotas are set, the project owner will receive a warning by e-mail when
-the usage exceeds >90% of the specified quota.
+the usage exceeds 90% of the specified quota.
 
-It's important to understand that the quotas are not strict:
+It's important to understand that **quotas are not strict**:
 
 * A project may exceed its billing hour quota somewhat, as the quota is checked 
   on an hourly basis. If the quota is reached, all running jobs will be 
@@ -155,7 +185,9 @@ It's important to understand that the quotas are not strict:
   data may still be written to and read from the project folder. It's up to the
   project owner to either increase the quota or delete data to obey the quota.
 
+{% note() %}
 Once set, a quota cannot be decreased, only increased.
+{% end %}
 
 # Data access in project folders
 
