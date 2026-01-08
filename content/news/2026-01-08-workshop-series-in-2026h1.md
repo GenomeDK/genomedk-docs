@@ -29,14 +29,12 @@ Please help us circulate the workshop invitations to any relevant departments/gr
 
 **Topics:**
 
+* Computing cluster concepts
 * Login and public-key authentication setup
 * File system organization
 * Basic Linux commands
 * Project management
 * Data transfer
-* Software management
-* The queueing system and your first batch jobs
-* Understanding and estimating resource usage
 
 This workshop will be hosted by Samuele Soraggi. There are 30 seats available.
 
@@ -44,17 +42,16 @@ This workshop will be hosted by Samuele Soraggi. There are 30 seats available.
 
 # Advanced use of GenomeDK
 
-**March 3, 2026, 10:00-14:00 @ [1241-114](https://www.au.dk/om/organisation/find-au/bygningskort?b=1241)**
+**March 9, 2026, 10:00-14:00 @ [1241-114](https://www.au.dk/om/organisation/find-au/bygningskort?b=1241)**
 
 **Intended audience:** For all users of GenomeDK, especially those already with some knowledge of the system.
 
 **Topics:**
 
-* Multiple terminal sessions with tmux
-* Web applications and tunneling
+* Software management
 * Containerized software
 * Data synchronization with rsync
-* Pipelines and your first pipeline submission
+* Batch jobs
 
 This workshop will be hosted by Samuele Soraggi. There are 30 seats available.
 
