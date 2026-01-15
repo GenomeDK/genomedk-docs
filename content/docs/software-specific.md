@@ -139,34 +139,21 @@ http://localhost:<UID>/?token=....
 
 # RStudio
 
-RStudio is available on the cluster as a graphical application, which can be run
-on both compute nodes and the frontend node. Bare in mind, the frontend node
-must *not* be used for computation or analysis. RStudio needs
-[X-forwarding](/docs/installing-software/#xforwarding) to be enabled.
+We recommend using the [GenomeDK Desktop](https://desktop.genome.au.dk) to obtain
+a graphical remote desktop on GenomeDK. Click "Start a new desktop" and choose
+an instance that fits the resources you need, as well as a project folder to
+associate the usage with.
 
-When logged in, you must either activate the environment where RStudio is
-installed or install it into an environment yourself (see [Installing and using
-software](/docs/installing-software/)):
-
-```bash
-[fe-open-01]$ conda install -n my-project rstudio-desktop
-[fe-open-01]$ conda activate my-project
-(my-project) [fe-open-01]$ rstudio
-```
-
-To run an analysis or computations in RStudio you will need to run RStudio in an
-interactive job on a compute node.
+When your desktop starts, you can now install Rstudio by opening the "Terminal"
+application and running:
 
 ```bash
-[fe-open-01]$ srun --mem=4g -c 1 --time=10:0:0 --pty bash
-srun: job 3597082 queued and waiting for resources
-srun: job 3597082 has been allocated resources
-[s03n11]$ conda activate my-project
-(my-project) [s03n11]$ rstudio
+[cn-1001]$ conda install -n my-project rstudio-desktop
+[cn-1001]$ conda activate my-project
+(my-project) [cn-1001]$ rstudio
 ```
 
-RStudio is automatically terminated if it allocates more than the reserved 4GB,
-the 10 hours expires or the connection is lost. So remember to save your work!
+If you already installed RStudio, you can skip the installation step.
 
 # TeXLive/LaTeX
 
