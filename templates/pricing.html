@@ -25,17 +25,7 @@
                 <span class="unit">DKK/TB/year</span>
             </div>
         </div>
-        <div class="prose">
-            <p><strong>The above prices apply for 2026.</strong></p>
-        </div>
         <div class="prose text-sm">
-            <p>One billing hour corresponds to one CPU core for one hour or 8 GB memory for
-                one hour, whichever is highest.</p>
-            <p>One GPU-hour corresponds to using one GPU for one hour.</p>
-            <p>If you store 1 TB of data in backup for a year you will be
-                billed 250 + 500 DKK. 250 DKK for the on-disk copy and 500 DKK for off-site
-                backup copy.</p>
-            <p>Users and project folders are always free of charge and can be requested as needed.</p>
             <p>Prices are updated yearly and are subject to change.</p>
         </div>
     </div>
@@ -44,11 +34,12 @@
     <div class="container w-narrow py-1">
         <div class="prose">
             <h1>Who can get an account?</h1>
-                <p>
-                    We are open to account requests from people associated with a university, the
-                    public sector (government agencies, regions, and municipalities), and small and
-                    medium-sized enterprises (SMEs).
-                </p>
+
+            <p>
+                We are open to account requests from people associated with a university, the
+                public sector (government agencies, regions, and municipalities), and small and
+                medium-sized enterprises (SMEs).
+            </p>
 
             <h1>How do I pay?</h1>
                 <p>If the project owner is associated with either:</p>
@@ -66,7 +57,32 @@
                 December) based on actual usage and the listed prices, unless
                 some other agreement has been made.
             </p>
-                </div>
+
+            <h1>How is my bill calculated?</h1>
+
+            <p>Users and project folders are always free of charge and can be requested as needed.
+                You are only billed for based on usage of CPU, GPU, storage, and backup.</p>
+
+            <p>One billing hour corresponds to one CPU core for one hour or 8 GB memory for
+                one hour, whichever is highest.</p>
+
+            <p>One GPU-hour corresponds to using one GPU for one hour. GPU hours are
+                converted to billing hours using the ratio between the CPU price and the GPU price.
+                For example, one Nvidia L40S GPU-hour will be counted as (6.00 / 0.13) = 46.15
+                billing hours.</p>
+
+            <p>Billing hours are summed on a monthly basis and multiplied by the price per billing hour.</p>
+
+            <p>Storage and backup usage is measured regularly. The last measurement of each month is used for billing and is multiplied by the price/TB/month (for example, 250 / 12).
+                </p>
+
+            <p><strong>Example 1:</strong> If you store 1 TB of data in backup for a three months, you will be
+                billed (250 DKK/TB/year + 500 DKK/TB/year) / 12 months/year * 3 months) = 187.5 DKK.</p>
+
+            <p><strong>Example 2:</strong> If you store 1 TB of data for three monts, but only put it in backup in one of the months, you will be
+                billed (250 DKK/TB/year / 12 months/year * 3 months) + (500 DKK/TB/year / 12 months/year * 1 month) = 104.16 DKK.</p>
+
+        </div>
     </div>
 </div>
 {% endblock %}
