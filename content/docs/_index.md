@@ -2,7 +2,8 @@
 title: Documentation
 sort_by: weight
 insert_anchor_links: right
-template: docs.html
+template: doc.html
+page_template: doc.html
 ---
 
 It's time to get your feet wet and learn how to use GenomeDK! The
