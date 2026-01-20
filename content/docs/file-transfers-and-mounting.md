@@ -3,9 +3,17 @@ title: File transfers and mounting
 weight: 37
 ---
 
-This section covers ways to access your data on GenomeDK, as well as various ways to transfer data to/from GenomeDK.
+This section covers ways to access your data on GenomeDK, as well as various 
+ways to transfer data to/from GenomeDK.
 
-If you are in a closed zone, you must use the data lock to import and export data. This is also covered in this section.
+Users in the open zone can freely transfer files to and from GenomeDK. However,
+users in a closed zone must use the **data lock** to import and export data. See
+[Using the data lock](#using_the_data_lock).
+
+{% note() %}
+When downloading files to GenomeDK, always run the download on the frontend. You
+should never submit a download as a job.
+{% end %}
 
 # Accessing your files locally (mounting) {#mounting}
 
@@ -58,18 +66,7 @@ To unmount the directory, run:
 
 You can now copy files to and from the cluster by simple drag-and-drop.
 
-# Transferring data {#copying_data}
-
-Users in the open zone can freely transfer files to and from GenomeDK. However,
-users in a closed zone must use the **data lock** to import and export data. See
-[Using the data lock](#using_the_data_lock).
-
-{% note() %}
-When downloading files to GenomeDK, always run the download on the frontend. You
-should never submit a download as a job.
-{% end %}
-
-## From your own machine to/from the cluster (SFTP)
+# From your own machine to/from the cluster (SFTP) {#copying_data}
 
 You can transfer data to/from GenomeDK using any SFTP-compatible client, for example:
 
@@ -80,7 +77,7 @@ You can transfer data to/from GenomeDK using any SFTP-compatible client, for exa
 
 In any case, you must connect to host `login.genome.au.dk` and port 22.
 
-## From your own machine to/from the cluster (scp/rsync)
+# From your own machine to/from the cluster (scp/rsync)
 
 You can also use `scp` and `rsync` to transfer data.
 
@@ -124,7 +121,7 @@ If you want to download data from the cluster:
 You may want to add the `--progress` flag to all of these commands if you're
 downloading/uploading large amounts of data.
 
-## From the Internet to the cluster (HTTP/HTTPS)
+# From the Internet to the cluster (HTTP/HTTPS)
 
 You can use `wget` to download data from the Internet to the cluster:
 
@@ -144,7 +141,7 @@ to a file:
     --tries=10000 --retry-connrefused URL
 ```
 
-## To/from the Internet to the cluster (FTP)
+# To/from the Internet to the cluster (FTP)
 
 To transfer data using the [(S)FTP
 protocol](https://en.wikipedia.org/wiki/File_Transfer_Protocol), you may use
@@ -218,7 +215,10 @@ lftp> bye
 
 # Using the data lock {#using_the_data_lock}
 
-The data lock is used in closed zones, where data cannot be transferred out of GenomeDK directly via the methods described above. Instead, files must be exported and the zone owner must then approve the export. When approved, you can then access the exported files over SFTP.
+The data lock is used in closed zones, where data cannot be transferred out of
+GenomeDK directly via the methods described above. Instead, files must be
+exported and the zone owner must then approve the export. When approved, you can
+then access the exported files over SFTP.
 
 ## Exporting files {#gdk-export}
 
