@@ -206,4 +206,17 @@ groups (g) and others (o) should have their read (r), write (w), and execute (x)
 permissions removed (-). This means that it's only the owner of the file who can
 now access it.
 
+If you want to change file permissions on all files in a folder, use:
+
+```bash
+[fe-open-01]$ chmod -R go-rwx <folder>
+```
+
+The `-R` means "do recursively". So it will find all files in that folder and updates
+the file permissions.
+
+
+**Note**, that you cannot change file permissions for a specific user to access
+that data, you can only change "groups" (`g`) and "others" (`o`).
+
 You can read more about `chmod` [here](https://en.wikipedia.org/wiki/Chmod).
