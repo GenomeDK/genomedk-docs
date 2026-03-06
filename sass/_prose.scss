@@ -10,7 +10,9 @@
     h4 {
         margin-block: 2rlh 1rlh;
         font-weight: normal;
+        line-height: 1.4;
         overflow-wrap: break-word;
+        text-wrap: pretty;
     }
 
     h1 a,
@@ -21,7 +23,7 @@
     }
 
     h1 {
-        font-size: $text-size-3xl;
+        font-size: $text-size-2xl;
     }
 
     h2 {
@@ -34,7 +36,7 @@
 
     h4 {
         font-size: $text-size-md;
-        font-weight: normal;
+        font-weight: bold;
     }
 
     .text-caption {
