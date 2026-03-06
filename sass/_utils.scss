@@ -7,40 +7,38 @@
 }
 
 .mt-2 {
-    margin-top: 2rem;
+    margin-top: 1lh;
 }
 
 .mb-1 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5lh;
 }
 
 .mb-2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1lh;
 }
 
 .py-1 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-block: 0.5lh;
 }
 
 .py-2 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-block: 1lh;
 }
 
 .pb-2 {
-    padding-bottom: 2rem;
+    padding-bottom: 1lh;
 }
 
 .w-narrow,
 .w-wide,
 .w-full {
     width: 100%;
-    max-width: 1280px;
+    max-width: 140rch;
 }
 
 .w-narrow {
-    max-width: 960px;
+    max-width: 120rch;
 }
 
 .bg-neutral {
@@ -89,26 +87,6 @@ $value in $text-sizes {
     border-radius: 0.25em;
 }
 
-.gap-y-1 {
-    row-gap: 1rem;
-}
-
-.gap-y-2 {
-    row-gap: 2rem;
-}
-
-.gap-x-2 {
-    column-gap: 2rem;
-}
-
-.gap-x-4 {
-    column-gap: 4rem;
-}
-
-.gap-y-4 {
-    row-gap: 4rem;
-}
-
 .align-items-center {
     align-items: center;
 }
@@ -125,10 +103,6 @@ $value in $text-sizes {
     .sm-hide {
         display: block;
     }
-}
-
-.text {
-    line-height: 1.5;
 }
 
 .text-primary-dark {
@@ -153,9 +127,4 @@ $value in $text-sizes {
 
 .shadow {
     box-shadow: 0 0 20px rgba(black, .25);
-}
-
-.illustration {
-    width: 100%;
-    border-radius: 0.25em;
 }

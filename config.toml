@@ -33,6 +33,8 @@ external_links_no_follow = true
 external_links_no_referrer = true
 
 insert_anchor_links = "right"
+
+definition_list = true
 smart_punctuation = true
 
 highlight_theme = "OneHalfLight"

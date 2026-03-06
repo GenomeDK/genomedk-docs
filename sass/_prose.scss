@@ -1,7 +1,6 @@
 .prose {
     p {
-        margin-top: 0;
-        margin-bottom: 1rem;
+        margin-block: 1rlh;
         line-height: $line-height;
     }
 
@@ -9,8 +8,7 @@
     h2,
     h3,
     h4 {
-        margin: 0;
-        padding: 2rem 0 0.5rem 0;
+        margin-block: 2rlh 1rlh;
         font-weight: normal;
         overflow-wrap: break-word;
     }
@@ -178,4 +176,14 @@
     table td {
         border-bottom: 1px solid white;
     }
+
+    .lead {
+        font-size: $text-size-xl;
+        margin-block: 2rlh;
+    }
+}
+
+.prose-lg {
+    font-size: 1.3em;
+    line-height: 2;
 }

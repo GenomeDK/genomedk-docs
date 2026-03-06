@@ -12,14 +12,8 @@
 @import "components/gallery";
 @import "components/prices";
 
-:root {
-    font-size: calc(1rem + 0.125vw);
-}
-
 * {
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: auto;
     box-sizing: border-box;
 }
 
@@ -68,18 +62,14 @@ h4 a {
 
 h1.title {
     font-weight: normal;
-    font-size: $text-size-4xl;
+    font-size: $text-size-5xl;
+    line-height: 1.2;
     color: $color-primary-dark;
-    margin: 0;
-    padding-bottom: 1rem;
-}
-
-h1.page-title {
-    font-weight: normal;
-    font-size: $text-size-4xl;
-    color: $color-primary-dark;
-    margin: 0;
-    padding: 1rem 0;
+    /*margin-block: 1rlh;*/
+    padding-block: 1rlh 0;
+    text-wrap: pretty;
+    max-inline-size: 80ch;
+    font-weight: bold;
 }
 
 h1.caption {
@@ -88,6 +78,10 @@ h1.caption {
     letter-spacing: 0.025rem;
     font-weight: bold;
     margin-top: 0;
+}
+
+p {
+    line-height: $line-height;
 }
 
 a {
@@ -99,13 +93,13 @@ a:hover {
 }
 
 hr {
-    margin: 2rem 0;
+    margin-block: 1rlh;
     border: none;
     border-top: 2px solid $color-neutral;
 }
 
 .text-logo {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     letter-spacing: 20%;
     text-decoration: none;
     margin: 1rem 0;
@@ -118,12 +112,12 @@ hr {
 }
 
 .display-item {
-    margin-bottom: 1rem
+    margin-bottom: 1lh;
 }
 
 .display-item .label {
     text-transform: uppercase;
-    margin-left: .25rem
+    margin-left: 1ch;
 }
 
 .s-display {
@@ -160,7 +154,8 @@ hr {
 
 .lead-grid {
     display: grid;
-    gap: 1em 3em;
+    gap: 0 4ch;
+    line-height: $line-height;
 
     .illustration1 {
         grid-area: ill1;
@@ -189,7 +184,8 @@ hr {
     .description1 h1,
     .description2 h1,
     .description3 h1 {
-        margin: 1rem 0 0.5rem 0;
+        margin-block: 1rlh 0;
+        font-weight: bold;
     }
 
     grid-template-areas: "de1"
@@ -285,29 +281,31 @@ hr {
 
 .news-illustration {
     display: block;
-    max-width: 100%;
-    max-height: 40svb;
-    margin: 0 auto;
-    margin-bottom: 2rem;
+    width: 100%;
+    height: 25rlh;
+    margin-block: 2rlh;
+    object-fit: cover;
     border-radius: 0.25rem;
 }
 
 .news-highlight {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2em;
+    gap: 1lh 4ch;
     align-items: center;
-    padding: 1em 0;
-}
+    padding-block: 1lh;
 
-.news-highlight-title {
-    margin: 0.25em 0;
+    .illustration {
+        width: 100%;
+    }
 }
 
 .news-highlight-title a {
     color: white;
     text-decoration: none;
     display: block;
+    font-weight: bold;
+    margin-block: 1rlh;
 }
 
 #search {
@@ -341,10 +339,4 @@ hr {
     box-sizing: content-box;
     width: 22px;
     height: 22px;
-}
-
-.article .lead {
-    font-size: $text-size-xl;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
 }

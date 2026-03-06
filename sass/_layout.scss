@@ -1,5 +1,5 @@
 .container {
-    padding: 0 1em;
+    padding: 0 2ch;
     margin-inline: auto;
 }
 
@@ -74,7 +74,7 @@ footer {
 .sidebar {
     flex-basis: 20rem;
     flex-grow: 1;
-    border-right: 2px solid $color-neutral;
+    padding-block: 1rlh;
 }
 
 .doc {
