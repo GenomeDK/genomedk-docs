@@ -5,7 +5,10 @@
     <div class="container w-narrow py-2">
         {% for page in section.pages | filter(attribute="extra.published", value=true) | slice(end=25) %}
         <article class="news-summary">
-            <div class="metadata">{{ page.date | date(format='%B %-d, %Y') }} - Aarhus, Denmark</div>
+            <div class="metadata">
+                <time datetime="{{ page.date }}">{{ page.date | date(format='%B %-d, %Y') }}</time>
+                - Aarhus, Denmark
+            </div>
             <h1 class="title"><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
             {% if page.extra.illustration %}
             <img class="news-illustration" src="{{ page.path }}/{{ page.extra.illustration }}" />
