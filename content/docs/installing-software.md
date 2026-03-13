@@ -82,7 +82,7 @@ channel_priority: strict
 auto_activate_base: false
 ```
 
-## Finding Conda packages
+## Finding Conda packages {#conda_find}
 
 You can easily search for Conda packages through the website
 [anaconda.org](https://anaconda.org/) or using the
