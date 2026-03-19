@@ -27,7 +27,7 @@ Conda packages can help in finding the right package build to install.
 If you compile software from the source code, you can use Conda to install the
 necessary compiler and libraries. See the [software development](#mpi-develop)
 section for more details. Well-written software, [like
-GROMACS](https://manual.gromacs.org/current/install-guide/index.html#quick-and-dirty-cluster-installation), will have
+GROMACS](https://manual.gromacs.org/current/install-guide/index.html#quick-and-dirty-cluster-installation), will
 have clear documentation for building it with MPI-support.
 
 # Submitting MPI programs to the queue
