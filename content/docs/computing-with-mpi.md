@@ -26,8 +26,8 @@ Conda packages can help in finding the right package build to install.
 
 If you compile software from the source code, you can use Conda to install the
 necessary compiler and libraries. See the [software development](#mpi-develop)
-section for more details. Well-written software will have, [like
-GROMACS](https://manual.gromacs.org/current/install-guide/index.html#quick-and-dirty-cluster-installation),
+section for more details. Well-written software, [like
+GROMACS](https://manual.gromacs.org/current/install-guide/index.html#quick-and-dirty-cluster-installation), will have
 have clear documentation for building it with MPI-support.
 
 # Submitting MPI programs to the queue
@@ -89,8 +89,6 @@ mpirun ./myprog
 Depending on the program you are running, you may want to use multiple cores per
 task (`--cpus-per-task`), spawn more tasks (`--ntasks`), or ask for a specific
 number of nodes (`--nodes`).
-
-
 
 # Developing MPI-enabled software {#mpi-develop}
 
