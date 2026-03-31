@@ -4,35 +4,23 @@ weight: 20
 ---
 
 This page will tell you everything you need to know to get up and
-running on GenomeDK. However, we assume that you have some experience
-with the command line/terminal.
+running on GenomeDK.
 
 # Get access to the cluster {#request_access}
 
-You should check out our [terms of service](/terms).
+GenomeDK is divided into multiple *zones*. Most users will want to connect to
+the "open zone". If you're in doubt about which zone you should request access
+to, check with your PI or colleague.
+
+If you need access to multiple zones, you must request a user for each zone.
 
 To request a user, fill out the [user request
 form](https://console.genome.au.dk/user-requests/create/).
 
-Once you've been granted access, you'll receive an e-mail. You'll
-then be able to connect to the cluster.
+Once you've been granted access, you'll receive an e-mail. You'll then be able
+to connect to the cluster.
 
-# Connecting to the cluster {#connecting_to_the_cluster}
-
-GenomeDK is divided into multiple *zones*. Most users belong to the open
-zone. If you're in doubt about which zone you belong to, check your
-account confirmation e-mail. If it doesn't mention a specific zone, you
-belong to the open zone. If still in doubt, please contact support.
-
-There are three ways to connect to GenomeDK:
-
-* [Connecting with SSH (open zone)](#ssh)
-* [Connecting with GenomeDK Desktop (open zone)](#desktop)
-* [Connecting with NoMachine (closed zones)](#zone_connect)
-
-In any case, you must first [prepare for two-factor authentication](#2fa).
-
-## Prepare for two-factor authentication {#2fa}
+## Prepare for two-factor authentication {#connecting_to_the_cluster}
 
 You must first install an authenticator app on your phone (if you don't already
 have one). Popular authenticator apps include:
@@ -44,14 +32,11 @@ have one). Popular authenticator apps include:
 All of these apps will allow you to scan a QR code and generate tokens for
 future logins.
 
-## Connecting to the open zone with SSH {#ssh}
+# Connecting to the cluster {#zone_connect}
 
-{% warning() %}
-On your first login, you must set up two-factor authentication. If you do not
-set up two-factor on the first login, you will not be able to access your
-account. Read the instructions to the end before logging in for the first time.
-{% end %}
+There are three ways to connect to GenomeDK:
 
+{% reveal(title="SSH (open zone only)") %}
 On Linux, open the terminal of your choice. On macOS, you may use `Terminal.app`
 which can be found in the `/Applications/Utilities` folder. In both cases, you
 should now be able to log in to the frontend by typing this command:
@@ -71,18 +56,16 @@ Older versions of Windows do not include the `ssh` command and thus you will
 need to install an alternative yourself. We recommend
 [MobaXterm](https://mobaxterm.mobatek.net/).
 
-### Set up two-factor
-
-You must now set up two-factor authentication. Run the following command on
+Once connected set up two-factor authentication. Run the following command on
 GenomeDK:
 
     gdk-auth-show-qr
 
 This will show a QR code in your terminal. Open the the authenticator app on
 your phone and scan the QR code.
+{% end %}
 
-## Connecting via the GenomeDK Desktop {#desktop}
-
+{% reveal(title="GenomeDK Desktop (any zone)") %}
 GenomeDK Desktop provides access to a graphical desktop environment (virtual
 desktop) running on the frontend node of the open zone. The Desktop is available
 directly in your browser.
@@ -99,16 +82,11 @@ Once logged in, a virtual desktop will appear within a few seconds.
 Please note that the session **should not be used for heavy computations**.
 Instead, submit a job to the queuing system inside your Desktop session.
 
-You can [learn more about using the Desktop here](@/docs/using-graphical-interfaces.md#desktop).
-
-## Connecting to a closed zone {#zone_connect}
-
-{% warning() %}
-On your first login, you must set up two-factor authentication. If you do not
-set up two-factor on the first login, you will not be able to access your
-account. Read the instructions to the end before logging in for the first time.
+You can [learn more about using the Desktop
+here](@/docs/using-graphical-interfaces.md#desktop).
 {% end %}
 
+{% reveal(title="NoMachine (closed zones only)") %}
 Download and install the remote desktop client for your operating system on your
 local machine.
 
@@ -126,11 +104,10 @@ username and password.
 
 Assuming you entered correctly you will get access to the virtual desktop.
 
-### Set up two-factor
-
 Open the the authenticator app on your phone and scan the `QRCode.png` located
 on your NoMachine desktop. From now on you will need to generate a one-time
 password with the authenticator app every time you log in.
+{% end %}
 
 # I forgot my password
 

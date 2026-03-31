@@ -1,9 +1,18 @@
-{% extends "layout_with_title.html" %}
+{% extends "layout.html" %}
 
-{% block body %}
+{% block content %}
 <div class="bg-white">
-    <div class="container w-narrow prose pb-2">
+    <div class="container w-narrow">
+        <h1 class="title">
+            {% if page %}
+            {{ page.title }}
+            {% else %}
+            {{ section.title }}
+            {% endif %}
+        </h1>
+        <div class="prose pb-2">
         {{ page.content | safe }}
+        </div>
     </div>
 </div>
 {% endblock %}

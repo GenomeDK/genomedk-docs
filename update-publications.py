@@ -35,6 +35,7 @@ queries = [
     ("Mads Reinholdt Jensen", 2021),
     ("Doug Speed", 2020),
     ("Jesper Smærup Bechsgaard", 2024),
+    ("Guillaume P Ramstein", 2025),
 ]
 
 blacklist = [

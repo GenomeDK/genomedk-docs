@@ -23,10 +23,8 @@ paths = "safe"
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
 
-error_on_missing_highlight = true
-
+render_emoji = true
 external_links_class = "external-link"
 external_links_target_blank = true
 external_links_no_follow = true
@@ -36,8 +34,6 @@ insert_anchor_links = "right"
 
 definition_list = true
 smart_punctuation = true
-
-highlight_theme = "OneHalfLight"
 
 [search]
 index_format = "elasticlunr_json"

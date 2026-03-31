@@ -20,15 +20,6 @@
                         <a href="{{ doc.permalink | safe }}">
                             {{ doc.title }}
                         </a>
-                        {% if doc.permalink == page.permalink %}
-                        <ul>
-                            {% for h1 in page.toc %}
-                                <li>
-                                    <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
-                                </li>
-                            {% endfor %}
-                            </ul>
-                        {% endif %}
                     </li>
                 {% endfor %}
                 </ul>

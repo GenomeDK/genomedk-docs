@@ -1,68 +1,102 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="bg-white">
-    <div class="container flex w-wide centered flex-col lead-grid align-items-center pb-2">
-        <div class="illustration1 sm-hide">
-            <object type="image/svg+xml" data="/assets/undraw_speed_test_wxl0.svg"
-                class="w-full"></object>
-        </div>
-        <div class="description1">
+<div class="bg-primary text-white">
+    <div class="container w-narrow hero">
+        <div class="description">
             <h1>High-performance computing for all
             </h1>
-            <p class="text-xl text">As the first high-performance computing facility for the life sciences in Denmark, we have
-                more than 10 years of experience serving scientists, students, the public sector, and SMEs.</p>
+            <p>
+                More than a decade serving scientists, students, the public sector, and SMEs.</p>
+            <p>We support users in a wide range of fields, including <b>bioinformatics, genetics, precision medicine, social sciences, engineering, chemistry, and physics</b>.</p>
         </div>
-
-        <div class="illustration2 sm-hide">
+        <div>
+            <a class="btn btn-magenta" href="https://console.genome.au.dk/user-requests/create/">Request
+                account</a>
+        </div>
+    </div>
+</div>
+<div class="bg-white">
+    <div class="container w-wide lead-grid">
+        <div class="illustration sm-hide">
             <object type="image/svg+xml" data="/assets/undraw_coming_home_52ir.svg"
                 class="w-full"></object>
         </div>
-        <div class="description2">
+        <div class="description">
             <h1>A safe home for your sensitive data</h1>
-            <p class="text-xl text">
-                We take <a href="{{ get_url(path='security') }}">information security</a> seriously. GenomeDK is ISO 27001 certified with yearly ISAE 3000 declarations.
+            <p>
+                GenomeDK is <b>ISO 27001-certified</b> with yearly ISAE 3000 declarations</a>.
             </p>
-            <p class="text-xl text">
-                Organize and control access to your data in <a href="{{ get_url(path="docs/projects-and-accounting") }}">project folders</a>,
+            <p>
+                <b>Organize and control access to your data</b> in project folders,
                 to help you reach GDPR compliance.
             </p>
-            <p  class="text-xl text">
-                Got special compliance
-                requirements? Get your own <a href="{{ get_url(path="zones/") }}">
-                closed zone for extra control</a>.
+            <p>
+                Got special <b>compliance requirements</b>? Get your own closed zone for extra control.
             </p>
+            <ul class="actions">
+                <li><a href="{{ get_url(path='security') }}">Information security</a></li>
+                <li><a href="{{ get_url(path='docs/projects-and-accounting') }}">Project folders</a></li>
+                <li><a href="{{ get_url(path='zones/') }}">Closed zones</a></li>
+            </ul>
         </div>
 
-        <div class="illustration3 sm-hide">
+        <div class="illustration sm-hide">
+            <object type="image/svg+xml" data="/assets/undraw_coming_home_52ir.svg"
+                class="w-full"></object>
+        </div>
+        <div class="description">
+            <h1>A safe home for your sensitive data</h1>
+            <p>
+                GenomeDK is <b>ISO 27001-certified</b> with yearly ISAE 3000 declarations</a>.
+            </p>
+            <p>
+                <b>Organize and control access to your data</b> in project folders,
+                to help you reach GDPR compliance.
+            </p>
+            <p>
+                Got special <b>compliance requirements</b>? Get your own closed zone for extra control.
+            </p>
+            <ul class="actions">
+                <li><a href="{{ get_url(path='security') }}">Information security</a></li>
+                <li><a href="{{ get_url(path='docs/projects-and-accounting') }}">Project folders</a></li>
+                <li><a href="{{ get_url(path='zones/') }}">Closed zones</a></li>
+            </ul>
+        </div>
+
+        <div class="illustration sm-hide">
             <object type="image/svg+xml" data="/assets/undraw_science_fqhl.svg"
                 class="w-full"></object>
         </div>
-        <div class="description3">
+        <div class="description">
             <h1>Empowers scientists and companies to utilize big data</h1>
-            <p class="text-xl text">We provide up-to-date documentation, friendly support, and workshops so that you can get
-                the help
-                you
-                need and concentrate <a href="{{ get_url(path="publications") }}">on the science</a>.</p>
-            <p class="text-xl text">We support users in a wide range of fields, including (but not limited to) bioinformatics, genetics, precision medicine, social sciences, engineering, chemistry, and physics.</p>
+            <p>Up-to-date documentation, regular workshop series, and friendly support will help you get started quickly, so you can concentrate on the science.</p>
+            <ul class="actions">
+                <li><a href="{{ get_url(path='docs/') }}">Documentation</a></li>
+                <li><a href="{{ get_url(path='help') }}">Support and workshops</a></li>
+                <li><a href="{{ get_url(path='publications') }}">Publications</a></li>
+            </ul>
         </div>
     </div>
     <div class="bg-neutral py-2">
-        <div class="container w-wide centered">
-            <div class="flex w-full space-evenly" style="flex-flow: row wrap;">
-                <div class="display-item"><span class="s-display">11520</span><span class="label">cores</span></div>
-                <div class="display-item"><span class="s-display">90</span><span class="label">TB memory</span></div>
-                <div class="display-item"><span class="s-display">33</span><span class="label">PB storage</span></div>
-                <div class="display-item"><span class="s-display">16</span><span class="label">GPUs</span></div>
+        <div class="container w-wide">
+            <div class="metrics">
+                <div class="metric"><span class="s-display">11520</span><span class="label">CPU cores</span></div>
+                <div class="metric"><span class="s-display">90<span class="unit">TB</span></span><span class="label">memory</span></div>
+                <div class="metric"><span class="s-display">33<span class="unit">PB</span></span><span class="label">storage</span></div>
+                <div class="metric"><span class="s-display">16</span><span class="label">GPUs</span></div>
             </div>
+            <ul class="actions centered py-1">
+                <li><a href="{{ get_url(path='docs/hardware') }}">Hardware</a></li>
+            </ul>
         </div>
     </div>
     <div class="bg-white py-2">
         <div class="container w-wide centered">
-            <div class="flex w-full space-evenly" style="flex-flow: row wrap;">
-                <div class="display-item"><span class="s-display">1000</span><span class="label">users</span></div>
-                <div class="display-item"><span class="s-display">1170</span><span class="label">projects</span></div>
-                <div class="display-item"><span class="s-display">1000</span><span class="label">publications</span>
+            <div class="metrics">
+                <div class="metric"><span class="s-display">1000</span><span class="label">users</span></div>
+                <div class="metric"><span class="s-display">1170</span><span class="label">projects</span></div>
+                <div class="metric"><span class="s-display">1000</span><span class="label">publications</span>
                 </div>
             </div>
         </div>
@@ -70,8 +104,8 @@
     {% set news = get_section(path="news/_index.md") %}
     {% set page = news.pages | filter(attribute="extra.published", value=true) | filter(attribute="extra.highlight", value=true) | first %}
     {% if page %}
-    <div class="bg-primary text-white py-2">
-        <div class="container w-wide centered">
+    <div class="bg-primary">
+        <div class="container w-wide text-white py-2">
             <h1>Hot off the press</h1>
             <article class="news-highlight">
                 <img class="illustration shadow" src="{{ page.path }}/{{ page.extra.illustration }}" />

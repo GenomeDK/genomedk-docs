@@ -2,13 +2,11 @@
 
 {% block content %}
 <div class="bg-white">
-    <div class="container w-narrow py-1">
+    <div class="container w-narrow">
         <h1 class="title">{{ section.title }}</h1>
-    </div>
-</div>
-<div class="bg-white">
-    <div class="container w-narrow pb-2 prose">
-        {{ section.content | safe }}
+        <div class="prose">
+            {{ section.content | safe }}
+        </div>
     </div>
 </div>
 {% endblock %}

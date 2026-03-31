@@ -1,24 +1,38 @@
-{% extends "layout_with_title.html" %}
+{% extends "layout.html" %}
 
-{% block body %}
+{% block content %}
 {% set data = load_data(path="publications.json") %}
 <div class="bg-white">
-    <div class="container w-narrow prose py-1">
-        {{ page.content | safe }}
+    <div class="container w-narrow">
+        <h1 class="title">
+            {% if page %}
+            {{ page.title }}
+            {% else %}
+            {{ section.title }}
+            {% endif %}
+        </h1>
+        <div class="prose">
+            {{ page.content | safe }}
 
-        {{ data["publications"] | length }} publications listed, last updated on {{ data["last_updated"] }}.
+            {{ data["publications"] | length }} publications listed, last updated on {{ data["last_updated"] }}.
 
-        <hr />
+            <p>Jump to year:
+            {% for year in data["publications"] | sort(attribute="year") | map(attribute="year") | unique | reverse %}
+            <a href="#section-{{ year }}">{{ year }}</a>{% if not loop.last %},{% endif %}{% endfor %}
+            </p>
 
-        {% for year, pubs in data["publications"] | group_by(attribute="year") %}
-        <h2>{{ year }}</h2>
-        <p>({{ pubs | length }} publications)</p>
-        <ul>
-            {% for pub in pubs %}
-            <li>{{ pub["citation"] | safe }}</li>
+            <hr />
+
+            {% for year, pubs in data["publications"] | sort(attribute="year") | reverse | group_by(attribute="year") %}
+            <h2 id="section-{{ year }}">{{ year }}</h2>
+            <p>({{ pubs | length }} publications)</p>
+            <ul>
+                {% for pub in pubs %}
+                <li>{{ pub["citation"] | safe }}</li>
+                {% endfor %}
+            </ul>
             {% endfor %}
-        </ul>
-        {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -5,7 +5,7 @@
     <div class="container flex w-wide centered flex-col">
         <div class="bg-white py-2 w-full">
             <div class="w-wide centered contact-grid">
-                <div class="pb-2 text">
+                <div class="text">
                     <h1 class="title pb-1">Need help?</h1>
                     <p class="text-lg">Or want to learn more about what GenomeDK can offer? Don't hesitate to get in touch.</p>
                     <div class="mb-2">
@@ -31,9 +31,9 @@
     </div>
 </div>
 <div class="bg-neutral">
-    <div class="container w-wide centered py-2">
+    <div class="container w-wide py-2">
         <h1 class="">Meet the team</h1>
-        <div class="contact-cards py-1">
+        <div class="contact-cards centered py-1">
             {% for person in page.extra.staff %}
             <a class="contact-card" alt="Send an e-mail to {{ person.name }}" href="mailto:{{ person.email }}">
                 <div class="name"><strong>{{ person.name }}</strong></div>
@@ -44,7 +44,7 @@
     </div>
 </div>
 <div class="bg-primary text-white">
-    <div class="container w-wide centered py-2 text">
+    <div class="container w-wide py-2">
         <h1>Training</h1>
         <p class="text-2xl pb-1">Our workshops are tailored to your needs and experience. We provide workshops on request to groups of five people or more.</p>
         <p>Previous workshops:</p>

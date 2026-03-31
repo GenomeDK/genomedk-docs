@@ -25,12 +25,14 @@
     </style>
     <link rel="preload" href="/assets/aupassata_rg-webfont.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/aupassata_bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="{{ get_url(path='gdk.css', cachebust=True) | safe }}" />
+    <link rel="stylesheet" href="{{ get_url(path='stylesheets/_main.css', cachebust=True) | safe }}" />
+    <link rel="stylesheet" href="{{ get_url(path='stylesheets/reset.css', cachebust=True) | safe }}" />
+    <link rel="stylesheet" href="{{ get_url(path='stylesheets/prose.css', cachebust=True) | safe }}" />
     <script src="{{ get_url(path='assets/elasticlunr.min.js', cachebust=True) | safe }}"></script>
 </head>
 <body>
     <div class="bg-white">
-        <div class="container w-wide py-1">
+        <div class="container w-wide">
             <header>
                 <a class="text-logo" href="{{ get_url(path="/") }}" alt="The name GenomeDK spelled out in capital letters using Aarhus University colors.">
                     <span>GENOME|</span><span>DK</span>
@@ -46,13 +48,12 @@
                         <a class="btn {% if item.path in current_path %}active{% endif %}" href="{{ get_url(path=item.path) }}">{{ item.title }}</a>
                     {% endfor %}
                     <a class="btn" href="https://console.genome.au.dk/status">Status</a>
-                    <a id="search-button" class="btn" href="{{ get_url(path="@/search.md") }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2.5" fill="white" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                        </svg>
+                    <a class="btn" href="https://desktop.genome.au.dk/" title="Go to the GenomeDK Desktop.">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-device-desktop"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10" /><path d="M7 20h10" /><path d="M9 16v4" /><path d="M15 16v4" /></svg>
                     </a>
-                    <a class="btn btn-magenta" href="https://console.genome.au.dk/user-requests/create/">Request
-                        account</a>
+                    <a class="btn" href="{{ get_url(path="@/search.md") }}" title="Go to the search page.">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                    </a>
                 </nav>
             </header>
         </div>

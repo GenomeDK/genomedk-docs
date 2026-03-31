@@ -10,7 +10,7 @@ Users in the open zone can freely transfer files to and from GenomeDK. However,
 users in a closed zone must use the **data lock** to import and export data. See
 [Using the data lock](#using_the_data_lock).
 
-{% note() %}
+{% warning() %}
 When downloading files to GenomeDK, always run the download on the frontend. You
 should never submit a download as a job.
 {% end %}

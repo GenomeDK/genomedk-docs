@@ -1,8 +1,15 @@
-{% extends "layout_with_title.html" %}
+{% extends "layout.html" %}
 
-{% block body %}
+{% block content %}
 <div class="bg-white">
     <div class="container w-narrow pb-2">
+        <h1 class="title">
+            {% if page %}
+            {{ page.title }}
+            {% else %}
+            {{ section.title }}
+            {% endif %}
+        </h1>
       <input id="search" class="rounded" type="search" placeholder="Type to search..." autofocus>
       <div class="search-results">
           <ul class="search-result-items"></ul>

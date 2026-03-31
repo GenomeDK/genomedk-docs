@@ -2,7 +2,23 @@
 
 {% block doc %}
 <h1 class="title">{{ page.title }}</h1>
+    <details class="contents" open>
+        <summary>
+            <h1 class="caption">On this page</h1>
+        </summary>
+        <ul class="toc">
+        {% for h1 in page.toc %}
+            <li>
+                <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </details>
 <div class="prose">
 {{ page.content | safe }}
 </div>
+<nav id="docs-nav">
+    {% if page.lower %}<a class="prev {% if not page.lower %}disabled{% endif %}" href="{{ get_url(path=page.lower.path) }}"><b>Previous</b><br />{{ page.lower.title }}</a>{% endif %}
+    {% if page.higher %}<a class="next {% if not page.higher %}disabled{% endif %}" href="{{ get_url(path=page.higher.path) }}"><b>Next</b><br />{{ page.higher.title }}</a>{% endif %}
+</nav>
 {% endblock %}
