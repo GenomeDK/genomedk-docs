@@ -1,37 +1,13 @@
 ---
 title: Interacting with the queue
 weight: 45
+extra:
+  menu_category: compute
 ---
 
 Since GenomeDK is a shared system, all computations must be carried out
 through a queue. Users submit jobs to the queue and the jobs then run
 when it's their turn.
-
-# Partitions and nodes
-
-To get an overview of the available nodes:
-
-```bash
-[fe-open-01]$ gnodes
-```
-
-This will list each partition and all of the compute nodes assigned to
-each partition. The header of each partitions lists the available
-resources such as the number of cores per node, available memory per
-node, and the maximum walltime (running time) a job in the partition can
-have.
-
-# Resource limits
-
-All users/jobs are subject to the following limits:
-
-* A user can at most use 3600 cores at once.
-* A user can at most use 12 GPUs at once.
-* A job can at most declare 1000 dependencies. Exceeding the limit results in an error when the job is submitted.
-* A job can at most request a time limit of 7 days. Exceeding the limit results in an error when the job is submitted.
-* A job array can at most have a length of 150000. Exceeding the limit results in an error when the job is submitted.
-
-The limits are subject to change at any time.
 
 # Submitting jobs under a project
 
@@ -181,34 +157,6 @@ their workflow and instead use a workflow engine such as
 bioinformatics). Such tools allow you to write entire pipelines
 consisting of thousands of separate jobs and submit those jobs to Slurm
 without writing job scripts manually.
-
-# Asking for GPUs {#gpu_nodes}
-
-To to run a job on a node with a GPU device you need to submit it to the
-*gpu* partition and specify how many GPU devices you are going to use.
-
-For example, to submit an interactive job that will use just one GPU:
-
-```bash
-[fe-open-01]$ srun --gres=gpu:1 -p gpu --pty /bin/bash
-```
-
-In a batch script it looks like this. Here we ask for four GPUs:
-
-```bash
-#!/bin/bash
-#SBATCH --account my_project
-#SBATCH -c 8
-#SBATCH --mem 16g
-#SBATCH --partition gpu
-#SBATCH --gres=gpu:4
-#SBATCH --time 04:00:00
-
-echo hello world
-```
-
-Note that the software you're using must support using multiple GPUs,
-otherwise allocating more GPUs will not make a difference.
 
 # Checking job status
 

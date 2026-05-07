@@ -67,7 +67,7 @@
         font-style: italic;
     }
 
-    p code,
+    code,
     pre {
         font-family: ui-monospace,
             Menlo, Monaco,
@@ -79,7 +79,6 @@
             "Fira Mono",
             "Droid Sans Mono",
             "Courier New", monospace;
-        font-size: $text-size-sm;
     }
 
     pre {
@@ -89,6 +88,7 @@
         line-height: $line-height;
         max-height: 200px;
         border-radius: 0.25em;
+        font-size: $text-size-sm;
     }
 
     img,

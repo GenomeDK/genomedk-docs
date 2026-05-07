@@ -1,6 +1,8 @@
 ---
 title: Software-specific documentation
 weight: 90
+extra:
+  menu_category: software
 ---
 
 # GATK

@@ -1,6 +1,8 @@
 ---
 title: Installing and using software
 weight: 40
+extra:
+  menu_category: software
 ---
 
 For most use cases, we recommend that you install and use the
@@ -232,4 +234,4 @@ Headers and libraries for compilation are located in
 `/usr/local/cuda/targets/x86_64-linux`.
 
 Read more about how to submit jobs for the GPU nodes
-[here](@/docs/interacting-with-the-queue.md#gpu_nodes).
+[here](@/docs/computing-with-gpus.md#gpu_nodes).

@@ -1,6 +1,8 @@
 ---
 title: Getting started
 weight: 20
+extra:
+  menu_category: basics
 ---
 
 This page will tell you everything you need to know to get up and

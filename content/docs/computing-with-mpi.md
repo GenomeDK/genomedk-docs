@@ -1,6 +1,8 @@
 ---
 title: Computing with MPI
-weight: 65
+weight: 49
+extra:
+  menu_category: compute
 ---
 
 [MPI](https://www.open-mpi.org/) is a technology used by some applications to

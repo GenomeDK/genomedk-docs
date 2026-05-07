@@ -1,6 +1,8 @@
 ---
 title: Using graphical interfaces
 weight: 60
+extra:
+  menu_category: software
 ---
 
 There's two options for using programs with a graphical user interface

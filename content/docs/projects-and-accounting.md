@@ -1,6 +1,8 @@
 ---
 title: Projects and accounting
 weight: 30
+extra:
+  menu_category: basics
 ---
 
 A project folder is a workspace with access control and usage management tools.

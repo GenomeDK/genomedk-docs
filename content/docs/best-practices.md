@@ -1,6 +1,8 @@
 ---
 title: Best practices
 weight: 80
+extra:
+  menu_category: data
 ---
 
 Using the same project structure for all of your projects provide a lot of

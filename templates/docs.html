@@ -12,10 +12,11 @@
     <div class="container w-wide">
         <div class="wrapper">
             <nav class="sidebar">
-                <h1 class="caption">Contents</h1>
                 {% if section.pages %}
+                {% for cat, docs in section.pages|group_by(attribute="extra.menu_category") %}
+                <h1 class="caption">{{ cat }}</h1>
                 <ul class="toc">
-                {% for doc in section.pages %}
+                    {% for doc in docs %}
                     <li class="{% if doc.permalink == page.permalink %}current{% endif %}">
                         <a href="{{ doc.permalink | safe }}">
                             {{ doc.title }}
@@ -30,8 +31,9 @@
                             </ul>
                         {% endif %}
                     </li>
-                {% endfor %}
+                    {% endfor %}
                 </ul>
+                {% endfor %}
             {% endif %}
             </nav>
             <div class="doc">

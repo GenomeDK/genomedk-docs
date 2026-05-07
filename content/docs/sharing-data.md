@@ -1,6 +1,8 @@
 ---
 title: Sharing data
-weight: 70
+weight: 38
+extra:
+  menu_category: data
 ---
 
 Data shares allow you to easily share data with collaborators or services that

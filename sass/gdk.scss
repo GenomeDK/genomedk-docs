@@ -15,6 +15,7 @@
 * {
     text-rendering: optimizeLegibility;
     box-sizing: border-box;
+    font-size-adjust: ex-height 0.53;
 }
 
 html {
@@ -75,9 +76,9 @@ h1.title {
 h1.caption {
     text-transform: uppercase;
     font-size: $text-size-sm;
-    letter-spacing: 0.025rem;
+    letter-spacing: 5%;
     font-weight: bold;
-    margin-top: 0;
+    margin-block: 0 0.25rlh;
 }
 
 p {
@@ -86,6 +87,12 @@ p {
 
 a {
     color: $color-primary-dark;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: $color-primary;
+    text-underline-offset: 2px;
+
+    transition-duration: 0.25s;
+    transition-property: color, background-color, text-decoration;
 }
 
 a:hover {
@@ -125,7 +132,7 @@ hr {
 }
 
 .toc {
-    margin: 0;
+    margin-block: 0.25lh 1.25lh;
     padding: 0;
 
     list-style: none;

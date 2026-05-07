@@ -1,6 +1,8 @@
 ---
 title: File transfers and mounting
 weight: 37
+extra:
+  menu_category: data
 ---
 
 This section covers ways to access your data on GenomeDK, as well as various 
