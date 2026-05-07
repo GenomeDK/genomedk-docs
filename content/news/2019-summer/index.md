@@ -51,7 +51,7 @@ been completed.
 We recently added two GPU nodes with two GPUs each to GenomeDK. We encourage you
 to experiment with these nodes. Several users have confirmed that they get large
 speed-ups when running e.g. Tensorflow on the GPU nodes. You can read more
-[here](@/docs/interacting-with-the-queue.md#gpu_nodes).
+[here](@/docs/computing-with-gpus.md#gpu_nodes).
 
 # Some interesting facts
 

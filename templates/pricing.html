@@ -1,30 +1,35 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div class="bg-white">
+    <div class="container w-narrow py-1">
+        <h1 class="title">Pricing</h1>
+    </div>
+</div>
 <div class="bg-primary text-white">
     <div class="container w-narrow py-1">
-        <div class="price-grid py-1">
-            <div class="service-item">
-                <h1 class="caption">CPU</h1>
-                <span class="price">0.13</span>
-                <span class="unit">DKK/billing hour</span>
-            </div>
-            <div class="service-item">
-                <h1 class="caption">GPU</h1>
-                <span class="price">6.00</span>
-                <span class="unit">DKK/billing hour</span>
-            </div>
-            <div class="service-item">
-                <h1 class="caption">storage</h1>
-                <span class="price">250</span>
-                <span class="unit">DKK/TB/year</span>
-            </div>
-            <div class="service-item">
-                <h1 class="caption">backup</h1>
-                <span class="price">500</span>
-                <span class="unit">DKK/TB/year</span>
-            </div>
-        </div>
+        <table class="price-grid">
+            <tr class="service-item">
+                <td class="caption">CPU</td>
+                <td class="price">0.13 <span class="unit">DKK/billing hour</span></td>
+            </tr>
+            <tr class="service-item">
+                <td class="caption">GPU (L40S)</td>
+                <td class="price">6 <span class="unit">DKK/GPU-hour</span></td>
+            </tr>
+            <tr class="service-item">
+                <td class="caption">GPU (H200)</td>
+                <td class="price">20 <span class="unit">DKK/GPU-hour</span></td>
+            </tr>
+            <tr class="service-item">
+                <td class="caption">Storage</td>
+                <td class="price">250 <span class="unit">DKK/TB/year</span></td>
+            </tr>
+            <tr class="service-item">
+                <td class="caption">Backup</td>
+                <td class="price">500 <span class="unit">DKK/TB/year</span></td>
+            </tr>
+        </table>
         <div class="prose text-sm">
             <p>Prices are updated yearly and are subject to change.</p>
         </div>

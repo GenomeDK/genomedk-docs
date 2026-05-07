@@ -23,7 +23,7 @@ We are excited to announce that we just this week expanded our computational cap
 Front of the new GPU nodes. Each node has 8 Nvidia L40S GPUs. Although these are data center GPUs, each GPU has 4 HDMI ports, so you could actually connect a TV to these things!
 {% end %}
 
-There's instructions for using the GPU nodes [in our documentation](@/docs/interacting-with-the-queue.md#gpu_nodes). Remember that compiling code for the GPU must also happen on one of the GPU nodes (in a job). The pricing is unchanged at 2.43 DKK/GPU billing hour.
+There's instructions for using the GPU nodes [in our documentation](@/docs/computing-with-gpus.md#gpu_nodes). Remember that compiling code for the GPU must also happen on one of the GPU nodes (in a job). The pricing is unchanged at 2.43 DKK/GPU billing hour.
 
 These nodes will replace our current GPU nodes (two nodes with two Nvidia V100 16GB GPUs each).
 
@@ -125,4 +125,3 @@ Thank you for being a part of the GenomeDK community! As usual, if you have any 
 Best regards,
 
 The GenomeDK Team
-

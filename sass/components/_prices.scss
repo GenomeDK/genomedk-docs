@@ -1,15 +1,12 @@
 .price-grid {
-    display: grid;
-    gap: 2em;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    font-size: $text-size-xl;
+    border-collapse: collapse;
 
-    .service-item .name {
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: $text-size-sm;
+    td {
+        padding: 1rlh 0;
     }
-
-    .service-item .price {
-        font-size: 5rem;
+    .service-item .caption {
+        font-weight: bold;
     }
 }
