@@ -1,7 +1,8 @@
 .prose {
+    line-height: $line-height;
+
     p {
         margin-block: 1rlh;
-        line-height: $line-height;
     }
 
     h1,
@@ -138,8 +139,7 @@
     ol ol,
     dl ul,
     dl ol {
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-block: 0;
     }
 
     dl dt {
@@ -148,35 +148,31 @@
     }
 
     dl dd {
-        margin-left: 1rem;
-        margin-bottom: 1rem;
+        margin-block: 1rlh;
     }
 
     dl dd p:first-child {
-        margin-top: 0;
+        margin-block-start: 0;
     }
 
     table {
-        margin-inline: auto;
-        background-color: $color-neutral;
-        border-radius: 0.25em;
+        margin: 2rlh auto;
+
         text-align: left;
-        padding: 1em 0;
+        font-size: $text-size-sm;
+
         border-collapse: collapse;
+        border: none;
     }
 
     table td,
     table th {
-        padding: 0.5rem 1rem;
+        padding: 0.35rlh 3ch 0.35rlh 1ch;
     }
 
     table th {
         font-weight: bold;
-        border-bottom: 2px solid white;
-    }
-
-    table td {
-        border-bottom: 1px solid white;
+        border-bottom: 2px solid $color-primary-dark;
     }
 
     .lead {
