@@ -19,7 +19,8 @@ We currently provide access to two types of GPUs:
 	
 |                     | Nvidia H200 SXM 141GB  | Nvidia L40S 48GB |
 |---------------------|------------------------|------------------|
-| Partition           | `gpu-h200`             | `gpu-l40s`       |
+| Partition           | `gpu-h200`             | `gpu-l40s` or    |
+|                     |                        | `gpu-short`      |
 | Nodes/GPUs          | 2 nodes x 4 GPUs       | 2 nodes x 8 GPUs |
 | Architecture        | Hopper                 | Ada Lovelace     |
 | VRAM                | 141 GB                 | 48 GB            |
