@@ -67,15 +67,15 @@ Or to submit an interactive job with two Nvidia H200 GPUs allocated:
 ```
 
 {% note() %}
-Note that the software you're using must support using multiple GPUs,
-otherwise allocating more GPUs will not make a difference.
+Note that the software you're using must support and be configued to use 
+multiple GPUs, otherwise allocating more GPUs will not make a difference.
 {% end %}
 
 If you really don't care which type of GPU you get, you can specify both
 partitions:
 
 ```bash
-[fe-open-01]$ srun --gpus 2 -p gpu,gpu-h200 --pty bash
+[fe-open-01]$ srun --gpus 2 -p gpu-l40s,gpu-h200 --pty bash
 ```
 
 In a batch script it looks like this. Here we ask for four Nvidia L40S GPUs:
@@ -85,7 +85,7 @@ In a batch script it looks like this. Here we ask for four Nvidia L40S GPUs:
 #SBATCH --account my_project
 #SBATCH -c 8
 #SBATCH --mem 16g
-#SBATCH --partition gpu
+#SBATCH --partition gpu-l40s
 #SBATCH --gpus 4
 #SBATCH --time 04:00:00
 
@@ -115,10 +115,35 @@ In this, four GPUs were requested for the job and it used on average 3.68 GPUs,
 which becomes a utilization of 92%. You may use `jobinfo` to check the
 utilization *as the job runs*.
 
-Alternatively, you can connect to the running job and use the `nvidia-smi` 
-command to get GPU and memory utilization:
+Alternatively, you can connect to the running job and use the `nvidia-smi` or
+`nvtop` commands to get GPU and memory utilization:
 
 ```bash
 [fe-open-01]$ srun --jobid <job id> --overlap --pty bash
-[gn-1001]$ nvidia-smi
+[gn-1001]$ nvidia-smi # or...
+[gn-1001]$ nvtop
 ```
+
+# Staging data
+
+If utilization is low or varies a lot on your test jobs (you can see this if you
+run `nvtop` as it shows a nice utilization curve), you should probably consider 
+staging the data to local disk as a first step to increase utilization:
+
+```bash
+#!/bin/bash
+#SBATCH --account my_project
+#SBATCH -c 8
+#SBATCH --mem 16g
+#SBATCH --partition gpu-l40s
+#SBATCH --gpus 1
+#SBATCH --time 04:00:00
+
+cp -r path-to-your-data-on-faststorage/ $TMPDIR/
+# change paths to refer to $TMPDIR
+some-command $TMPDIR/input.dat
+```
+
+Reading from local disk will provide much higher and more stable access to data.
+You can see the size of the local disk on each type of compute node on the
+[hardware page](@/docs/hardware.md).
