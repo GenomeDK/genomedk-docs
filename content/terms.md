@@ -2,7 +2,7 @@
 title: Terms of service
 ---
 
-**Last updated: July 5th, 2021**
+**Last updated: June 26th, 2026**
 
 Thanks for using GenomeDK!
 
@@ -27,8 +27,7 @@ up, and sharing it when you ask us to (through projects). We may access,
 copy, or move your data internally as part of general maintenance of the
 Services. You give us permission to do so.
 
-You should know that we are under obligation to maintain
-confidentiality.
+You should know that we are under obligation to maintain confidentiality.
 
 ## Your responsibilities
 
@@ -46,14 +45,22 @@ transferring the sensitive data to our Services. If you obtain a Data
 Processing Agreement with us, these terms of service will act as the
 main agreement, unless another agreement has been made.
 
-You must also ensure that you have proper licenses for any software that
-you run on GenomeDK.
+Your GenomeDK user(s) are personal and you must never share credentials for your
+user(s) with anyone else. Additionally, it is your responsibility to:
+
+- change any generated/temporary passwords as soon as possible,
+- choose a sufficiently strong password,
+- ensure that your PC used to connect to GenomeDK isn't left unlocked or unattended,
+- only connect to GenomeDK through a secure and trusted network,
+- inform GenomeDK system administrators of any potential issues related to the 
+  user's credentials information and any relevant change of role and/or employment.
+- have the rights and proper licenses to use software you
+  transfer to/install/run on GenomeDK.
 
 **Help us keep Your Data protected.** Safeguard passwords and keys to
-the Services and inform us if you change your e-mail address. Choose
-strong passwords. Never share your account credentials or give others
-access to your account. You may use our Services only as permitted by
-applicable law.
+the Services and inform us if you change your e-mail address. You may use our 
+Services only as permitted by applicable law. We strongly recommend that you 
+don't store sensitive/personal information in filenames.
 
 ## Other services
 
@@ -97,6 +104,7 @@ If the project owner is associated with either:
 
 -   Faculty of Health, Aarhus University,
 -   Faculty of Natural Sciences, Aarhus University,
+-   Center for Quantitative Genetics and Genomics, Aarhus University,
 -   Central Region Denmark (Region Midt),
 
 then the usage is paid internally, and the project owner will not
