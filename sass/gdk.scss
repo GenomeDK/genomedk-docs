@@ -66,8 +66,8 @@ h1.title {
     font-size: $text-size-5xl;
     line-height: 1.2;
     color: $color-primary-dark;
-    /*margin-block: 1rlh;*/
-    padding-block: 1rlh 0;
+    display: inline-block;
+    margin-block: 1rlh;
     text-wrap: pretty;
     max-inline-size: 80ch;
     font-weight: bold;

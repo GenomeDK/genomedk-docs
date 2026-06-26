@@ -1,9 +1,17 @@
-{% extends "layout_with_title.html" %}
+{% extends "layout.html" %}
 
-{% block body %}
+{% block content %}
 {% set data = load_data(path="publications.json") %}
 <div class="bg-white">
     <div class="container w-narrow prose py-1">
+        <h1 class="title">
+            {% if page %}
+            {{ page.title }}
+            {% else %}
+            {{ section.title }}
+            {% endif %}
+        </h1>
+
         {{ page.content | safe }}
 
         {{ data["publications"] | length }} publications listed, last updated on {{ data["last_updated"] }}.
