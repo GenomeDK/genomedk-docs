@@ -18,7 +18,7 @@
 
         <hr />
 
-        {% for year, pubs in data["publications"] | group_by(attribute="year") %}
+        {% for year, pubs in data["publications"] | sort(attribute="year") | reverse | group_by(attribute="year", reverse=True) %}
         <h2>{{ year }}</h2>
         <p>({{ pubs | length }} publications)</p>
         <ul>
