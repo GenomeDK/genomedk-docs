@@ -4,6 +4,8 @@ title: Terms of service
 
 **Last updated: June 26th, 2026**
 
+**Effective as of: August 1st, 2026**
+
 Thanks for using GenomeDK!
 
 We provide computational power, storage, and software to manage projects
