@@ -74,9 +74,10 @@ This workshop will be hosted by Samuele Soraggi. There are 30 seats available.
 * Main pipeline languages
 * Think through your pipeline architecture
 * Dependencies
-* Set software up and prepare your first pipeline
-* Submit!
-* Polish your resource requirements
+* A first parallelized pipeline
+* Resource requirements
+* Generalizing a pipeline to various inputs
+* Creating libraries of workflows
 * Wrap up
 
 This workshop will be hosted by Samuele Soraggi. There are 30 seats available.
