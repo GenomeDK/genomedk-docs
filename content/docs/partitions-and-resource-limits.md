@@ -42,3 +42,10 @@ All users/jobs are subject to the following limits:
   in an error when the job is submitted.
 
 The limits are subject to change at any time.
+
+## Extension of job time
+
+If you have one or more jobs that, contrary to your expectations, can not finish
+within 7 days, you may [contact support](mailto:support@genome.au.dk) and 
+request an extension. Remember to include the relevant job IDs and how long the
+extension should be.
