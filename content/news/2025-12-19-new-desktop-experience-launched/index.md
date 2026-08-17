@@ -4,10 +4,13 @@ title = "New desktop experience launched!"
 [extra]
 published = true
 highlight = false
+illustration = "desktop-running.png"
 +++
 
 The GenomeDK Desktop provides graphical access to GenomeDK right in your
 browser, without the need to install any software on your own computer. 
+
+<!-- more -->
 
 Until recently, the solution only provided access to our frontends where
 resources are limited, but it still proved to be incredibly popular for the many
@@ -21,7 +24,7 @@ The GenomeDK Desktop running in a browser, with a file browser and terminal open
 We have now **revamped the desktop solution** and introduced a range of features
 to make the desktop even more convenient and powerful.
 
-<!-- more -->
+
 
 # Desktops with dedicated resources
 
