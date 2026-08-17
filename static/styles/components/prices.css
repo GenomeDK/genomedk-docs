@@ -1,0 +1,14 @@
+@layer components {
+    .price-grid {
+        width: 100%;
+        font-size: var(--text-size-xl);
+        border-collapse: collapse;
+
+        td {
+            padding: var(--block-space-half) 0;
+        }
+        .service-item .caption {
+            font-weight: bold;
+        }
+    }
+}

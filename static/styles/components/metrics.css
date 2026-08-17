@@ -1,0 +1,34 @@
+@layer components {
+    .metrics {
+        color:  white;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        row-gap: var(--block-space);
+        column-gap: var(--inline-space);
+
+        .metric {
+            margin-block: var(--block-space-half);
+        }
+
+        .metric .label {
+            text-transform: uppercase;
+            margin-inline-start: var(--inline-space-half);
+        }
+
+        .metric .value {
+            font-size: var(--text-size-5xl);
+            line-height: 1.2;
+        }
+    }
+
+    @media (min-width: 140rch) {
+        .metrics .metric .value {
+            font-size: var(--text-size-huge);
+        }
+    }
+}

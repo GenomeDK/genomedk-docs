@@ -1,94 +1,181 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="bg-white">
-    <div class="container flex w-wide centered flex-col lead-grid align-items-center pb-2">
-        <div class="illustration1 sm-hide">
-            <object type="image/svg+xml" data="/assets/undraw_speed_test_wxl0.svg"
-                class="w-full"></object>
-        </div>
-        <div class="description1">
-            <h1>High-performance computing for all
-            </h1>
-            <p class="text-xl text">As the first high-performance computing facility for the life sciences in Denmark, we have
-                more than 10 years of experience serving scientists, students, the public sector, and SMEs.</p>
-        </div>
-
-        <div class="illustration2 sm-hide">
-            <object type="image/svg+xml" data="/assets/undraw_coming_home_52ir.svg"
-                class="w-full"></object>
-        </div>
-        <div class="description2">
-            <h1>A safe home for your sensitive data</h1>
-            <p class="text-xl text">
-                We take <a href="{{ get_url(path='security') }}">information security</a> seriously. GenomeDK is ISO 27001 certified with yearly ISAE 3000 declarations.
+<div class="landing-container">
+    <div class="container w-wide">
+        <div class="landing-content flow">
+            <h1>High-performance computing for all</h1>
+            <p>
+                GenomeDK is a high-performance computing infrastructure for research and other compute-intensive work. We
+                provide computing power, storage, and support to researchers,
+                students, public institutions, and small and medium-sized companies.
             </p>
-            <p class="text-xl text">
+            <p>All wrapped up in an ISO 27001-certified, mature, and flexible platform located in Aarhus, Denmark.</p>
+            <a class="btn btn-magenta" href="https://console.genome.au.dk/user-requests/create/">Request
+                account</a>
+        </div>
+    </div>
+</div>
+<div class="bg-white">
+    <div class="container w-wide py-2 features">
+        <div>
+            <h1>Organize and collaborate with project folders</h1>
+            <p>
                 Organize and control access to your data in <a href="{{ get_url(path="docs/projects-and-accounting") }}">project folders</a>,
                 to help you reach GDPR compliance.
             </p>
-            <p  class="text-xl text">
-                Got special compliance
-                requirements? Get your own <a href="{{ get_url(path="zones/") }}">
-                closed zone for extra control</a>.
+        </div>
+        <div>
+            <h1>A safe home for your sensitive data</h1>
+            <p>
+                We take <a href="{{ get_url(path='security') }}">information security</a> seriously. GenomeDK is ISO 27001 certified with yearly ISAE 3000 declarations.
             </p>
         </div>
 
-        <div class="illustration3 sm-hide">
-            <object type="image/svg+xml" data="/assets/undraw_science_fqhl.svg"
-                class="w-full"></object>
-        </div>
-        <div class="description3">
-            <h1>Empowers scientists and companies to utilize big data</h1>
-            <p class="text-xl text">We provide up-to-date documentation, friendly support, and workshops so that you can get
-                the help
-                you
-                need and concentrate <a href="{{ get_url(path="publications") }}">on the science</a>.</p>
-            <p class="text-xl text">We support users in a wide range of fields, including (but not limited to) bioinformatics, genetics, precision medicine, social sciences, engineering, chemistry, and physics.</p>
+        <div>
+            <h1>Supports you at every step</h1>
+            <p>We provide up-to-date documentation, friendly support, and workshops so that you can get
+                the help you need and concentrate <a href="{{ get_url(path='publications') }}">on the science</a>.</p>
+
         </div>
     </div>
-    <div class="bg-neutral py-2">
-        <div class="container w-wide centered">
-            <div class="flex w-full space-evenly" style="flex-flow: row wrap;">
-                <div class="display-item"><span class="s-display">21500</span><span class="label">cores</span></div>
-                <div class="display-item"><span class="s-display">128</span><span class="label">TB memory</span></div>
-                <div class="display-item"><span class="s-display">33</span><span class="label">PB storage</span></div>
-                <div class="display-item"><span class="s-display">24</span><span class="label">GPUs</span></div>
-            </div>
+</div>
+
+<div class="zone-comparison bg-neutral" aria-labelledby="zone-comparison-title">
+    <div class="container w-wide py-2 centered flow">
+        <h1>Open or closed zone?</h1>
+        <p class="prose-container prose prose-lg">
+            Both zone types use the same GenomeDK platform. The open zone is the default;
+            closed zones add isolation and data controls for projects with additional
+            security or legal requirements.
+        </p>
+
+        <div class="zone-comparison__table-wrapper">
+            <table class="zone-comparison__table">
+                <colgroup>
+                    <col class="zone-comparison__feature-column">
+                    <col class="zone-comparison__zone-column" span="2">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">Feature</th>
+                        <th scope="col">Open zone</th>
+                        <th scope="col">Closed zone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Pay per usage, no pre-allocation or reservation required</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Project folders to control access to data</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Network isolation between zones</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Virtual desktop access</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ad-hoc usage reporting and project quotas</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Direct SSH access</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status zone-comparison__status--unavailable" role="img" aria-label="Not supported">&mdash;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Free data movement in and out</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status zone-comparison__status--unavailable" role="img" aria-label="Not supported">&mdash;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Copy and paste to or from the local computer</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status zone-comparison__status--unavailable" role="img" aria-label="Not supported">&mdash;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Owner-approved and logged data exports</th>
+                        <td><span class="zone-comparison__status zone-comparison__status--unavailable" role="img" aria-label="Not applicable">&mdash;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Owner-managed zone access</th>
+                        <td><span class="zone-comparison__status zone-comparison__status--unavailable" role="img" aria-label="Not applicable">&mdash;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Owner-configurable Internet restrictions</th>
+                        <td><span class="zone-comparison__status zone-comparison__status--unavailable" role="img" aria-label="Not supported">&mdash;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+
+        <a class="btn btn-magenta" href="{{ get_url(path='zones/') }}">Learn more</a>
+
     </div>
-    <div class="bg-white py-2">
-        <div class="container w-wide centered">
-            <div class="flex w-full space-evenly" style="flex-flow: row wrap;">
-                <div class="display-item"><span class="s-display">1000</span><span class="label">users</span></div>
-                <div class="display-item"><span class="s-display">1170</span><span class="label">projects</span></div>
-                <div class="display-item"><span class="s-display">1000</span><span class="label">publications</span>
+</div>
+
+<div class="bg-magenta-dark py-2">
+    <div class="container w-wide centered flow">
+        <div class="metrics">
+            <div class="metric"><span class="value">11520</span><span class="label">cores</span></div>
+            <div class="metric"><span class="value">90</span><span class="label">TB memory</span></div>
+            <div class="metric"><span class="value">33</span><span class="label">PB storage</span></div>
+            <div class="metric"><span class="value">24</span><span class="label">GPUs</span></div>
+        </div>
+        <div class="metrics">
+            <div class="metric"><span class="value">1000</span><span class="label">users</span></div>
+            <div class="metric"><span class="value">1170</span><span class="label">projects</span></div>
+            <div class="metric"><span class="value">1000</span><span class="label">publications</span></div>
+        </div>
+        <a class="btn btn-white" href="{{ get_url(path='@/docs/hardware.md') }}">Learn more</a>
+    </div>
+</div>
+
+{% set news = get_section(path="news/_index.md") %}
+{% set pages = news.pages | filter(attribute="extra.published", value=true) | filter(attribute="extra.highlight", value=true) | slice(end=3) %}
+<div class="bg-neutral py-2">
+    <div class="container w-wide centered">
+        <div class="news-list-horizontal">
+            {% for page in pages %}
+            <article>
+                <div class="news-illustration">
+                    {% if page.extra.illustration %}
+                        <img src="{{ page.path }}/{{ page.extra.illustration }}" />
+                    {% endif %}
                 </div>
-            </div>
-        </div>
-    </div>
-    {% set news = get_section(path="news/_index.md") %}
-    {% set page = news.pages | filter(attribute="extra.published", value=true) | filter(attribute="extra.highlight", value=true) | first %}
-    {% if page %}
-    <div class="bg-primary text-white py-2">
-        <div class="container w-wide centered">
-            <h1>Hot off the press</h1>
-            <article class="news-highlight">
-                <img class="illustration shadow" src="{{ page.path }}/{{ page.extra.illustration }}" />
-                <div class="news-highlight-body">
+                <div class="news-body">
                     <div class="metadata">
                         <time datetime="{{ page.date }}">{{ page.date | date(format='%B %-d, %Y') }}</time>
                         - Aarhus, Denmark
                     </div>
-                    <h1 class="news-highlight-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
-                    <section class="prose mb-1">
+                    <h1><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
+                    <section class="prose">
+                        {% if page.summary %}
                         {{ page.summary | safe }}
+                        <a href="{{ page.permalink }}">Continue reading...</a>
+                        {% else %}
+                        {{ page.content | safe}}
+                        {% endif %}
                     </section>
-                    <a class="btn btn-magenta" href="{{ page.permalink }}">Continue reading...</a>
                 </div>
             </article>
+            {% endfor %}
         </div>
+        <a class="btn btn-cyan" href="{{ get_url(path='/news') }}">Show more</a>
     </div>
-    {% endif %}
 </div>
 {% endblock %}

@@ -1,0 +1,319 @@
+@charset "utf-8";
+
+@layer reset, base, utils, components;
+
+@import "reset.css";
+@import "layout.css";
+@import "utils.css";
+
+@import "components/prose.css";
+@import "components/button.css";
+@import "components/prices.css";
+@import "components/metrics.css";
+@import "components/header.css";
+@import "components/footer.css";
+@import "components/newsstand.css";
+@import "components/landing.css";
+@import "components/docs.css";
+
+@font-face {
+    font-family: "AUPassata";
+    src: url("/assets/aupassata_rg-webfont.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "AUPassata";
+    src: url("/assets/aupassata_bold-webfont.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: block;
+}
+
+@layer base {
+    :root {
+        --line-height: 1.6;
+
+        --block-space-quart: 0.25rlh;
+        --block-space-half: 0.5rlh;
+        --block-space: 1rlh;
+        --block-space-double: 2rlh;
+        --block-space-quad: 4rlh;
+
+        --inline-space-quart: 0.25rch;
+        --inline-space-half: 0.5rch;
+        --inline-space: 1rch;
+        --inline-space-double: 2rch;
+        --inline-space-quad: 4rch;
+
+        --color-primary-light: #BBD9EB;
+        --color-primary: #37a0cb;
+        --color-primary-dark: #003e5c;
+        --color-secondary-light: #D1D4DC;
+        --color-secondary: #003d73;
+        --color-secondary-dark: #002546;
+        --color-ok-light: oklch(0.92 0.1423 124.61);
+        --color-ok: oklch(0.7 0.1423 124.61);
+        --color-ok-dark: #425821;
+        --color-danger-light: #F9C8CE;
+        --color-danger: #e2001a;
+        --color-danger-dark: #5b0c0c;
+        --color-warning-light: oklch(0.92 0.1698 83.98);
+        --color-warning: oklch(0.8274 0.1698 83.98);
+        --color-warning-dark: #634b03;
+        --color-neutral-light: oklch(0.99 0 0);
+        --color-neutral: #f5f5f5;
+        --color-neutral-dark: #e9e9e9;
+        --color-magenta-light: oklch(0.927042 0.054818 353.578527);
+        --color-magenta: #e2007a;
+        --color-magenta-dark: #5f0030;
+
+        --title-color: var(--color-primary-dark);
+        --heading-color: var(--color-primary-dark);
+        --text-color: var(--color-primary-dark);
+        --link-color: var(--color-primary-dark);
+        --link-decoration-color: var(--color-primary);
+        --link-hover-color: var(--color-primary);
+
+        --text-size-xs: 0.69rem;
+        --text-size-sm: 0.83rem;
+        --text-size-md: 1rem;
+        --text-size-lg: 1.2rem;
+        --text-size-xl: 1.44rem;
+        --text-size-2xl: 1.73rem;
+        --text-size-3xl: 2.07rem;
+        --text-size-4xl: 2.49rem;
+        --text-size-5xl: 2.99rem;
+        --text-size-huge: 5.17rem;
+
+        --sans-font: AUPassata,
+            -apple-system,
+            BlinkMacSystemFont,
+            avenir next,
+            avenir,
+            segoe ui,
+            helvetica neue,
+            helvetica,
+            Cantarell,
+            Ubuntu,
+            roboto,
+            noto,
+            arial,
+            sans-serif;
+        --monospace-font: ui-monospace,
+            Menlo,
+            Monaco,
+            "Cascadia Mono",
+            "Segoe UI Mono",
+            "Roboto Mono",
+            "Oxygen Mono",
+            "Ubuntu Monospace",
+            "Source Code Pro",
+            "Fira Mono",
+            "Droid Sans Mono",
+            "Courier New",
+            monospace;
+
+    }
+
+    .inverse {
+        --title-color: #fff;
+        --heading-color: var(--color-primary-dark);
+        --text-color: #fff;
+        --link-color: #fff;
+        --link-decoration-color: var(--color-primary-dark);
+        --link-hover-color: var(--color-primary-dark);
+
+        color: var(--text-color)
+    }
+
+    html {
+        scroll-behavior: smooth;
+        text-rendering: optimizeLegibility;
+        font-size-adjust: ex-height 0.53;
+    }
+
+    @media (min-width: 140rch) {
+        html {
+            font-size: 1.05rem;
+        }
+    }
+
+    body {
+        font-family: var(--sans-font);
+        background: var(--color-primary-dark);
+        color: var(--text-color);
+        line-height: var(--line-height);
+    }
+
+    p {
+        margin-block: 0;
+        overflow-wrap: break-word;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin-block: 0;
+        font-weight: bold;
+        overflow-wrap: break-word;
+        text-wrap: balance;
+    }
+
+    :is(h1, h2, h3, h4) a {
+        text-decoration: none;
+        color: var(--heading-color);
+    }
+
+    h1 {
+        font-size: var(--text-size-2xl);
+        line-height: 1.6;
+    }
+
+    h2 {
+        font-size: var(--text-size-xl);
+        line-height: 1.6;
+    }
+
+    h3 {
+        font-size: var(--text-size-lg);
+        line-height: 1.6;
+    }
+
+    h4 {
+        font-size: var(--text-size-md);
+        line-height: 1.6;
+        font-weight: bold;
+    }
+
+    h1.title {
+        color: var(--title-color);
+
+        font-size: var(--text-size-4xl);
+        font-weight: bold;
+        text-wrap: balance;
+
+        line-height: 1.2;
+
+        margin-block: 1rlh 1rlh;
+        max-inline-size: 75rch;
+    }
+
+    h1.caption {
+        text-transform: uppercase;
+        font-size: var(--text-size-sm);
+        letter-spacing: 5%;
+        font-weight: bold;
+        margin-block: 0 0.25rlh;
+    }
+
+    .metadata {
+        font-family: var(--monospace-font);
+        font-size: var(--text-size-xs);
+        color: var(--color-primary);;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    p {
+        line-height: var(--line-height);
+    }
+
+    a {
+        color: var(--link-color);
+        text-decoration-thickness: 2px;
+        text-decoration-color: var(--link-decoration-color, --color-primary);
+        text-underline-offset: 2px;
+
+        transition-duration: 0.25s;
+        transition-property: color, background-color, text-decoration;
+    }
+
+    a:hover {
+        color: var(--link-hover-color);
+    }
+
+    hr {
+        margin-block: 1rlh;
+        border: none;
+        border-top: 2px solid var(--color-neutral);
+    }
+
+    .contact-grid {
+        display: grid;
+        align-items: center;
+        row-gap: var(--block-space);
+        column-gap: var(--inline-space-double);
+        grid-template-columns: repeat(auto-fit, minmax(35rch, 1fr));
+    }
+
+    .contact-cards {
+        display: grid;
+        row-gap: var(--block-space);
+        column-gap: var(--inline-space-double);
+        grid-template-columns: repeat(auto-fit, minmax(15rch, 1fr));
+        margin-block: var(--block-space);
+    }
+
+    .contact-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        text-align: center;
+        row-gap: var(--block-space-quart);
+    }
+
+    #map {
+        border: none;
+        display: block;
+        width: 100%;
+
+        iframe {
+            display: inline-block;
+            min-height: 400px;
+            max-height: 0.5vw;
+            width: 100%;
+        }
+    }
+
+    #search {
+        width: 100%;
+        font-size: var(--text-size-xl);
+        padding: 0.75em;
+        border: 1px solid #eee;
+        margin-bottom: 1em;
+    }
+
+    .search-result-items {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding-top: 1.5em;
+            padding-bottom: 1.5em;
+            border-bottom: 1px solid #eee;
+        }
+    }
+
+    .search-result-item a {
+        font-weight: bold;
+        padding-bottom: 0.25em;
+        display: block;
+    }
+
+    #search-button svg {
+        display: block;
+        box-sizing: content-box;
+        width: 22px;
+        height: 22px;
+    }
+
+    section {
+        margin-block: var(--block-space);
+    }
+}

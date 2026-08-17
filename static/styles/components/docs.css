@@ -1,0 +1,111 @@
+@layer components {
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: var(--inline-space-quad);
+        row-gap: var(--block-space);
+    }
+
+    .sidebar {
+        flex-basis: 35rch;
+        flex-grow: 1;
+        padding-block: var(--block-space);
+    }
+
+    @media (min-width: 100rch) {
+        .sidebar {
+            position: sticky;
+            inset-block-start: var(--block-space);
+            align-self: flex-start;
+            max-block-size: calc(100dvh - 2 * var(--block-space));
+            overflow-y: auto;
+        }
+    }
+
+    .doc {
+        flex-basis: 0;
+        flex-grow: 999;
+        min-inline-size: 50%;
+    }
+
+    .doc-breadcrumb {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--inline-space-half);
+
+        color: var(--color-primary);
+        font-size: var(--text-size-sm);
+    }
+
+    .doc-breadcrumb a {
+        text-decoration: none;
+    }
+
+    .doc-navigation {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--inline-space-double);
+
+        margin-block-start: var(--block-space-double);
+        padding-block-start: var(--block-space);
+        border-block-start: 2px solid var(--color-neutral);
+    }
+
+    .doc-navigation__link {
+        display: flex;
+        flex-direction: column;
+        gap: var(--block-space-quart);
+        text-decoration: none;
+    }
+
+    .doc-navigation__link--next {
+        grid-column: 2;
+        text-align: end;
+    }
+
+    .doc-navigation__direction {
+        color: var(--color-primary);
+        font-size: var(--text-size-sm);
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.025rem;
+    }
+
+    .doc-navigation__title {
+        font-size: var(--text-size-md);
+        font-weight: bold;
+    }
+
+    .toc {
+        margin-block: var(--block-space-quart) var(--block-space);
+        padding: 0;
+
+        list-style: none;
+
+        ul {
+            list-style: none;
+            padding-inline-start: var(--inline-space-double);
+        }
+
+        li {
+            line-height: var(--line-height);
+            margin-block: var(--block-space-quart);
+        }
+
+        li.current > a {
+            font-weight: bold;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-decoration-color: var(--link-decoration-color, --color-primary);
+            text-underline-offset: 2px;
+
+            transition-duration: 0.25s;
+            transition-property: color, background-color, text-decoration;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}

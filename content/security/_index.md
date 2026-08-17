@@ -1,5 +1,5 @@
 +++
-title = "Security and compliance"
+title = "Compliance"
 +++
 
 # Information security

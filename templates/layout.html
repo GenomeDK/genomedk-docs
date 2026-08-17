@@ -6,72 +6,93 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ get_url(path='news/atom.xml', trailing_slash=false) }}">
     <title>GenomeDK</title>
-    <style>
-        @font-face {
-            font-family: "AUPassata";
-            src: url("/assets/aupassata_rg-webfont.woff2") format("woff2");
-            font-weight: 400;
-            font-style: normal;
-            font-display: block;
-        }
-
-        @font-face {
-            font-family: "AUPassata";
-            src: url("/assets/aupassata_bold-webfont.woff2") format("woff2");
-            font-weight: 600;
-            font-style: bold;
-            font-display: block;
-        }
-    </style>
-    <link rel="preload" href="/assets/aupassata_rg-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/aupassata_bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="{{ get_url(path='gdk.css', cachebust=True) | safe }}" />
-    <script src="{{ get_url(path='assets/elasticlunr.min.js', cachebust=True) | safe }}"></script>
+    <link rel="stylesheet" href="{{ get_url(path='styles/gdk.css', cachebust=true) }}" />
+    <script src="{{ get_url(path='assets/elasticlunr.min.js', cachebust=true) | safe }}"></script>
 </head>
 <body>
-    <div class="bg-white">
-        <div class="container w-wide py-1">
-            <header>
-                <a class="text-logo" href="{{ get_url(path="/") }}" alt="The name GenomeDK spelled out in capital letters using Aarhus University colors.">
-                    <span>GENOME|</span><span>DK</span>
+    <div class="bg-white header-container">
+        <div class="container w-wide">
+            <header class="navigation">
+                <a class="navigation__brand" href="{{ get_url(path="/") }}" aria-label="GenomeDK home">
+                    <span class="navigation__brand-short" aria-hidden="true">G|<span>DK</span></span>
+                    <span class="navigation__brand-full" aria-hidden="true">GENOME|<span>DK</span></span>
                 </a>
-                <nav role="navigation">
-                    {% set items = [
-                        get_section(path="news/_index.md"),
-                        get_page(path="pricing.md"),
-                        get_section(path="docs/_index.md"),
-                        get_page(path="help.md"),
-                    ] %}
-                    {% for item in items %}
-                        <a class="btn {% if item.path in current_path %}active{% endif %}" href="{{ get_url(path=item.path) }}">{{ item.title }}</a>
-                    {% endfor %}
-                    <a class="btn" href="https://console.genome.au.dk/status">Status</a>
+                <nav aria-label="Primary navigation">
+                    <div class="navigation__menu">
+                        <button class="navigation__toggle btn" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+                        <ul id="primary-navigation" class="navigation__list">
+                            {% set items = [
+                                get_section(path="news/_index.md"),
+                                get_page(path="pricing.md"),
+                                get_section(path="docs/_index.md"),
+                                get_section(path="security/_index.md"),
+                                get_page(path="help.md"),
+                            ] %}
+                            {% for item in items %}
+                                <li>
+                                    <a class="link {% if item.path in current_path %}active{% endif %}"
+                                        {% if item.path in current_path %}aria-current="page"{% endif %}
+                                        href="{{ get_url(path=item.path) }}">{{ item.title }}</a>
+                                </li>
+                            {% endfor %}
+                            <li><a class="link" href="https://console.genome.au.dk/status">Status</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="navigation__actions">
                     <a id="search-button" class="btn" href="{{ get_url(path="@/search.md") }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2.5" fill="white" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2.5" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
                     </a>
-                    <a class="btn btn-magenta" href="https://console.genome.au.dk/user-requests/create/">Request
-                        account</a>
-                </nav>
+                </div>
             </header>
         </div>
     </div>
-    <div>
+    <div class="content">
     {% block content %}{% endblock content %}
     </div>
     <footer>
         <div class="container">
-            <object type="image/svg+xml" data="{{ get_url(path="/assets/au_segl.svg") }}" class="seal"></object>
-            <p><a href="{{ get_url(path="terms") }}">Terms of service</a> |
-                <a href="{{ get_url(path="privacy") }}">Privacy policy</a> |
-                <a
-                    href="{{ get_url(path="governance") }}">Governance</a> | <a
-                    href="{{ get_url(path="publications") }}">Publications</a></p>
+            <div id="seal">
+                <object type="image/svg+xml" data="{{ get_url(path='/assets/au_segl.svg') }}" class="seal"></object>
+            </div>
+            <ul id="links">
+                <li><a href="{{ get_url(path="terms") }}">Terms of service</a></li>
+                <li><a href="{{ get_url(path="privacy") }}">Privacy policy</a></li>
+                <li><a href="{{ get_url(path="governance") }}">Governance</a></li>
+                <li><a href="{{ get_url(path="publications") }}">Publications</a></li>
+            </ul>
             <p>&copy; GenomeDK, Aarhus University</p>
         </div>
     </footer>
 
+    <script>
+        const navigationToggle = document.querySelector(".navigation__toggle");
+        const navigationMenu = document.querySelector(".navigation__menu");
+
+        if (navigationToggle && navigationMenu) {
+            const closeNavigation = () => navigationToggle.setAttribute("aria-expanded", "false");
+
+            navigationToggle.addEventListener("click", () => {
+                const isOpen = navigationToggle.getAttribute("aria-expanded") === "true";
+                navigationToggle.setAttribute("aria-expanded", String(!isOpen));
+            });
+
+            document.addEventListener("click", (event) => {
+                if (!navigationMenu.contains(event.target)) {
+                    closeNavigation();
+                }
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape" && navigationToggle.getAttribute("aria-expanded") === "true") {
+                    closeNavigation();
+                    navigationToggle.focus();
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

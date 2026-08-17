@@ -1,0 +1,23 @@
+@layer layout {
+    .container {
+        padding-inline: var(--inline-space-double);
+        margin-inline: auto;
+    }
+
+    @media (min-width: 140rch) {
+        .container {
+            padding-inline: var(--inline-space);
+        }
+    }
+
+    .w-narrow,
+    .w-wide,
+    .w-full {
+        width: 100%;
+        max-width: 125rch;
+    }
+
+    .w-narrow {
+        max-width: 85rch;
+    }
+}

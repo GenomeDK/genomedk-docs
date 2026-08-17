@@ -1,0 +1,48 @@
+@layer utils {
+    .py-1 {
+        padding-block: var(--block-space);
+    }
+
+    .py-2 {
+        padding-block: var(--block-space-double);
+    }
+
+    .bg-neutral {
+        background-color: var(--color-neutral);
+    }
+
+    .bg-white {
+        background-color: #fff;
+    }
+
+    .bg-primary {
+        background-color: var(--color-primary);
+    }
+
+    .bg-magenta-dark {
+        background-color: var(--color-magenta-dark);
+    }
+
+    .rounded {
+        border-radius: 0.25em;
+    }
+
+    .centered {
+        display: grid;
+        justify-items: center;
+    }
+
+    .nowrap {
+        word-break: keep-all;
+    }
+
+    .flow-quart > * + * {
+        margin-block: var(--block-space-quart);
+    }
+    .flow-half > * + * {
+        margin-block: var(--block-space-half);
+    }
+    .flow > * + * {
+        margin-block: var(--block-space);
+    }
+}

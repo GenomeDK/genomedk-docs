@@ -1,0 +1,46 @@
+@layer components {
+    a, button, .btn, [role="button"] {
+        outline-offset: 2px;
+        outline-color: var(--btn-color-hover, var(--color-primary-dark));
+    }
+
+    .btn {
+        display: inline-block;
+        padding: var(--block-space-half) var(--inline-space);
+
+        background: transparent;
+        border: 2px solid var(--btn-color);
+        border-radius: 0.25em;
+        color: var(--btn-color, var(--color-primary));
+
+        font-size: var(--text-size-sm);
+        font-weight: bold;
+        letter-spacing: 0.025rem;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        transition-duration: 0.25s;
+        transition-property: color, border, background-color;
+
+        &:hover {
+            border-color: var(--btn-color-hover);
+            color: var(--btn-color-hover);
+        }
+    }
+
+    .btn-magenta {
+        --btn-color: var(--color-magenta);
+        --btn-color-hover: var(--color-magenta-dark);
+    }
+
+    .btn-cyan {
+        --btn-color: var(--color-primary);
+        --btn-color-hover: var(--color-primary-dark);
+    }
+
+    .btn-white {
+        --btn-color: white;
+        --btn-color-hover: var(--color-magenta);
+    }
+}

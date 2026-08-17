@@ -1,8 +1,40 @@
 {% extends "docs.html" %}
 
 {% block doc %}
+<nav class="doc-breadcrumb" aria-label="Breadcrumb">
+    {% if is_doc_page %}
+    <a href="{{ section.permalink | safe }}">Documentation</a>
+    <span aria-hidden="true">&rsaquo;</span>
+    {% endif %}
+    <span aria-current="page">{{ page.title }}</span>
+</nav>
+
 <h1 class="title">{{ page.title }}</h1>
 <div class="prose">
 {{ page.content | safe }}
 </div>
+
+<nav class="doc-navigation" aria-label="Documentation pages">
+    {% if is_doc_page %}
+        {% if page.lower %}
+        <a class="doc-navigation__link doc-navigation__link--previous" href="{{ page.lower.permalink | safe }}" rel="prev">
+            <span class="doc-navigation__direction">&larr; Previous</span>
+            <span class="doc-navigation__title">{{ page.lower.title }}</span>
+        </a>
+        {% endif %}
+
+        {% if page.higher %}
+        <a class="doc-navigation__link doc-navigation__link--next" href="{{ page.higher.permalink | safe }}" rel="next">
+            <span class="doc-navigation__direction">Next &rarr;</span>
+            <span class="doc-navigation__title">{{ page.higher.title }}</span>
+        </a>
+        {% endif %}
+    {% elif section.pages %}
+        {% set first_doc = section.pages | first %}
+        <a class="doc-navigation__link doc-navigation__link--next" href="{{ first_doc.permalink | safe }}" rel="next">
+            <span class="doc-navigation__direction">Next &rarr;</span>
+            <span class="doc-navigation__title">{{ first_doc.title }}</span>
+        </a>
+    {% endif %}
+</nav>
 {% endblock %}

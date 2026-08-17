@@ -1,9 +1,10 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
 {% set data = load_data(path="publications.json") %}
 <div class="bg-white">
-    <div class="container w-narrow prose py-1">
+    <div class="container w-narrow py-2">
         <h1 class="title">
             {% if page %}
             {{ page.title }}
@@ -11,22 +12,23 @@
             {{ section.title }}
             {% endif %}
         </h1>
+        <div class="prose">
+            {{ page.content | safe }}
 
-        {{ page.content | safe }}
+            <p>{{ data["publications"] | length }} publications listed, last updated on {{ data["last_updated"] }}.</p>
 
-        {{ data["publications"] | length }} publications listed, last updated on {{ data["last_updated"] }}.
+            <hr />
 
-        <hr />
-
-        {% for year, pubs in data["publications"] | sort(attribute="year") | reverse | group_by(attribute="year", reverse=True) %}
-        <h2>{{ year }}</h2>
-        <p>({{ pubs | length }} publications)</p>
-        <ul>
-            {% for pub in pubs %}
-            <li>{{ pub["citation"] | safe }}</li>
+            {% for year, pubs in data["publications"] | sort(attribute="year") | reverse | group_by(attribute="year", reverse=True) %}
+            <h2>{{ year }}</h2>
+            <p>({{ pubs | length }} publications)</p>
+            <ul>
+                {% for pub in pubs %}
+                <li>{{ pub["citation"] | safe }}</li>
+                {% endfor %}
+            </ul>
             {% endfor %}
-        </ul>
-        {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

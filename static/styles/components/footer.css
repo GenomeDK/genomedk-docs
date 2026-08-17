@@ -1,0 +1,41 @@
+@layer components {
+    footer {
+        padding: var(--block-space);
+
+        text-align: center;
+        font-size: var(--text-size-sm);
+
+        color: white;
+
+        *>* {
+           margin-block: var(--block-space);
+        }
+
+        a {
+            color: white;
+        }
+
+        #links {
+            display: flex;
+            flex-direction: row;
+            column-gap: var(--inline-space-double);
+            justify-content: center;
+
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: inline-block;
+            }
+        }
+
+        #seal {
+            text-align: center;
+            .seal {
+                height: 6rlh;
+                object-fit: cover;
+            }
+        }
+    }
+}

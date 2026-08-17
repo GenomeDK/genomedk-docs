@@ -2,24 +2,24 @@
 
 {% block content %}
 <div class="bg-white">
-    <div class="container flex w-wide centered flex-col">
+    <div class="container w-wide">
         <div class="bg-white py-2 w-full">
             <div class="w-wide centered contact-grid">
-                <div class="pb-2 text">
-                    <h1 class="title pb-1">Need help?</h1>
+                <div class="flow">
+                    <h1 class="title">Need help?</h1>
                     <p class="text-lg">Or want to learn more about what GenomeDK can offer? Don't hesitate to get in touch.</p>
-                    <div class="mb-2">
+                    <div>
                         <a class="btn btn-magenta" href="mailto:{{ page.extra.email }}">Send us an e-mail</a>
                     </div>
-                    <div class="mb-1">
+                    <div>
                         Building 1872, office 359<br />
                         Universitetsbyen 81<br />
                         8000 Aarhus C
                     </div>
-                    <div class="mb-1">
+                    <div>
                         E-mail: <a href="mailto:{{ page.extra.email }}">{{ page.extra.email }}</a>
                     </div>
-                    <div class="mb-1">
+                    <div>
                         Phone: {{ page.extra.phone }}
                     </div>
                 </div>
@@ -31,9 +31,9 @@
     </div>
 </div>
 <div class="bg-neutral">
-    <div class="container w-wide centered py-2">
-        <h1 class="">Meet the team</h1>
-        <div class="contact-cards py-1">
+    <div class="container w-wide py-2">
+        <h1>Meet the team</h1>
+        <div class="contact-cards">
             {% for person in page.extra.staff %}
             <a class="contact-card" alt="Send an e-mail to {{ person.name }}" href="mailto:{{ person.email }}">
                 <div class="name"><strong>{{ person.name }}</strong></div>
@@ -41,18 +41,6 @@
             </a>
             {% endfor %}
         </div>
-    </div>
-</div>
-<div class="bg-primary text-white">
-    <div class="container w-wide centered py-2 text">
-        <h1>Training</h1>
-        <p class="text-2xl pb-1">Our workshops are tailored to your needs and experience. We provide workshops on request to groups of five people or more.</p>
-        <p>Previous workshops:</p>
-        <ul>
-            {% for workshop in page.extra.workshops %}
-            <li>{{ workshop|markdown|safe }}</li>
-            {% endfor %}
-        </ul>
     </div>
 </div>
 {% endblock %}
