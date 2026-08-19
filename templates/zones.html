@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="bg-white">
+    <div class="container w-narrow py-2">
+        <h1 class="title">
+            {% if page %}
+            {{ page.title }}
+            {% else %}
+            {{ section.title }}
+            {% endif %}
+        </h1>
+        <div class="prose">
+            <p>GenomeDK is divided into zones. The open zone resembles traditional
+            high-performance computing systems where data can be moved freely in and out of
+            the system.</p>
+
+            <p>For projects with additional security or legal requirements, GenomeDK provides
+            <em>closed zones</em>. A closed zone provides additional measures to protect against
+            data leaks and adds increased control over data leaving the zone.</p>
+        </div>
+    </div>
+</div>
+
+<div class="zone-comparison bg-neutral" aria-labelledby="zone-comparison-title">
+    <div class="container w-wide py-2 centered flow">
+        <h1>Open or closed zone?</h1>
+        <p class="prose-container prose prose-lg">
+            Both zone types use the same GenomeDK platform. The open zone is the default;
+            closed zones add isolation and data controls for projects with additional
+            security or legal requirements.
+        </p>
+
+        <div class="zone-comparison__table-wrapper">
+            <table class="zone-comparison__table">
+                <colgroup>
+                    <col class="zone-comparison__feature-column">
+                    <col class="zone-comparison__zone-column" span="2">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">Feature</th>
+                        <th scope="col">Open zone</th>
+                        <th scope="col">Closed zone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Pay per usage, no pre-allocation or reservation required</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Project folders to control access to data</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Network isolation between zones</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Virtual desktop access</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ad-hoc usage reporting and project quotas</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Direct SSH access</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status zone-comparison__status--unavailable" role="img" aria-label="Not supported">&mdash;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Free data movement in and out</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status zone-comparison__status--unavailable" role="img" aria-label="Not supported">&mdash;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Copy and paste to or from the local computer</th>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                        <td><span class="zone-comparison__status zone-comparison__status--unavailable" role="img" aria-label="Not supported">&mdash;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Owner-approved and logged data exports</th>
+                        <td><span class="zone-comparison__status zone-comparison__status--unavailable" role="img" aria-label="Not applicable">&mdash;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Owner-managed zone access</th>
+                        <td><span class="zone-comparison__status zone-comparison__status--unavailable" role="img" aria-label="Not applicable">&mdash;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Owner-configurable Internet restrictions</th>
+                        <td><span class="zone-comparison__status zone-comparison__status--unavailable" role="img" aria-label="Not supported">&mdash;</span></td>
+                        <td><span class="zone-comparison__status" role="img" aria-label="Supported">&#10003;</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white">
+    <div class="container w-narrow py-2">
+        <div class="prose">
+            <p>A closed zone is not tied to a single project. One or more project
+            folders belong to the zone, so users in a zone can still organize and
+            share their data via project folders inside the zone.</p>
+
+            <p>Users will need a separate account/user for each closed zone they need
+            access to.</p>
+
+            <p>If you think that you need a closed zone for your projects, feel free to
+            get in touch.</p>
+        </div>
+        <div class="centered py-1">
+            <a class="btn btn-magenta" href="mailto:support@genome.dk">Get in touch</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
