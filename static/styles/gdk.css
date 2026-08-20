@@ -223,6 +223,8 @@
     }
 
     a {
+        display: inline-block;
+
         color: var(--link-color);
         text-decoration-thickness: 2px;
         text-decoration-color: var(--link-decoration-color, --color-primary);
