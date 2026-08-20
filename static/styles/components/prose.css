@@ -8,7 +8,7 @@
     .prose {
         line-height: var(--line-height);
 
-        >*+* {
+        *+* {
             margin-block: var(--block-space);
         }
 
