@@ -3,8 +3,6 @@
 @layer reset, base, utils, components;
 
 @import "reset.css";
-@import "layout.css";
-@import "utils.css";
 
 @import "components/prose.css";
 @import "components/button.css";
@@ -317,5 +315,77 @@
 
     section {
         margin-block: var(--block-space);
+    }
+}
+
+@layer utils {
+    .py-1 {
+        padding-block: var(--block-space);
+    }
+
+    .py-2 {
+        padding-block: var(--block-space-double);
+    }
+
+    .bg-neutral {
+        background-color: var(--color-neutral);
+    }
+
+    .bg-white {
+        background-color: #fff;
+    }
+
+    .bg-primary {
+        background-color: var(--color-primary);
+    }
+
+    .bg-magenta-dark {
+        background-color: var(--color-magenta-dark);
+    }
+
+    .rounded {
+        border-radius: 0.25em;
+    }
+
+    .centered {
+        display: grid;
+        justify-items: center;
+    }
+
+    .nowrap {
+        word-break: keep-all;
+    }
+
+    .flow-quart > * + * {
+        margin-block: var(--block-space-quart);
+    }
+    .flow-half > * + * {
+        margin-block: var(--block-space-half);
+    }
+    .flow > * + * {
+        margin-block: var(--block-space);
+    }
+}
+
+@layer layout {
+    .container {
+        padding-inline: var(--inline-space-double);
+        margin-inline: auto;
+    }
+
+    @media (min-width: 140rch) {
+        .container {
+            padding-inline: var(--inline-space);
+        }
+    }
+
+    .w-narrow,
+    .w-wide {
+        width: 100%;
+        max-width: 125rch;
+    }
+
+    .w-narrow {
+        max-width: 85rch;
     }
 }

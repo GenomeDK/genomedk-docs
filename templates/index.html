@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="bg-white">
-    <div class="container w-wide py-2 features">
+    <div class="container w-wide features">
         <div>
             <h1>Organize and collaborate with project folders</h1>
             <p>
@@ -85,15 +85,17 @@
                         <time datetime="{{ page.date }}">{{ page.date | date(format='%B %-d, %Y') }}</time>
                         - Aarhus, Denmark
                     </div>
-                    <h1><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
-                    <section class="prose">
-                        {% if page.summary %}
-                        {{ page.summary | safe }}
-                        <a href="{{ page.permalink }}">Continue reading...</a>
-                        {% else %}
-                        {{ page.content | safe}}
-                        {% endif %}
-                    </section>
+                    <div class="flow">
+                        <h1><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
+                        <div class="prose">
+                            {% if page.summary %}
+                            {{ page.summary | safe }}
+                            <a href="{{ page.permalink }}">Continue reading...</a>
+                            {% else %}
+                            {{ page.content | safe}}
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
             </article>
             {% endfor %}
