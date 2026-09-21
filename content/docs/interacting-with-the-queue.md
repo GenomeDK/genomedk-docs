@@ -105,6 +105,7 @@ The most minimal job script you can write looks like this:
 
 ```bash
 #!/bin/bash
+#SBATCH --name sayhello
 #SBATCH --account my_project
 
 echo hello world
@@ -120,6 +121,7 @@ To specify which resources are needed by the job:
 
 ```bash
 #!/bin/bash
+#SBATCH --name sayhello
 #SBATCH --account my_project
 #SBATCH -c 8
 #SBATCH --mem 16g
@@ -128,7 +130,8 @@ echo hello world
 ```
 
 This specifies that you want eight cores and 16 GB of memory allocated
-to the job.
+to the job. The name is optional, but may make it easier to keep track of
+jobs.
 
 {% note() %}
 A node can be shared by multiple users, so you should always take extra
@@ -150,13 +153,64 @@ Submitted batch job 17129500
 Contrary to `srun`, this command
 returns immediately, giving us a job id to identify our job.
 
-Most people find it annoying to write these job script for each step in
-their workflow and instead use a workflow engine such as
-[gwf](https://gwf.app/) (developed at GenomeDK) or
+You can specify arguments to the job script when submitting a job. Say you have
+this batch script saved as `example.sh`:
+
+```bash
+#!/bin/bash
+#SBATCH --name process_sample
+#SBATCH --account my_project
+#SBATCH -c 8
+#SBATCH --mem 16g
+
+sample_file=$1
+./process_sample.sh $sample_file
+```
+
+You could then run:
+
+```bash
+[fe-open-01]$ sbatch example.sh sample_1.txt
+[fe-open-01]$ sbatch example.sh sample_2.txt
+...
+[fe-open-01]$ sbatch example.sh sample_10.txt
+```
+
+For such simple cases like the above, it's better to use an array job.
+
+For more complicated workflows, most people prefer to use a workflow engine 
+such as [gwf](https://gwf.app/) (developed at GenomeDK) or
 [snakemake](https://snakemake.readthedocs.io/) (quite popular in
-bioinformatics). Such tools allow you to write entire pipelines
-consisting of thousands of separate jobs and submit those jobs to Slurm
-without writing job scripts manually.
+bioinformatics).
+
+Such tools allow you to write entire pipelines consisting of thousands of
+separate jobs and submit those jobs to Slurm without writing job scripts
+manually. They will also help you keep track of failed jobs and to re-submit
+only what's needed in case something failed.
+
+# Array jobs
+
+You can use a job array to run the same batch script for several inputs. This 
+example creates ten jobs. Each job receives an index in the 
+`SLURM_ARRAY_TASK_ID` environment variable:
+
+```bash
+#!/bin/bash
+#SBATCH --name process_sample
+#SBATCH -c 8
+#SBATCH --mem 16g
+#SBATCH --account my_project
+#SBATCH --array=1-10
+
+./process_sample.sh "sample_${SLURM_ARRAY_TASK_ID}.txt"
+```
+
+Save the script as `example.sh` and submit the entire array with 
+`sbatch example.sh`.
+
+This corresponds to submitting jobs in a loop, but is much more efficient, as
+the queuing system will gradually expand the array job into individual jobs,
+instead of filling the queue up with separate jobs.
 
 # Checking job status
 
