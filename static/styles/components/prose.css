@@ -192,11 +192,15 @@
             }
         }
 
-        .admonition :first-child {
+        .admonition div {
+            margin-block: 0;
+        }
+
+        .admonition div :first-child {
             margin-top: 0;
         }
 
-        .admonition :last-child {
+        .admonition div :last-child {
             margin-bottom: 0;
         }
 
