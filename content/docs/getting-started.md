@@ -82,7 +82,7 @@ GenomeDK:
 This will show a QR code in your terminal. Open the the authenticator app on
 your phone and scan the QR code.
 
-## Connecting via the GenomeDK Desktop (any zone) {#desktop} {#zone_connect}
+## Connecting via the GenomeDK Desktop (any zone) {#desktop}
 
 GenomeDK Desktop provides access to a graphical desktop environment (virtual
 desktop) directly in your browser. For closed zones, this is the only way to
