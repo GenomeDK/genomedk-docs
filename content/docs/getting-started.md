@@ -28,9 +28,8 @@ belong to the open zone. If still in doubt, please contact support.
 
 There are three ways to connect to GenomeDK:
 
-* [Connecting with SSH (open zone)](#ssh)
-* [Connecting with GenomeDK Desktop (open zone)](#desktop)
-* [Connecting with NoMachine (closed zones)](#zone_connect)
+* [Connecting with SSH (open zone only)](#ssh)
+* [Connecting with GenomeDK Desktop (open and closed zones)](#desktop)
 
 In any case, you must first [prepare for two-factor authentication](#2fa).
 
@@ -46,7 +45,7 @@ have one). Popular authenticator apps include:
 All of these apps will allow you to scan a QR code and generate tokens for
 future logins.
 
-## Connecting to the open zone with SSH {#ssh}
+## Connecting via SSH (open zone only) {#ssh}
 
 {% warning() %}
 On your first login, you must set up two-factor authentication. If you do not
@@ -83,56 +82,24 @@ GenomeDK:
 This will show a QR code in your terminal. Open the the authenticator app on
 your phone and scan the QR code.
 
-## Connecting via the GenomeDK Desktop {#desktop}
+## Connecting via the GenomeDK Desktop (any zone) {#desktop} {#zone_connect}
 
 GenomeDK Desktop provides access to a graphical desktop environment (virtual
-desktop) running on the frontend node of the open zone. The Desktop is available
-directly in your browser.
+desktop) directly in your browser. For closed zones, this is the only way to
+connect to GenomeDK.
 
 * Go to the [GenomeDK Desktop](https://desktop.genome.au.dk/) and log in with
   your usual GenomeDK credentials.
-* Choose the service you wish to connect to (in most cases "Frontend - Open", to
-  access the frontend in the open zone).
 * If this is your first login, you will be guided through the process of setting
   up two-factor authentication.
+* Choose the service you wish to connect to (for example "Frontend - Open", to
+  access the frontend in the open zone) or launch a desktop with dedicated
+  resources by choosing "Start a new desktop...".
 
-Once logged in, a virtual desktop will appear within a few seconds.
-
-Please note that the session **should not be used for heavy computations**.
-Instead, submit a job to the queuing system inside your Desktop session.
+Please note that desktops launched on a frontend **should not be used for heavy 
+computations**.
 
 You can [learn more about using the Desktop here](@/docs/using-graphical-interfaces.md#desktop).
-
-## Connecting to a closed zone {#zone_connect}
-
-{% warning() %}
-On your first login, you must set up two-factor authentication. If you do not
-set up two-factor on the first login, you will not be able to access your
-account. Read the instructions to the end before logging in for the first time.
-{% end %}
-
-Download and install the remote desktop client for your operating system on your
-local machine.
-
-- [Download client for Windows](https://www.nomachine.com/download/download&id=8)
-- [Download client for macOS](https://www.nomachine.com/download/download&id=7)
-- [Download client for Linux](https://www.nomachine.com/download/linux&id=1)
-
-Download the connection file for the zone you wish to connect to:
-
-* [iPSYCH](/zones/ipsych.nxs) ([guidelines](/assets/iPSYCH_Guidelines_GDK_2021_04_13.pdf))
-* [Brain](/zones/brain.nxs)
-
-Using the login information received in your mailbox. Login by entering your
-username and password.
-
-Assuming you entered correctly you will get access to the virtual desktop.
-
-### Set up two-factor
-
-Open the the authenticator app on your phone and scan the `QRCode.png` located
-on your NoMachine desktop. From now on you will need to generate a one-time
-password with the authenticator app every time you log in.
 
 # I forgot my password
 
